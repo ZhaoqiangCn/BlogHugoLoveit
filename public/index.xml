@@ -1,8 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>LoveIt Theme | LoveIt Theme</title>
+        <title>zhaoqiang Blog | zhaoqiang Blog</title>
         <link>/</link>
-        <description>LoveIt Theme | LoveIt Theme</description>
+        <description>zhaoqiang Blog | zhaoqiang Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 02 Aug 2019 11:04:49 +0800</lastBuildDate><atom:link href="/" rel="self" type="application/rss+xml" /><item>
                 <title>About LoveIt</title>
                 <link>/about/</link>
