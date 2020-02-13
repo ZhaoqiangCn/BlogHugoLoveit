@@ -1,32 +1,32 @@
-baseURL = "/"
-# website language
-languageCode = "en"
-# [en, zh, ...] determines which i18n file to use
-defaultContentLanguage = "en"
-# website title
-title = "LoveIt Theme"
-# theme
+baseURL = "https://example.com/"
+# 网站语言
+languageCode = "zh"
+# [en, zh, ...] 设定主题的国际化
+defaultContentLanguage = "zh"
+# 网站标题
+title = "LoveIt 主题"
+# 主题
 theme = "LoveIt"
-# whether to use git commit log to generate lastmod record
+# 是否使用 git 信息来生成文章的上次修改时间
 enableGitInfo = false
-# whether to include chinese/japanese/korean
-hasCJKLanguage = false
-# default amount of posts in each pages
+# 是否包括中日韩文字
+hasCJKLanguage = true
+# 默认每页列表显示的文章数目
 paginate = 12
-# whether to use emoji code
+# 是否使用 emoji 代码
 enableEmoji = true
-# whether to use robots.txt
+# 是否使用 robots.txt
 enableRobotsTXT = true
-# [UA-XXXXXXXX-X] google analytics code
+# [UA-XXXXXXXX-X] 谷歌分析代号
 googleAnalytics = ""
-# copyright description used only for seo schema
+# 版权描述，仅仅用于 SEO
 copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
-# date format
+# 日期格式
 dateFormatToUse = "2006-01-02"
 
-# Markup related configuration in Hugo
+# Hugo 解析文档的配置
 [markup]
-  # Syntax Highlighting (https://gohugo.io/content-management/syntax-highlighting)
+  # 代码高亮设置 (https://gohugo.io/content-management/syntax-highlighting)
   [markup.highlight]
     codeFences = true
     guessSyntax = true
@@ -36,7 +36,7 @@ dateFormatToUse = "2006-01-02"
     noClasses = false
     style = "monokai"
     tabWidth = 4
-  # Goldmark is from Hugo 0.60 the default library used for Markdown
+  # Goldmark 是 Hugo 0.60 以来的默认 Markdown 解析库
   [markup.goldmark]
     [markup.goldmark.extensions]
       definitionList = true
@@ -47,121 +47,121 @@ dateFormatToUse = "2006-01-02"
       taskList = true
       typographer = true
     [markup.goldmark.renderer]
-      # whether to use HTML tags directly in the document
+      # 是否在文档中直接使用 HTML 标签
       unsafe = true
-  # Table Of Contents settings
+  # 目录设置
   [markup.tableOfContents]
     startLevel = 2
     endLevel = 6
 
-# Author Info
+# 作者信息
 [author]
   name = "xxxx"
   link = ""
 
-# Sitemap Info
+# 网站地图信息
 [sitemap]
   changefreq = "weekly"
   filename = "sitemap.xml"
   priority = 0.5
 
-# Permalinks Info (https://gohugo.io/content-management/urls/#permalinks)
+# Permalinks 信息 (https://gohugo.io/content-management/urls/#permalinks)
 [Permalinks]
   posts = ":year/:month/:filename"
 
-# Menu Info
+# 菜单信息
 [menu]
   [[menu.main]]
     identifier = "posts"
-    name = "Posts"
+    name = "文章"
     url = "posts"
     weight = 1
 
   [[menu.main]]
     identifier = "tags"
-    name = "Tags"
+    name = "标签"
     url = "tags"
     weight = 2
 
   [[menu.main]]
     identifier = "categories"
-    name = "Categories"
+    name = "分类"
     url = "categories"
     weight = 3
 
   [[menu.main]]
     identifier = "about"
-    name = "About"
+    name = "关于"
     url = "about"
     weight = 4
 
   [[menu.main]]
-    identifier = "zh"
+    identifier = "en"
     pre = '<i class="fas fa-language fa-fw"></i>'
     name = ""
-    title = "简体中文"
-    url = "https://hugo-loveit-zh.netlify.com"
+    title = "English"
+    url = "https://hugo-loveit-en.netlify.com"
     weight = 5
 
 [params]
-  # LoveIt theme version
+  # LoveIt 主题版本
   version = "0.1.X"
-  # site description
-  description = "About LoveIt Theme"
-  # site keywords
+  # 网站描述
+  description = "关于 LoveIt 主题"
+  # 网站关键词
   keywords = ["Theme", "Hugo"]
-  # site default theme ("light", "dark", "auto")
+  # 网站默认主题 ("light", "dark", "auto")
   defaultTheme = "auto"
 
-  # Home Page Info
-  ##home mode ("post", "other")
+  # 主页信息设置
+  ## 主页模式 ("post", "other")
   home_mode = "post"
-  ## special amount of posts in each home post page
+  ## 主页在 post 模式下每页 post 显示数量
   home_paginate = 6
-  ## URL of avatar shown in home page
+  ## 主页显示头像的 URL
   avatar = "images/avatar.png"
-  ## subtitle shown in home page
-  subtitle = "A Clean, Elegant but Advanced Hugo Theme"
+  ## 主页显示的网站副标题
+  subtitle = "一个简洁、优雅且高效的 Hugo 主题"
 
-  # whether to show social share links in post page
+  # 在文章页面是否使用分享功能
   socialShare = true
 
-  # Footer CopyRight Info
-  ## Site creation time
+  # 页面底部版权信息设置
+  ## 网站创立年份
   since = 2019
-  ## ICP info only in China (HTML format is allowed)
+  ## ICP 备案信息，仅在中国使用 (允许使用 HTML 格式)
   icp = ""
-  ## license info (HTML format is allowed)
+  ## 许可协议信息 (允许使用 HTML 格式)
   license= '<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
 
-  # public git repo url to link lastmod git commit only then enableGitInfo is true
+  # 用于生成文章上次修改时间的公共 git 仓库路径，仅在 enableGitInfo 设为 true 时有效
   gitRepo = ""
 
-  # mathematical formulas (KaTeX)
+  # 数学公式 (KaTeX https://katex.org/)
   [params.math]
     enable = true
     block_left_delimiter = ""
     block_right_delimiter = ""
     inline_left_delimiter = "$"
     inline_right_delimiter = "$"
-    # KaTeX extension copy_tex
+    # KaTeX 插件 copy_tex
     copy_tex = true
-    # KaTeX extension mhchem
+    # KaTeX 插件 mhchem
     mhchem = true
 
-  # whether to show link to Raw Markdown content of the post
+  # 是否在文章页面显示原始 Markdown 文档链接
   linkToMarkdown = true
 
-  # site verification code for Google/Bing/Yandex/Pinterest/Baidu
+  # 网站验证代码，用于 Google/Bing/Yandex/Pinterest/Baidu
   google_verification = ""
   bing_verification = ""
   yandex_verification = ""
   pinterest_verification = ""
   baidu_verification = ""
 
-  # CSS and JS Files CDN
+  # CSS 和 JS 文件的 CDN 设置
   [params.cdn]
-    ## for example '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.10.1/css/all.min.css" integrity="sha256-fdcFNFiBMrNfWL6OcAGQz6jDgNTRxnrLEd4vJYFWScE=" crossorigin="anonymous">'
+    ## 例如 '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.10.1/css/all.min.css" integrity="sha256-fdcFNFiBMrNfWL6OcAGQz6jDgNTRxnrLEd4vJYFWScE=" crossorigin="anonymous">'
     fontawesome_free_css = ''
     animate_css = ''
     gitalk_css = ''
@@ -185,11 +185,11 @@ dateFormatToUse = "2006-01-02"
     aplayer_js = ''
     meting_js = ''
 
-  # Gravatar Info for preferred avatar in home page
+  # Gravatar 信息，用于优先在主页显示的头像
   [params.gravatar]
     email = ""
 
-  # Social Info in home page
+  # 主页的社交信息设置
   [params.social]
     GitHub = "xxxx"
     Linkedin = "xxxx"
@@ -255,7 +255,7 @@ dateFormatToUse = "2006-01-02"
     #XMPP = "xxxx"
     #Matrix ="xxxx"
 
-  # Social Share Links in post page
+  # 文章页面的分享信息设置
   [params.share]
     enable = true
     Twitter = true
@@ -269,7 +269,7 @@ dateFormatToUse = "2006-01-02"
     #VKontakte = true
     #Weibo = true
 
-  # Publisher Info just for SEO
+  # 出版者信息，仅用于 SEO
   [params.publisher]
     name = "xxxx"
     [params.publisher.logo]
@@ -277,36 +277,36 @@ dateFormatToUse = "2006-01-02"
       width = 127
       height = 40
 
-  # Website Log Info just for SEO
+  # 网站图标信息，仅用于 SEO
   [params.logo]
     url = "logo.png"
     width = 127
     height = 40
 
-  # Website Image Info just for SEO
+  #  网站图标信息，仅用于 SEO
   [params.image]
     url = "cover.png"
     width = 800
     height = 600
 
-  # Disqus Comment Config (https://disqus.com/)
+  # Disqus 评论系统设置 (https://disqus.com/)
   [params.disqus]
-    # Disqus shortname to use Disqus in posts
+    # Disqus 的用户名，用来在文章中启用 Disqus 评论系统
     shortname = "dillonzq"
 
-  # Gittalk Comment Config (https://github.com/gitalk/gitalk)
+  # Gittalk 评论系统设置 (https://github.com/gitalk/gitalk)
   [params.gitalk]
     owner = ""
     repo = ""
     clientId = ""
     clientSecret = ""
 
-  # Valine Comment Config (https://github.com/xCss/Valine)
+  # Valine 评论系统设置 (https://github.com/xCss/Valine)
   [params.valine]
     enable = false
     appId = ""
     appKey = ""
-    placeholder = "Your comment ..."
+    placeholder = "你的评论 ..."
     notify = false
     verify = true
     avatar = "mp"
@@ -315,7 +315,7 @@ dateFormatToUse = "2006-01-02"
     visitor = true
     recordIP = true
 
-  # Facebook Comment Config (https://developers.facebook.com/docs/plugins/comments)
+  # Facebook 评论系统设置 (https://developers.facebook.com/docs/plugins/comments)
   [params.facebook]
     enable = false
     width = "100%"
@@ -323,7 +323,7 @@ dateFormatToUse = "2006-01-02"
     appId = ""
     languageCode = "en_US"
 
-# Privacy Info (https://gohugo.io/about/hugo-and-gdpr/)
+# 隐私信息设置 (https://gohugo.io/about/hugo-and-gdpr/)
 [privacy]
   [privacy.googleAnalytics]
     anonymizeIP = true
@@ -331,18 +331,18 @@ dateFormatToUse = "2006-01-02"
   [privacy.youtube]
     privacyEnhanced = true
 
-# Options to make output .md files
+# 用于输出 Markdown 格式文档的设置
 [mediaTypes]
   [mediaTypes."text/plain"]
     suffixes = ["md"]
 
-# Options to make output .md files
+# 用于输出 Markdown 格式文档的设置
 [outputFormats.MarkDown]
   mediaType = "text/plain"
   isPlainText = true
   isHTML = false
 
-# Options to make hugo output files
+# 用于 Hugo 输出文档的设置
 [outputs]
   home = ["HTML", "RSS"]
   page = ["HTML", "MarkDown"]
