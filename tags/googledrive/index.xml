@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GoogleDrive on Zhaoqiang&#39;s Blog | Java Developer</title>
+    <link>http://zhaoqiangcn.github.io/BlogHugoLoveit/tags/googledrive/</link>
+    <description>Recent content in GoogleDrive on Zhaoqiang&#39;s Blog | Java Developer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Sat, 12 May 2018 15:49:55 +0800</lastBuildDate>
+    
+	<atom:link href="http://zhaoqiangcn.github.io/BlogHugoLoveit/tags/googledrive/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title> Aria2 搭建离线下载并自动上传到 Google Drive</title>
+      <link>http://zhaoqiangcn.github.io/BlogHugoLoveit/2018/05/aria2/</link>
+      <pubDate>Sat, 12 May 2018 15:49:55 +0800</pubDate>
+      
+      <guid>http://zhaoqiangcn.github.io/BlogHugoLoveit/2018/05/aria2/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

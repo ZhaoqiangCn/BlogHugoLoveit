@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on Zhaoqiang&#39;s Blog | Java Developer</title>
+    <link>http://zhaoqiangcn.github.io/BlogHugoLoveit/categories/linux/</link>
+    <description>Recent content in Linux on Zhaoqiang&#39;s Blog | Java Developer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Thu, 16 Jan 2020 09:16:23 +0800</lastBuildDate>
+    
+	<atom:link href="http://zhaoqiangcn.github.io/BlogHugoLoveit/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>NextCloud Scan Files on Server</title>
+      <link>http://zhaoqiangcn.github.io/BlogHugoLoveit/2020/01/nextcloud-scan-files-on-server/</link>
+      <pubDate>Thu, 16 Jan 2020 09:16:23 +0800</pubDate>
+      
+      <guid>http://zhaoqiangcn.github.io/BlogHugoLoveit/2020/01/nextcloud-scan-files-on-server/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>使用 GitHub Actions 编译 OpenWrt</title>
+      <link>http://zhaoqiangcn.github.io/BlogHugoLoveit/2020/01/openwrt-build/</link>
+      <pubDate>Fri, 10 Jan 2020 16:15:18 +0800</pubDate>
+      
+      <guid>http://zhaoqiangcn.github.io/BlogHugoLoveit/2020/01/openwrt-build/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>NaiveBoom 阅后即焚</title>
+      <link>http://zhaoqiangcn.github.io/BlogHugoLoveit/2020/01/naiveboom/</link>
+      <pubDate>Thu, 02 Jan 2020 15:32:50 +0800</pubDate>
+      
+      <guid>http://zhaoqiangcn.github.io/BlogHugoLoveit/2020/01/naiveboom/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Synology With Linux</title>
+      <link>http://zhaoqiangcn.github.io/BlogHugoLoveit/2020/01/synology-with-linux/</link>
+      <pubDate>Wed, 01 Jan 2020 16:19:26 +0800</pubDate>
+      
+      <guid>http://zhaoqiangcn.github.io/BlogHugoLoveit/2020/01/synology-with-linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title> Nextcloud 性能优化</title>
+      <link>http://zhaoqiangcn.github.io/BlogHugoLoveit/2019/11/nextcloud-optimize/</link>
+      <pubDate>Sat, 30 Nov 2019 15:58:17 +0800</pubDate>
+      
+      <guid>http://zhaoqiangcn.github.io/BlogHugoLoveit/2019/11/nextcloud-optimize/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title> 在宝塔面板部署Nextcloud服务</title>
+      <link>http://zhaoqiangcn.github.io/BlogHugoLoveit/2019/11/nextcloud-deploy/</link>
+      <pubDate>Fri, 29 Nov 2019 15:58:17 +0800</pubDate>
+      
+      <guid>http://zhaoqiangcn.github.io/BlogHugoLoveit/2019/11/nextcloud-deploy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>清理 Docker 占用的磁盘空间</title>
+      <link>http://zhaoqiangcn.github.io/BlogHugoLoveit/2019/05/docker-clean/</link>
+      <pubDate>Fri, 10 May 2019 16:11:55 +0800</pubDate>
+      
+      <guid>http://zhaoqiangcn.github.io/BlogHugoLoveit/2019/05/docker-clean/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>使用 ACME 免费申请 Let&#39;s Encrypt 证书</title>
+      <link>http://zhaoqiangcn.github.io/BlogHugoLoveit/2019/01/acme/</link>
+      <pubDate>Tue, 15 Jan 2019 16:05:16 +0800</pubDate>
+      
+      <guid>http://zhaoqiangcn.github.io/BlogHugoLoveit/2019/01/acme/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>学习强国</title>
+      <link>http://zhaoqiangcn.github.io/BlogHugoLoveit/2018/09/pandalearning/</link>
+      <pubDate>Mon, 10 Sep 2018 16:09:33 +0800</pubDate>
+      
+      <guid>http://zhaoqiangcn.github.io/BlogHugoLoveit/2018/09/pandalearning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title> Aria2 搭建离线下载并自动上传到 Google Drive</title>
+      <link>http://zhaoqiangcn.github.io/BlogHugoLoveit/2018/05/aria2/</link>
+      <pubDate>Sat, 12 May 2018 15:49:55 +0800</pubDate>
+      
+      <guid>http://zhaoqiangcn.github.io/BlogHugoLoveit/2018/05/aria2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Synology DDNS 02</title>
+      <link>http://zhaoqiangcn.github.io/BlogHugoLoveit/2016/08/synology-ddns-02/</link>
+      <pubDate>Wed, 10 Aug 2016 13:55:28 +0800</pubDate>
+      
+      <guid>http://zhaoqiangcn.github.io/BlogHugoLoveit/2016/08/synology-ddns-02/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Synology DDNS 01</title>
+      <link>http://zhaoqiangcn.github.io/BlogHugoLoveit/2016/07/synology-ddns-01/</link>
+      <pubDate>Sun, 10 Jul 2016 13:55:24 +0800</pubDate>
+      
+      <guid>http://zhaoqiangcn.github.io/BlogHugoLoveit/2016/07/synology-ddns-01/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

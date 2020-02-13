@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>HUGO on Zhaoqiang&#39;s Blog | Java Developer</title>
+    <link>http://zhaoqiangcn.github.io/BlogHugoLoveit/categories/hugo/</link>
+    <description>Recent content in HUGO on Zhaoqiang&#39;s Blog | Java Developer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Thu, 16 Jan 2020 14:54:04 +0800</lastBuildDate>
+    
+	<atom:link href="http://zhaoqiangcn.github.io/BlogHugoLoveit/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>在 HUGO 中添加 Valine 评论系统的过程后续--邮件通知</title>
+      <link>http://zhaoqiangcn.github.io/BlogHugoLoveit/2020/01/hugo-valine-email/</link>
+      <pubDate>Thu, 16 Jan 2020 14:54:04 +0800</pubDate>
+      
+      <guid>http://zhaoqiangcn.github.io/BlogHugoLoveit/2020/01/hugo-valine-email/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title> 部署 Hugo 静态博客到 Netlify 和 Github Pages</title>
+      <link>http://zhaoqiangcn.github.io/BlogHugoLoveit/2020/01/hugo-netlify/</link>
+      <pubDate>Sun, 12 Jan 2020 14:49:17 +0800</pubDate>
+      
+      <guid>http://zhaoqiangcn.github.io/BlogHugoLoveit/2020/01/hugo-netlify/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>在 HUGO 中添加 Valine 评论系统的过程</title>
+      <link>http://zhaoqiangcn.github.io/BlogHugoLoveit/2020/01/hugo-valine/</link>
+      <pubDate>Fri, 10 Jan 2020 14:41:18 +0800</pubDate>
+      
+      <guid>http://zhaoqiangcn.github.io/BlogHugoLoveit/2020/01/hugo-valine/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>用 Hugo 配合 GithubActions 自动构建我的博客</title>
+      <link>http://zhaoqiangcn.github.io/BlogHugoLoveit/2020/01/hugo-github-actions/</link>
+      <pubDate>Thu, 09 Jan 2020 14:52:40 +0800</pubDate>
+      
+      <guid>http://zhaoqiangcn.github.io/BlogHugoLoveit/2020/01/hugo-github-actions/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
