@@ -1,26 +1,17 @@
 baseURL = "https://zhaoqiangcn.github.io/BlogHugoLoveit/"
-# website language
-languageCode = "en"
-# [en, zh, ...] determines which i18n file to use
-defaultContentLanguage = "en"
-# website title
-title = "zhaoqiang Blog"
-# theme
-theme = "LoveIt"
-# whether to use git commit log to generate lastmod record
-enableGitInfo = false
-# whether to include chinese/japanese/korean
-hasCJKLanguage = false
-# default amount of posts in each pages
-paginate = 12
-# whether to use emoji code
-enableEmoji = true
-# whether to use robots.txt
-enableRobotsTXT = true
-# [UA-XXXXXXXX-X] google analytics code
-googleAnalytics = ""
-# copyright description used only for seo schema
+languageCode = "zh"                                      # 网站语言标识
+defaultContentLanguage = "zh"                            # [en, zh, ...] 设定主题的国际化
+title = "Zhaoqiang's Blog | Java Developer"                                      # 网站标题
+#theme = "LoveIt"                                         # 主题
+enableGitInfo = false                                    # 是否使用 git 信息来生成文章的上次修改时间
+hasCJKLanguage = true                                    # 是否包括中日韩文字
+paginate = 12                                            # 默认每页列表显示的文章数目
+enableEmoji = true                                       # 是否使用 emoji 代码
+enableRobotsTXT = true                                   # 是否使用 robots.txt
+googleAnalytics = "UA-105751499-1"                                     # [UA-XXXXXXXX-X] 谷歌分析代号
 copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
+                                                         # 版权描述，仅仅用于 SEO
+                                                      ####  代码高亮设置 (https://gohugo.io/content-management/syntax-highlighting)
 # date format
 dateFormatToUse = "2006-12-02"
 
@@ -56,7 +47,7 @@ dateFormatToUse = "2006-12-02"
 
 # Author Info
 [author]
-  name = "xxxx"
+  name = "zhaoqiang"
   link = ""
 
 # Sitemap Info
@@ -107,9 +98,9 @@ dateFormatToUse = "2006-12-02"
   # LoveIt theme version
   version = "0.1.X"
   # site description
-  description = "About LoveIt Theme"
+  description = "Zhao Qiang's Blog"
   # site keywords
-  keywords = ["Theme", "Hugo"]
+  keywords = ["Dynamics AX", "Github" ,"Linux", "Synology","HUGO"]
   # site default theme ("light", "dark", "auto")
   defaultTheme = "auto"
 
@@ -128,7 +119,7 @@ dateFormatToUse = "2006-12-02"
 
   # Footer CopyRight Info
   ## Site creation time
-  since = 2019
+  since = 2016
   ## ICP info only in China (HTML format is allowed)
   icp = ""
   ## license info (HTML format is allowed)

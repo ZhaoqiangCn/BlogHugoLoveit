@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Using webservice to connect with Dynamics AX | Zhaoqiang&#39;s Blog | Java Developer</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noodp" />
+<meta name="Description" content="Zhao Qiang&#39;s Blog"><link rel="prev" href="https://zhaoqiangcn.github.io/BlogHugoLoveit/2020/01/dynamics-ax-golive-data-import/" /><link rel="next" href="https://zhaoqiangcn.github.io/BlogHugoLoveit/2020/01/office-365-apply/" /><link rel="canonical" href="https://zhaoqiangcn.github.io/BlogHugoLoveit/2020/01/dynamics-ax-webservice/" />
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff"><meta property="og:title" content="Using webservice to connect with Dynamics AX" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://zhaoqiangcn.github.io/BlogHugoLoveit/2020/01/dynamics-ax-webservice/" />
+<meta property="article:published_time" content="2020-01-14T11:03:30+08:00" />
+<meta property="article:modified_time" content="2020-01-14T11:03:30+08:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Using webservice to connect with Dynamics AX"/>
+<meta name="twitter:description" content=""/>
+<script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Using webservice to connect with Dynamics AX",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/zhaoqiangcn.github.io\/BlogHugoLoveit\/2020\/01\/dynamics-ax-webservice\/"
+        },"image": {
+                "@type": "ImageObject",
+                "url": "https:\/\/zhaoqiangcn.github.io\/BlogHugoLoveit\/cover.png",
+                "width":  800 ,
+                "height":  600 
+            },"genre": "posts","keywords": "AX2009, WebService, WCF","wordcount":  528 ,
+        "url": "https:\/\/zhaoqiangcn.github.io\/BlogHugoLoveit\/2020\/01\/dynamics-ax-webservice\/","datePublished": "2020-01-14T11:03:30\x2b08:00","dateModified": "2020-01-14T11:03:30\x2b08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+                "@type": "Organization",
+                "name": "xxxx",
+                "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/zhaoqiangcn.github.io\/BlogHugoLoveit\/logo.png",
+                "width":  127 ,
+                "height":  40 
+                }
+            },"description": ""
+    }
+    </script><link rel="stylesheet" href="/BlogHugoLoveit/css/style.scss"><link rel="stylesheet" href="/BlogHugoLoveit/css/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/BlogHugoLoveit/css/lib/forkawesome/fork-awesome.scss"><link rel="stylesheet" href="/BlogHugoLoveit/css/lib/animate/animate.min.css"></head>
+    <body><script>
+            if (!window.localStorage || !window.localStorage.getItem('theme')) {window.isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;} else {
+                window.isDark = (window.localStorage && window.localStorage.getItem('theme')) === 'dark';
+            }
+            window.isDark && document.body.classList.add('dark-theme');
+        </script><div class="wrapper"><nav class="navbar">
+    <div class="navbar-container">
+        <div class="navbar-header animated bounceIn">
+            <a href="https://zhaoqiangcn.github.io/BlogHugoLoveit/">Zhaoqiang&#39;s Blog | Java Developer</a>
+        </div>
+        <div class="navbar-menu"><a class="menu-item" href="https://zhaoqiangcn.github.io/BlogHugoLoveit/posts" title="">Posts</a><a class="menu-item" href="https://zhaoqiangcn.github.io/BlogHugoLoveit/tags" title="">Tags</a><a class="menu-item" href="https://zhaoqiangcn.github.io/BlogHugoLoveit/categories" title="">Categories</a><a class="menu-item" href="https://zhaoqiangcn.github.io/BlogHugoLoveit/about" title="">About</a><a class="menu-item" href="https://hugo-loveit-zh.netlify.com" title="简体中文"><i class="fas fa-language fa-fw"></i></a><a href="javascript:void(0);" class="theme-switch"><i class="fas fa-adjust fa-rotate-180 fa-fw" title="切换主题"></i></a>
+        </div>
+    </div>
+</nav><nav class="navbar-mobile">
+    <div class="navbar-container">
+        <div class="navbar-header">
+            <div class="navbar-header-title animated bounceIn">
+                <a href="https://zhaoqiangcn.github.io/BlogHugoLoveit/">Zhaoqiang&#39;s Blog | Java Developer</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="navbar-menu" id="mobile-menu"><a class="menu-item" href="https://zhaoqiangcn.github.io/BlogHugoLoveit/posts" title="">Posts</a><a class="menu-item" href="https://zhaoqiangcn.github.io/BlogHugoLoveit/tags" title="">Tags</a><a class="menu-item" href="https://zhaoqiangcn.github.io/BlogHugoLoveit/categories" title="">Categories</a><a class="menu-item" href="https://zhaoqiangcn.github.io/BlogHugoLoveit/about" title="">About</a><a class="menu-item" href="https://hugo-loveit-zh.netlify.com" title="简体中文"></a><a href="javascript:void(0);" class="theme-switch"><i class="fas fa-adjust fa-rotate-180 fa-fw" title="切换主题"></i></a>
+        </div>
+    </div>
+</nav>
+<main class="main">
+                <div class="container"><article class="page"><h1 class="post-title animated flipInX">Using webservice to connect with Dynamics AX</h1><div class="post-meta">
+            <div class="post-meta-main"><a class="author" href="https://zhaoqiangcn.github.io/BlogHugoLoveit/" rel="author" target="_blank">
+                    <i class="fas fa-user-circle fa-fw"></i>zhaoqiang
+                </a>&nbsp;<span class="post-category">收录于&nbsp;<i class="far fa-folder fa-fw"></i><a href="https://zhaoqiangcn.github.io/BlogHugoLoveit/categories/dynamicsax/">Dynamics a x</a>&nbsp;</span></div>
+            <div class="post-meta-other"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-01-14>2020-01-14</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>约 528 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>预计阅读 2 分钟&nbsp;</div>
+        </div><div class="post-content"><a class="post-dummy-target" id="第三方接口调用ax内部程序"></a><h2>第三方接口调用AX内部程序</h2>
+<a class="post-dummy-target" id="systemconnector"></a><h3>SystemConnector</h3>
+<p>在&quot;Csharp&quot;代码中，我们可以直接调用&quot;Systemconnector&quot;提供的接口从而实现执行AX内部程序的功能。</p>
+<p>如：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c#" data-lang="c#"><span class="n">axServiceProvider</span><span class="p">.</span><span class="n">handleAgileData</span><span class="p">(</span><span class="s">&#34;cig&#34;</span><span class="p">,</span> <span class="n">_XMLStr</span><span class="p">)</span><span class="p">;</span> 
+</code></pre></td></tr></table>
+</div>
+</div><p>实际上 &ldquo;axServiceProvider&rdquo; 是通过内置函数 &ldquo;CallStaticClassMethod&rdquo; 来实现调用AX内部程序。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c#" data-lang="c#"><span class="kt">string</span> <span class="n">returnStr</span> <span class="p">=</span> <span class="p">(</span><span class="kt">string</span><span class="p">)</span><span class="n">op</span><span class="p">.</span><span class="n">CallStaticClassMethod</span><span class="p">(</span><span class="s">&#34;AX Class&#34;</span><span class="p">,</span> <span class="s">&#34;Class Method&#34;</span><span class="p">,</span> <span class="n">_legal</span><span class="p">,</span> <span class="n">_XMLStr</span><span class="p">)</span><span class="p">;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>将第三方外部程序组织的XML数据主动传递给AX，AX内部只需要解析该XML数据即可执行相应的业务逻辑操作。</p>
+<p>在 axServiceProvider 中我们可以设定AX2009的环境端口，用户，密码，公司等信息，同样可以构建更多的方法来调用Ax不同的功能。</p>
+<p>下文是通过&quot;Csharp&quot;代码调用接口的样例：</p>
+<a class="post-dummy-target" id="consume-systemconnector-in-vs"></a><h2>Consume SystemConnector in VS</h2>
+<p><figure><img src="/BlogHugoLoveit/svg/loading.min.svg" data-sizes="auto" data-src="/Images/AX2009Webservice/1.png" alt="1" class="lazyload"><figcaption class="image-caption">1</figcaption></figure>
+</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c#" data-lang="c#"><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.IO</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Linq</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Web</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Web.UI</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Web.UI.WebControls</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Xml</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">SystemConnector.DynamicsAX</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">CIG_WCF4AgileAX</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">partial</span> <span class="k">class</span> <span class="nc">WebForm1</span> <span class="p">:</span> <span class="n">System</span><span class="p">.</span><span class="n">Web</span><span class="p">.</span><span class="n">UI</span><span class="p">.</span><span class="n">Page</span>
+    <span class="p">{</span>
+        <span class="k">protected</span> <span class="k">void</span> <span class="n">Page_Load</span><span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">EventArgs</span> <span class="n">e</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kt">string</span> <span class="n">ret</span> <span class="p">=</span> <span class="s">&#34;&#34;</span><span class="p">;</span>
+            <span class="c1">//string _XMLStr = GetXmlDocument(@&#34;D:/AgileXml/HDC000076-utf.xml&#34;);
+</span><span class="c1"></span>            <span class="c1">//string _XMLStr = GetXmlDocument(@&#34;E:/AgileXml/test1014/UPD-1014-33-01.xml&#34;);
+</span><span class="c1"></span>            <span class="kt">string</span> <span class="n">_XMLStr</span> <span class="p">=</span> <span class="n">GetXmlDocument</span><span class="p">(</span><span class="s">@&#34;E:/AgileXml/test1014/CIG000780.xml&#34;</span><span class="p">)</span><span class="p">;</span>
+            <span class="c1">//string _XMLStr = &#34;AX-MES-RDIF-Go&#34;;
+</span><span class="c1"></span>            <span class="k">try</span>
+            <span class="p">{</span>
+                <span class="n">AXServiceProvider</span> <span class="n">axServiceProvider</span> <span class="p">=</span> <span class="k">new</span> <span class="n">AXServiceProvider</span><span class="p">(</span><span class="p">)</span><span class="p">;</span>
+                <span class="c1">//ret = axServiceProvider.handleRFIDData(&#34;cig&#34;, _XMLStr);
+</span><span class="c1"></span>                <span class="n">ret</span> <span class="p">=</span> <span class="n">axServiceProvider</span><span class="p">.</span><span class="n">handleAgileData</span><span class="p">(</span><span class="s">&#34;cig&#34;</span><span class="p">,</span> <span class="n">_XMLStr</span><span class="p">)</span><span class="p">;</span>              
+            <span class="p">}</span>
+            <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">ex</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">ret</span><span class="p">=</span> <span class="n">ex</span><span class="p">.</span><span class="n">ToString</span><span class="p">(</span><span class="p">)</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="n">Response</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="n">ret</span><span class="p">)</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="k">private</span> <span class="k">static</span> <span class="kt">string</span> <span class="n">GetXmlDocument</span><span class="p">(</span><span class="kt">string</span> <span class="n">xmlPath</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">try</span>
+            <span class="p">{</span>
+                <span class="n">XmlDocument</span> <span class="n">doc</span> <span class="p">=</span> <span class="k">null</span><span class="p">;</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">File</span><span class="p">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">xmlPath</span><span class="p">)</span><span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="n">doc</span> <span class="p">=</span> <span class="k">new</span> <span class="n">XmlDocument</span><span class="p">(</span><span class="p">)</span><span class="p">;</span>
+                    <span class="n">doc</span><span class="p">.</span><span class="n">Load</span><span class="p">(</span><span class="n">xmlPath</span><span class="p">)</span><span class="p">;</span>               
+                <span class="p">}</span>
+                <span class="k">return</span> <span class="n">doc</span><span class="p">.</span><span class="n">InnerXml</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">ex</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">System</span><span class="p">.</span><span class="n">Diagnostics</span><span class="p">.</span><span class="n">Debug</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="n">ex</span><span class="p">.</span><span class="n">Message</span><span class="p">)</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><a href="https://pan.nashome.cn/s/x9FmdkpEiiWnT4B" target="_blank">源代码</a>
+</p>
+<a class="post-dummy-target" id="ax内部程序调用第三方接口"></a><h2>AX内部程序调用第三方接口</h2>
+<p>AX2009 调用外部接口只需要打开AOT-Reference-添加一个服务引用即可，添加引用时可以添加dll文件。</p>
+<p>如下图：</p>
+<p><figure><img src="/BlogHugoLoveit/svg/loading.min.svg" data-sizes="auto" data-src="/Images/AX2009Webservice/2.png" alt="2" class="lazyload"><figcaption class="image-caption">2</figcaption></figure>
+</p>
+<p><figure><img src="/BlogHugoLoveit/svg/loading.min.svg" data-sizes="auto" data-src="/Images/AX2009Webservice/3.png" alt="3" class="lazyload"><figcaption class="image-caption">3</figcaption></figure>
+</p>
+<p>这样就可以了。</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>本文于 2020-01-14 更新</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share"><span><a href="//twitter.com/share?url=https%3a%2f%2fzhaoqiangcn.github.io%2fBlogHugoLoveit%2f2020%2f01%2fdynamics-ax-webservice%2f&amp;text=Using%20webservice%20to%20connect%20with%20Dynamics%20AX&amp;via=xxxx" target="_blank" title="分享到 Twitter">
+            <i class="fab fa-twitter fa-fw"></i>
+        </a><a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fzhaoqiangcn.github.io%2fBlogHugoLoveit%2f2020%2f01%2fdynamics-ax-webservice%2f" target="_blank" title="分享到 Facebook">
+            <i class="fab fa-facebook-square fa-fw"></i>
+        </a><a href="//reddit.com/submit?url=https%3a%2f%2fzhaoqiangcn.github.io%2fBlogHugoLoveit%2f2020%2f01%2fdynamics-ax-webservice%2f&amp;title=Using%20webservice%20to%20connect%20with%20Dynamics%20AX" target="_blank" title="分享到 Reddit">
+            <i class="fab fa-reddit fa-fw"></i>
+        </a></span></div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section><span class="tag">
+                        <a href="https://zhaoqiangcn.github.io/BlogHugoLoveit/tags/ax2009/"><i class="fas fa-tag fa-fw"></i>&nbsp;AX2009</a>&nbsp;
+                    </span><span class="tag">
+                        <a href="https://zhaoqiangcn.github.io/BlogHugoLoveit/tags/webservice/"><i class="fas fa-tag fa-fw"></i>&nbsp;WebService</a>&nbsp;
+                    </span><span class="tag">
+                        <a href="https://zhaoqiangcn.github.io/BlogHugoLoveit/tags/wcf/"><i class="fas fa-tag fa-fw"></i>&nbsp;WCF</a>&nbsp;
+                    </span></section>
+        <section>
+            <span><a href="javascript:window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="https://zhaoqiangcn.github.io/BlogHugoLoveit/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="https://zhaoqiangcn.github.io/BlogHugoLoveit/2020/01/dynamics-ax-golive-data-import/" class="prev" rel="prev" title="Dynamics AX GoLive Data Import"><i class="fas fa-angle-left fa-fw"></i>Dynamics AX GoLive Data Import</a>
+            <a href="https://zhaoqiangcn.github.io/BlogHugoLoveit/2020/01/office-365-apply/" class="next" rel="next" title="免费申请 Office365 企业版一年试用教程">免费申请 Office365 企业版一年试用教程<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div class="post-comment"></div>
+    </article></div>
+            </main><footer class="footer">
+    <div class="copyright"><div class="copyright-line">由 <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreffer">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="external nofollow noopener noreffer">LoveIt<i class="far fa-heart fa-fw"></i></a>
+        </div>
+
+        <div class="copyright-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2016 - 2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://zhaoqiangcn.github.io/BlogHugoLoveit/" target="_blank">zhaoqiang</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+    </div>
+</footer>
+</div><a href="#" class="dynamic-to-top" id="dynamic-to-top" data-scroll>
+            <span>&nbsp;</span>
+        </a><script src="/BlogHugoLoveit/js/lib/jquery/jquery.slim.min.js"></script><script src="/BlogHugoLoveit/js/lib/lazysizes/lazysizes.min.js"></script><script src="/BlogHugoLoveit/js/lib/smooth-scroll/smooth-scroll.polyfills.min.js"></script><script>window.scroll = new SmoothScroll('[data-scroll]', {speed: 300, speedAsDuration: true});</script><link rel="stylesheet" href="/BlogHugoLoveit/css/lib/katex/katex.min.css"><script src="/BlogHugoLoveit/js/lib/katex/katex.min.js"></script><script defer src="/BlogHugoLoveit/js/lib/katex/auto-render.min.js"></script><link rel="stylesheet" href="/BlogHugoLoveit/css/lib/katex/copy-tex.min.css"><script defer src="/BlogHugoLoveit/js/lib/katex/copy-tex.min.js"></script><script defer src="/BlogHugoLoveit/js/lib/katex/mhchem.min.js"></script><script>
+        document.addEventListener("DOMContentLoaded", function () {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    { left: "$$", right: "$$", display: true },
+                    { left: "\\(", right: "\\)", display: false },
+                    { left: "\\[", right: "\\]", display: true },{ left: "$", right: "$", display: false },]
+            });
+        });
+    </script><script src="/BlogHugoLoveit/js/blog.min.js"></script>
+</body>
+</html>

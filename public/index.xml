@@ -1,9 +1,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>zhaoqiang Blog | zhaoqiang Blog</title>
+        <title>Zhaoqiang&#39;s Blog | Java Developer | Zhaoqiang&#39;s Blog | Java Developer</title>
         <link>https://zhaoqiangcn.github.io/BlogHugoLoveit/</link>
-        <description>zhaoqiang Blog | zhaoqiang Blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 02 Aug 2019 11:04:49 +0800</lastBuildDate><atom:link href="https://zhaoqiangcn.github.io/BlogHugoLoveit/" rel="self" type="application/rss+xml" /><item>
+        <description>Zhaoqiang&#39;s Blog | Java Developer | Zhaoqiang&#39;s Blog | Java Developer</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 16 Jan 2020 14:54:04 +0800</lastBuildDate><atom:link href="https://zhaoqiangcn.github.io/BlogHugoLoveit/" rel="self" type="application/rss+xml" /><item>
+                <title>Posts</title>
+                <link>https://zhaoqiangcn.github.io/BlogHugoLoveit/posts/</link>
+                <pubDate>Thu, 16 Jan 2020 14:54:04 +0800</pubDate><guid>https://zhaoqiangcn.github.io/BlogHugoLoveit/posts/</guid>
+                <description></description>
+            </item><item>
                 <title>About LoveIt</title>
                 <link>https://zhaoqiangcn.github.io/BlogHugoLoveit/about/</link>
                 <pubDate>Fri, 02 Aug 2019 11:04:49 +0800</pubDate><guid>https://zhaoqiangcn.github.io/BlogHugoLoveit/about/</guid>
@@ -110,10 +115,5 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 </description>
-            </item><item>
-                <title>Posts</title>
-                <link>https://zhaoqiangcn.github.io/BlogHugoLoveit/posts/</link>
-                <pubDate>Thu, 01 Aug 2019 18:02:41 +0800</pubDate><guid>https://zhaoqiangcn.github.io/BlogHugoLoveit/posts/</guid>
-                <description></description>
             </item></channel>
 </rss>
