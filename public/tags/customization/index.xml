@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Customization on Zhaoqiang&#39;s Blog | Java Developer</title>
-    <link>https://zhaoqiangcn.github.io/BlogHugoLoveit/tags/customization/</link>
+    <link>http://zhaoqiangcn.github.io/BlogHugoLoveit/tags/customization/</link>
     <description>Recent content in Customization on Zhaoqiang&#39;s Blog | Java Developer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
     <lastBuildDate>Wed, 15 Jan 2020 16:25:29 +0800</lastBuildDate>
     
-	<atom:link href="https://zhaoqiangcn.github.io/BlogHugoLoveit/tags/customization/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://zhaoqiangcn.github.io/BlogHugoLoveit/tags/customization/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>How to create deployable packages in Dynamics 365 </title>
-      <link>https://zhaoqiangcn.github.io/BlogHugoLoveit/2020/01/dynamics-365-deployable-packages/</link>
+      <link>http://zhaoqiangcn.github.io/BlogHugoLoveit/2020/01/dynamics-365-deployable-packages/</link>
       <pubDate>Wed, 15 Jan 2020 16:25:29 +0800</pubDate>
       
-      <guid>https://zhaoqiangcn.github.io/BlogHugoLoveit/2020/01/dynamics-365-deployable-packages/</guid>
+      <guid>http://zhaoqiangcn.github.io/BlogHugoLoveit/2020/01/dynamics-365-deployable-packages/</guid>
       <description></description>
     </item>
     

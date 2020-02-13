@@ -61,4 +61,4 @@ Disallow: /
 User-agent: ZoominfoBot
 Disallow: /
 
-Sitemap: https://zhaoqiangcn.github.io/BlogHugoLoveit/sitemap.xml
+Sitemap: http://zhaoqiangcn.github.io/BlogHugoLoveit/sitemap.xml
