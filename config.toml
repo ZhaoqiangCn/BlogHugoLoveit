@@ -4,7 +4,6 @@ defaultContentLanguage = "zh"                            # [en, zh, ...] 设定�
 title = "Zhaoqiang's Blog | Java Developer"                                      # 网站标题
 theme = "LoveIt"                                         # 主题
 staticDir = ["../static", "../../assets/others"]    # 静态文件目录，../ 找的是主题中的static文件,若没有将simpleSite中的static文件夹复制为跟simpleSite同级
-publishDir =["../public"]  
 enableGitInfo = false                                    # 是否使用 git 信息来生成文章的上次修改时间
 hasCJKLanguage = true                                    # 是否包括中日韩文字
 paginate = 12                                            # 默认每页列表显示的文章数目
