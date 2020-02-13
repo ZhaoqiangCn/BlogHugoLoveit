@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>chromium on Zhaoqiang&#39;s Blog | Java Developer</title>
-    <link>https://zhaoqiangcn.github.io/BlogHugoLoveit/tags/chromium/</link>
+    <link>http://zhaoqiangcn.github.io/BlogHugoLoveit/tags/chromium/</link>
     <description>Recent content in chromium on Zhaoqiang&#39;s Blog | Java Developer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
     <lastBuildDate>Mon, 10 Sep 2018 16:09:33 +0800</lastBuildDate>
     
-	<atom:link href="https://zhaoqiangcn.github.io/BlogHugoLoveit/tags/chromium/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://zhaoqiangcn.github.io/BlogHugoLoveit/tags/chromium/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>学习强国</title>
-      <link>https://zhaoqiangcn.github.io/BlogHugoLoveit/2018/09/pandalearning/</link>
+      <link>http://zhaoqiangcn.github.io/BlogHugoLoveit/2018/09/pandalearning/</link>
       <pubDate>Mon, 10 Sep 2018 16:09:33 +0800</pubDate>
       
-      <guid>https://zhaoqiangcn.github.io/BlogHugoLoveit/2018/09/pandalearning/</guid>
+      <guid>http://zhaoqiangcn.github.io/BlogHugoLoveit/2018/09/pandalearning/</guid>
       <description></description>
     </item>
     
