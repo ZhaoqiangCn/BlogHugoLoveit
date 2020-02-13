@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>How to create deployable packages in Dynamics 365  | Zhaoqiang&#39;s Blog | Java Developer</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noodp" />
+<meta name="Description" content="Zhao Qiang&#39;s Blog"><link rel="prev" href="https://zhaoqiangcn.github.io/BlogHugoLoveit/2020/01/dynamics-365-on-premises/" /><link rel="next" href="https://zhaoqiangcn.github.io/BlogHugoLoveit/2020/01/nextcloud-scan-files-on-server/" /><link rel="canonical" href="https://zhaoqiangcn.github.io/BlogHugoLoveit/2020/01/dynamics-365-deployable-packages/" />
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff"><meta property="og:title" content="How to create deployable packages in Dynamics 365 " />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://zhaoqiangcn.github.io/BlogHugoLoveit/2020/01/dynamics-365-deployable-packages/" />
+<meta property="article:published_time" content="2020-01-15T16:25:29+08:00" />
+<meta property="article:modified_time" content="2020-01-15T16:25:29+08:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="How to create deployable packages in Dynamics 365 "/>
+<meta name="twitter:description" content=""/>
+<script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "How to create deployable packages in Dynamics 365 ",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/zhaoqiangcn.github.io\/BlogHugoLoveit\/2020\/01\/dynamics-365-deployable-packages\/"
+        },"image": {
+                "@type": "ImageObject",
+                "url": "https:\/\/zhaoqiangcn.github.io\/BlogHugoLoveit\/cover.png",
+                "width":  800 ,
+                "height":  600 
+            },"genre": "posts","keywords": "Dynamics365, Customization","wordcount":  278 ,
+        "url": "https:\/\/zhaoqiangcn.github.io\/BlogHugoLoveit\/2020\/01\/dynamics-365-deployable-packages\/","datePublished": "2020-01-15T16:25:29\x2b08:00","dateModified": "2020-01-15T16:25:29\x2b08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+                "@type": "Organization",
+                "name": "xxxx",
+                "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/zhaoqiangcn.github.io\/BlogHugoLoveit\/logo.png",
+                "width":  127 ,
+                "height":  40 
+                }
+            },"description": ""
+    }
+    </script><link rel="stylesheet" href="/BlogHugoLoveit/css/style.scss"><link rel="stylesheet" href="/BlogHugoLoveit/css/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/BlogHugoLoveit/css/lib/forkawesome/fork-awesome.scss"><link rel="stylesheet" href="/BlogHugoLoveit/css/lib/animate/animate.min.css"></head>
+    <body><script>
+            if (!window.localStorage || !window.localStorage.getItem('theme')) {window.isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;} else {
+                window.isDark = (window.localStorage && window.localStorage.getItem('theme')) === 'dark';
+            }
+            window.isDark && document.body.classList.add('dark-theme');
+        </script><div class="wrapper"><nav class="navbar">
+    <div class="navbar-container">
+        <div class="navbar-header animated bounceIn">
+            <a href="https://zhaoqiangcn.github.io/BlogHugoLoveit/">Zhaoqiang&#39;s Blog | Java Developer</a>
+        </div>
+        <div class="navbar-menu"><a class="menu-item" href="https://zhaoqiangcn.github.io/BlogHugoLoveit/posts" title="">Posts</a><a class="menu-item" href="https://zhaoqiangcn.github.io/BlogHugoLoveit/tags" title="">Tags</a><a class="menu-item" href="https://zhaoqiangcn.github.io/BlogHugoLoveit/categories" title="">Categories</a><a class="menu-item" href="https://zhaoqiangcn.github.io/BlogHugoLoveit/about" title="">About</a><a class="menu-item" href="https://hugo-loveit-zh.netlify.com" title="简体中文"><i class="fas fa-language fa-fw"></i></a><a href="javascript:void(0);" class="theme-switch"><i class="fas fa-adjust fa-rotate-180 fa-fw" title="切换主题"></i></a>
+        </div>
+    </div>
+</nav><nav class="navbar-mobile">
+    <div class="navbar-container">
+        <div class="navbar-header">
+            <div class="navbar-header-title animated bounceIn">
+                <a href="https://zhaoqiangcn.github.io/BlogHugoLoveit/">Zhaoqiang&#39;s Blog | Java Developer</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="navbar-menu" id="mobile-menu"><a class="menu-item" href="https://zhaoqiangcn.github.io/BlogHugoLoveit/posts" title="">Posts</a><a class="menu-item" href="https://zhaoqiangcn.github.io/BlogHugoLoveit/tags" title="">Tags</a><a class="menu-item" href="https://zhaoqiangcn.github.io/BlogHugoLoveit/categories" title="">Categories</a><a class="menu-item" href="https://zhaoqiangcn.github.io/BlogHugoLoveit/about" title="">About</a><a class="menu-item" href="https://hugo-loveit-zh.netlify.com" title="简体中文"></a><a href="javascript:void(0);" class="theme-switch"><i class="fas fa-adjust fa-rotate-180 fa-fw" title="切换主题"></i></a>
+        </div>
+    </div>
+</nav>
+<main class="main">
+                <div class="container"><article class="page"><h1 class="post-title animated flipInX">How to create deployable packages in Dynamics 365 </h1><div class="post-meta">
+            <div class="post-meta-main"><a class="author" href="https://zhaoqiangcn.github.io/BlogHugoLoveit/" rel="author" target="_blank">
+                    <i class="fas fa-user-circle fa-fw"></i>zhaoqiang
+                </a>&nbsp;<span class="post-category">收录于&nbsp;<i class="far fa-folder fa-fw"></i><a href="https://zhaoqiangcn.github.io/BlogHugoLoveit/categories/dynamicsax/">Dynamics a x</a>&nbsp;</span></div>
+            <div class="post-meta-other"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-01-15>2020-01-15</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>约 278 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>预计阅读 1 分钟&nbsp;</div>
+        </div><div class="post-content"><a class="post-dummy-target" id="概览"></a><h2>概览</h2>
+<p>Dynamics 365 中，部署开发者的代码和客制化的程序到生产环境必须通过 deployable packages。</p>
+<p>Deployable packages 可以通过 <strong>Visual Studio dev tools</strong>，或者 <strong>build automation process</strong> 创建，创建后需要上传至LCS Project Asset library。一起都准备好之后，系统管理员即可通过 LCS 中的 <strong>Maintain &gt; Apply updates</strong> tool，将程序发布到生产环境。</p>
+<p>下图简单描述了整个过程:</p>
+<p><figure><img src="/BlogHugoLoveit/svg/loading.min.svg" data-sizes="auto" data-src="https://docs.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/deployment/media/createandapplydeployablepackage.png" alt="Create and apply a deployment package" class="lazyload"><figcaption class="image-caption">Create and apply a deployment package</figcaption></figure>
+</p>
+<a class="post-dummy-target" id="创建--deployable-package"></a><h2>创建  deployable package</h2>
+<p>在开发环境中，可以在Visual studio通过以下步骤创建 deployable package。</p>
+<ol>
+<li>选择 <strong>Dynamics 365</strong> &gt; <strong>Deploy</strong> &gt; <strong>Create Deployment Package</strong>. <figure><img src="/BlogHugoLoveit/svg/loading.min.svg" data-sizes="auto" data-src="https://docs.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/deployment/media/createdeploymentpackage-986x1024.png" alt="Create deployment package" class="lazyload"><figcaption class="image-caption">Create deployment package</figcaption></figure>
+</li>
+<li>指定文件路径<figure><img src="/BlogHugoLoveit/svg/loading.min.svg" data-sizes="auto" data-src="https://docs.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/deployment/media/pack4.png" alt="Select a location" class="lazyload"><figcaption class="image-caption">Select a location</figcaption></figure>
+</li>
+<li>创建好之后，登录 LCS ，点击 <strong>Asset Library</strong> 。</li>
+<li>上传刚才创建的deployable package。</li>
+</ol>
+<a class="post-dummy-target" id="删除-deployable-package"></a><h2>删除 deployable package</h2>
+<p>详细信息可以参考：<a href="https://docs.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/deployment/uninstall-deployable-package" target="_blank">Uninstall a package</a>
+.</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>本文于 2020-01-15 更新</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share"><span><a href="//twitter.com/share?url=https%3a%2f%2fzhaoqiangcn.github.io%2fBlogHugoLoveit%2f2020%2f01%2fdynamics-365-deployable-packages%2f&amp;text=How%20to%20create%20deployable%20packages%20in%20Dynamics%20365%20&amp;via=xxxx" target="_blank" title="分享到 Twitter">
+            <i class="fab fa-twitter fa-fw"></i>
+        </a><a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fzhaoqiangcn.github.io%2fBlogHugoLoveit%2f2020%2f01%2fdynamics-365-deployable-packages%2f" target="_blank" title="分享到 Facebook">
+            <i class="fab fa-facebook-square fa-fw"></i>
+        </a><a href="//reddit.com/submit?url=https%3a%2f%2fzhaoqiangcn.github.io%2fBlogHugoLoveit%2f2020%2f01%2fdynamics-365-deployable-packages%2f&amp;title=How%20to%20create%20deployable%20packages%20in%20Dynamics%20365%20" target="_blank" title="分享到 Reddit">
+            <i class="fab fa-reddit fa-fw"></i>
+        </a></span></div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section><span class="tag">
+                        <a href="https://zhaoqiangcn.github.io/BlogHugoLoveit/tags/dynamics365/"><i class="fas fa-tag fa-fw"></i>&nbsp;Dynamics365</a>&nbsp;
+                    </span><span class="tag">
+                        <a href="https://zhaoqiangcn.github.io/BlogHugoLoveit/tags/customization/"><i class="fas fa-tag fa-fw"></i>&nbsp;Customization</a>&nbsp;
+                    </span></section>
+        <section>
+            <span><a href="javascript:window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="https://zhaoqiangcn.github.io/BlogHugoLoveit/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="https://zhaoqiangcn.github.io/BlogHugoLoveit/2020/01/dynamics-365-on-premises/" class="prev" rel="prev" title="Dynamics 365 On-premises Environments"><i class="fas fa-angle-left fa-fw"></i>Dynamics 365 On-premises Environments</a>
+            <a href="https://zhaoqiangcn.github.io/BlogHugoLoveit/2020/01/nextcloud-scan-files-on-server/" class="next" rel="next" title="NextCloud Scan Files on Server">NextCloud Scan Files on Server<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div class="post-comment"></div>
+    </article></div>
+            </main><footer class="footer">
+    <div class="copyright"><div class="copyright-line">由 <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreffer">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="external nofollow noopener noreffer">LoveIt<i class="far fa-heart fa-fw"></i></a>
+        </div>
+
+        <div class="copyright-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2016 - 2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://zhaoqiangcn.github.io/BlogHugoLoveit/" target="_blank">zhaoqiang</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+    </div>
+</footer>
+</div><a href="#" class="dynamic-to-top" id="dynamic-to-top" data-scroll>
+            <span>&nbsp;</span>
+        </a><script src="/BlogHugoLoveit/js/lib/jquery/jquery.slim.min.js"></script><script src="/BlogHugoLoveit/js/lib/lazysizes/lazysizes.min.js"></script><script src="/BlogHugoLoveit/js/lib/smooth-scroll/smooth-scroll.polyfills.min.js"></script><script>window.scroll = new SmoothScroll('[data-scroll]', {speed: 300, speedAsDuration: true});</script><link rel="stylesheet" href="/BlogHugoLoveit/css/lib/katex/katex.min.css"><script src="/BlogHugoLoveit/js/lib/katex/katex.min.js"></script><script defer src="/BlogHugoLoveit/js/lib/katex/auto-render.min.js"></script><link rel="stylesheet" href="/BlogHugoLoveit/css/lib/katex/copy-tex.min.css"><script defer src="/BlogHugoLoveit/js/lib/katex/copy-tex.min.js"></script><script defer src="/BlogHugoLoveit/js/lib/katex/mhchem.min.js"></script><script>
+        document.addEventListener("DOMContentLoaded", function () {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    { left: "$$", right: "$$", display: true },
+                    { left: "\\(", right: "\\)", display: false },
+                    { left: "\\[", right: "\\]", display: true },{ left: "$", right: "$", display: false },]
+            });
+        });
+    </script><script src="/BlogHugoLoveit/js/blog.min.js"></script>
+</body>
+</html>

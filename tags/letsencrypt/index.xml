@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>letsencrypt on Zhaoqiang&#39;s Blog | Java Developer</title>
+    <link>https://zhaoqiangcn.github.io/BlogHugoLoveit/tags/letsencrypt/</link>
+    <description>Recent content in letsencrypt on Zhaoqiang&#39;s Blog | Java Developer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Tue, 15 Jan 2019 16:05:16 +0800</lastBuildDate>
+    
+	<atom:link href="https://zhaoqiangcn.github.io/BlogHugoLoveit/tags/letsencrypt/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>使用 ACME 免费申请 Let&#39;s Encrypt 证书</title>
+      <link>https://zhaoqiangcn.github.io/BlogHugoLoveit/2019/01/acme/</link>
+      <pubDate>Tue, 15 Jan 2019 16:05:16 +0800</pubDate>
+      
+      <guid>https://zhaoqiangcn.github.io/BlogHugoLoveit/2019/01/acme/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
