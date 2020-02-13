@@ -1,24 +1,33 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>zhaoqiang Blog | zhaoqiang Blog</title>
-        <link>/</link>
+        <link>https://zhaoqiangcn.github.io/BlogHugoLoveit/</link>
         <description>zhaoqiang Blog | zhaoqiang Blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 02 Aug 2019 11:04:49 +0800</lastBuildDate><atom:link href="/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 02 Aug 2019 11:04:49 +0800</lastBuildDate><atom:link href="https://zhaoqiangcn.github.io/BlogHugoLoveit/" rel="self" type="application/rss+xml" /><item>
                 <title>About LoveIt</title>
-                <link>/about/</link>
-                <pubDate>Fri, 02 Aug 2019 11:04:49 +0800</pubDate><guid>/about/</guid>
-                <description>&lt;p&gt;&lt;a href=&#34;https://github.com/dillonzq/LoveIt&#34;&gt;LoveIt :(far fa-heart):&lt;/a&gt; is a &lt;strong&gt;clean&lt;/strong&gt;, &lt;strong&gt;elegant&lt;/strong&gt; but &lt;strong&gt;advanced&lt;/strong&gt; blog theme for &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; developed by &lt;a href=&#34;https://dillonzq.com&#34;&gt;Dillon&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;It is based on the original &lt;a href=&#34;https://github.com/liuzc/LeaveIt/&#34;&gt;LeaveIt Theme&lt;/a&gt; and &lt;a href=&#34;https://github.com/liuzc/LeaveIt/&#34;&gt;KeepIt Theme&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/images/Apple-Devices-Preview.png&#34; alt=&#34;Hugo Theme LoveIt&#34;&gt;&lt;/p&gt;
+                <link>https://zhaoqiangcn.github.io/BlogHugoLoveit/about/</link>
+                <pubDate>Fri, 02 Aug 2019 11:04:49 +0800</pubDate><guid>https://zhaoqiangcn.github.io/BlogHugoLoveit/about/</guid>
+                <description>&lt;p&gt;&lt;a href=&#34;https://github.com/dillonzq/LoveIt&#34; target=&#34;_blank&#34;&gt;LoveIt :(far fa-heart):&lt;/a&gt;
+ is a &lt;strong&gt;clean&lt;/strong&gt;, &lt;strong&gt;elegant&lt;/strong&gt; but &lt;strong&gt;advanced&lt;/strong&gt; blog theme for &lt;a href=&#34;https://gohugo.io/&#34; target=&#34;_blank&#34;&gt;Hugo&lt;/a&gt;
+ developed by &lt;a href=&#34;https://dillonzq.com&#34; target=&#34;_blank&#34;&gt;Dillon&lt;/a&gt;
+.&lt;/p&gt;
+&lt;p&gt;It is based on the original &lt;a href=&#34;https://github.com/liuzc/LeaveIt/&#34; target=&#34;_blank&#34;&gt;LeaveIt Theme&lt;/a&gt;
+ and &lt;a href=&#34;https://github.com/liuzc/LeaveIt/&#34; target=&#34;_blank&#34;&gt;KeepIt Theme&lt;/a&gt;
+.&lt;/p&gt;
+&lt;p&gt;&lt;figure&gt;&lt;img src=&#34;https://zhaoqiangcn.github.io/BlogHugoLoveit/BlogHugoLoveit/svg/loading.min.svg&#34; data-sizes=&#34;auto&#34; data-src=&#34;https://zhaoqiangcn.github.io/BlogHugoLoveit/images/Apple-Devices-Preview.png&#34; alt=&#34;Hugo Theme LoveIt&#34; class=&#34;lazyload&#34;&gt;&lt;figcaption class=&#34;image-caption&#34;&gt;Hugo Theme LoveIt&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
 &lt;h3 id=&#34;features&#34;&gt;Features&lt;/h3&gt;
 &lt;h4 id=&#34;performance-and-seo&#34;&gt;Performance and SEO&lt;/h4&gt;
 &lt;ul&gt;
-&lt;li&gt;:(fas fa-rocket): Optimized for performance: 99/100 on mobile and 100/100 on desktop in &lt;a href=&#34;https://developers.google.com/speed/pagespeed/insights&#34;&gt;Google PageSpeed Insights&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;:(fas fa-rocket): Optimized for performance: 99/100 on mobile and 100/100 on desktop in &lt;a href=&#34;https://developers.google.com/speed/pagespeed/insights&#34; target=&#34;_blank&#34;&gt;Google PageSpeed Insights&lt;/a&gt;
+&lt;/li&gt;
 &lt;li&gt;:(fab fa-searchengin): Optimized SEO performance with a correct SEO SCHEMA based on JSON-LD&lt;/li&gt;
-&lt;li&gt;:(fab fa-google): &lt;a href=&#34;https://analytics.google.com/analytics&#34;&gt;Google Analytics&lt;/a&gt; support&lt;/li&gt;
+&lt;li&gt;:(fab fa-google): &lt;a href=&#34;https://analytics.google.com/analytics&#34; target=&#34;_blank&#34;&gt;Google Analytics&lt;/a&gt;
+ support&lt;/li&gt;
 &lt;li&gt;:(fas fa-search): Search engine verification support (Google, Bind, Yandex and Baidu)&lt;/li&gt;
 &lt;li&gt;:(fas fa-tachometer-alt): CDN for all third-party libraries support&lt;/li&gt;
-&lt;li&gt;:(far fa-images): Automatically converted images with Lazy Load by &lt;a href=&#34;https://github.com/aFarkas/lazysizes&#34;&gt;lazysizes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;:(far fa-images): Automatically converted images with Lazy Load by &lt;a href=&#34;https://github.com/aFarkas/lazysizes&#34; target=&#34;_blank&#34;&gt;lazysizes&lt;/a&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id=&#34;appearance-and-layout&#34;&gt;Appearance and Layout&lt;/h4&gt;
 &lt;ul&gt;
@@ -32,53 +41,79 @@
 &lt;/ul&gt;
 &lt;h4 id=&#34;social-and-comment-systems&#34;&gt;Social and Comment Systems&lt;/h4&gt;
 &lt;ul&gt;
-&lt;li&gt;:(far fa-user): Gravatar support by &lt;a href=&#34;https://gravatar.com&#34;&gt;Gravatar&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;:(far fa-user): Gravatar support by &lt;a href=&#34;https://gravatar.com&#34; target=&#34;_blank&#34;&gt;Gravatar&lt;/a&gt;
+&lt;/li&gt;
 &lt;li&gt;:(fas fa-user-circle): Local Avatar support&lt;/li&gt;
 &lt;li&gt;:(far fa-id-card): Up to 54 social sites supported&lt;/li&gt;
 &lt;li&gt;:(fas fa-share-square): Share post support&lt;/li&gt;
-&lt;li&gt;:(far fa-comment): Disqus comment system support by &lt;a href=&#34;https://disqus.com&#34;&gt;Disqus&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;:(far fa-comment-dots): Gitalk comment system support by &lt;a href=&#34;https://github.com/gitalk/gitalk&#34;&gt;Gitalk&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;:(far fa-comment-alt): Valine comment system support by &lt;a href=&#34;https://valine.js.org/&#34;&gt;Valine&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;:(far fa-comment): Disqus comment system support by &lt;a href=&#34;https://disqus.com&#34; target=&#34;_blank&#34;&gt;Disqus&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;:(far fa-comment-dots): Gitalk comment system support by &lt;a href=&#34;https://github.com/gitalk/gitalk&#34; target=&#34;_blank&#34;&gt;Gitalk&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;:(far fa-comment-alt): Valine comment system support by &lt;a href=&#34;https://valine.js.org/&#34; target=&#34;_blank&#34;&gt;Valine&lt;/a&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id=&#34;extended-features&#34;&gt;Extended Features&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;:(fas fa-code): Automatically highlighting code by chroma in Hugo&lt;/li&gt;
-&lt;li&gt;:(fab fa-font-awesome): Extended markdown syntax for &lt;a href=&#34;https://fontawesome.com/&#34;&gt;Font Awesome&lt;/a&gt; icons&lt;/li&gt;
-&lt;li&gt;:(fas fa-square-root-alt): Math formula support by &lt;a href=&#34;https://katex.org/&#34;&gt;Katex&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;:(fas fa-project-diagram): Diagram syntax shortcode support by &lt;a href=&#34;https://github.com/knsv/mermaid&#34;&gt;mermaid&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;:(fas fa-music): Embedded music player support by &lt;a href=&#34;https://github.com/MoePlayer/APlayer&#34;&gt;APlayer&lt;/a&gt; and &lt;a href=&#34;https://github.com/metowolf/MetingJS&#34;&gt;MetingJS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;:(fab fa-font-awesome): Extended markdown syntax for &lt;a href=&#34;https://fontawesome.com/&#34; target=&#34;_blank&#34;&gt;Font Awesome&lt;/a&gt;
+ icons&lt;/li&gt;
+&lt;li&gt;:(fas fa-square-root-alt): Math formula support by &lt;a href=&#34;https://katex.org/&#34; target=&#34;_blank&#34;&gt;Katex&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;:(fas fa-project-diagram): Diagram syntax shortcode support by &lt;a href=&#34;https://github.com/knsv/mermaid&#34; target=&#34;_blank&#34;&gt;mermaid&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;:(fas fa-music): Embedded music player support by &lt;a href=&#34;https://github.com/MoePlayer/APlayer&#34; target=&#34;_blank&#34;&gt;APlayer&lt;/a&gt;
+ and &lt;a href=&#34;https://github.com/metowolf/MetingJS&#34; target=&#34;_blank&#34;&gt;MetingJS&lt;/a&gt;
+&lt;/li&gt;
 &lt;li&gt;:(fas fa-tv): Bilibili player support&lt;/li&gt;
 &lt;li&gt;:(far fa-bell): Kinds of admonitions shortcode support&lt;/li&gt;
 &lt;li&gt;:(fas fa-align-left): Custom align and float style shortcodes support&lt;/li&gt;
-&lt;li&gt;:(fas fa-i-cursor): Animated typing support by &lt;a href=&#34;https://typeitjs.com/&#34;&gt;TypeIt&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;:(far fa-clock): Animated coutdown support by &lt;a href=&#34;https://github.com/hilios/jQuery.countdown&#34;&gt;jQuery.countdown&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;:(fas fa-arrow-up): Dynamic to top support by &lt;a href=&#34;https://github.com/cferdinandi/smooth-scroll&#34;&gt;Smooth Scroll&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;:(fas fa-i-cursor): Animated typing support by &lt;a href=&#34;https://typeitjs.com/&#34; target=&#34;_blank&#34;&gt;TypeIt&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;:(far fa-clock): Animated coutdown support by &lt;a href=&#34;https://github.com/hilios/jQuery.countdown&#34; target=&#34;_blank&#34;&gt;jQuery.countdown&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;:(fas fa-arrow-up): Dynamic to top support by &lt;a href=&#34;https://github.com/cferdinandi/smooth-scroll&#34; target=&#34;_blank&#34;&gt;Smooth Scroll&lt;/a&gt;
+&lt;/li&gt;
 &lt;li&gt;&amp;hellip;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;license&#34;&gt;License&lt;/h3&gt;
 &lt;p&gt;LoveIt is licensed under the MIT license.&lt;/p&gt;
-&lt;p&gt;Check the &lt;a href=&#34;https://github.com/dillonzq/LoveIt/blob/master/LICENSE&#34;&gt;LICENSE file&lt;/a&gt; for details.&lt;/p&gt;
+&lt;p&gt;Check the &lt;a href=&#34;https://github.com/dillonzq/LoveIt/blob/master/LICENSE&#34; target=&#34;_blank&#34;&gt;LICENSE file&lt;/a&gt;
+ for details.&lt;/p&gt;
 &lt;p&gt;Thanks to the authors of following resources included in the theme:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://fontawesome.com/&#34;&gt;Font Awesome&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://daneden.github.io/animate.css/&#34;&gt;Animate.css&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/aFarkas/lazysizes&#34;&gt;lazysizes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/cferdinandi/smooth-scroll&#34;&gt;Smooth Scroll&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://typeitjs.com/&#34;&gt;TypeIt&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/jquery/jquery&#34;&gt;jQuery&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/hilios/jQuery.countdown&#34;&gt;jQuery.countdown&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://katex.org/&#34;&gt;Katex&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/knsv/mermaid&#34;&gt;mermaid&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/MoePlayer/APlayer&#34;&gt;APlayer&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/metowolf/MetingJS&#34;&gt;MetingJS&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/gitalk/gitalk&#34;&gt;Gitalk&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://valine.js.org/&#34;&gt;Valine&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://fontawesome.com/&#34; target=&#34;_blank&#34;&gt;Font Awesome&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://daneden.github.io/animate.css/&#34; target=&#34;_blank&#34;&gt;Animate.css&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/aFarkas/lazysizes&#34; target=&#34;_blank&#34;&gt;lazysizes&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/cferdinandi/smooth-scroll&#34; target=&#34;_blank&#34;&gt;Smooth Scroll&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://typeitjs.com/&#34; target=&#34;_blank&#34;&gt;TypeIt&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jquery/jquery&#34; target=&#34;_blank&#34;&gt;jQuery&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/hilios/jQuery.countdown&#34; target=&#34;_blank&#34;&gt;jQuery.countdown&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://katex.org/&#34; target=&#34;_blank&#34;&gt;Katex&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/knsv/mermaid&#34; target=&#34;_blank&#34;&gt;mermaid&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/MoePlayer/APlayer&#34; target=&#34;_blank&#34;&gt;APlayer&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/metowolf/MetingJS&#34; target=&#34;_blank&#34;&gt;MetingJS&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/gitalk/gitalk&#34; target=&#34;_blank&#34;&gt;Gitalk&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://valine.js.org/&#34; target=&#34;_blank&#34;&gt;Valine&lt;/a&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 </description>
             </item><item>
                 <title>Posts</title>
-                <link>/posts/</link>
-                <pubDate>Thu, 01 Aug 2019 18:02:41 +0800</pubDate><guid>/posts/</guid>
+                <link>https://zhaoqiangcn.github.io/BlogHugoLoveit/posts/</link>
+                <pubDate>Thu, 01 Aug 2019 18:02:41 +0800</pubDate><guid>https://zhaoqiangcn.github.io/BlogHugoLoveit/posts/</guid>
                 <description></description>
             </item></channel>
 </rss>
