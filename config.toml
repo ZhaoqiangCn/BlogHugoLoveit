@@ -90,11 +90,11 @@ dateFormatToUse = "2016-01-02"
     url = "categories"
     weight = 3
 
-  [[menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "about"
-    weight = 4
+#  [[menu.main]]
+#    identifier = "about"
+#    name = "About"
+#    url = "about"
+#    weight = 4
 
 #  [[menu.main]]
 #    identifier = "zh"
