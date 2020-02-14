@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>IPKG on Zhaoqiang&#39;s Blog | Java Developer</title>
-    <link>http://zhaoqiangcn.github.io/BlogHugoLoveit/tags/ipkg/</link>
+    <link>https://www.spacesh.com/tags/ipkg/</link>
     <description>Recent content in IPKG on Zhaoqiang&#39;s Blog | Java Developer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
     <lastBuildDate>Wed, 01 Jan 2020 16:19:26 +0800</lastBuildDate>
     
-	<atom:link href="http://zhaoqiangcn.github.io/BlogHugoLoveit/tags/ipkg/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.spacesh.com/tags/ipkg/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Synology With Linux</title>
-      <link>http://zhaoqiangcn.github.io/BlogHugoLoveit/2020/01/synology-with-linux/</link>
+      <link>https://www.spacesh.com/2020/01/synology-with-linux/</link>
       <pubDate>Wed, 01 Jan 2020 16:19:26 +0800</pubDate>
       
-      <guid>http://zhaoqiangcn.github.io/BlogHugoLoveit/2020/01/synology-with-linux/</guid>
+      <guid>https://www.spacesh.com/2020/01/synology-with-linux/</guid>
       <description></description>
     </item>
     

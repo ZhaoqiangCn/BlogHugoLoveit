@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>用 Hugo 配合 GithubActions 自动构建我的博客 | Zhaoqiang&#39;s Blog | Java Developer</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noodp" />
-<meta name="Description" content="Zhao Qiang&#39;s Blog"><link rel="prev" href="http://zhaoqiangcn.github.io/BlogHugoLoveit/2020/01/naiveboom/" /><link rel="next" href="http://zhaoqiangcn.github.io/BlogHugoLoveit/2020/01/hugo-valine/" /><link rel="canonical" href="http://zhaoqiangcn.github.io/BlogHugoLoveit/2020/01/hugo-github-actions/" />
+<meta name="Description" content="Zhao Qiang&#39;s Blog"><link rel="prev" href="https://www.spacesh.com/2020/01/naiveboom/" /><link rel="next" href="https://www.spacesh.com/2020/01/hugo-valine/" /><link rel="canonical" href="https://www.spacesh.com/2020/01/hugo-github-actions/" />
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -16,7 +16,7 @@
 <meta name="theme-color" content="#ffffff"><meta property="og:title" content="用 Hugo 配合 GithubActions 自动构建我的博客" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://zhaoqiangcn.github.io/BlogHugoLoveit/2020/01/hugo-github-actions/" />
+<meta property="og:url" content="https://www.spacesh.com/2020/01/hugo-github-actions/" />
 <meta property="article:published_time" content="2020-01-09T14:52:40+08:00" />
 <meta property="article:modified_time" content="2020-01-09T14:52:40+08:00" />
 <meta name="twitter:card" content="summary"/>
@@ -29,25 +29,25 @@
         "headline": "用 Hugo 配合 GithubActions 自动构建我的博客",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "http:\/\/zhaoqiangcn.github.io\/BlogHugoLoveit\/2020\/01\/hugo-github-actions\/"
+            "@id": "https:\/\/www.spacesh.com\/2020\/01\/hugo-github-actions\/"
         },"image": {
                 "@type": "ImageObject",
-                "url": "http:\/\/zhaoqiangcn.github.io\/BlogHugoLoveit\/cover.png",
+                "url": "https:\/\/www.spacesh.com\/cover.png",
                 "width":  800 ,
                 "height":  600 
             },"genre": "posts","keywords": "Github Pages, Github Actions","wordcount":  862 ,
-        "url": "http:\/\/zhaoqiangcn.github.io\/BlogHugoLoveit\/2020\/01\/hugo-github-actions\/","datePublished": "2020-01-09T14:52:40\x2b08:00","dateModified": "2020-01-09T14:52:40\x2b08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+        "url": "https:\/\/www.spacesh.com\/2020\/01\/hugo-github-actions\/","datePublished": "2020-01-09T14:52:40\x2b08:00","dateModified": "2020-01-09T14:52:40\x2b08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
                 "@type": "Organization",
                 "name": "xxxx",
                 "logo": {
                 "@type": "ImageObject",
-                "url": "http:\/\/zhaoqiangcn.github.io\/BlogHugoLoveit\/logo.png",
+                "url": "https:\/\/www.spacesh.com\/logo.png",
                 "width":  127 ,
                 "height":  40 
                 }
             },"description": ""
     }
-    </script><link rel="stylesheet" href="/BlogHugoLoveit/css/style.scss"><link rel="stylesheet" href="/BlogHugoLoveit/css/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/BlogHugoLoveit/css/lib/forkawesome/fork-awesome.scss"><link rel="stylesheet" href="/BlogHugoLoveit/css/lib/animate/animate.min.css"><link rel="stylesheet" href="/BlogHugoLoveit/css/search.min.css">
+    </script><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/css/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/css/lib/forkawesome/forkawesome.min.css"><link rel="stylesheet" href="/css/lib/animate/animate.min.css"><link rel="stylesheet" href="/css/search.min.css">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 </head>
@@ -59,9 +59,9 @@
         </script><div class="wrapper"><nav class="navbar">
     <div class="navbar-container">
         <div class="navbar-header animated bounceIn">
-            <a href="http://zhaoqiangcn.github.io/BlogHugoLoveit/">Zhaoqiang&#39;s Blog | Java Developer</a>
+            <a href="https://www.spacesh.com/">Zhaoqiang&#39;s Blog | Java Developer</a>
         </div>
-        <div class="navbar-menu"><a class="menu-item" href="http://zhaoqiangcn.github.io/BlogHugoLoveit/posts" title="">Posts</a><a class="menu-item" href="http://zhaoqiangcn.github.io/BlogHugoLoveit/tags" title="">Tags</a><a class="menu-item" href="http://zhaoqiangcn.github.io/BlogHugoLoveit/categories" title="">Categories</a><a class="menu-item" href="http://zhaoqiangcn.github.io/BlogHugoLoveit/about" title="">About</a><a class="menu-item" href="https://hugo-loveit-zh.netlify.com" title="简体中文"><i class="fas fa-language fa-fw"></i></a><a href="javascript:void(0);" class="theme-switch"><i class="fas fa-adjust fa-rotate-180 fa-fw" title="切换主题"></i></a>
+        <div class="navbar-menu"><a class="menu-item" href="https://www.spacesh.com/posts" title="">Posts</a><a class="menu-item" href="https://www.spacesh.com/tags" title="">Tags</a><a class="menu-item" href="https://www.spacesh.com/categories" title="">Categories</a><a class="menu-item" href="https://www.spacesh.com/about" title="">About</a><a class="menu-item" href="https://hugo-loveit-zh.netlify.com" title="简体中文"><i class="fas fa-language fa-fw"></i></a><a href="javascript:void(0);" class="theme-switch"><i class="fas fa-adjust fa-rotate-180 fa-fw" title="切换主题"></i></a>
 			
             <a href="#ex1" rel="modal:open"><i class="fas fa-search fa-fw"></i></a>
             
@@ -71,21 +71,21 @@
     <div class="navbar-container">
         <div class="navbar-header">
             <div class="navbar-header-title animated bounceIn">
-                <a href="http://zhaoqiangcn.github.io/BlogHugoLoveit/">Zhaoqiang&#39;s Blog | Java Developer</a>
+                <a href="https://www.spacesh.com/">Zhaoqiang&#39;s Blog | Java Developer</a>
             </div>
             <div class="menu-toggle" id="menu-toggle">
                 <span></span><span></span><span></span>
             </div>
         </div>
-        <div class="navbar-menu" id="mobile-menu"><a class="menu-item" href="http://zhaoqiangcn.github.io/BlogHugoLoveit/posts" title="">Posts</a><a class="menu-item" href="http://zhaoqiangcn.github.io/BlogHugoLoveit/tags" title="">Tags</a><a class="menu-item" href="http://zhaoqiangcn.github.io/BlogHugoLoveit/categories" title="">Categories</a><a class="menu-item" href="http://zhaoqiangcn.github.io/BlogHugoLoveit/about" title="">About</a><a class="menu-item" href="https://hugo-loveit-zh.netlify.com" title="简体中文"></a><a href="javascript:void(0);" class="theme-switch"><i class="fas fa-adjust fa-rotate-180 fa-fw" title="切换主题"></i></a>
+        <div class="navbar-menu" id="mobile-menu"><a class="menu-item" href="https://www.spacesh.com/posts" title="">Posts</a><a class="menu-item" href="https://www.spacesh.com/tags" title="">Tags</a><a class="menu-item" href="https://www.spacesh.com/categories" title="">Categories</a><a class="menu-item" href="https://www.spacesh.com/about" title="">About</a><a class="menu-item" href="https://hugo-loveit-zh.netlify.com" title="简体中文"></a><a href="javascript:void(0);" class="theme-switch"><i class="fas fa-adjust fa-rotate-180 fa-fw" title="切换主题"></i></a>
         </div>
     </div>
 </nav>
 <main class="main">
                 <div class="container"><article class="page"><h1 class="post-title animated flipInX">用 Hugo 配合 GithubActions 自动构建我的博客</h1><div class="post-meta">
-            <div class="post-meta-main"><a class="author" href="http://zhaoqiangcn.github.io/BlogHugoLoveit/" rel="author" target="_blank">
+            <div class="post-meta-main"><a class="author" href="https://www.spacesh.com/" rel="author" target="_blank">
                     <i class="fas fa-user-circle fa-fw"></i>zhaoqiang
-                </a>&nbsp;<span class="post-category">收录于&nbsp;<i class="far fa-folder fa-fw"></i><a href="http://zhaoqiangcn.github.io/BlogHugoLoveit/categories/hugo/">H u g o</a>&nbsp;</span></div>
+                </a>&nbsp;<span class="post-category">收录于&nbsp;<i class="far fa-folder fa-fw"></i><a href="https://www.spacesh.com/categories/hugo/">H u g o</a>&nbsp;</span></div>
             <div class="post-meta-other"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-01-09>2020-01-09</time>&nbsp;
                 <i class="fas fa-pencil-alt fa-fw"></i>约 862 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>预计阅读 2 分钟&nbsp;</div>
@@ -293,11 +293,11 @@ git push origin develop
         </div>
         <div class="post-info-line">
             <div class="post-info-md"></div>
-            <div class="post-info-share"><span><a href="//twitter.com/share?url=http%3a%2f%2fzhaoqiangcn.github.io%2fBlogHugoLoveit%2f2020%2f01%2fhugo-github-actions%2f&amp;text=%e7%94%a8%20Hugo%20%e9%85%8d%e5%90%88%20GithubActions%20%e8%87%aa%e5%8a%a8%e6%9e%84%e5%bb%ba%e6%88%91%e7%9a%84%e5%8d%9a%e5%ae%a2&amp;via=xxxx" target="_blank" title="分享到 Twitter">
+            <div class="post-info-share"><span><a href="//twitter.com/share?url=https%3a%2f%2fwww.spacesh.com%2f2020%2f01%2fhugo-github-actions%2f&amp;text=%e7%94%a8%20Hugo%20%e9%85%8d%e5%90%88%20GithubActions%20%e8%87%aa%e5%8a%a8%e6%9e%84%e5%bb%ba%e6%88%91%e7%9a%84%e5%8d%9a%e5%ae%a2&amp;via=xxxx" target="_blank" title="分享到 Twitter">
             <i class="fab fa-twitter fa-fw"></i>
-        </a><a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fzhaoqiangcn.github.io%2fBlogHugoLoveit%2f2020%2f01%2fhugo-github-actions%2f" target="_blank" title="分享到 Facebook">
+        </a><a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.spacesh.com%2f2020%2f01%2fhugo-github-actions%2f" target="_blank" title="分享到 Facebook">
             <i class="fab fa-facebook-square fa-fw"></i>
-        </a><a href="//reddit.com/submit?url=http%3a%2f%2fzhaoqiangcn.github.io%2fBlogHugoLoveit%2f2020%2f01%2fhugo-github-actions%2f&amp;title=%e7%94%a8%20Hugo%20%e9%85%8d%e5%90%88%20GithubActions%20%e8%87%aa%e5%8a%a8%e6%9e%84%e5%bb%ba%e6%88%91%e7%9a%84%e5%8d%9a%e5%ae%a2" target="_blank" title="分享到 Reddit">
+        </a><a href="//reddit.com/submit?url=https%3a%2f%2fwww.spacesh.com%2f2020%2f01%2fhugo-github-actions%2f&amp;title=%e7%94%a8%20Hugo%20%e9%85%8d%e5%90%88%20GithubActions%20%e8%87%aa%e5%8a%a8%e6%9e%84%e5%bb%ba%e6%88%91%e7%9a%84%e5%8d%9a%e5%ae%a2" target="_blank" title="分享到 Reddit">
             <i class="fab fa-reddit fa-fw"></i>
         </a></span></div>
         </div>
@@ -305,17 +305,17 @@ git push origin develop
 
     <div class="post-info-more">
         <section><span class="tag">
-                        <a href="http://zhaoqiangcn.github.io/BlogHugoLoveit/tags/github-pages/"><i class="fas fa-tag fa-fw"></i>&nbsp;Github Pages</a>&nbsp;
+                        <a href="https://www.spacesh.com/tags/github-pages/"><i class="fas fa-tag fa-fw"></i>&nbsp;Github Pages</a>&nbsp;
                     </span><span class="tag">
-                        <a href="http://zhaoqiangcn.github.io/BlogHugoLoveit/tags/github-actions/"><i class="fas fa-tag fa-fw"></i>&nbsp;Github Actions</a>&nbsp;
+                        <a href="https://www.spacesh.com/tags/github-actions/"><i class="fas fa-tag fa-fw"></i>&nbsp;Github Actions</a>&nbsp;
                     </span></section>
         <section>
-            <span><a href="javascript:window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="http://zhaoqiangcn.github.io/BlogHugoLoveit/">主页</a></span>
+            <span><a href="javascript:window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="https://www.spacesh.com/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="http://zhaoqiangcn.github.io/BlogHugoLoveit/2020/01/naiveboom/" class="prev" rel="prev" title="NaiveBoom 阅后即焚"><i class="fas fa-angle-left fa-fw"></i>NaiveBoom 阅后即焚</a>
-            <a href="http://zhaoqiangcn.github.io/BlogHugoLoveit/2020/01/hugo-valine/" class="next" rel="next" title="在 HUGO 中添加 Valine 评论系统的过程">在 HUGO 中添加 Valine 评论系统的过程<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="https://www.spacesh.com/2020/01/naiveboom/" class="prev" rel="prev" title="NaiveBoom 阅后即焚"><i class="fas fa-angle-left fa-fw"></i>NaiveBoom 阅后即焚</a>
+            <a href="https://www.spacesh.com/2020/01/hugo-valine/" class="next" rel="next" title="在 HUGO 中添加 Valine 评论系统的过程">在 HUGO 中添加 Valine 评论系统的过程<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div class="post-comment"></div>
     </article></div>
@@ -323,12 +323,12 @@ git push origin develop
     <div class="copyright"><div class="copyright-line">由 <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreffer">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="external nofollow noopener noreffer">LoveIt<i class="far fa-heart fa-fw"></i></a>
         </div>
 
-        <div class="copyright-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2016 - 2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="http://zhaoqiangcn.github.io/BlogHugoLoveit/" target="_blank">zhaoqiang</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        <div class="copyright-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2016 - 2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://www.spacesh.com/" target="_blank">zhaoqiang</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
     </div>
 </footer>
 </div><a href="#" class="dynamic-to-top" id="dynamic-to-top" data-scroll>
             <span>&nbsp;</span>
-        </a><script src="/BlogHugoLoveit/js/lib/jquery/jquery.slim.min.js"></script><script src="/BlogHugoLoveit/js/lib/lazysizes/lazysizes.min.js"></script><script src="/BlogHugoLoveit/js/lib/smooth-scroll/smooth-scroll.polyfills.min.js"></script><script>window.scroll = new SmoothScroll('[data-scroll]', {speed: 300, speedAsDuration: true});</script><link rel="stylesheet" href="/BlogHugoLoveit/css/lib/katex/katex.min.css"><script src="/BlogHugoLoveit/js/lib/katex/katex.min.js"></script><script defer src="/BlogHugoLoveit/js/lib/katex/auto-render.min.js"></script><link rel="stylesheet" href="/BlogHugoLoveit/css/lib/katex/copy-tex.min.css"><script defer src="/BlogHugoLoveit/js/lib/katex/copy-tex.min.js"></script><script defer src="/BlogHugoLoveit/js/lib/katex/mhchem.min.js"></script><script>
+        </a><script src="/js/lib/jquery/jquery.slim.min.js"></script><script src="/js/lib/lazysizes/lazysizes.min.js"></script><script src="/js/lib/smooth-scroll/smooth-scroll.polyfills.min.js"></script><script>window.scroll = new SmoothScroll('[data-scroll]', {speed: 300, speedAsDuration: true});</script><link rel="stylesheet" href="/css/lib/katex/katex.min.css"><script src="/js/lib/katex/katex.min.js"></script><script defer src="/js/lib/katex/auto-render.min.js"></script><link rel="stylesheet" href="/css/lib/katex/copy-tex.min.css"><script defer src="/js/lib/katex/copy-tex.min.js"></script><script defer src="/js/lib/katex/mhchem.min.js"></script><script>
         document.addEventListener("DOMContentLoaded", function () {
             renderMathInElement(document.body, {
                 delimiters: [
@@ -337,7 +337,7 @@ git push origin develop
                     { left: "\\[", right: "\\]", display: true },{ left: "$", right: "$", display: false },]
             });
         });
-    </script><script src="/BlogHugoLoveit/js/blog.min.js"></script>
+    </script><script src="/js/blog.min.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 
@@ -349,7 +349,7 @@ git push origin develop
 
 
  
-<script src= "/BlogHugoLoveit/js/search.js" type="text/javascript"></script>
+<script src= "/js/search.js" type="text/javascript"></script>
     <div id="ex1" class="modal">
         <div class="aa-input-container" id="aa-input-container">
     <input type="search" id="aa-search-input" class="aa-input-search" placeholder="Search for titles or URIs..." name="search" autocomplete="off" />
