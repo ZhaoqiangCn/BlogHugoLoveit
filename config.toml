@@ -57,7 +57,7 @@ dateFormatToUse = "2016-01-02"
 
 # Author Info
 [author]
-  name = "xxxx"
+  name = "zhao qiang"
   link = ""
 
 # Sitemap Info
@@ -68,7 +68,7 @@ dateFormatToUse = "2016-01-02"
 
 # Permalinks Info (https://gohugo.io/content-management/urls/#permalinks)
 [Permalinks]
-  posts = ":year/:month/:filename"
+  posts = ":filename"
 
 # Menu Info
 [menu]
@@ -96,13 +96,13 @@ dateFormatToUse = "2016-01-02"
     url = "about"
     weight = 4
 
-  [[menu.main]]
-    identifier = "zh"
-    pre = '<i class="fas fa-language fa-fw"></i>'
-    name = ""
-    title = "简体中文"
-    url = "https://hugo-loveit-zh.netlify.com"
-    weight = 5
+#  [[menu.main]]
+#    identifier = "zh"
+#    pre = '<i class="fas fa-language fa-fw"></i>'
+#    name = ""
+#    title = "简体中文"
+#    url = "https://hugo-loveit-zh.netlify.com"
+#    weight = 5
 
 [params]
   # LoveIt theme version
