@@ -130,7 +130,7 @@ dateFormatToUse = "2016-01-02"
   ## Site creation time
   since = 2019
   ## ICP info only in China (HTML format is allowed)
-  icp = "<a href="http://www.beian.miit.gov.cn">沪ICP备17033498号</a>"
+  icp = '<a href="http://www.beian.miit.gov.cn">沪ICP备17033498号</a>'
   ## license info (HTML format is allowed)
   license= '<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
 
