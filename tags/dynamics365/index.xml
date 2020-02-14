@@ -2,40 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dynamics365 on Zhaoqiang&#39;s Blog</title>
-    <link>https://zhaoqiangcn.github.io/BlogHugoLoveit/tags/dynamics365/</link>
+    <link>https://www.spacesh.com/tags/dynamics365/</link>
     <description>Recent content in Dynamics365 on Zhaoqiang&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
     <lastBuildDate>Wed, 15 Jan 2020 16:25:29 +0800</lastBuildDate>
     
-	<atom:link href="https://zhaoqiangcn.github.io/BlogHugoLoveit/tags/dynamics365/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.spacesh.com/tags/dynamics365/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>How to create deployable packages in Dynamics 365 </title>
-      <link>https://zhaoqiangcn.github.io/BlogHugoLoveit/2020/01/dynamics-365-deployable-packages/</link>
+      <link>https://www.spacesh.com/2020/01/dynamics-365-deployable-packages/</link>
       <pubDate>Wed, 15 Jan 2020 16:25:29 +0800</pubDate>
       
-      <guid>https://zhaoqiangcn.github.io/BlogHugoLoveit/2020/01/dynamics-365-deployable-packages/</guid>
+      <guid>https://www.spacesh.com/2020/01/dynamics-365-deployable-packages/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Dynamics 365 On-premises Environments</title>
-      <link>https://zhaoqiangcn.github.io/BlogHugoLoveit/2020/01/dynamics-365-on-premises/</link>
+      <link>https://www.spacesh.com/2020/01/dynamics-365-on-premises/</link>
       <pubDate>Wed, 15 Jan 2020 14:24:30 +0800</pubDate>
       
-      <guid>https://zhaoqiangcn.github.io/BlogHugoLoveit/2020/01/dynamics-365-on-premises/</guid>
+      <guid>https://www.spacesh.com/2020/01/dynamics-365-on-premises/</guid>
       <description></description>
     </item>
     
     <item>
       <title>How to deploy instance in Dynamics 365</title>
-      <link>https://zhaoqiangcn.github.io/BlogHugoLoveit/2019/12/dynamics-365-instance-deploy/</link>
+      <link>https://www.spacesh.com/2019/12/dynamics-365-instance-deploy/</link>
       <pubDate>Wed, 11 Dec 2019 13:53:26 +0800</pubDate>
       
-      <guid>https://zhaoqiangcn.github.io/BlogHugoLoveit/2019/12/dynamics-365-instance-deploy/</guid>
+      <guid>https://www.spacesh.com/2019/12/dynamics-365-instance-deploy/</guid>
       <description></description>
     </item>
     
