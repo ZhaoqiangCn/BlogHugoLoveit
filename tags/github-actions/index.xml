@@ -14,19 +14,19 @@
     
     <item>
       <title>使用 GitHub Actions 编译 OpenWrt</title>
-      <link>https://www.spacesh.com/2020/01/openwrt-build/</link>
+      <link>https://www.spacesh.com/openwrt-build/</link>
       <pubDate>Fri, 10 Jan 2020 16:15:18 +0800</pubDate>
       
-      <guid>https://www.spacesh.com/2020/01/openwrt-build/</guid>
+      <guid>https://www.spacesh.com/openwrt-build/</guid>
       <description></description>
     </item>
     
     <item>
       <title>用 Hugo 配合 GithubActions 自动构建我的博客</title>
-      <link>https://www.spacesh.com/2020/01/hugo-github-actions/</link>
+      <link>https://www.spacesh.com/hugo-github-actions/</link>
       <pubDate>Thu, 09 Jan 2020 14:52:40 +0800</pubDate>
       
-      <guid>https://www.spacesh.com/2020/01/hugo-github-actions/</guid>
+      <guid>https://www.spacesh.com/hugo-github-actions/</guid>
       <description></description>
     </item>
     
