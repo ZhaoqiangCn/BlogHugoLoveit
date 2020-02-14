@@ -15,7 +15,7 @@ $(function() {
           if (suggestion.search) {
             search = suggestion.search;
           } else {
-            search = suggestion.uri;
+            search = suggestion.title;
           }
           return (
             "<span>" +
