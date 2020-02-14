@@ -1,16 +1,16 @@
 baseURL = "https://zhaoqiangcn.github.io/BlogHugoLoveit/"
 # website language
-languageCode = "en"
+languageCode = "zh"
 # [en, zh, ...] determines which i18n file to use
-defaultContentLanguage = "en"
+defaultContentLanguage = "zh"
 # website title
-title = "LoveIt Theme"
+title = "Zhaoqiang's Blog"
 # theme
 theme = "LoveIt"
 # whether to use git commit log to generate lastmod record
 enableGitInfo = false
 # whether to include chinese/japanese/korean
-hasCJKLanguage = false
+hasCJKLanguage = true
 # default amount of posts in each pages
 paginate = 12
 # whether to use emoji code
@@ -18,11 +18,11 @@ enableEmoji = true
 # whether to use robots.txt
 enableRobotsTXT = true
 # [UA-XXXXXXXX-X] google analytics code
-googleAnalytics = ""
+googleAnalytics = "UA-105751499-1"
 # copyright description used only for seo schema
 copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
 # date format
-dateFormatToUse = "2006-01-02"
+dateFormatToUse = "2016-01-02"
 
 # Markup related configuration in Hugo
 [markup]
@@ -107,9 +107,9 @@ dateFormatToUse = "2006-01-02"
   # LoveIt theme version
   version = "0.1.X"
   # site description
-  description = "About LoveIt Theme"
+  description = "Zhao Qiang's Blog"
   # site keywords
-  keywords = ["Theme", "Hugo"]
+  keywords = ["Dynamics AX", "Github" ,"Linux", "Synology","HUGO"]
   # site default theme ("light", "dark", "auto")
   defaultTheme = "auto"
 
@@ -121,7 +121,7 @@ dateFormatToUse = "2006-01-02"
   ## URL of avatar shown in home page
   avatar = "images/avatar.png"
   ## subtitle shown in home page
-  subtitle = "A Clean, Elegant but Advanced Hugo Theme"
+  subtitle = "Welcome to my blog !"
 
   # whether to show social share links in post page
   socialShare = true
@@ -162,14 +162,15 @@ dateFormatToUse = "2006-01-02"
   # CSS and JS Files CDN
   [params.cdn]
     ## for example '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.10.1/css/all.min.css" integrity="sha256-fdcFNFiBMrNfWL6OcAGQz6jDgNTRxnrLEd4vJYFWScE=" crossorigin="anonymous">'
-    fontawesome_free_css = ''
-    animate_css = ''
-    gitalk_css = ''
-    gitalk_js = ''
+    fontawesome_free_css = '<link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">'                           # 例如 '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.10.1/css/all.min.css" integrity="sha256-fdcFNFiBMrNfWL6OcAGQz6jDgNTRxnrLEd4vJYFWScE=" crossorigin="anonymous">'
+    animate_css = '<link href="https://cdn.bootcss.com/animate.css/3.7.2/animate.css" rel="stylesheet">'
+    gitalk_css = '<link href="https://cdn.bootcss.com/gitalk/1.5.0/gitalk.min.css" rel="stylesheet">'
+    gitalk_js = '<script src="https://cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js"></script>'
+    jquery_js = '<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.slim.min.js"></script>'
+    lazysizes_js = '<script src="https://cdn.bootcss.com/lazysizes/5.1.2/lazysizes.min.js"></script>'
+    smooth_scroll_js = '<script src="https://cdn.bootcss.com/smooth-scroll/16.1.0/smooth-scroll.polyfills.min.js"></script>'
+    typeit_js = '<script src="https://cdn.bootcss.com/typeit/6.0.3/typeit.min.js"></script>'
     valine_js = ''
-    jquery_js = ''
-    lazysizes_js = ''
-    smooth_scroll_js = ''
     katex_css = ''
     katex_js = ''
     katex_auto_render_js = ''
@@ -179,7 +180,6 @@ dateFormatToUse = "2006-01-02"
     mermaid_js = ''
     echarts_js = ''
     echarts_macarons_js = ''
-    typeit_js = ''
     jquery_countdown_js = ''
     aplayer_css = ''
     aplayer_js = ''
@@ -191,6 +191,7 @@ dateFormatToUse = "2006-01-02"
 
   # Social Info in home page
   [params.social]
+    BiliBili = "https://space.bilibili.com/474553042"
     GitHub = "xxxx"
     Linkedin = "xxxx"
     Twitter = "xxxx"
@@ -304,14 +305,12 @@ dateFormatToUse = "2006-01-02"
   # Valine Comment Config (https://github.com/xCss/Valine)
   [params.valine]
     enable = false
-    appId = ""
-    appKey = ""
-    placeholder = "Your comment ..."
-    notify = false
-    verify = true
-    avatar = "mp"
-    #meta= ""
-    pageSize = 10
+    appId = 'Bu42IhLNJc94WvCDKSsRwTqa-gzGzoHsz'
+    appKey = 'bKSP5XiBoIHs8PyXC4uhGhqQ'
+    notify = false  # mail notifier , https://github.com/xCss/Valine/wiki
+    verify = false # Verification code
+    avatar = 'mm' 
+    placeholder = '说点什么吧...'
     visitor = true
     recordIP = true
 

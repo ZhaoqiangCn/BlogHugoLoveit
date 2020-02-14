@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>使用 ACME 免费申请 Let&#39;s Encrypt 证书 | LoveIt Theme</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>使用 ACME 免费申请 Let&#39;s Encrypt 证书 | Zhaoqiang&#39;s Blog</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noodp" />
-<meta name="Description" content="About LoveIt Theme"><link rel="prev" href="https://zhaoqiangcn.github.io/BlogHugoLoveit/2018/09/pandalearning/" /><link rel="next" href="https://zhaoqiangcn.github.io/BlogHugoLoveit/2019/05/docker-clean/" /><link rel="canonical" href="https://zhaoqiangcn.github.io/BlogHugoLoveit/2019/01/acme/" />
+<meta name="Description" content="Zhao Qiang&#39;s Blog"><link rel="prev" href="https://zhaoqiangcn.github.io/BlogHugoLoveit/2018/09/pandalearning/" /><link rel="next" href="https://zhaoqiangcn.github.io/BlogHugoLoveit/2019/05/docker-clean/" /><link rel="canonical" href="https://zhaoqiangcn.github.io/BlogHugoLoveit/2019/01/acme/" />
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -35,7 +35,7 @@
                 "url": "https:\/\/zhaoqiangcn.github.io\/BlogHugoLoveit\/cover.png",
                 "width":  800 ,
                 "height":  600 
-            },"genre": "posts","keywords": "acme, letsencrypt, https, 证书","wordcount":  455 ,
+            },"genre": "posts","keywords": "acme, letsencrypt, https, 证书","wordcount":  1738 ,
         "url": "https:\/\/zhaoqiangcn.github.io\/BlogHugoLoveit\/2019\/01\/acme\/","datePublished": "2019-01-15T16:05:16\x2b08:00","dateModified": "2019-01-15T16:05:16\x2b08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
                 "@type": "Organization",
                 "name": "xxxx",
@@ -59,9 +59,9 @@
         </script><div class="wrapper"><nav class="navbar">
     <div class="navbar-container">
         <div class="navbar-header animated bounceIn">
-            <a href="https://zhaoqiangcn.github.io/BlogHugoLoveit/">LoveIt Theme</a>
+            <a href="https://zhaoqiangcn.github.io/BlogHugoLoveit/">Zhaoqiang&#39;s Blog</a>
         </div>
-        <div class="navbar-menu"><a class="menu-item" href="https://zhaoqiangcn.github.io/BlogHugoLoveit/posts" title="">Posts</a><a class="menu-item" href="https://zhaoqiangcn.github.io/BlogHugoLoveit/tags" title="">Tags</a><a class="menu-item" href="https://zhaoqiangcn.github.io/BlogHugoLoveit/categories" title="">Categories</a><a class="menu-item" href="https://zhaoqiangcn.github.io/BlogHugoLoveit/about" title="">About</a><a class="menu-item" href="https://hugo-loveit-zh.netlify.com" title="简体中文"><i class="fas fa-language fa-fw"></i></a><a href="javascript:void(0);" class="theme-switch"><i class="fas fa-adjust fa-rotate-180 fa-fw" title="Switch Theme"></i></a>
+        <div class="navbar-menu"><a class="menu-item" href="https://zhaoqiangcn.github.io/BlogHugoLoveit/posts" title="">Posts</a><a class="menu-item" href="https://zhaoqiangcn.github.io/BlogHugoLoveit/tags" title="">Tags</a><a class="menu-item" href="https://zhaoqiangcn.github.io/BlogHugoLoveit/categories" title="">Categories</a><a class="menu-item" href="https://zhaoqiangcn.github.io/BlogHugoLoveit/about" title="">About</a><a class="menu-item" href="https://hugo-loveit-zh.netlify.com" title="简体中文"><i class="fas fa-language fa-fw"></i></a><a href="javascript:void(0);" class="theme-switch"><i class="fas fa-adjust fa-rotate-180 fa-fw" title="切换主题"></i></a>
 			
             <a href="#ex1" rel="modal:open"><i class="fas fa-search fa-fw"></i></a>
             
@@ -71,13 +71,13 @@
     <div class="navbar-container">
         <div class="navbar-header">
             <div class="navbar-header-title animated bounceIn">
-                <a href="https://zhaoqiangcn.github.io/BlogHugoLoveit/">LoveIt Theme</a>
+                <a href="https://zhaoqiangcn.github.io/BlogHugoLoveit/">Zhaoqiang&#39;s Blog</a>
             </div>
             <div class="menu-toggle" id="menu-toggle">
                 <span></span><span></span><span></span>
             </div>
         </div>
-        <div class="navbar-menu" id="mobile-menu"><a class="menu-item" href="https://zhaoqiangcn.github.io/BlogHugoLoveit/posts" title="">Posts</a><a class="menu-item" href="https://zhaoqiangcn.github.io/BlogHugoLoveit/tags" title="">Tags</a><a class="menu-item" href="https://zhaoqiangcn.github.io/BlogHugoLoveit/categories" title="">Categories</a><a class="menu-item" href="https://zhaoqiangcn.github.io/BlogHugoLoveit/about" title="">About</a><a class="menu-item" href="https://hugo-loveit-zh.netlify.com" title="简体中文"></a><a href="javascript:void(0);" class="theme-switch"><i class="fas fa-adjust fa-rotate-180 fa-fw" title="Switch Theme"></i></a>
+        <div class="navbar-menu" id="mobile-menu"><a class="menu-item" href="https://zhaoqiangcn.github.io/BlogHugoLoveit/posts" title="">Posts</a><a class="menu-item" href="https://zhaoqiangcn.github.io/BlogHugoLoveit/tags" title="">Tags</a><a class="menu-item" href="https://zhaoqiangcn.github.io/BlogHugoLoveit/categories" title="">Categories</a><a class="menu-item" href="https://zhaoqiangcn.github.io/BlogHugoLoveit/about" title="">About</a><a class="menu-item" href="https://hugo-loveit-zh.netlify.com" title="简体中文"></a><a href="javascript:void(0);" class="theme-switch"><i class="fas fa-adjust fa-rotate-180 fa-fw" title="切换主题"></i></a>
         </div>
     </div>
 </nav>
@@ -85,10 +85,10 @@
                 <div class="container"><article class="page"><h1 class="post-title animated flipInX">使用 ACME 免费申请 Let&#39;s Encrypt 证书</h1><div class="post-meta">
             <div class="post-meta-main"><a class="author" href="https://zhaoqiangcn.github.io/BlogHugoLoveit/" rel="author" target="_blank">
                     <i class="fas fa-user-circle fa-fw"></i>xxxx
-                </a>&nbsp;<span class="post-category">included in&nbsp;<i class="far fa-folder fa-fw"></i><a href="https://zhaoqiangcn.github.io/BlogHugoLoveit/categories/linux/">Linux</a>&nbsp;</span></div>
+                </a>&nbsp;<span class="post-category">收录于&nbsp;<i class="far fa-folder fa-fw"></i><a href="https://zhaoqiangcn.github.io/BlogHugoLoveit/categories/linux/">Linux</a>&nbsp;</span></div>
             <div class="post-meta-other"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2019-01-15>2019-01-15</time>&nbsp;
-                <i class="fas fa-pencil-alt fa-fw"></i>about 455 words&nbsp;
-                <i class="far fa-clock fa-fw"></i>3 min&nbsp;</div>
+                <i class="fas fa-pencil-alt fa-fw"></i>约 1738 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>预计阅读 4 分钟&nbsp;</div>
         </div><div class="post-content"><a class="post-dummy-target" id="1-安装-acmesh"></a><h2>1. 安装 <strong>acme.sh</strong></h2>
 <p>安装很简单, 一个命令:</p>
 <div class="highlight"><div class="chroma">
@@ -317,17 +317,17 @@ export Ali_Secret=&#34;jlsdflanljkljlfdsaklkjflsa&#34;
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>The article was updated on 2019-01-15</span>
+                <span>本文于 2019-01-15 更新</span>
             </div>
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
             <div class="post-info-md"></div>
-            <div class="post-info-share"><span><a href="//twitter.com/share?url=https%3a%2f%2fzhaoqiangcn.github.io%2fBlogHugoLoveit%2f2019%2f01%2facme%2f&amp;text=%e4%bd%bf%e7%94%a8%20ACME%20%e5%85%8d%e8%b4%b9%e7%94%b3%e8%af%b7%20Let%27s%20Encrypt%20%e8%af%81%e4%b9%a6&amp;via=xxxx" target="_blank" title="Share on Twitter">
+            <div class="post-info-share"><span><a href="//twitter.com/share?url=https%3a%2f%2fzhaoqiangcn.github.io%2fBlogHugoLoveit%2f2019%2f01%2facme%2f&amp;text=%e4%bd%bf%e7%94%a8%20ACME%20%e5%85%8d%e8%b4%b9%e7%94%b3%e8%af%b7%20Let%27s%20Encrypt%20%e8%af%81%e4%b9%a6&amp;via=xxxx" target="_blank" title="分享到 Twitter">
             <i class="fab fa-twitter fa-fw"></i>
-        </a><a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fzhaoqiangcn.github.io%2fBlogHugoLoveit%2f2019%2f01%2facme%2f" target="_blank" title="Share on Facebook">
+        </a><a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fzhaoqiangcn.github.io%2fBlogHugoLoveit%2f2019%2f01%2facme%2f" target="_blank" title="分享到 Facebook">
             <i class="fab fa-facebook-square fa-fw"></i>
-        </a><a href="//reddit.com/submit?url=https%3a%2f%2fzhaoqiangcn.github.io%2fBlogHugoLoveit%2f2019%2f01%2facme%2f&amp;title=%e4%bd%bf%e7%94%a8%20ACME%20%e5%85%8d%e8%b4%b9%e7%94%b3%e8%af%b7%20Let%27s%20Encrypt%20%e8%af%81%e4%b9%a6" target="_blank" title="Share on Reddit">
+        </a><a href="//reddit.com/submit?url=https%3a%2f%2fzhaoqiangcn.github.io%2fBlogHugoLoveit%2f2019%2f01%2facme%2f&amp;title=%e4%bd%bf%e7%94%a8%20ACME%20%e5%85%8d%e8%b4%b9%e7%94%b3%e8%af%b7%20Let%27s%20Encrypt%20%e8%af%81%e4%b9%a6" target="_blank" title="分享到 Reddit">
             <i class="fab fa-reddit fa-fw"></i>
         </a></span></div>
         </div>
@@ -344,7 +344,7 @@ export Ali_Secret=&#34;jlsdflanljkljlfdsaklkjflsa&#34;
                         <a href="https://zhaoqiangcn.github.io/BlogHugoLoveit/tags/%E8%AF%81%E4%B9%A6/"><i class="fas fa-tag fa-fw"></i>&nbsp;证书</a>&nbsp;
                     </span></section>
         <section>
-            <span><a href="javascript:window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="https://zhaoqiangcn.github.io/BlogHugoLoveit/">Home</a></span>
+            <span><a href="javascript:window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="https://zhaoqiangcn.github.io/BlogHugoLoveit/">主页</a></span>
         </section>
     </div>
 
@@ -354,7 +354,7 @@ export Ali_Secret=&#34;jlsdflanljkljlfdsaklkjflsa&#34;
 <div class="post-comment"></div>
     </article></div>
             </main><footer class="footer">
-    <div class="copyright"><div class="copyright-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreffer">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="external nofollow noopener noreffer">LoveIt<i class="far fa-heart fa-fw"></i></a>
+    <div class="copyright"><div class="copyright-line">由 <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreffer">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="external nofollow noopener noreffer">LoveIt<i class="far fa-heart fa-fw"></i></a>
         </div>
 
         <div class="copyright-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://zhaoqiangcn.github.io/BlogHugoLoveit/" target="_blank">xxxx</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
