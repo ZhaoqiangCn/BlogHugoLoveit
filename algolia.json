@@ -264,6 +264,25 @@
         ]
     },
     {
+        "author": "zhao qiang",
+        "uri": "posts/newnew",
+        "content": "Algolia testtest",
+        "objectID": "posts/newnew",
+        "author_link": "",
+        "title": "Algolia Test",
+        "date": "2020-02-14T06:27:22.000Z",
+        "lastmod": "2020-02-14T06:27:22.000Z",
+        "draft": false,
+        "description": "",
+        "show_in_homepage": true,
+        "description_as_summary": false,
+        "license": "",
+        "tags": [],
+        "categories": [],
+        "featured_image": "",
+        "featured_image_preview": ""
+    },
+    {
         "title": " 在宝塔面板部署Nextcloud服务",
         "uri": "posts/NextCloud-Deploy",
         "content": "centos7 4   nginx   php7 2   MariaDB      Nextcloud14             Nextcloud15                  Nextcloud                                  Nextcloud15  Nextcloud15          PHP7 2   SQL5 6   Nginx                    Nextcloud  1               2           wwwroot          nextclou zip                    3      zip           4                nextcloud              5                             6                                                                                                                                 755        770  7                     8                                                9",
