@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Even on Zhaoqiang&#39;s Blog | Java Developer</title>
-    <link>http://zhaoqiangcn.github.io/BlogHugoLoveit/tags/even/</link>
+    <link>https://www.spacesh.com/tags/even/</link>
     <description>Recent content in Even on Zhaoqiang&#39;s Blog | Java Developer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
     <lastBuildDate>Sun, 12 Jan 2020 14:49:17 +0800</lastBuildDate>
     
-	<atom:link href="http://zhaoqiangcn.github.io/BlogHugoLoveit/tags/even/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.spacesh.com/tags/even/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title> 部署 Hugo 静态博客到 Netlify 和 Github Pages</title>
-      <link>http://zhaoqiangcn.github.io/BlogHugoLoveit/2020/01/hugo-netlify/</link>
+      <link>https://www.spacesh.com/2020/01/hugo-netlify/</link>
       <pubDate>Sun, 12 Jan 2020 14:49:17 +0800</pubDate>
       
-      <guid>http://zhaoqiangcn.github.io/BlogHugoLoveit/2020/01/hugo-netlify/</guid>
+      <guid>https://www.spacesh.com/2020/01/hugo-netlify/</guid>
       <description></description>
     </item>
     

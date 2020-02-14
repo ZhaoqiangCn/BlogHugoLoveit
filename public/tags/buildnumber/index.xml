@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>BuildNumber on Zhaoqiang&#39;s Blog | Java Developer</title>
-    <link>http://zhaoqiangcn.github.io/BlogHugoLoveit/tags/buildnumber/</link>
+    <link>https://www.spacesh.com/tags/buildnumber/</link>
     <description>Recent content in BuildNumber on Zhaoqiang&#39;s Blog | Java Developer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
     <lastBuildDate>Mon, 09 Dec 2019 17:57:40 +0800</lastBuildDate>
     
-	<atom:link href="http://zhaoqiangcn.github.io/BlogHugoLoveit/tags/buildnumber/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.spacesh.com/tags/buildnumber/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Dynamics AX 版本号大全</title>
-      <link>http://zhaoqiangcn.github.io/BlogHugoLoveit/2019/12/dynamics-ax-buildnumbers/</link>
+      <link>https://www.spacesh.com/2019/12/dynamics-ax-buildnumbers/</link>
       <pubDate>Mon, 09 Dec 2019 17:57:40 +0800</pubDate>
       
-      <guid>http://zhaoqiangcn.github.io/BlogHugoLoveit/2019/12/dynamics-ax-buildnumbers/</guid>
+      <guid>https://www.spacesh.com/2019/12/dynamics-ax-buildnumbers/</guid>
       <description></description>
     </item>
     

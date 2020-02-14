@@ -2,49 +2,49 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>AX2009 on Zhaoqiang&#39;s Blog | Java Developer</title>
-    <link>http://zhaoqiangcn.github.io/BlogHugoLoveit/tags/ax2009/</link>
+    <link>https://www.spacesh.com/tags/ax2009/</link>
     <description>Recent content in AX2009 on Zhaoqiang&#39;s Blog | Java Developer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
     <lastBuildDate>Tue, 14 Jan 2020 11:03:30 +0800</lastBuildDate>
     
-	<atom:link href="http://zhaoqiangcn.github.io/BlogHugoLoveit/tags/ax2009/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.spacesh.com/tags/ax2009/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Using webservice to connect with Dynamics AX</title>
-      <link>http://zhaoqiangcn.github.io/BlogHugoLoveit/2020/01/dynamics-ax-webservice/</link>
+      <link>https://www.spacesh.com/2020/01/dynamics-ax-webservice/</link>
       <pubDate>Tue, 14 Jan 2020 11:03:30 +0800</pubDate>
       
-      <guid>http://zhaoqiangcn.github.io/BlogHugoLoveit/2020/01/dynamics-ax-webservice/</guid>
+      <guid>https://www.spacesh.com/2020/01/dynamics-ax-webservice/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Dynamics AX GoLive Data Import</title>
-      <link>http://zhaoqiangcn.github.io/BlogHugoLoveit/2020/01/dynamics-ax-golive-data-import/</link>
+      <link>https://www.spacesh.com/2020/01/dynamics-ax-golive-data-import/</link>
       <pubDate>Mon, 13 Jan 2020 14:58:36 +0800</pubDate>
       
-      <guid>http://zhaoqiangcn.github.io/BlogHugoLoveit/2020/01/dynamics-ax-golive-data-import/</guid>
+      <guid>https://www.spacesh.com/2020/01/dynamics-ax-golive-data-import/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Dynamics AX Auto Generate XML</title>
-      <link>http://zhaoqiangcn.github.io/BlogHugoLoveit/2020/01/dynamics-ax-auto-generate-xml/</link>
+      <link>https://www.spacesh.com/2020/01/dynamics-ax-auto-generate-xml/</link>
       <pubDate>Mon, 13 Jan 2020 09:50:21 +0800</pubDate>
       
-      <guid>http://zhaoqiangcn.github.io/BlogHugoLoveit/2020/01/dynamics-ax-auto-generate-xml/</guid>
+      <guid>https://www.spacesh.com/2020/01/dynamics-ax-auto-generate-xml/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Dynamics AX GoLive Data Initialize</title>
-      <link>http://zhaoqiangcn.github.io/BlogHugoLoveit/2020/01/dynamics-ax-golive-data-initialize/</link>
+      <link>https://www.spacesh.com/2020/01/dynamics-ax-golive-data-initialize/</link>
       <pubDate>Thu, 02 Jan 2020 10:19:24 +0800</pubDate>
       
-      <guid>http://zhaoqiangcn.github.io/BlogHugoLoveit/2020/01/dynamics-ax-golive-data-initialize/</guid>
+      <guid>https://www.spacesh.com/2020/01/dynamics-ax-golive-data-initialize/</guid>
       <description></description>
     </item>
     

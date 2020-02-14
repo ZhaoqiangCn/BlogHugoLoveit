@@ -1,4 +1,4 @@
-baseURL = "http://zhaoqiangcn.github.io/BlogHugoLoveit/"
+baseURL = "https://www.spacesh.com/"
 languageCode = "zh"                                      # 网站语言标识
 defaultContentLanguage = "zh"                            # [en, zh, ...] 设定主题的国际化
 title = "Zhaoqiang's Blog | Java Developer"                                      # 网站标题
