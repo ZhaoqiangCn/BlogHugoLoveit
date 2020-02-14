@@ -3,7 +3,9 @@
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 
 # Build the project.
-hugo -t loveit
+HUGO_ENV=production hugo --gc --minify
+
+#hugo -t loveit
 
 #echo "acbdc102e2c95f016d423fa03690923d $2"
 #searchKey="$2"
