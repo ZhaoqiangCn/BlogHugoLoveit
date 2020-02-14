@@ -192,7 +192,7 @@ dateFormatToUse = "2016-01-02"
 
   # Social Info in home page
   [params.social]
-    BiliBili = "https://space.bilibili.com/474553042"
+    #BiliBili = "https://space.bilibili.com/474553042"
     GitHub = "xxxx"
     Linkedin = "xxxx"
     Twitter = "xxxx"
@@ -202,7 +202,7 @@ dateFormatToUse = "2016-01-02"
     Telegram = "xxxx"
     #Medium = "xxxx"
     #Gitlab = "xxxx"
-    #Youtubelegacy = "xxxx"
+    Youtubelegacy = "https://space.bilibili.com/474553042"
     #Youtubecustom = "xxxx"
     #Youtubechannel = "xxxx"
     #Tumblr ="xxxx"
