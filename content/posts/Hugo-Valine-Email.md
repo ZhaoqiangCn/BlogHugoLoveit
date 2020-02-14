@@ -5,6 +5,7 @@ description: "Valine 评论系统 邮件通知"
 draft: false
 tags: [Valine]
 categories: [HUGO]
+toc:true
 ---
 
 <!--more-->
