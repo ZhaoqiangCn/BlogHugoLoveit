@@ -1,7 +1,7 @@
 $(function() {
   // 替换成自己的algolia信息
   var client = algoliasearch("EO42BFKWB5","acbdc102e2c95f016d423fa03690923d");
-  var index = client.initIndex("www.nashome.cn");
+  var index = client.initIndex("hugoblogloveit");
   autocomplete(
     "#aa-search-input",
     { hint: false },
