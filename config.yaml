@@ -1,13 +1,13 @@
 ---
-baseURL: "https://zhaoqiangcn.github.io/BlogHugoLoveit/"
-languageCode: "zh"
-title: "zhaoqiang's blog"
-theme: "LoveIt"
-description: "一个记录个人工作、生活的blog"
-
-#下面信息填写自己的algolia信息
+baseurl: "https://www.spacesh.com/"
+DefaultContentLanguage: "zh-cn"
+hasCJKLanguage: true
+languageCode: "zh-cn"
+title: "River's Site"
+theme: "beautifulhugo"
+metaDataFormat: "yaml"
 algolia:
-  index: "www.nashome.cn"
-  key: "acbdc102e2c95f016d423fa03690923d"
+  index: "hugoblogloveit"
+  key: "d3ef25fc7cb90a144ea0139748e4cf6b"
   appID: "EO42BFKWB5"
 ---
