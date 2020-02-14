@@ -1,9 +1,9 @@
 #baseURL = "https://zhaoqiangcn.github.io/BlogHugoLoveit/"
 baseURL = "https://www.spacesh.com/"
 # website language
-languageCode = "en"
+languageCode = "zh"
 # [en, zh, ...] determines which i18n file to use
-defaultContentLanguage = "en"
+defaultContentLanguage = "zh"
 # website title
 title = "Zhaoqiang's Blog"
 # theme
