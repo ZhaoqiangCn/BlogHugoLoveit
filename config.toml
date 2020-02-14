@@ -304,7 +304,7 @@ dateFormatToUse = "2016-01-02"
 
   # Valine Comment Config (https://github.com/xCss/Valine)
   [params.valine]
-    enable = false
+    enable = true
     appId = 'Bu42IhLNJc94WvCDKSsRwTqa-gzGzoHsz'
     appKey = 'bKSP5XiBoIHs8PyXC4uhGhqQ'
     notify = false  # mail notifier , https://github.com/xCss/Valine/wiki
