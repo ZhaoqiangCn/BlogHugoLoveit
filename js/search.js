@@ -15,14 +15,14 @@ $(function() {
           if (suggestion.search) {
             search = suggestion.search;
           } else {
-            search = suggestion.uri;
+            search = suggestion.title;
           }
           return (
             "<span>" +
             '<a href="/' +
             search +
             '">' +
-            suggestion._highlightResult.uri.value +
+            suggestion._highlightResult.title.value +
             "</a></span>"
           );
         }
