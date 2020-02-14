@@ -1,4 +1,5 @@
-baseURL = "https://zhaoqiangcn.github.io/BlogHugoLoveit/"
+#baseURL = "https://zhaoqiangcn.github.io/BlogHugoLoveit/"
+baseURL = "https://www.spacesh.com/"
 # website language
 languageCode = "zh"
 # [en, zh, ...] determines which i18n file to use
