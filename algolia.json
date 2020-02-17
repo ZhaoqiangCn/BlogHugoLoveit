@@ -15,7 +15,11 @@
         ],
         "categories": [
             "Linux"
-        ]
+        ],
+        "comment": true,
+        "toc": true,
+        "auto_collapse_toc": true,
+        "math": false
     },
     {
         "title": " Aria2 搭建离线下载并自动上传到 Google Drive",
@@ -31,7 +35,11 @@
         ],
         "categories": [
             "Linux"
-        ]
+        ],
+        "comment": true,
+        "toc": true,
+        "auto_collapse_toc": true,
+        "math": false
     },
     {
         "title": "清理 Docker 占用的磁盘空间",
@@ -47,7 +55,11 @@
         ],
         "categories": [
             "Linux"
-        ]
+        ],
+        "comment": true,
+        "toc": true,
+        "auto_collapse_toc": true,
+        "math": false
     },
     {
         "title": "How to create deployable packages in Dynamics 365 ",
@@ -62,8 +74,12 @@
             "Customization"
         ],
         "categories": [
-            "DynamicsAX"
-        ]
+            "Dynamicsax"
+        ],
+        "comment": true,
+        "toc": true,
+        "auto_collapse_toc": true,
+        "math": false
     },
     {
         "title": "How to deploy instance in Dynamics 365",
@@ -77,8 +93,12 @@
             "Dynamics365"
         ],
         "categories": [
-            "DynamicsAX"
-        ]
+            "Dynamicsax"
+        ],
+        "comment": true,
+        "toc": true,
+        "auto_collapse_toc": true,
+        "math": false
     },
     {
         "title": "Dynamics 365 On-premises Environments",
@@ -92,8 +112,12 @@
             "Dynamics365"
         ],
         "categories": [
-            "DynamicsAX"
-        ]
+            "Dynamicsax"
+        ],
+        "comment": true,
+        "toc": true,
+        "auto_collapse_toc": true,
+        "math": false
     },
     {
         "title": "Dynamics AX Auto Generate XML",
@@ -104,13 +128,17 @@
         "description": "Auto Generate XML From AX Document Service",
         "draft": false,
         "tags": [
-            "AX2009",
-            "XML",
+            "Ax2009",
+            "Xml",
             "DocumentService"
         ],
         "categories": [
-            "DynamicsAX"
-        ]
+            "Dynamicsax"
+        ],
+        "comment": true,
+        "toc": true,
+        "auto_collapse_toc": true,
+        "math": false
     },
     {
         "title": "Dynamics AX 版本号大全",
@@ -125,8 +153,12 @@
             "BuildNumber"
         ],
         "categories": [
-            "DynamicsAX"
-        ]
+            "Dynamicsax"
+        ],
+        "comment": true,
+        "toc": true,
+        "auto_collapse_toc": true,
+        "math": false
     },
     {
         "title": "Dynamics AX GoLive Data Import",
@@ -137,13 +169,17 @@
         "description": "DynamicsAX项目上线期初数据的初始化-期初余额导入功能",
         "draft": false,
         "tags": [
-            "AX2009",
+            "Ax2009",
             "Data",
             "Golive"
         ],
         "categories": [
-            "DynamicsAX"
-        ]
+            "Dynamicsax"
+        ],
+        "comment": true,
+        "toc": true,
+        "auto_collapse_toc": true,
+        "math": false
     },
     {
         "title": "Dynamics AX GoLive Data Initialize",
@@ -154,13 +190,17 @@
         "description": "DynamicsAX项目上线期初数据的初始化",
         "draft": false,
         "tags": [
-            "AX2009",
+            "Ax2009",
             "Data",
             "Golive"
         ],
         "categories": [
-            "DynamicsAX"
-        ]
+            "Dynamicsax"
+        ],
+        "comment": true,
+        "toc": true,
+        "auto_collapse_toc": true,
+        "math": false
     },
     {
         "title": "Using webservice to connect with Dynamics AX",
@@ -171,13 +211,17 @@
         "description": "",
         "draft": false,
         "tags": [
-            "AX2009",
+            "Ax2009",
             "WebService",
-            "WCF"
+            "Wcf"
         ],
         "categories": [
-            "DynamicsAX"
-        ]
+            "Dynamicsax"
+        ],
+        "comment": true,
+        "toc": true,
+        "auto_collapse_toc": true,
+        "math": false
     },
     {
         "title": "用 Hugo 配合 GithubActions 自动构建我的博客",
@@ -188,12 +232,14 @@
         "description": "",
         "draft": false,
         "tags": [
-            "Github Pages",
-            "Github Actions"
+            "GithubPages",
+            "GithubActions"
         ],
         "categories": [
-            "HUGO"
-        ]
+            "hugo"
+        ],
+        "autoCollapseToc": true,
+        "toc": true
     },
     {
         "title": " 部署 Hugo 静态博客到 Netlify 和 Github Pages",
@@ -205,12 +251,14 @@
         "draft": false,
         "tags": [
             "Netlify",
-            "Github Pages",
+            "GithubPages",
             "Even"
         ],
         "categories": [
-            "HUGO"
-        ]
+            "hugo"
+        ],
+        "autoCollapseToc": true,
+        "toc": true
     },
     {
         "title": "在 HUGO 中添加 Valine 评论系统的过程后续--邮件通知",
@@ -224,7 +272,7 @@
             "Valine"
         ],
         "categories": [
-            "HUGO"
+            "hugo"
         ],
         "autoCollapseToc": true,
         "toc": true
@@ -241,8 +289,10 @@
             "Valine"
         ],
         "categories": [
-            "HUGO"
-        ]
+            "hugo"
+        ],
+        "autoCollapseToc": true,
+        "toc": true
     },
     {
         "title": "NaiveBoom 阅后即焚",
@@ -255,27 +305,11 @@
         "tags": [],
         "categories": [
             "Linux"
-        ]
-    },
-    {
-        "author": "zhao qiang",
-        "uri": "post/newnew",
-        "content": "Algolia testtest asd",
-        "objectID": "post/newnew",
-        "author_link": "",
-        "title": "Algolia Test",
-        "date": "2020-02-14T06:27:22.000Z",
-        "lastmod": "2020-02-14T06:27:22.000Z",
-        "draft": false,
-        "description": "",
-        "show_in_homepage": true,
-        "description_as_summary": false,
-        "license": "",
-        "tags": [],
-        "categories": [],
-        "featured_image": "",
-        "featured_image_preview": "",
-        "toc": true
+        ],
+        "comment": true,
+        "toc": true,
+        "auto_collapse_toc": true,
+        "math": false
     },
     {
         "title": " 在宝塔面板部署Nextcloud服务",
@@ -290,7 +324,11 @@
         ],
         "categories": [
             "Linux"
-        ]
+        ],
+        "comment": true,
+        "toc": true,
+        "auto_collapse_toc": true,
+        "math": false
     },
     {
         "title": " Nextcloud 性能优化",
@@ -305,7 +343,11 @@
         ],
         "categories": [
             "Linux"
-        ]
+        ],
+        "comment": true,
+        "toc": true,
+        "auto_collapse_toc": true,
+        "math": false
     },
     {
         "title": "NextCloud Scan Files on Server",
@@ -320,7 +362,11 @@
         ],
         "categories": [
             "Linux"
-        ]
+        ],
+        "comment": true,
+        "toc": true,
+        "auto_collapse_toc": true,
+        "math": false
     },
     {
         "title": "免费申请 Office365 企业版一年试用教程",
@@ -334,8 +380,12 @@
             "Office365"
         ],
         "categories": [
-            "DynamicsAX"
-        ]
+            "Dynamicsax"
+        ],
+        "comment": true,
+        "toc": true,
+        "auto_collapse_toc": true,
+        "math": false
     },
     {
         "title": "使用 GitHub Actions 编译 OpenWrt",
@@ -346,12 +396,16 @@
         "description": "",
         "draft": false,
         "tags": [
-            "openwrt",
-            "Github Actions"
+            "Openwrt",
+            "GithubActions"
         ],
         "categories": [
             "Linux"
-        ]
+        ],
+        "comment": true,
+        "toc": true,
+        "auto_collapse_toc": true,
+        "math": false
     },
     {
         "title": "学习强国",
@@ -362,14 +416,18 @@
         "description": "",
         "draft": false,
         "tags": [
-            "chromium",
-            "chromedriver",
-            "selenium",
-            "debian9"
+            "Chromium",
+            "Chromedriver",
+            "Selenium",
+            "Debian9"
         ],
         "categories": [
             "Linux"
-        ]
+        ],
+        "comment": true,
+        "toc": true,
+        "auto_collapse_toc": true,
+        "math": false
     },
     {
         "title": "Synology DDNS 01",
@@ -384,7 +442,11 @@
         ],
         "categories": [
             "Linux"
-        ]
+        ],
+        "comment": true,
+        "toc": true,
+        "auto_collapse_toc": true,
+        "math": false
     },
     {
         "title": "Synology DDNS 02",
@@ -399,7 +461,11 @@
         ],
         "categories": [
             "Linux"
-        ]
+        ],
+        "comment": true,
+        "toc": true,
+        "auto_collapse_toc": true,
+        "math": false
     },
     {
         "title": "Synology With Linux",
@@ -412,12 +478,16 @@
         "tags": [
             "Synology",
             "BestTrace",
-            "IPKG",
+            "Ipkg",
             "Rclone",
             "SpeedTest"
         ],
         "categories": [
             "Linux"
-        ]
+        ],
+        "comment": true,
+        "toc": true,
+        "auto_collapse_toc": true,
+        "math": false
     }
 ]
