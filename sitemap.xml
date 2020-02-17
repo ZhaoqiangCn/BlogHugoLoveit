@@ -3,27 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://www.spacesh.com/post/newnew/</loc>
-    <lastmod>2020-02-14T14:27:22+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.spacesh.com/post/</loc>
-    <lastmod>2020-02-14T14:27:22+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.spacesh.com/</loc>
-    <lastmod>2020-02-14T14:27:22+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://www.spacesh.com/categories/</loc>
     <lastmod>2020-01-16T14:54:04+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -38,6 +17,13 @@
   </url>
   
   <url>
+    <loc>https://www.spacesh.com/post/</loc>
+    <lastmod>2020-01-16T14:54:04+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://www.spacesh.com/tags/</loc>
     <lastmod>2020-01-16T14:54:04+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -46,6 +32,13 @@
   
   <url>
     <loc>https://www.spacesh.com/tags/valine/</loc>
+    <lastmod>2020-01-16T14:54:04+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.spacesh.com/</loc>
     <lastmod>2020-01-16T14:54:04+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
