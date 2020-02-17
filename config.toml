@@ -5,7 +5,7 @@ languageCode = "zh"
 # [en, zh, ...] determines which i18n file to use
 defaultContentLanguage = "zh"
 # website title
-title = "zhaoqiang's Blog"
+title = "ZhaoQiang's Blog"
 # theme
 theme = "LoveIt"
 # whether to use git commit log to generate lastmod record
@@ -56,7 +56,7 @@ dateFormatToUse = "2016-01-02"
 
 # Author Info
 [author]
-  name = "zhao qiang"
+  name = "ZhaoQiang"
   link = ""
 
 # Sitemap Info
@@ -109,7 +109,7 @@ dateFormatToUse = "2016-01-02"
   # site description
   description = "Zhao Qiang's Blog"
   # site keywords
-  keywords = ["Dynamics AX", "Github" ,"Linux", "Synology","HUGO"]
+  keywords = ["Dynamics AX", "Github" ,"Linux", "Synology","HUGO","Tutorial","Technology"]
   # site default theme ("light", "dark", "auto")
   defaultTheme = "auto"
 
@@ -128,7 +128,7 @@ dateFormatToUse = "2016-01-02"
 
   # Footer CopyRight Info
   ## Site creation time
-  since = 2019
+  since = 2017
   ## ICP info only in China (HTML format is allowed)
   icp = '<a href="http://www.beian.miit.gov.cn">沪ICP备17033498号</a>'
   ## license info (HTML format is allowed)
