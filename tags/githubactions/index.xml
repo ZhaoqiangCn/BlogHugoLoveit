@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Openwrt on ZhaoQiang&#39;s Blog</title>
-    <link>https://www.nashome.cn/tags/openwrt/</link>
-    <description>Recent content in Openwrt on ZhaoQiang&#39;s Blog</description>
+    <title>GithubActions on ZhaoQiang&#39;s Blog</title>
+    <link>https://www.nashome.cn/tags/githubactions/</link>
+    <description>Recent content in GithubActions on ZhaoQiang&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
     <lastBuildDate>Fri, 10 Jan 2020 16:15:18 +0800</lastBuildDate>
     
-	<atom:link href="https://www.nashome.cn/tags/openwrt/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.nashome.cn/tags/githubactions/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,6 +18,15 @@
       <pubDate>Fri, 10 Jan 2020 16:15:18 +0800</pubDate>
       
       <guid>https://www.nashome.cn/post/openwrt-build/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>用 Hugo 配合 GithubActions 自动构建我的博客</title>
+      <link>https://www.nashome.cn/post/hugo-github-actions/</link>
+      <pubDate>Thu, 09 Jan 2020 14:52:40 +0800</pubDate>
+      
+      <guid>https://www.nashome.cn/post/hugo-github-actions/</guid>
       <description></description>
     </item>
     
