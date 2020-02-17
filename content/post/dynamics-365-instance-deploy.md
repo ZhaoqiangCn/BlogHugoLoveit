@@ -3,8 +3,12 @@ title: "How to deploy instance in Dynamics 365"
 date: 2019-12-11T13:53:26+08:00
 description: ""
 draft: false
-tags: [Dynamics365]
-categories: [DynamicsAX]
+tags: ["Dynamics365"]
+categories: ["DynamicsAX"]
+comment: true
+toc: true
+auto_collapse_toc: true
+math: false
 ---
 
 <!--more-->

@@ -3,8 +3,12 @@ title: "How to create deployable packages in Dynamics 365 "
 date: 2020-01-15T16:25:29+08:00
 description: ""
 draft: false
-tags: [Dynamics365,Customization]
-categories: [DynamicsAX]
+tags: ["Dynamics365","Customization"]
+categories: ["DynamicsAX"]
+comment: true
+toc: true
+auto_collapse_toc: true
+math: false
 ---
 
 <!--more-->
