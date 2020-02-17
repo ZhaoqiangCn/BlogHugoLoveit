@@ -4,7 +4,7 @@ date: 2019-12-11T13:53:26+08:00
 description: ""
 draft: false
 tags: ["Dynamics365"]
-categories: ["DynamicsAX"]
+categories: ["Dynamicsax"]
 comment: true
 toc: true
 auto_collapse_toc: true

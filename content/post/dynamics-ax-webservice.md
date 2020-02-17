@@ -4,7 +4,11 @@ date: 2020-01-14T11:03:30+08:00
 description: ""
 draft: false
 tags: [AX2009,WebService,WCF]
-categories: [DynamicsAX]
+categories: [Dynamicsax]
+comment: true
+toc: true
+auto_collapse_toc: true
+math: false
 ---
 
 <!--more-->

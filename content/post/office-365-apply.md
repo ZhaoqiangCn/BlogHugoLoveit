@@ -4,7 +4,11 @@ date: 2020-01-14T14:45:12+08:00
 description: ""
 draft: false
 tags: [Office365]
-categories: [DynamicsAX]
+categories: [Dynamicsax]
+comment: true
+toc: true
+auto_collapse_toc: true
+math: false
 ---
 
 <!--more-->

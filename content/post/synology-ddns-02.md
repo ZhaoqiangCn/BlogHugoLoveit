@@ -5,6 +5,10 @@ description: ""
 draft: false
 tags: [Synology]
 categories: [Linux]
+comment: true
+toc: true
+auto_collapse_toc: true
+math: false
 ---
 
 <!--more-->

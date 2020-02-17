@@ -4,7 +4,11 @@ date: 2019-12-09T17:57:40+08:00
 description: ""
 draft: false
 tags: [版本号,BuildNumber]
-categories: [DynamicsAX]
+categories: [Dynamicsax]
+comment: true
+toc: true
+auto_collapse_toc: true
+math: false
 ---
 
 <!--more-->
