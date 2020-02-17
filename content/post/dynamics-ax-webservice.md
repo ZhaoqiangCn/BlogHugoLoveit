@@ -3,7 +3,7 @@ title: "Using webservice to connect with Dynamics AX"
 date: 2020-01-14T11:03:30+08:00
 description: ""
 draft: false
-tags: [AX2009,WebService,WCF]
+tags: [Ax2009,WebService,Wcf]
 categories: [Dynamicsax]
 comment: true
 toc: true

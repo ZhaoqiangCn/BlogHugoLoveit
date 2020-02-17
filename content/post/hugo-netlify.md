@@ -3,7 +3,7 @@ title: " 部署 Hugo 静态博客到 Netlify 和 Github Pages"
 date: 2020-01-12T14:49:17+08:00
 description: "百度无法收录github pages，因此本文介绍如何把hugo 同时部署到github pages和netlify而且每次更新文章只需要push到github即可"
 draft: false
-tags: [Netlify,Github Pages,Even]
+tags: [Netlify,GithubPages,Even]
 categories: [hugo]
 autoCollapseToc: true
 toc: true

@@ -3,7 +3,7 @@ title: "Dynamics AX Auto Generate XML"
 date: 2020-01-13T09:50:21+08:00
 description: "Auto Generate XML From AX Document Service"
 draft: false
-tags: ["AX2009","XML","DocumentService"]
+tags: ["Ax2009","Xml","DocumentService"]
 categories: ["Dynamicsax"]
 comment: true
 toc: true

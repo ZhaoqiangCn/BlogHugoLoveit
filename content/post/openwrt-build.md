@@ -3,7 +3,7 @@ title: "使用 GitHub Actions 编译 OpenWrt"
 date: 2020-01-10T16:15:18+08:00
 description: ""
 draft: false
-tags: [openwrt,Github Actions]
+tags: [Openwrt,GithubActions]
 categories: [Linux]
 comment: true
 toc: true

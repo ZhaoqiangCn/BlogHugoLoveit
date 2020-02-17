@@ -3,7 +3,7 @@ title: "Synology With Linux"
 date: 2020-01-01T16:19:26+08:00
 description: ""
 draft: false
-tags: [Synology,BestTrace,IPKG,Rclone,SpeedTest]
+tags: [Synology,BestTrace,Ipkg,Rclone,SpeedTest]
 categories: [Linux]
 comment: true
 toc: true

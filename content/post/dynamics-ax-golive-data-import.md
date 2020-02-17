@@ -3,7 +3,7 @@ title: "Dynamics AX GoLive Data Import"
 date: 2020-01-13T14:58:36+08:00
 description: "DynamicsAX项目上线期初数据的初始化-期初余额导入功能"
 draft: false
-tags: [AX2009,Data,Golive]
+tags: [Ax2009,Data,Golive]
 categories: [Dynamicsax]
 comment: true
 toc: true

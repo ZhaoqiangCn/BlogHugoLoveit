@@ -1,5 +1,5 @@
 [build]
-  command = "hugo --gc --minify \n npm run algolia"
+  command = "hugo --gc --minify"
   
 
 [build.environment]

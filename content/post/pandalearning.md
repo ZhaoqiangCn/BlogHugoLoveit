@@ -3,7 +3,7 @@ title: "学习强国"
 date: 2018-09-10T16:09:33+08:00
 description: ""
 draft: false
-tags: [chromium,chromedriver,selenium,debian9]
+tags: [Chromium,Chromedriver,Selenium,Debian9]
 categories: [Linux]
 comment: true
 toc: true
