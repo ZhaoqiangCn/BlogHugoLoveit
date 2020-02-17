@@ -4,7 +4,9 @@ date: 2020-01-12T14:49:17+08:00
 description: "百度无法收录github pages，因此本文介绍如何把hugo 同时部署到github pages和netlify而且每次更新文章只需要push到github即可"
 draft: false
 tags: [Netlify,Github Pages,Even]
-categories: [HUGO]
+categories: [hugo]
+autoCollapseToc: true
+toc: true
 ---
 
 <!--more-->

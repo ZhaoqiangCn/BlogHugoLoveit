@@ -4,7 +4,9 @@ date: 2020-01-10T14:41:18+08:00
 description: "Valine 评论系统"
 draft: false
 tags: [Valine]
-categories: [HUGO]
+categories: [hugo]
+autoCollapseToc: true
+toc: true
 ---
 
 <!--more-->

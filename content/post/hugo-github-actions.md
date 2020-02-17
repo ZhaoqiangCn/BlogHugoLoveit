@@ -4,7 +4,9 @@ date: 2020-01-09T14:52:40+08:00
 description: ""
 draft: false
 tags: [Github Pages,Github Actions]
-categories: [HUGO]
+categories: [hugo]
+autoCollapseToc: true
+toc: true
 ---
 
 <!--more-->

@@ -4,7 +4,7 @@ date: 2020-01-16T14:54:04+08:00
 description: "Valine 评论系统 邮件通知"
 draft: false
 tags: [Valine]
-categories: [HUGO]
+categories: [hugo]
 autoCollapseToc: true
 toc: true
 ---
