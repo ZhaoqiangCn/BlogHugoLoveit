@@ -3,14 +3,14 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://www.spacesh.com/posts/newnew/</loc>
+    <loc>https://www.spacesh.com/post/newnew/</loc>
     <lastmod>2020-02-14T14:27:22+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.spacesh.com/posts/</loc>
+    <loc>https://www.spacesh.com/post/</loc>
     <lastmod>2020-02-14T14:27:22+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -52,7 +52,7 @@
   </url>
   
   <url>
-    <loc>https://www.spacesh.com/posts/hugo-valine-email/</loc>
+    <loc>https://www.spacesh.com/post/hugo-valine-email/</loc>
     <lastmod>2020-01-16T14:54:04+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -73,7 +73,7 @@
   </url>
   
   <url>
-    <loc>https://www.spacesh.com/posts/nextcloud-scan-files-on-server/</loc>
+    <loc>https://www.spacesh.com/post/nextcloud-scan-files-on-server/</loc>
     <lastmod>2020-01-16T09:16:23+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -101,14 +101,14 @@
   </url>
   
   <url>
-    <loc>https://www.spacesh.com/posts/dynamics-365-deployable-packages/</loc>
+    <loc>https://www.spacesh.com/post/dynamics-365-deployable-packages/</loc>
     <lastmod>2020-01-15T16:25:29+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.spacesh.com/posts/dynamics-365-on-premises/</loc>
+    <loc>https://www.spacesh.com/post/dynamics-365-on-premises/</loc>
     <lastmod>2020-01-15T14:24:30+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -122,7 +122,7 @@
   </url>
   
   <url>
-    <loc>https://www.spacesh.com/posts/office-365-apply/</loc>
+    <loc>https://www.spacesh.com/post/office-365-apply/</loc>
     <lastmod>2020-01-14T14:45:12+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -136,7 +136,7 @@
   </url>
   
   <url>
-    <loc>https://www.spacesh.com/posts/dynamics-ax-webservice/</loc>
+    <loc>https://www.spacesh.com/post/dynamics-ax-webservice/</loc>
     <lastmod>2020-01-14T11:03:30+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -164,7 +164,7 @@
   </url>
   
   <url>
-    <loc>https://www.spacesh.com/posts/dynamics-ax-golive-data-import/</loc>
+    <loc>https://www.spacesh.com/post/dynamics-ax-golive-data-import/</loc>
     <lastmod>2020-01-13T14:58:36+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -185,7 +185,7 @@
   </url>
   
   <url>
-    <loc>https://www.spacesh.com/posts/dynamics-ax-auto-generate-xml/</loc>
+    <loc>https://www.spacesh.com/post/dynamics-ax-auto-generate-xml/</loc>
     <lastmod>2020-01-13T09:50:21+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -199,7 +199,7 @@
   </url>
   
   <url>
-    <loc>https://www.spacesh.com/posts/hugo-netlify/</loc>
+    <loc>https://www.spacesh.com/post/hugo-netlify/</loc>
     <lastmod>2020-01-12T14:49:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -241,35 +241,35 @@
   </url>
   
   <url>
-    <loc>https://www.spacesh.com/posts/openwrt-build/</loc>
+    <loc>https://www.spacesh.com/post/openwrt-build/</loc>
     <lastmod>2020-01-10T16:15:18+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.spacesh.com/posts/hugo-valine/</loc>
+    <loc>https://www.spacesh.com/post/hugo-valine/</loc>
     <lastmod>2020-01-10T14:41:18+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.spacesh.com/posts/hugo-github-actions/</loc>
+    <loc>https://www.spacesh.com/post/hugo-github-actions/</loc>
     <lastmod>2020-01-09T14:52:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.spacesh.com/posts/naiveboom/</loc>
+    <loc>https://www.spacesh.com/post/naiveboom/</loc>
     <lastmod>2020-01-02T15:32:50+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.spacesh.com/posts/dynamics-ax-golive-data-initialize/</loc>
+    <loc>https://www.spacesh.com/post/dynamics-ax-golive-data-initialize/</loc>
     <lastmod>2020-01-02T10:19:24+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -311,14 +311,14 @@
   </url>
   
   <url>
-    <loc>https://www.spacesh.com/posts/synology-with-linux/</loc>
+    <loc>https://www.spacesh.com/post/synology-with-linux/</loc>
     <lastmod>2020-01-01T16:19:26+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.spacesh.com/posts/dynamics-365-instance-deploy/</loc>
+    <loc>https://www.spacesh.com/post/dynamics-365-instance-deploy/</loc>
     <lastmod>2019-12-11T13:53:26+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -332,7 +332,7 @@
   </url>
   
   <url>
-    <loc>https://www.spacesh.com/posts/dynamics-ax-buildnumbers/</loc>
+    <loc>https://www.spacesh.com/post/dynamics-ax-buildnumbers/</loc>
     <lastmod>2019-12-09T17:57:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -346,14 +346,14 @@
   </url>
   
   <url>
-    <loc>https://www.spacesh.com/posts/nextcloud-optimize/</loc>
+    <loc>https://www.spacesh.com/post/nextcloud-optimize/</loc>
     <lastmod>2019-11-30T15:58:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.spacesh.com/posts/nextcloud-deploy/</loc>
+    <loc>https://www.spacesh.com/post/nextcloud-deploy/</loc>
     <lastmod>2019-11-29T15:58:17+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -374,7 +374,7 @@
   </url>
   
   <url>
-    <loc>https://www.spacesh.com/posts/docker-clean/</loc>
+    <loc>https://www.spacesh.com/post/docker-clean/</loc>
     <lastmod>2019-05-10T16:11:55+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -402,7 +402,7 @@
   </url>
   
   <url>
-    <loc>https://www.spacesh.com/posts/acme/</loc>
+    <loc>https://www.spacesh.com/post/acme/</loc>
     <lastmod>2019-01-15T16:05:16+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -444,14 +444,14 @@
   </url>
   
   <url>
-    <loc>https://www.spacesh.com/posts/pandalearning/</loc>
+    <loc>https://www.spacesh.com/post/pandalearning/</loc>
     <lastmod>2018-09-10T16:09:33+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.spacesh.com/posts/aria2/</loc>
+    <loc>https://www.spacesh.com/post/aria2/</loc>
     <lastmod>2018-05-12T15:49:55+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -472,14 +472,14 @@
   </url>
   
   <url>
-    <loc>https://www.spacesh.com/posts/synology-ddns-02/</loc>
+    <loc>https://www.spacesh.com/post/synology-ddns-02/</loc>
     <lastmod>2016-08-10T13:55:28+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.spacesh.com/posts/synology-ddns-01/</loc>
+    <loc>https://www.spacesh.com/post/synology-ddns-01/</loc>
     <lastmod>2016-07-10T13:55:24+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

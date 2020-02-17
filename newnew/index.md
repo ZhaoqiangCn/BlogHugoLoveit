@@ -1,8 +1,0 @@
-# Algolia Test
-
-
-
-
-
-
-Algolia testtest
