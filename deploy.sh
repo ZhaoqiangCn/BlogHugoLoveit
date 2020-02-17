@@ -3,7 +3,9 @@
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 
 # Build the project.
-HUGO_ENV=production hugo --gc --minify \n npm run algolia
+HUGO_ENV=production hugo --gc --minify 
+
+npm run algolia
 
 #hugo -t loveit
 
