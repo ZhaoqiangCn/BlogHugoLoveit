@@ -3,8 +3,8 @@ baseurl: "https://www.spacesh.com/"
 DefaultContentLanguage: "zh-cn"
 hasCJKLanguage: true
 languageCode: "zh-cn"
-title: "River's Site"
-theme: "beautifulhugo"
+title: "zhaoqiang's blog"
+theme: "loveit"
 metaDataFormat: "yaml"
 algolia:
   index: "hugoblogloveit"

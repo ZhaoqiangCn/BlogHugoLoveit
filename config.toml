@@ -74,7 +74,7 @@ dateFormatToUse = "2016-01-02"
   [[menu.main]]
     identifier = "posts"
     name = "Posts"
-    url = "posts"
+    url = "post"
     weight = 1
 
   [[menu.main]]
