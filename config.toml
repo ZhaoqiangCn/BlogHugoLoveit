@@ -5,7 +5,7 @@ languageCode = "zh"
 # [en, zh, ...] determines which i18n file to use
 defaultContentLanguage = "zh"
 # website title
-title = "Zhaoqiang's Blog"
+title = "zhaoqiang's Blog"
 # theme
 theme = "LoveIt"
 # whether to use git commit log to generate lastmod record
