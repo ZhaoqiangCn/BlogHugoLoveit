@@ -16,6 +16,7 @@ categories: []
 
 featured_image: ""
 featured_image_preview: ""
-
+autoCollapseToc: true
+toc: true
 ​---
 ---
