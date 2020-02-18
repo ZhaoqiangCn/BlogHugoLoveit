@@ -223,7 +223,7 @@ pygmentsCodefencesGuessSyntax = true
     # Gitea = "xxxx"
     # XMPP = "xxxx"
     # Matrix = "xxxx"
-     Bilibili = "https://space.bilibili.com/474553042"
+     Bilibili = "474553042"
 
   # Page config
   [params.page]
