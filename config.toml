@@ -1,4 +1,3 @@
-#baseURL = "https://zhaoqiangcn.github.io/BlogHugoLoveit/"
 baseURL = "https://www.nashome.cn/"
 # website language
 languageCode = "zh"
@@ -23,7 +22,7 @@ googleAnalytics = "UA-105751499-1"
 # copyright description used only for seo schema
 copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
 # date format
-dateFormatToUse = "2016-01-02"
+dateFormatToUse = "2006-01-02"
 pygmentsOptions = "linenos=table"
 pygmentsCodefences = true
 pygmentsUseClasses = true
@@ -72,7 +71,7 @@ pygmentsCodefencesGuessSyntax = true
 
 # Permalinks Info (https://gohugo.io/content-management/urls/#permalinks)
 #[Permalinks]
-#  posts = ":title"
+#  posts = ":year/:month/:filename"
 
 # Menu Info
 [menu]
@@ -117,167 +116,202 @@ pygmentsCodefencesGuessSyntax = true
   keywords = ["Dynamics AX", "Github" ,"Linux", "Synology","HUGO","Tutorial","Technology"]
   # site default theme ("light", "dark", "auto")
   defaultTheme = "auto"
-
-  # Home Page Info
-  ##home mode ("post", "other")
-  home_mode = "post"
-  ## special amount of posts in each home post page
-  home_paginate = 6
-  ## URL of avatar shown in home page
-  avatar = "images/avatar.png"
-  ## subtitle shown in home page
-  subtitle = "Welcome to my blog !"
-
-  # whether to show social share links in post page
-  socialShare = true
-
-  # Footer CopyRight Info
-  ## Site creation time
-  since = 2017
-  ## ICP info only in China (HTML format is allowed)
-  icp = '<a href="http://www.beian.miit.gov.cn">沪ICP备17033498号</a>'
-  ## license info (HTML format is allowed)
-  license= '<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
-
   # public git repo url to link lastmod git commit only then enableGitInfo is true
   gitRepo = ""
 
-  # mathematical formulas (KaTeX)
-  [params.math]
-    enable = true
-    block_left_delimiter = ""
-    block_right_delimiter = ""
-    inline_left_delimiter = "$"
-    inline_right_delimiter = "$"
-    # KaTeX extension copy_tex
-    copy_tex = true
-    # KaTeX extension mhchem
-    mhchem = true
+  # Header info
+  [params.header]
+    # desktop header mode ("fixed", "normal", "auto")
+    desktopMode = "fixed"
+    # mobile header mode ("fixed", "normal", "auto")
+    mobileMode = "auto"
 
-  # whether to show link to Raw Markdown content of the post
-  linkToMarkdown = true
+  # Footer Copyright Info
+  [params.footer]
+    # Site creation time
+    since = 2016
+    # ICP info only in China (HTML format is allowed)
+    icp = '<a href="http://www.beian.miit.gov.cn">沪ICP备17033498号</a>'
+    # license info (HTML format is allowed)
+    license= '<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
 
-  # site verification code for Google/Bing/Yandex/Pinterest/Baidu
-  google_verification = ""
-  bing_verification = ""
-  yandex_verification = ""
-  pinterest_verification = ""
-  baidu_verification = ""
-
-  # CSS and JS Files CDN
-  [params.cdn]
-    ## for example '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.10.1/css/all.min.css" integrity="sha256-fdcFNFiBMrNfWL6OcAGQz6jDgNTRxnrLEd4vJYFWScE=" crossorigin="anonymous">'
-    fontawesome_free_css = '<link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">'                           # 例如 '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.10.1/css/all.min.css" integrity="sha256-fdcFNFiBMrNfWL6OcAGQz6jDgNTRxnrLEd4vJYFWScE=" crossorigin="anonymous">'
-    animate_css = '<link href="https://cdn.bootcss.com/animate.css/3.7.2/animate.css" rel="stylesheet">'
-    gitalk_css = '<link href="https://cdn.bootcss.com/gitalk/1.5.0/gitalk.min.css" rel="stylesheet">'
-    gitalk_js = '<script src="https://cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js"></script>'
-    jquery_js = '<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.slim.min.js"></script>'
-    lazysizes_js = '<script src="https://cdn.bootcss.com/lazysizes/5.1.2/lazysizes.min.js"></script>'
-    smooth_scroll_js = '<script src="https://cdn.bootcss.com/smooth-scroll/16.1.0/smooth-scroll.polyfills.min.js"></script>'
-    typeit_js = '<script src="https://cdn.bootcss.com/typeit/6.0.3/typeit.min.js"></script>'
-    valine_js = ''
-    katex_css = ''
-    katex_js = ''
-    katex_auto_render_js = ''
-    katex_copy_tex_css = ''
-    katex_copy_tex_js = ''
-    katex_mhchem_js = ''
-    mermaid_js = ''
-    echarts_js = ''
-    echarts_macarons_js = ''
-    jquery_countdown_js = ''
-    aplayer_css = ''
-    aplayer_js = ''
-    meting_js = ''
-
-  # Gravatar Info for preferred avatar in home page
-  [params.gravatar]
-    email = ""
+  # Home Page Info
+  [params.home]
+    # Home Page Profile
+    [params.home.profile]
+      enable = true
+      # Gravatar Email for preferred avatar in home page
+      gravatarEmail = ""
+      # URL of avatar shown in home page
+      avatarURL = "images/avatar.png"
+      # subtitle shown in home page
+      subtitle = "Welcome to my blog !"
+      # whether to use typeit animation for subtitle
+      typeit = true
+      # whether to show social links
+      social = true
+    # Home Page Posts
+    [params.home.posts]
+      enable = true
+      # special amount of posts in each home posts page
+      paginate = 6
+      # default behavior when you don't set "hiddenFromHomePage" in front matter
+      defaultHiddenFromHomePage = false
 
   # Social Info in home page
   [params.social]
-    #BiliBili = "https://space.bilibili.com/474553042"
     GitHub = "xxxx"
     #Linkedin = "xxxx"
     #Twitter = "xxxx"
     Instagram = "xxxx"
-    Email = "zq19890000@gmail.com"
+    Email = "xxxx@outlook.com"
     #Facebook = "xxxx"
     Telegram = "xxxx"
-    #Medium = "xxxx"
-    #Gitlab = "xxxx"
-    #Youtubelegacy = "https://space.bilibili.com/474553042"
-    #Youtubecustom = "xxxx"
-    Youtubechannel = "xxxx"
-    #Tumblr ="xxxx"
-    #Quora = "xxxx"
-    #Keybase = "xxxx"
-    #Pinterest = "xxxx"
-    #Reddit = "xxxx"
-    #Codepen = "xxxx"
-    #FreeCodeCamp = "xxxx"
-    #Bitbucket = "xxxx"
-    #Stackoverflow = "xxxx"
-    #Weibo = "xxxx"
-    #Odnoklassniki = "xxxx"
-    #VKontakte = "xxxx"
-    #Flickr = "xxxx"
-    #Xing = "xxxx"
-    #Snapchat = "xxxx"
-    #Soundcloud = "xxxx"
-    #Spotify = "xxxx"
-    #Bandcamp = "xxxx"
-    #Paypal = "xxxx"
-    #Fivehundredpx = "xxxx"
-    #Mix = "xxxx"
-    #Goodreads = "xxxx"
-    #Lastfm = "xxxx"
-    #Foursquare = "xxxx"
-    #Hackernews = "xxxx"
-    #Kickstarter = "xxxx"
-    #Patreon = "xxxx"
-    #Steam = "xxxx"
-    #Twitch = "xxxx"
-    #Strava = "xxxx"
-    #Skype = "xxxx"
-    #Whatsapp = "xxxx"
-    #Zhihu = "xxxx"
-    #Douban = "xxxx"
-    #Angellist = "xxxx"
-    #Slidershare = "xxxx"
-    #Jsfiddle = "xxxx"
-    #Deviantart = "xxxx"
-    #Behance = "xxxx"
-    #Dribble = "xxxx"
-    #Wordpress = "xxxx"
-    #Vine = "xxxx"
-    #Googlescholar = "xxxx"
-    #Researchgate = "xxxx"
-    #Mastodon = "xxxx"
-    #MastodonPrefix = "https://mastodon.technology/"
-    #Thingiverse = "xxxx"
-    #Devto = "xxxx"
-    #Gitea = "xxxx"
-    #XMPP = "xxxx"
-    #Matrix ="xxxx"
+    # Medium = "xxxx"
+    # Gitlab = "xxxx"
+    # Youtubelegacy = "xxxx"
+    # Youtubecustom = "xxxx"
+    # Youtubechannel = "xxxx"
+    # Tumblr ="xxxx"
+    # Quora = "xxxx"
+    # Keybase = "xxxx"
+    # Pinterest = "xxxx"
+    # Reddit = "xxxx"
+    # Codepen = "xxxx"
+    # FreeCodeCamp = "xxxx"
+    # Bitbucket = "xxxx"
+    # Stackoverflow = "xxxx"
+    # Weibo = "xxxx"
+    # Odnoklassniki = "xxxx"
+    # VK = "xxxx"
+    # Flickr = "xxxx"
+    # Xing = "xxxx"
+    # Snapchat = "xxxx"
+    # Soundcloud = "xxxx"
+    # Spotify = "xxxx"
+    # Bandcamp = "xxxx"
+    # Paypal = "xxxx"
+    # Fivehundredpx = "xxxx"
+    # Mix = "xxxx"
+    # Goodreads = "xxxx"
+    # Lastfm = "xxxx"
+    # Foursquare = "xxxx"
+    # Hackernews = "xxxx"
+    # Kickstarter = "xxxx"
+    # Patreon = "xxxx"
+    # Steam = "xxxx"
+    # Twitch = "xxxx"
+    # Strava = "xxxx"
+    # Skype = "xxxx"
+    # Whatsapp = "xxxx"
+    # Zhihu = "xxxx"
+    # Douban = "xxxx"
+    # Angellist = "xxxx"
+    # Slidershare = "xxxx"
+    # Jsfiddle = "xxxx"
+    # Deviantart = "xxxx"
+    # Behance = "xxxx"
+    # Dribble = "xxxx"
+    # Wordpress = "xxxx"
+    # Vine = "xxxx"
+    # Googlescholar = "xxxx"
+    # Researchgate = "xxxx"
+    # Mastodon = "xxxx"
+    # MastodonPrefix = "https://mastodon.technology/"
+    # Thingiverse = "xxxx"
+    # Devto = "xxxx"
+    # Gitea = "xxxx"
+    # XMPP = "xxxx"
+    # Matrix = "xxxx"
+     Bilibili = "https://space.bilibili.com/474553042"
+
+  # Page config
+  [params.page]
+    # whether to show social share links in post page
+    socialShare = true
+    # whether to show link to Raw Markdown content of the post
+    linkToMarkdown = true
 
   # Social Share Links in post page
   [params.share]
     enable = true
     Twitter = true
     Facebook = true
-    Reddit = true
     Linkedin = true
+    Whatsapp = true
     Pinterest = true
-    #HackerNews = true
-    #Mix = true
-    #Tumblr = true
-    #VKontakte = true
-    Weibo = true
+    Tumblr = true
+    HackerNews = true
+    # Reddit = true
+    # VK = true
+    # Buffer = true
+    # Xing = true
+    # Line = true
+    # Instapaper = true
+    # Pocket = true
+    # Digg = true
+    # Stumbleupon = true
+    # Flipboard = true
+     Weibo = true
+    # Renren = true
+    # Myspace = true
+    # Blogger = true
+    # Baidu = true
+    # Odnoklassniki = true
+    # Evernote = true
+    # Skype = true
+    # Trello = true
+    # Mix = true
+
+  # mathematical formulas (KaTeX)
+  [params.math]
+    enable = true
+    blockLeftDelimiter = ""
+    blockRightDelimiter = ""
+    inlineLeftDelimiter = "$"
+    inlineRightDelimiter = "$"
+    # KaTeX extension copy_tex
+    copyTex = true
+    # KaTeX extension mhchem
+    mhchem = true
+
+  # CSS and JS Files CDN
+  [params.cdn]
+    ## for example '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.10.1/css/all.min.css" integrity="sha256-fdcFNFiBMrNfWL6OcAGQz6jDgNTRxnrLEd4vJYFWScE=" crossorigin="anonymous">' 
+    jquery_js = '<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.slim.min.js"></script>'
+    fontawesomeFreeCSS = '<link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">'                           # 例如 '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.10.1/css/all.min.css" integrity="sha256-fdcFNFiBMrNfWL6OcAGQz6jDgNTRxnrLEd4vJYFWScE=" crossorigin="anonymous">'
+    animateCSS = '<link href="https://cdn.bootcss.com/animate.css/3.7.2/animate.css" rel="stylesheet">'
+    gitalkCSS = '<link href="https://cdn.bootcss.com/gitalk/1.5.0/gitalk.min.css" rel="stylesheet">'
+    gitalkJS = '<script src="https://cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js"></script>'
+    valineJS = ''
+    lazysizesJS = '<script src="https://cdn.bootcss.com/lazysizes/5.1.2/lazysizes.min.js"></script>'
+    smoothScrollJS = '<script src="https://cdn.bootcss.com/smooth-scroll/16.1.0/smooth-scroll.polyfills.min.js"></script>'
+    sharerJS = ''
+    katexCSS = ''
+    katexJS = ''
+    katexAutoRenderJS = ''
+    katexCopyTexCSS = ''
+    katexCopyTexJS = ''
+    katexMhchemJS = ''
+    mermaidJS = ''
+    echartsJS = ''
+    echartsMacaronsJS = ''
+    typeitJS = '<script src="https://cdn.bootcss.com/typeit/6.0.3/typeit.min.js"></script>'
+    aplayerCSS = ''
+    aplayerJS = ''
+    metingJS = ''
+
+  # site verification code for Google/Bing/Yandex/Pinterest/Baidu
+  [params.verification]
+    google = ""
+    bing = ""
+    yandex = ""
+    pinterest = ""
+    baidu = ""
 
   # Publisher Info just for SEO
   [params.publisher]
-    name = "zhao qiang"
+    name = "xxxx"
     [params.publisher.logo]
       url = "logo.png"
       width = 127
@@ -295,37 +329,43 @@ pygmentsCodefencesGuessSyntax = true
     width = 800
     height = 600
 
-  # Disqus Comment Config (https://disqus.com/)
-  [params.disqus]
-    # Disqus shortname to use Disqus in posts
-    shortname = "dillonzq"
-
-  # Gittalk Comment Config (https://github.com/gitalk/gitalk)
-  [params.gitalk]
-    owner = ""
-    repo = ""
-    clientId = ""
-    clientSecret = ""
-
-  # Valine Comment Config (https://github.com/xCss/Valine)
-  [params.valine]
+  # Comment Config
+  [params.comment]
     enable = true
-    appId = 'Bu42IhLNJc94WvCDKSsRwTqa-gzGzoHsz'
-    appKey = 'bKSP5XiBoIHs8PyXC4uhGhqQ'
-    notify = false  # mail notifier , https://github.com/xCss/Valine/wiki
-    verify = false # Verification code
-    avatar = 'mm' 
-    placeholder = '说点什么吧...'
-    visitor = true
-    recordIP = true
 
-  # Facebook Comment Config (https://developers.facebook.com/docs/plugins/comments)
-  [params.facebook]
-    enable = false
-    width = "100%"
-    numPosts = 10
-    appId = ""
-    languageCode = "en_US"
+    # Disqus Comment Config (https://disqus.com/)
+    [params.comment.disqus]
+      # Disqus shortname to use Disqus in posts
+      shortname = "dillonzq"
+
+    # Gittalk Comment Config (https://github.com/gitalk/gitalk)
+    [params.comment.gitalk]
+      owner = ""
+      repo = ""
+      clientId = ""
+      clientSecret = ""
+
+    # Valine Comment Config (https://github.com/xCss/Valine)
+    [params.comment.valine]
+      enable = true
+      appId = 'Bu42IhLNJc94WvCDKSsRwTqa-gzGzoHsz'
+      appKey = 'bKSP5XiBoIHs8PyXC4uhGhqQ'
+      placeholder = '说点什么吧...'
+      notify = false
+      verify = false
+      avatar = "mm"
+      # meta= ""
+      pageSize = 10
+      visitor = true
+      recordIP = true
+
+    # Facebook Comment Config (https://developers.facebook.com/docs/plugins/comments)
+    [params.comment.facebook]
+      enable = false
+      width = "100%"
+      numPosts = 10
+      appId = ""
+      languageCode = "en_US"
 
 # Privacy Info (https://gohugo.io/about/hugo-and-gdpr/)
 [privacy]
