@@ -333,18 +333,6 @@ pygmentsCodefencesGuessSyntax = true
   [params.comment]
     enable = true
 
-    # Disqus Comment Config (https://disqus.com/)
-    [params.comment.disqus]
-      # Disqus shortname to use Disqus in posts
-      shortname = "dillonzq"
-
-    # Gittalk Comment Config (https://github.com/gitalk/gitalk)
-    [params.comment.gitalk]
-      owner = ""
-      repo = ""
-      clientId = ""
-      clientSecret = ""
-
     # Valine Comment Config (https://github.com/xCss/Valine)
     [params.comment.valine]
       enable = true
@@ -358,14 +346,6 @@ pygmentsCodefencesGuessSyntax = true
       pageSize = 10
       visitor = true
       recordIP = true
-
-    # Facebook Comment Config (https://developers.facebook.com/docs/plugins/comments)
-    [params.comment.facebook]
-      enable = false
-      width = "100%"
-      numPosts = 10
-      appId = ""
-      languageCode = "en_US"
 
 # Privacy Info (https://gohugo.io/about/hugo-and-gdpr/)
 [privacy]
