@@ -78,19 +78,19 @@ pygmentsCodefencesGuessSyntax = true
 [menu]
   [[menu.main]]
     identifier = "posts"
-    name = "Posts"
+    name = "文章"
     url = "post"
     weight = 1
 
   [[menu.main]]
     identifier = "tags"
-    name = "Tags"
+    name = "标签"
     url = "tags"
     weight = 2
 
   [[menu.main]]
     identifier = "categories"
-    name = "Categories"
+    name = "分类"
     url = "categories"
     weight = 3
 
