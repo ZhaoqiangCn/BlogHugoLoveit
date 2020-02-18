@@ -122,9 +122,9 @@ pygmentsCodefencesGuessSyntax = true
   # Header info
   [params.header]
     # desktop header mode ("fixed", "normal", "auto")
-    desktopMode = "auto"
+    #desktopMode = "auto"
     # mobile header mode ("fixed", "normal", "auto")
-    mobileMode = "auto"
+    #mobileMode = "auto"
 
   # Footer Copyright Info
   [params.footer]
