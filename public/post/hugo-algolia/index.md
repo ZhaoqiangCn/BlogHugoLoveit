@@ -1,31 +1,5 @@
----
-author: "zhao qiang"
-author_link: ""
-title: "用 Hugo 搭配 Algolia 实现高效美观的站内搜索"
-date: 2020-02-18T09:13:13+08:00
-lastmod: 2020-02-18T09:13:13+08:00
-draft: false
-description: "用 Hugo 搭配 Algolia 实现高效美观的站内搜索"
-show_in_homepage: true
-description_as_summary: false
-license: ""
+# 用 Hugo 搭配 Algolia 实现高效美观的站内搜索
 
-tags: ["hugo",
-"algolia",
-"站内搜索",
-"search"
-]
-categories: ["hugo"
-]
-
-featured_image: ""
-featured_image_preview: ""
-
-comment: true
-toc: true
-auto_collapse_toc: true
-math: false
----
 
 ## 前言
 
