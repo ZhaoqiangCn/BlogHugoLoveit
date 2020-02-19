@@ -3,42 +3,77 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.nashome.cn/tags/algolia/</loc>
+    <lastmod>2020-02-18T09:13:13+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://www.nashome.cn/categories/</loc>
-    <lastmod>2020-01-16T14:54:04+08:00</lastmod>
+    <lastmod>2020-02-18T09:13:13+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.nashome.cn/categories/hugo/</loc>
-    <lastmod>2020-01-16T14:54:04+08:00</lastmod>
+    <lastmod>2020-02-18T09:13:13+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nashome.cn/tags/hugo/</loc>
+    <lastmod>2020-02-18T09:13:13+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.nashome.cn/post/</loc>
-    <lastmod>2020-01-16T14:54:04+08:00</lastmod>
+    <lastmod>2020-02-18T09:13:13+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nashome.cn/tags/search/</loc>
+    <lastmod>2020-02-18T09:13:13+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.nashome.cn/tags/</loc>
-    <lastmod>2020-01-16T14:54:04+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nashome.cn/tags/valine/</loc>
-    <lastmod>2020-01-16T14:54:04+08:00</lastmod>
+    <lastmod>2020-02-18T09:13:13+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.nashome.cn/</loc>
+    <lastmod>2020-02-18T09:13:13+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nashome.cn/post/hugo-algolia/</loc>
+    <lastmod>2020-02-18T09:13:13+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nashome.cn/tags/%E7%AB%99%E5%86%85%E6%90%9C%E7%B4%A2/</loc>
+    <lastmod>2020-02-18T09:13:13+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nashome.cn/tags/valine/</loc>
     <lastmod>2020-01-16T14:54:04+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
