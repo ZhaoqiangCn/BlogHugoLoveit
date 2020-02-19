@@ -1,5 +1,5 @@
 ---
-title: "在 HUGO 中添加 Valine 评论系统的过程"
+title: "用 HUGO 搭配 Valine 实现简洁的评论交互"
 date: 2020-01-10T14:41:18+08:00
 description: "Valine 评论系统"
 draft: false

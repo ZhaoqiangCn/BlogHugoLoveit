@@ -1,5 +1,5 @@
 ---
-title: "在 HUGO 中添加 Valine 评论系统的过程后续--邮件通知"
+title: "用 HUGO 搭配 Valine 实现邮件通知"
 date: 2020-01-16T14:54:04+08:00
 description: "Valine 评论系统 邮件通知"
 draft: false

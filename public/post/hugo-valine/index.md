@@ -1,4 +1,4 @@
-# 在 HUGO 中添加 Valine 评论系统的过程
+# 用 HUGO 搭配 Valine 实现简洁的评论交互
 
 
 <!--more-->
