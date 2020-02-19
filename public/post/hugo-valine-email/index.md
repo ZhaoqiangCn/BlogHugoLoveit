@@ -1,4 +1,4 @@
-# 用 HUGO 配合 Valine 实现评论后实时邮件通知
+# 用 Hugo 配合 Valine 实现评论后实时邮件通知
 
 
 <!--more-->

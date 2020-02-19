@@ -1,4 +1,4 @@
-# 用 HUGO 配合 Valine 实现简洁的评论交互
+# 用 Hugo 配合 Valine 实现简洁的评论交互
 
 
 <!--more-->

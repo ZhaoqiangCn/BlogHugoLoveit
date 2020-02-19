@@ -1,5 +1,5 @@
 ---
-title: "用 HUGO 配合 Valine 实现评论后实时邮件通知"
+title: "用 Hugo 配合 Valine 实现评论后实时邮件通知"
 date: 2020-01-16T14:54:04+08:00
 description: "Valine 评论系统 邮件通知"
 draft: false
