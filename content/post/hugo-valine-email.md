@@ -11,7 +11,9 @@ toc: true
 
 <!--more-->
 
-> ***本文同步更新至 [Youtube ](https://youtu.be/y45Y_bYHBk8) 和 [BiliBili ](https://www.bilibili.com/video/av84409002/)***
+{{% admonition "success" "Admonition success" %}}
+**本文同步更新至 [Youtube ](https://youtu.be/y45Y_bYHBk8) 和 [BiliBili ](https://www.bilibili.com/video/av84409002/)**
+{{% /admonition %}}
 
 如果你对 `Valine` 自带的`邮件提醒`不满意，还可以使用更完善的第三方`邮件提醒`：
 

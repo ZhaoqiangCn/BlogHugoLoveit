@@ -2,8 +2,9 @@
 
 
 <!--more-->
-
-> ***本文同步更新至 [Youtube ](https://youtu.be/U7fpUaGrt8o) 和 [BiliBili ](https://www.bilibili.com/video/av84392015/)***
+{{% admonition "success" "Admonition success" %}}
+**本文同步更新至 [Youtube ](https://youtu.be/U7fpUaGrt8o) 和 [BiliBili ](https://www.bilibili.com/video/av84392015/)**
+{{% /admonition %}}
 
 ## Leancloud相关配置
 
