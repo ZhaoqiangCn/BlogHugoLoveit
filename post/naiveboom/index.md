@@ -5,8 +5,8 @@
 
 这是一个无需注册即可使用的阅后即焚程序，当你需要在能够被第三方监听的平台，分享一些敏感信息时，可以借助NaiveBoom，将敏感信息以一个一次性链接的形式发送，一旦被人点击，信息即消失了。
 
-
 ## 项目介绍
+
 项目遵循MIT协议开源。
 工作环境为：nodejs、redis、Nginx或Apache等（可选）
 Github地址：https://github.com/kchown/naiveboom
