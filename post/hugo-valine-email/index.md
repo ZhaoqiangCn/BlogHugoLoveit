@@ -1,4 +1,4 @@
-# 在 HUGO 中添加 Valine 评论系统的过程后续--邮件通知
+# 用 HUGO 搭配 Valine 实现邮件通知
 
 
 <!--more-->
