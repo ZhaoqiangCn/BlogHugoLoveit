@@ -13,7 +13,7 @@
     
     
     <item>
-      <title>用 Hugo 搭配 Algolia 实现高效美观的站内搜索</title>
+      <title>用 Hugo 配合 Algolia 实现高效美观的站内搜索</title>
       <link>https://www.nashome.cn/post/hugo-algolia/</link>
       <pubDate>Tue, 18 Feb 2020 09:13:13 +0800</pubDate>
       
@@ -22,7 +22,7 @@
     </item>
     
     <item>
-      <title>用 HUGO 搭配 Valine 实现邮件通知</title>
+      <title>用 HUGO 配合 Valine 实现评论后实时邮件通知</title>
       <link>https://www.nashome.cn/post/hugo-valine-email/</link>
       <pubDate>Thu, 16 Jan 2020 14:54:04 +0800</pubDate>
       
@@ -94,7 +94,7 @@
     </item>
     
     <item>
-      <title> 部署 Hugo 静态博客到 Netlify 和 Github Pages</title>
+      <title> 同时部署 Hugo 静态博客到 Netlify 和 Github Pages</title>
       <link>https://www.nashome.cn/post/hugo-netlify/</link>
       <pubDate>Sun, 12 Jan 2020 14:49:17 +0800</pubDate>
       
@@ -112,7 +112,7 @@
     </item>
     
     <item>
-      <title>用 HUGO 搭配 Valine 实现简洁的评论交互</title>
+      <title>用 HUGO 配合 Valine 实现简洁的评论交互</title>
       <link>https://www.nashome.cn/post/hugo-valine/</link>
       <pubDate>Fri, 10 Jan 2020 14:41:18 +0800</pubDate>
       
@@ -121,7 +121,7 @@
     </item>
     
     <item>
-      <title>用 Hugo 配合 GithubActions 自动构建我的博客</title>
+      <title>用 Hugo 配合 Github Actions 自动构建我的博客</title>
       <link>https://www.nashome.cn/post/hugo-github-actions/</link>
       <pubDate>Thu, 09 Jan 2020 14:52:40 +0800</pubDate>
       

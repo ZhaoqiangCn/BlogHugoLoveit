@@ -1,4 +1,4 @@
-# 用 Hugo 搭配 Algolia 实现高效美观的站内搜索
+# 用 Hugo 配合 Algolia 实现高效美观的站内搜索
 
 
 ## 前言

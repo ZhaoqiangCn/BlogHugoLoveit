@@ -1,4 +1,4 @@
-# 用 Hugo 配合 GithubActions 自动构建我的博客
+# 用 Hugo 配合 Github Actions 自动构建我的博客
 
 
 <!--more-->
