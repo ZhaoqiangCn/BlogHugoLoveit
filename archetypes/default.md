@@ -1,5 +1,5 @@
 ---
-author: "zhao qiang"
+author: "ZhaoQiang"
 author_link: ""
 title: "{{ replace .TranslationBaseName "-" " " | title }}"
 date: {{ .Date }}
