@@ -10,9 +10,7 @@ toc: true
 ---
 
 <!--more-->
-{{% admonition "success" "Admonition success" %}}
-**本文同步更新至 [Youtube ](https://youtu.be/ZAi4a1fyBWI) 和 [BiliBili ](https://www.bilibili.com/video/av84216011/)**
-{{% /admonition %}}
+>**本文同步更新至 [Youtube ](https://youtu.be/ZAi4a1fyBWI) 和 [BiliBili ](https://www.bilibili.com/video/av84216011/)**
 
 ## 部署到Github Pages
 
