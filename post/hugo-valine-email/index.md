@@ -2,8 +2,7 @@
 
 
 <!--more-->
-
-> ***本文同步更新至 [Youtube ](https://youtu.be/y45Y_bYHBk8) 和 [BiliBili ](https://www.bilibili.com/video/av84409002/)***
+>**本文同步更新至 [Youtube ](https://youtu.be/y45Y_bYHBk8) 和 [BiliBili ](https://www.bilibili.com/video/av84409002/)**
 
 如果你对 `Valine` 自带的`邮件提醒`不满意，还可以使用更完善的第三方`邮件提醒`：
 
@@ -19,19 +18,19 @@
 
 进入 [Leancloud](https://leancloud.cn/dashboard/applist.html#/apps) 对应的 `Valine` 应用中，点击 `云引擎 -> 设置` 填写代码库并保存：`https://github.com/zhaojun1998/Valine-Admin`
 
-![img](/Images/ValineComments/1.png)
+![img](https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/ValineComments/1.png)
 
 　　切换到部署标签页，选择 `Git 源码部署`
 
-![img](/Images/ValineComments/2.png)
+![img](https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/ValineComments/2.png)
 
 　　分支使用 `master`，点击部署即可
 
-![img](/Images/ValineComments/3.png)
+![img](https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/ValineComments/3.png)
 
 　　可以在 `云引擎 -> 应用日志` 查看部署日志信息
 
-![img](/Images/ValineComments/4.png)
+![img](https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/ValineComments/4.png)
 
 
 
@@ -39,7 +38,7 @@
 
 　　此外，你需要设置云引擎的环境变量以提供必要的信息，点击 `云引擎 -> 设置`，找到 `自定义环境变量`
 
-![img](/Images/ValineComments/5.png)
+![img](https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/ValineComments/5.png)
 
 **必选参数**
 
@@ -58,7 +57,7 @@
 
 　　然后将 `邮箱地址` 设置至 `SMTP_USER`，`邮箱授权码` 设置至 `SMTP_PASS`，`SMTP_SERVICE` 中填写 `QQ`
 
-![img](/Images/ValineComments/6.png)
+![img](https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/ValineComments/6.png)
 
 
 
@@ -96,41 +95,41 @@
 
 > 此处如果要设置自定义的 Web 主机域名，根据中国大陆有关法律法规，国内用户绑定独立域名前必须先域名备案。
 
-![img](/Images/ValineComments/7.png)
+![img](https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/ValineComments/7.png)
 
 #### 使用自带定时器
 
 　　首先需要添加环境变量，`ADMIN_URL`：`Web 主机域名`，如图所示（添加后重启容器才会生效）：
 
-![img](/Images/ValineComments/8.png)
+![img](https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/ValineComments/8.png)
 
 　　然后点击云引擎 - 定时任务，新增定时器，按照图片上填写：
 
 - 定时任务名称：自定义
 - 选择生成环境：self_wake
 - Cron 表达式：定时器触发代码，表示 7点 ~ 23点每20分钟执行一次
-![img](/Images/ValineComments/9.png)
+![img](https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/ValineComments/9.png)
 
 　　添加后要记得**点击启用**，启用状态如下：
 
-![img](/Images/ValineComments/10.png)
+![img](https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/ValineComments/10.png)
 
 　　启用成功后，每 20 分钟在 `云引擎 -> 应用日志` 中可以看到日志。
 
 > **注意：更新新版本与更改环境变量均需要重启容器后生效。**
 
-![img](/Images/ValineComments/11.png)
+![img](https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/ValineComments/11.png)
 
 ### LeanCloud 评论管理
 
 　　LeanCloud 提供了一套评论管理后台，该后台登录需要账号密码，需要在这里设置，只需要填写 `email`、`password`、`username`，这三个字段即可, 使用 `email` 作为账号登陆即可。（为了安全考虑，此 `email` 必须为配置中的 `SMTP_USER` 或 `TO_EMAIL`， 否则不允许登录）
 
-![img](/Images/ValineComments/12.png)
+![img](https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/ValineComments/12.png)
 
 　　访问自己的 Web 主机域名，效果如下：
 
 
-![img](/Images/ValineComments/13.png)
+![img](https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/ValineComments/13.png)
 
 　　使用已设置好的账号密码登录即可管理评论。
 
@@ -138,6 +137,6 @@
 
 　　此时，我们在站点发表评论以后，邮箱中就会收到提醒信息啦。
 
-![img](/Images/ValineComments/14.png)
+![img](https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/ValineComments/14.png)
 
 

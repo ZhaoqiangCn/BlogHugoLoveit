@@ -29,7 +29,7 @@ string returnStr = (string)op.CallStaticClassMethod("AX Class", "Class Method", 
 
 ## Consume SystemConnector in VS
 
-![1](/Images/AX2009Webservice/1.png)
+![1](https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/AX2009Webservice/1.png)
 
 ```c#
 using System;
@@ -95,8 +95,8 @@ AX2009 调用外部接口只需要打开AOT-Reference-添加一个服务引用�
 
 如下图：
 
-![2](/Images/AX2009Webservice/2.png)
+![2](https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/AX2009Webservice/2.png)
 
-![3](/Images/AX2009Webservice/3.png)
+![3](https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/AX2009Webservice/3.png)
 
 这样就可以了。

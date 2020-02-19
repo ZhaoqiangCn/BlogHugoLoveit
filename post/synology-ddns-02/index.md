@@ -28,8 +28,6 @@ QuickConnect 让您使用可自定义的 ID 或地址（如 quickconnect.to/exam
 
 这里可以注册**Synology**提供的DDNS服务或者其他服务商的DDNS。下文仅针对**Synology**，其他下拉列表中的服务商配置基本类似。
 
-![](https://image.nashome.cn/uploads/DDNS01.png?x-oss-process=style%2Ffull)![](https://image.nashome.cn/uploads/DDNS03.png?x-oss-process=style%2Ffull)
-
 **若要设置 DDNS 主机名：**
 
 1. 单击**添加**按钮将出现一个对话框，提示您编辑以下设置：
@@ -49,4 +47,3 @@ QuickConnect 让您使用可自定义的 ID 或地址（如 quickconnect.to/exam
    * **编辑：**更改所选主机名条目的设置。
    * **立即更新：**更新所有已启用 DDNS 服务的主机名条目状态。
 
-![](https://image.nashome.cn/uploads/DDNS02.png?x-oss-process=style%2Ffull)

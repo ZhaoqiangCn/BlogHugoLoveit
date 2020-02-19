@@ -3,8 +3,7 @@
 
 <!--more-->
 
-> ***本文同步更新至 [Youtube ](https://youtu.be/X3ROQto8jWM) 和 [BiliBili ](https://www.bilibili.com/video/av84104625/)***
-
+> **本文同步更新至 [Youtube ](https://youtu.be/X3ROQto8jWM) 和 [BiliBili ](https://www.bilibili.com/video/av84104625/)**
 
 ## 初始化 GitHub 仓库
 
