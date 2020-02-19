@@ -1,10 +1,9 @@
 {
   "name": "bloghugoloveit",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "algolia": "hugo-algolia -i \"content/post/**\" -s "
   },
   "repository": {
     "type": "git",
@@ -16,7 +15,10 @@
     "url": "https://github.com/ZhaoqiangCn/BlogHugoLoveit/issues"
   },
   "homepage": "https://github.com/ZhaoqiangCn/BlogHugoLoveit#readme",
-  "scripts": {
-    "algolia": "hugo-algolia -i \"content/post/**\" -s "
+  "description": "",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "xml2js": "^0.4.23",
+    "xmlhttprequest": "^1.8.0"
   }
 }
