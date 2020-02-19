@@ -71,7 +71,7 @@ $ unzip AriaNg-1.0.0.zip
 
 浏览器访问 [http://lixian.xxx.com](http://lixian.xxx.com/) ，点击左侧的 **AriaNg 设置** ，再点上面的 **PRC** 选项卡，把 `Aria2 RPC 地址` 和 `Aria2 RPC 密钥` 填上，如下图所示：
 
-![PNG](/Images/Aria2Image/AriaNgRPCshezhi.png)
+![PNG](https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Aria2Image/AriaNgRPCshezhi.png)
 
 如果不出意外，左侧的 **Aria2 状态** 会显示 `已连接`
 
@@ -372,7 +372,7 @@ $ chmod +x /home/autoupload.sh
 
 比如我现在下载完了一个 `BT` 任务，这个任务总共有 47G 大小，173 个文件，目前正在往 GD 上传。我们通过宝塔面板来看一下此时 VPS 的系统状态：
 
-![PNG](/Images/Aria2Image/baotafuzai.png)
+![PNG](https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Aria2Image/baotafuzai.png)
 
 虽然 CPU 什么的都不高，但系统负载却达到了 100% ，宝塔面板加载明显变慢！可以想象，如果不用上传队列加以控制，此时 `Aria2` 又下载好了几个任务，然后又开始用 `rclone` 上传新的文件，而我们之前那个 47G 的大包还没上传完，这几个上传任务同时执行，我们的小鸡还不废掉？这只还仅仅只是各种坑中的一个！
 
@@ -380,17 +380,17 @@ $ chmod +x /home/autoupload.sh
 
 在宝塔面板右侧点击 **计划任务**，然后添加两个计划任务，具体配置如下：
 
-![PNG](/Images/Aria2Image/baotajihua1.png)
+![PNG](https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Aria2Image/baotajihua1.png)
 
 这个计划任务会每分钟检查一次队列中是否有待上传的任务，如果有，且当前没有任务在执行上传操作就那就开始上传。但是，如果当前有任务正在上传，就跳过，待其上传完后再执行。
 
-![PNG](/Images/Aria2Image/baotajihua2.png)
+![PNG](https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Aria2Image/baotajihua2.png)
 
 这个计划任务会每十分钟检查一次 `Aria2` 中是否有 **正在下载** 、**正在等待**、**已完成/已停止** 这 3 种状态的任务，如果都没有，那就清理 `config.py` 中指定的 `Aria2 下载目录` ，这样做的原因是长期做下载，下载目录中会遗留很多乱七八糟的无用的文件或文件夹，所以在没有任务的时候清理一下，可以释放服务器的硬盘空间。
 
 但这两个计划任务的执行周期都比较短，时间长了就会在系统里留下体积巨大的日志文件，所以还需处理一下，让他们不写日志。
 
-![PNG](/Images/Aria2Image/baotajihua3.png)
+![PNG](https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Aria2Image/baotajihua3.png)
 
 打开 `/www/server/cron` 这个文件夹，里面存放了刚才由宝塔面板创建的两个计划任务脚本 \( 不带 `.log` 的那两个文件 \)，点击右边的 **编辑**，把：
 
@@ -442,13 +442,13 @@ python3 /home/clear_down.py > /dev/null
 
 根据 `Aria2` 的配置，还需要再开放几个端口
 
-![PNG](/Images/Aria2Image/baotakaifangduankou.png)
+![PNG](https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Aria2Image/baotakaifangduankou.png)
 
 #### Telegram Bot 通知
 
 如果需要通过 `Telegram` 来接收离线任务完成通知，可以在 `config.py` 中开启 `"enable_tg_bot": True,` 并做好相应的配置。其中 `tg_chat_id` 是通知目标，它的值可以是 **个人/群组/频道** 的数字 **id** 或者 **带 @ 的 username** ；`tg_bot_token` 则需要私聊 [@BotFather](https://t.me/BotFather) 并创建机器人后获取。下面是 `Telegram` 通知的效果截图：
 
-![PNG](/Images/Aria2Image/telegrambottongzhi.jpg)
+![PNG](https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Aria2Image/telegrambottongzhi.jpg)
 
 **至此，所有安装、配置的工作已全部完成。**
 

@@ -13,15 +13,15 @@ Github地址：https://github.com/kchown/naiveboom
 
 ## 预览
 电脑端Web界面预览：
-![PNG](/Images/NaiveBoomImage/diannaoyulan.png)
+![PNG](https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/NaiveBooMImage/diannaoyulan.png)
 iOS手机端Web界面预览：		
 
-![PNG](/Images/NaiveBoomImage/shoujiyulan.png)
+![PNG](https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/NaiveBooMImage/shoujiyulan.png)
 
 基础环境配置
 Redis
 由于我的VPS本身部署了lnmp 1.5(https://lnmp.org/install.html)，因此也直接使用了其提供的Redis，具体安装过程如下：
-![PNG](/Images/NaiveBoomImage/anzhuangguocheng.png)
+![PNG](https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/NaiveBooMImage/anzhuangguocheng.png)
 进入lnmp解压后的目录，执行：
 
 ```text
@@ -73,5 +73,5 @@ npm install
 pm2 start run.js
 ```
 如果显示如下画面，那么NaiveBoom已经在正常运行了：
-![PNG](/Images/NaiveBoomImage/pm2.png)
+![PNG](https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/NaiveBooMImage/pm2.png)
 我们此时如果访问http://ip:3000，应该就能正常访问NaiveBoom了！

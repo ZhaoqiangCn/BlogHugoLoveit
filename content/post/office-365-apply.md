@@ -27,11 +27,11 @@ math: false
 
 完善相关信息，国家选择China
 
-![img](/Images/Office365/1.jpg)
+![img](https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Office365/1.jpg)
 
 3）下面是勾选你要使用那些功能。不知道怎么勾选那就全勾选吧！
 
-![img](/Images/Office365/2.jpg)
+![img](https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Office365/2.jpg)
 
 鼠标点的累？Chrome 浏览器 F12 打开控制复制下面的脚本执行一下，全部勾选了。
 
@@ -41,15 +41,15 @@ $(".ms-Checkbox").each(function(i,o){$(o)[0].click()})
 
 4）点击加入后，稍等一会可见下面的成功界面！点击【SET UP SUBSCRIPTION】设置订阅相关内容！其实就是设置一个全局管理员！需要一个手机号接收验证码！
 
-![img](/Images/Office365/3.jpg)
+![img](https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Office365/3.jpg)
 
-![img](/Images/Office365/4.jpg)
+![img](https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Office365/4.jpg)
 
-![img](/Images/Office365/5.jpg)
+![img](https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Office365/5.jpg)
 
 5）设置完成后可见成功界面如下！到期时间！
 
-![img](/Images/Office365/6.jpg)
+![img](https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Office365/6.jpg)
 
 ### **登录控制台**
 
@@ -57,9 +57,9 @@ $(".ms-Checkbox").each(function(i,o){$(o)[0].click()})
 
 登录以后可以管理订阅，管理用户！
 
-![img](/Images/Office365/7.jpg)
+![img](https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Office365/7.jpg)
 
-![img](/Images/Office365/8.jpg)
+![img](https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Office365/8.jpg)
 
 ### **许可证信息**
 

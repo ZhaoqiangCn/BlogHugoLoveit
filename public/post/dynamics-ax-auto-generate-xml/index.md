@@ -7,21 +7,21 @@
 
 组织需要输出的数据，新建一个Query。注意新建的表需要有Index。
 
-![0](/Images/AX2009AutoXML/0.png)
+![0](https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/AX2009AutoXML/0.png)
 
 ## 文档服务
 
 路径：工具 -&gt; 开发工具 -&gt; AIF -&gt; 创建、更新文档服务
 
-![1](/Images/AX2009AutoXML/1.png)
+![1](https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/AX2009AutoXML/1.png)
 
-![2](/Images/AX2009AutoXML/2.png)
+![2](https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/AX2009AutoXML/2.png)
 
 ### 自动创建Pravite Project
 
 通过系统工具可以自动创建下图中的所有类，其中Job可以生成XML的XSD，CIG\_ICTradeOrderService是对应的文档服务名称
 
-![3](/Images/AX2009AutoXML/3.png)
+![3](https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/AX2009AutoXML/3.png)
 
 ## XML文件
 

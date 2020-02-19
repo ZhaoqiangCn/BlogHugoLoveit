@@ -35,19 +35,19 @@ math: false
 
 ### Application
 
-​    点击**NEW APPLICATION**，**Name**可选，方案选择**FREE**，然后创建，随后的地区选择邻近地区即可；
-![](/Images/Algolia/1.png)
+点击**NEW APPLICATION**，**Name**可选，方案选择**FREE**，然后创建，随后的地区选择邻近地区即可；
+![](https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Algolia/1.png)
 
 ### Indices & Index
 
-​    点击侧栏的**Indices**，然后点击**Create Index**，**Index name**自定义（例如自己的域名）
-![](/Images/Algolia/0.png)		
-![](/Images/Algolia/2.png)
+点击侧栏的**Indices**，然后点击**Create Index**，**Index name**自定义（例如自己的域名）
+![](https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Algolia/0.png)		
+![](https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Algolia/2.png)
 
 ### API Keys
 
-​    点击侧栏**API Keys**，记住以下的 **Keys**，之后都会用到；
-![](/Images/Algolia/3.png)
+点击侧栏**API Keys**，记住以下的 **Keys**，之后都会用到；
+![](https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Algolia/3.png)
 
 ## 在本地生成索引
 

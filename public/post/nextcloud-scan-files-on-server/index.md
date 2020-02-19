@@ -48,7 +48,7 @@ sudo -u www php occ files:scan --all   #扫描所有用户的所有文件
 
 执行命令后进行扫描并列出扫描信息。
 
-![img](/Images/NextCloud/OCC/1.png)
+![img](https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/NextCloud/OCC/1.png)
 
 如果不想显示扫描信息，可以在后面加上
 
@@ -72,7 +72,7 @@ sudo -u www-data php occ files:scan --all --quiet
 sudo -u www-data php occ user:list
 ```
 
-![img](/Images/NextCloud/OCC/2.png)
+![img](https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/NextCloud/OCC/2.png)
 
 为用户zhaoqiang 扫描文件：
 
@@ -80,7 +80,7 @@ sudo -u www-data php occ user:list
 sudo -u www-data php occ files:scan zhaoqiang
 ```
 
-![img](/Images/NextCloud/OCC/3.png)
+![img](https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/NextCloud/OCC/3.png)
 
 ### 2.指定扫描目录
 
