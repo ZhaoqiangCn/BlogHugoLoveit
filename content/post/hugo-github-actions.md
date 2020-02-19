@@ -1,5 +1,5 @@
 ---
-title: "用 Hugo 配合 GithubActions 自动构建我的博客"
+title: "用 Hugo 配合 Github Actions 自动构建我的博客"
 date: 2020-01-09T14:52:40+08:00
 description: ""
 draft: false

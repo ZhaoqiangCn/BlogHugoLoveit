@@ -1,11 +1,11 @@
 ---
 author: "zhao qiang"
 author_link: ""
-title: "用 Hugo 搭配 Algolia 实现高效美观的站内搜索"
+title: "用 Hugo 配合 Algolia 实现高效美观的站内搜索"
 date: 2020-02-18T09:13:13+08:00
 lastmod: 2020-02-18T09:13:13+08:00
 draft: false
-description: "用 Hugo 搭配 Algolia 实现高效美观的站内搜索"
+description: "很多的 `Hugo` 主题是没有自带搜索功能的，但是们为了方便用户浏览和查找内容是需要在网站上提供搜索功能。大家可以查看 [Hugo 官方推荐的搜索方案](https://gohugo.io/tools/search/)，这里我选择的是 [Algolia](https://www.algolia.com/) "
 show_in_homepage: true
 description_as_summary: false
 license: ""

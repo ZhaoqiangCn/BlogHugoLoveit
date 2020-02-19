@@ -1,4 +1,4 @@
-#  部署 Hugo 静态博客到 Netlify 和 Github Pages
+#  同时部署 Hugo 静态博客到 Netlify 和 Github Pages
 
 
 <!--more-->

@@ -1,7 +1,7 @@
 ---
-title: "用 HUGO 搭配 Valine 实现简洁的评论交互"
+title: "用 HUGO 配合 Valine 实现简洁的评论交互"
 date: 2020-01-10T14:41:18+08:00
-description: "Valine 评论系统"
+description: "Valine 评论系统 leancloud"
 draft: false
 tags: [Valine]
 categories: [hugo]
