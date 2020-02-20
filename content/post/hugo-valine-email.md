@@ -7,6 +7,9 @@ tags: [Valine]
 categories: [hugo]
 autoCollapseToc: true
 toc: true
+aliases = [
+    "/post/Hugo-Valine-Email/"
+]
 ---
 
 <!--more-->
