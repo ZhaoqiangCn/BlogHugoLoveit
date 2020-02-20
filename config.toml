@@ -143,7 +143,8 @@ pygmentsCodefencesGuessSyntax = true
       # Gravatar Email for preferred avatar in home page
       gravatarEmail = ""
       # URL of avatar shown in home page
-      avatarURL = "images/avatar.png"
+      #avatarURL = "images/avatar.png"
+      avatarURL = "https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/avatar.png"
       # subtitle shown in home page
       subtitle = "Welcome to my blog !"
       # whether to use typeit animation for subtitle
@@ -311,7 +312,7 @@ pygmentsCodefencesGuessSyntax = true
 
   # Publisher Info just for SEO
   [params.publisher]
-    name = "xxxx"
+    name = "ZhaoQiang"
     [params.publisher.logo]
       url = "logo.png"
       width = 127
