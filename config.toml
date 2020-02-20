@@ -144,7 +144,7 @@ pygmentsCodefencesGuessSyntax = true
       gravatarEmail = ""
       # URL of avatar shown in home page
       #avatarURL = "images/avatar.png"
-      avatarURL = "https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/avatar.png"
+      avatarURL = "https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/avatar.png?x-oss-process=style/thumbnail"
       # subtitle shown in home page
       subtitle = "Welcome to my blog !"
       # whether to use typeit animation for subtitle
