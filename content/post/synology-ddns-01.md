@@ -9,6 +9,9 @@ comment: true
 toc: true
 auto_collapse_toc: true
 math: false
+aliases: [
+    "/post/Synology-DDNS-01/"
+]
 ---
 
 <!--more-->

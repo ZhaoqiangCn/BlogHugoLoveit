@@ -7,6 +7,9 @@ tags: [GithubPages,GithubActions]
 categories: [hugo]
 autoCollapseToc: true
 toc: true
+aliases: [
+    "/post/Hugo-Github-Actions/"
+]
 ---
 
 <!--more-->
