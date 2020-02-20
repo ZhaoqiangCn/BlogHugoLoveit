@@ -111,7 +111,7 @@ pygmentsCodefencesGuessSyntax = true
   # LoveIt theme version
   version = "0.1.X"
   # site description
-  description = "Zhao Qiang's Blog"
+  description = "Zhao Qiang`s Blog"
   # site keywords
   keywords = ["Dynamics AX", "Github" ,"Linux", "Synology","HUGO","Tutorial","Technology"]
   # site default theme ("light", "dark", "auto")
@@ -314,19 +314,19 @@ pygmentsCodefencesGuessSyntax = true
   [params.publisher]
     name = "ZhaoQiang"
     [params.publisher.logo]
-      url = "logo.png"
+      url = ""
       width = 127
       height = 40
 
   # Website Log Info just for SEO
   [params.logo]
-    url = "logo.png"
+    url = ""
     width = 127
     height = 40
 
   # Website Image Info just for SEO
   [params.image]
-    url = "cover.png"
+    url = ""
     width = 800
     height = 600
 
