@@ -10,7 +10,7 @@ toc: true
 auto_collapse_toc: true
 math: false
 aliases: [
-    "/post/Nextcloud-Optimize/"
+    "/post/NextCloud-Optimize/"
 ]
 ---
 
