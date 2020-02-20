@@ -4,7 +4,7 @@ languageCode = "zh"
 # [en, zh, ...] determines which i18n file to use
 defaultContentLanguage = "zh"
 # website title
-title = "ZhaoQiang's Blog"
+title = "Blog My Life"
 # theme
 theme = "LoveIt"
 # whether to use git commit log to generate lastmod record
@@ -111,7 +111,7 @@ pygmentsCodefencesGuessSyntax = true
   # LoveIt theme version
   version = "0.1.X"
   # site description
-  description = "Zhao Qiang`s Blog"
+  description = "A blog recording my life"
   # site keywords
   keywords = ["Dynamics AX", "Github" ,"Linux", "Synology","HUGO","Tutorial","Technology"]
   # site default theme ("light", "dark", "auto")
