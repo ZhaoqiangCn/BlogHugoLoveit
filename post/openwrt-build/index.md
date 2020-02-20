@@ -135,7 +135,6 @@ git clone https://github.com/P3TERX/xxx package/xxx
 <details style="box-sizing: border-box; display: block; color: rgba(0, 0, 0, 0.86); font-family: &quot;Droid Serif&quot;, -apple-system, system-ui, sans-serif; font-size: 18px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;"><summary style="box-sizing: border-box; display: list-item; cursor: pointer; outline: 0px;">点击查看</summary></details>
 
 
-
 ### 真·一键编译
 
 点击自己仓库页面上的 Star 开始编译，为了防止被滥用，这个功能默认没有开启。开启后如果被恶意点击轻则封号，严重可能会导致中美关系恶化、原子弹爆炸、第三次世界大战等后果。（大雾
@@ -143,7 +142,6 @@ git clone https://github.com/P3TERX/xxx package/xxx
 
 
 <details style="box-sizing: border-box; display: block; color: rgba(0, 0, 0, 0.86); font-family: &quot;Droid Serif&quot;, -apple-system, system-ui, sans-serif; font-size: 18px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;"><summary style="box-sizing: border-box; display: list-item; cursor: pointer; outline: 0px;">点击查看</summary></details>
-
 
 
 ### 自定义源码编译
@@ -155,7 +153,6 @@ git clone https://github.com/P3TERX/xxx package/xxx
 <details style="box-sizing: border-box; display: block; color: rgba(0, 0, 0, 0.86); font-family: &quot;Droid Serif&quot;, -apple-system, system-ui, sans-serif; font-size: 18px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;"><summary style="box-sizing: border-box; display: list-item; cursor: pointer; outline: 0px;">点击查看</summary></details>
 
 
-
 ### 并发编译
 
 基于 GitHub Ac­tions 可同时运行多个工作流程的特性，最多可以同时进行至少 20 个编译任务。也可以单独选择其中一个进行编译，这充分的利用到了 GitHub Ac­tions 为每个账户免费提供的 20 个 Ubuntu 虚拟服务器环境。此外你还可以额外再使用 5 个 ma­cOS 虚拟服务器环境进行编译，开启方法在后面有说明。
@@ -163,7 +160,6 @@ git clone https://github.com/P3TERX/xxx package/xxx
 
 
 <details style="box-sizing: border-box; display: block; color: rgba(0, 0, 0, 0.86); font-family: &quot;Droid Serif&quot;, -apple-system, system-ui, sans-serif; font-size: 18px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;"><summary style="box-sizing: border-box; display: list-item; cursor: pointer; outline: 0px;">点击查看</summary></details>
-
 
 
 ### 云 menuconfig（SSH 连接到 Actions）
@@ -175,7 +171,6 @@ git clone https://github.com/P3TERX/xxx package/xxx
 <details style="box-sizing: border-box; display: block; color: rgba(0, 0, 0, 0.86); font-family: &quot;Droid Serif&quot;, -apple-system, system-ui, sans-serif; font-size: 18px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;"><summary style="box-sizing: border-box; display: list-item; cursor: pointer; outline: 0px;">点击查看</summary></details>
 
 
-
 ### macOS 虚拟机编译
 
 GitHub Ac­tions 的 ma­cOS 虚拟机性能要高于 Ubuntu 虚拟机，所以使用它编译 Open­Wrt 理论上速度会更快。博主经过几天时间的研究已经总结出了 [macOS 下的 OpenWrt 编译环境的搭建方法](https://p3terx.com/archives/compiling-openwrt-with-macos.html)，并编写出了适用于 ma­cOS 虚拟环境的 Open­Wrt 编译方案的 work­flow 文件。
@@ -183,7 +178,6 @@ GitHub Ac­tions 的 ma­cOS 虚拟机性能要高于 Ubuntu 虚拟机，所以�
 
 
 <details style="box-sizing: border-box; display: block; color: rgba(0, 0, 0, 0.86); font-family: &quot;Droid Serif&quot;, -apple-system, system-ui, sans-serif; font-size: 18px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;"><summary style="box-sizing: border-box; display: list-item; cursor: pointer; outline: 0px;">点击查看</summary></details>
-
 
 
 ## 尾巴
