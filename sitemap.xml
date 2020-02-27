@@ -66,14 +66,14 @@
   </url>
   
   <url>
-    <loc>https://www.nashome.cn/categories/hugo/</loc>
+    <loc>https://www.nashome.cn/tags/hugo/</loc>
     <lastmod>2020-02-18T09:13:13+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.nashome.cn/tags/hugo/</loc>
+    <loc>https://www.nashome.cn/categories/hugo/</loc>
     <lastmod>2020-02-18T09:13:13+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

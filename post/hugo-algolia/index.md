@@ -1,5 +1,6 @@
 # 用 Hugo 配合 Algolia 实现高效美观的站内搜索
 
+> **本文同步更新至 [Youtube ](https://youtu.be/D77dMN_U4YA) 和 [BiliBili ](https://www.bilibili.com/video/av91537755/)**
 
 ## 前言
 
