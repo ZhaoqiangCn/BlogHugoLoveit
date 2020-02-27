@@ -3,21 +3,63 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://www.nashome.cn/tags/algolia/</loc>
-    <lastmod>2020-02-18T09:13:13+08:00</lastmod>
+    <loc>https://www.nashome.cn/tags/ax2009/</loc>
+    <lastmod>2020-02-27T09:21:37+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nashome.cn/tags/ax2012/</loc>
+    <lastmod>2020-02-27T09:21:37+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.nashome.cn/</loc>
-    <lastmod>2020-02-18T09:13:13+08:00</lastmod>
+    <lastmod>2020-02-27T09:21:37+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.nashome.cn/categories/</loc>
+    <lastmod>2020-02-27T09:21:37+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nashome.cn/post/dynamics-ax-record-level-security/</loc>
+    <lastmod>2020-02-27T09:21:37+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nashome.cn/categories/dynamicsax/</loc>
+    <lastmod>2020-02-27T09:21:37+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nashome.cn/post/</loc>
+    <lastmod>2020-02-27T09:21:37+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nashome.cn/tags/</loc>
+    <lastmod>2020-02-27T09:21:37+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nashome.cn/tags/algolia/</loc>
     <lastmod>2020-02-18T09:13:13+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -38,21 +80,7 @@
   </url>
   
   <url>
-    <loc>https://www.nashome.cn/post/</loc>
-    <lastmod>2020-02-18T09:13:13+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://www.nashome.cn/tags/search/</loc>
-    <lastmod>2020-02-18T09:13:13+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nashome.cn/tags/</loc>
     <lastmod>2020-02-18T09:13:13+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -122,13 +150,6 @@
   </url>
   
   <url>
-    <loc>https://www.nashome.cn/categories/dynamicsax/</loc>
-    <lastmod>2020-01-15T16:25:29+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://www.nashome.cn/post/dynamics-365-deployable-packages/</loc>
     <lastmod>2020-01-15T16:25:29+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -152,13 +173,6 @@
   <url>
     <loc>https://www.nashome.cn/post/office-365-apply/</loc>
     <lastmod>2020-01-14T14:45:12+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nashome.cn/tags/ax2009/</loc>
-    <lastmod>2020-01-14T11:03:30+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
