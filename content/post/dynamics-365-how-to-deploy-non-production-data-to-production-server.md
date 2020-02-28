@@ -38,23 +38,23 @@ math: false
 
 如下图：
 
-![](http://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/Dynamics365/deploydata/1.png)
+![](https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/Dynamics365/deploydata/1.png)
 
 **新建**
 
 如下图：
 
-![](http://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/Dynamics365/deploydata/2.png)
+![](https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/Dynamics365/deploydata/2.png)
 
 选择 `Sandbox to production`
 
 如下图：
 
-![](http://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/Dynamics365/deploydata/3.png)
+![](https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/Dynamics365/deploydata/3.png)
 
 接下来需要选择 `Sandbox source` 、`downtime` 等等
 
-![](http://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/Dynamics365/deploydata/4.png)
+![](https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/Dynamics365/deploydata/4.png)
 
 
 
