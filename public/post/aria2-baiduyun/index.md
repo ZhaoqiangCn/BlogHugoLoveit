@@ -18,29 +18,29 @@
 
 **解决办法：**修改文件后缀为`.rar` 然后解压缩,得到如下文件夹。
 
-![](http://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/aria2baiduyun/01.png)
+![](https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/aria2baiduyun/01.png)
 
 ### Chrome设置
 
 在`Chrome`扩展程序中打开**开发者模式**，**加载已解压的扩展程序**，然后选中刚才解压的文件夹即可。
 
-![](http://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/aria2baiduyun/02.png)
+![](https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/aria2baiduyun/02.png)
 
 ### 百度云设置
 
 刷新浏览器来到百度网盘后，任意选中一个文件就可以看到多出了一个**导出下载**的按钮了。
 
-![](http://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/aria2baiduyun/03.png)
+![](https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/aria2baiduyun/03.png)
 
 点击**设置**,在这里需要输入之前配置好的ARIA2的地址和远程下载的文件夹，**这个文件夹我就选上一篇文章中设置好的可以自动上传到googledrive的文件夹了**，其他参数不需要修改。
 
-![](http://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/aria2baiduyun/04.png)
+![](https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/aria2baiduyun/04.png)
 
 ## 使用
 
 使用非常简单，在百度云中选中需要下载的文件，点击 **ARIA2 RPC** 后下载就已经自动开始啦。
 
-![](http://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/aria2baiduyun/05.png)
+![](https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/aria2baiduyun/05.png)
 
 ## 结语
 
