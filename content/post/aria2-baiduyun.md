@@ -60,6 +60,8 @@ math: false
 
 点击**设置**,在这里需要输入之前配置好的ARIA2的地址和远程下载的文件夹，**这个文件夹我就选上一篇文章中设置好的可以自动上传到googledrive的文件夹了**，其他参数不需要修改。
 
+**RPC地址格式**：http://token:123456qwerty@example.com:6800/jsonrpc
+
 ![](https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/aria2baiduyun/04.png)
 
 ## 使用
