@@ -22,6 +22,36 @@
         "math": false
     },
     {
+        "author": "ZhaoQiang",
+        "uri": "post/aria2-baiduyun",
+        "content": "Aria2           Google Drive     Aria2              Google Drive                 Aria2                        Google Drive                  BaiduExporter           Chrome         Aria2        BaiduExporter      BaiduExporter    chrome                           rar                Chrome    Chrome                                                                                                         ARIA2                                      googledrive                                             ARIA2 RPC",
+        "objectID": "post/aria2-baiduyun",
+        "author_link": "",
+        "title": " 使用 Aria2 实现百度云(Baiduyun)自动转存到谷歌云(GoogleDrive)",
+        "date": "2020-03-04T08:35:28.000Z",
+        "lastmod": "2020-03-04T08:35:28.000Z",
+        "draft": false,
+        "description": "",
+        "show_in_homepage": true,
+        "description_as_summary": false,
+        "license": "",
+        "tags": [
+            "Aria2",
+            "Baiduyun",
+            "GoogleDrive"
+        ],
+        "categories": [
+            "Linux",
+            ""
+        ],
+        "featured_image": "",
+        "featured_image_preview": "",
+        "comment": true,
+        "toc": true,
+        "auto_collapse_toc": true,
+        "math": false
+    },
+    {
         "title": " Aria2 搭建离线下载并自动上传到 Google Drive",
         "uri": "post/aria2",
         "content": "Google VPS                        Google Drive         GD           nPlayer    Google Drive                                  GD                 CentOS 7     Linux                       VPS     KVM          Linux     text   yum install  y wget    wget  O install sh http   download bt cn install install_6 0 sh    bash install sh                                    Nginx   Redis                                    Nginx   Redis     Nginx         AriaNg        Redis         GD                           GD               Aria2 Aria2                         HTTP HTTPS FTP SFTP BitTorrent   Metalink                         Aria2    text   wget  N   no check certificate https   raw githubusercontent com ToyoDAdoubi doubi master aria2 sh    chmod  x aria2 sh    bash aria2 sh                                BT Tracker            Aria2    Aria2                text   wget  N   no check certificate https   raw githubusercontent com meishixiu note master Aria2 2BAriaNg 2BRclone 2BGoogleDrive aria2 sh    chmod  x aria2 sh    bash aria2 sh                       root  aria2 aria2 conf     aria2 conf               Aria2 RPC    rpc secret              Aria2                dir            AriaNg                                            Nginx                                     AriaNg AriaNg      Aria2          Web                      Aria2            Aria2                            AriaNg                                  AriaNg                                                          lixian xxx com                                                lixian xxx com            home wwwroot lixian xxx com            AriaNg      home wwwroot lixian xxx com       text   cd  home wwwroot lixian xxx com   wget https   github com mayswind AriaNg releases download 1 0 0 AriaNg 1 0 0 zip   unzip AriaNg 1 0 0 zip   AriaNg               AriaNg      Aria2                      http   lixian xxx com        AriaNg           PRC       Aria2 RPC      Aria2 RPC                         Aria2               Rclone Rclone                                              Rclone   text   curl https   rclone org install sh   sudo bash   Rclone   Google Drive        text   rclone config             text n  New remote s  Set configuration password q  Quit config n s q n      n          text name  gd                 gd          text Type storage configure  Enter string value  Press Enter default       Choose number below  type own value 1   stackable unification remote  appear merge contents several remotes    union  2   Alias existing remote    alias  3   Amazon Drive    amazon cloud drive  4   Amazon S3 Compliant Storage Providers  AWS  Ceph  Dreamhost  IBM COS  Minio     s3  5   Backblaze B2    b2  6   Box    box  7   Cache remote    cache  8   Dropbox    dropbox  9   Encrypt Decrypt remote    crypt  10   FTP Connection    ftp  11   Google Cloud Storage  this not Google Drive     google cloud storage  12   Google Drive    drive  13   Hubic    hubic  14   JottaCloud    jottacloud  15   Local Disk    local  16   Mega    mega  17   Microsoft Azure Blob Storage    azureblob  18   Microsoft OneDrive    onedrive  19   OpenDrive    opendrive  20   Openstack Swift  Rackspace Cloud Files  Memset Memstore  OVH     swift  21   Pcloud    pcloud  22   QingCloud Object Storage    qingstor  23   SSH SFTP Connection    sftp  24   Webdav    webdav  25   Yandex Disk    yandex  26   http Connection    http  Storage 12   12    Google Drive      12          text   help drive backend at  https   rclone org drive    Google Application Client Id Leave blank normally  Enter string value  Press Enter default       client_id                    text Google Application Client Secret Leave blank normally  Enter string value  Press Enter default       client_secret                    text Scope rclone use when requesting access drive  Enter string value  Press Enter default       Choose number below  type own value 1   Full access files  excluding Application Data Folder     drive  2   Read only access file metadata file contents     drive readonly    Access files created rclone only  3   visible drive website    File authorization revoked when user deauthorizes app     drive file    Allows read write access Application Data folder  4   not visible drive website     drive appfolder    Allows read only access file metadata 5   does not allow access read download file content     drive metadata readonly  scope 1      1          text ID root folder Leave blank normally  Fill access  Computers  folders   see docs   Enter string value  Press Enter default       rootfolderid                    text Service Account Credentials JSON file path Leave blank normally  Needed want use SA instead interactive login  Enter string value  Press Enter default       serviceaccountfile                    text Edit advanced config   y n  y  Yes n  No y n n      n          text Remote config Use auto config  Say Y not sure Say N working remote headless machine Y didn t work y  Yes n  No y n n      n          text browser doesn t open automatically go following link  https   accounts google com o oauth2 auth accesstype offline client",
@@ -79,6 +109,36 @@
         "comment": true,
         "toc": true,
         "auto_collapse_toc": true,
+        "math": false,
+        "aliases": [
+            "/post/Dynamics-365-deployable-packages/"
+        ]
+    },
+    {
+        "author": "ZhaoQiang",
+        "uri": "post/dynamics-365-how-to-deploy-non-production-data-to-production-server",
+        "content": "UAT                                                                           Service Request      Service Request    LCS    Project Details        Service request                 Sandbox production              Sandbox source  downtime                             5                 1",
+        "objectID": "post/dynamics-365-how-to-deploy-non-production-data-to-production-server",
+        "author_link": "",
+        "title": "How to Deploy UAT Data to Production Server in Dynamics 365",
+        "date": "2020-02-28T07:03:59.000Z",
+        "lastmod": "2020-02-28T07:03:59.000Z",
+        "draft": false,
+        "description": "如何将UAT的数据在上线时部署到生产环境",
+        "show_in_homepage": true,
+        "description_as_summary": false,
+        "license": "",
+        "tags": [
+            "Dynamics365"
+        ],
+        "categories": [
+            "Dynamicsax"
+        ],
+        "featured_image": "",
+        "featured_image_preview": "",
+        "comment": true,
+        "toc": true,
+        "auto_collapse_toc": true,
         "math": false
     },
     {
@@ -98,7 +158,10 @@
         "comment": true,
         "toc": true,
         "auto_collapse_toc": true,
-        "math": false
+        "math": false,
+        "aliases": [
+            "/post/Dynamics-365-Instance-Deploy/"
+        ]
     },
     {
         "title": "Dynamics 365 On-premises Environments",
@@ -117,7 +180,10 @@
         "comment": true,
         "toc": true,
         "auto_collapse_toc": true,
-        "math": false
+        "math": false,
+        "aliases": [
+            "/post/Dynamics-365-on-premises/"
+        ]
     },
     {
         "title": "Dynamics AX Auto Generate XML",
@@ -138,7 +204,10 @@
         "comment": true,
         "toc": true,
         "auto_collapse_toc": true,
-        "math": false
+        "math": false,
+        "aliases": [
+            "/post/Dynamics-AX-Auto-Generate-XML/"
+        ]
     },
     {
         "title": "Dynamics AX 版本号大全",
@@ -158,7 +227,10 @@
         "comment": true,
         "toc": true,
         "auto_collapse_toc": true,
-        "math": false
+        "math": false,
+        "aliases": [
+            "/post/Dynamics-AX-BuildNumbers/"
+        ]
     },
     {
         "title": "Dynamics AX GoLive Data Import",
@@ -179,7 +251,10 @@
         "comment": true,
         "toc": true,
         "auto_collapse_toc": true,
-        "math": false
+        "math": false,
+        "aliases": [
+            "/post/Dynamics-AX-GoLive-Data-Import/"
+        ]
     },
     {
         "title": "Dynamics AX GoLive Data Initialize",
@@ -197,6 +272,37 @@
         "categories": [
             "Dynamicsax"
         ],
+        "comment": true,
+        "toc": true,
+        "auto_collapse_toc": true,
+        "math": false,
+        "aliases": [
+            "/post/Dynamics-AX-GoLive-Data-Initialize/"
+        ]
+    },
+    {
+        "author": "ZhaoQiang",
+        "uri": "post/dynamics-ax-record-level-security",
+        "content": "Record Level Security Applies To  Microsoft Dynamics AX 2012 R3  Microsoft Dynamics AX 2012 R2  Microsoft Dynamics AX 2012 Feature Pack  Microsoft Dynamics AX 2012  Microsoft Dynamics AX 2009 Record level security  RLS  automatically handled kernel when form report opened  However  record level security bypassed following situations  Using display edit methods Using FormListControl  FormTreeControl TableListControl show data Using temporary table data source enable Database trace option view messages indicate when record level security applied method call  Note   record level security feature will removed future release  previously set record level security filters  will continue function  setting new filters  recommend create data security policies using extensible data security framework  information data security policies  Overview Security Policies Table Records    Note   Record level security its own configuration key  SysRecordLevelSecurity     Using Display Edit Methods Whenever display edit method used return value row  evaluate business impact displaying data  determine displaying data cause unwanted data disclosure  perform explicit authorization check call methods  Record level security not required situations  When value calculated  When value based values fields current record  Using FormListControl  FormTreeControl  TableListControl Show Data Populating FormListControl  FormTreeControl  TableListControl data query lead unwanted information disclosure  cases manually enable record level security  following example illustrates manually enable record level security  public void run   CustTable custTable  super       Ensure record level security  RLS  used custTable recordLevelSecurity true   select custTable   listView add custTable AccountNum       Using Temporary Table Data Source When form cache filled data temporary table  sure data uses record level security  includes tables declared temporary code Temporary property table Application Object Tree  AOT  set Yes  following example shows use record level security temporary table  public void run   CustTable custTable  tmpDatasource       Ensure record level security  RLS  used custTable recordLevelSecurity true   select custTable   tmpDataSource data custTable   tmpDataSource insert      formDataSource setTmp    formDataSource checkRecord false   formDataSource setTmpData tmpDatasource   super      Using Database Tracing Identify Record Level Security Applied When database trace started  output sends message window includes information statements record level security applied  line displaying  RLS  end indicates record level security enabled call method  following example message shows record level security enabled call salesLine select method  salesLine select    RLS  enable database tracing Click Tools   Options  click Development link  Trace FastTab  select Database trace check box",
+        "objectID": "post/dynamics-ax-record-level-security",
+        "author_link": "",
+        "title": "Dynamics AX Record Level Security",
+        "date": "2020-02-27T01:21:37.000Z",
+        "lastmod": "2020-02-27T01:21:37.000Z",
+        "draft": false,
+        "description": "",
+        "show_in_homepage": true,
+        "description_as_summary": false,
+        "license": "",
+        "tags": [
+            "Ax2009",
+            "Ax2012"
+        ],
+        "categories": [
+            "Dynamicsax"
+        ],
+        "featured_image": "",
+        "featured_image_preview": "",
         "comment": true,
         "toc": true,
         "auto_collapse_toc": true,
@@ -224,16 +330,14 @@
         "math": false
     },
     {
-        "author": "zhao qiang",
-        "uri": "post/hugo-algolia",
-        "content": "Hugo                                                   Hugo                   Algolia             EVEN       LOVEIT                      Algolia          Application     NEW APPLICATION Name       FREE                     Indices   Index        Indices     Create Index Index name             API Keys       API Keys       Keys                 config yaml  themes    config yaml        key Admin API Key  baseurl   https   www nashome cn   DefaultContentLanguage   zh cn  hasCJKLanguage  true languageCode   zh cn  title   zhaoqiang s blog  theme   loveit  metaDataFormat   yaml  algolia  index     blogloveit  key    9748e4cf6b  appID    KWB5  hugo aligolia         hugo algolia                   hugo aligolia               npm    yarn                       npm install hugo algolia  g                         hugo algolia  s JSON index file created public algolia json   updatedAt   2020 01 23T02 36 09 480Z   taskID  249063848950           dashboard     Indices                                             index     false            search html  themes LoveIt layouts partials  search html          search js  themes LoveIt assets js   search js   function              algolia   var client   algoliasearch  KWB5    7139d  9748e4cf6bc36ab191d    var index   client initIndex    blogloveit    autocomplete    aa search input     hint  false      source  autocomplete sources hits index    hitsPerPage  8     displayKey   name   templates    suggestion  function suggestion    console log suggestion   var search   suggestion search    search   suggestion search    else   search   suggestion uri    return             suggestion _highlightResult title value                    document  on  click     aa suggestion   function      var aa     this  find  a   attr  href    window location href   aa           search css    themes LoveIt assets css     search css      import  https   fonts googleapis com css family Montserrat 400 700    aa input container   display  inline block  position  relative  width  100      aa input container span  aa input container input   width  inherit     aa input search   width  300px  padding  12px 28px 12px 12px  border 0px  border  2px solid  e4e4e4  border radius  4px   webkit transition   2s  transition   2s  font family   Montserrat   sans serif  box shadow  4px 4px 0 rgba 241  241  241  0 35   font size  11px  box sizing  border box  color  black   webkit appearance  none   moz appearance  none  appearance  none  font weight  bold     aa input search   webkit search decoration   aa input search   webkit search cancel button   aa input search   webkit search results button   aa input search   webkit search results decoration   display  none     aa input search focus   outline  0  border color   D3D3D3  box shadow  4px 4px 0 rgba 58  150  207  0 1      aa input icon   height  16px  width  16px  position  absolute  top  50   right  16px   webkit transform  translateY  50    transform  translateY  50    fill   e4e4e4     aa hint   color  yellow     aa dropdown menu   background color   fff  border  2px solid rgba 228  228  228  0 6   border top width  1px  font family   Montserrat   sans serif  width  300px  margin top  10px  box shadow  4px 4px 0 rgba 241  241  241  0 35   font size  11px  border radius  4px  box sizing  border box     aa suggestion   padding  12px  border top  1px solid gray  cursor  pointer   webkit transition   2s  transition   2s  display   webkit box  display   ms flexbox  display  flex   webkit box pack  justify   ms flex pack  justify  justify content  space between   webkit box align  center   ms flex align  center  align items  center               aa suggestion hover   aa suggestion aa cursor   background color   F5F5F5     aa suggestion   span first child   color   000     aa suggestion   span last child   text transform  uppercase  color   000     aa suggestion   span first child em   aa suggestion   span last child em   font weight  700  font style  normal  background color  rgba 0  0  0  0 1   padding  2px 0 2px 2px     aa suggestion a  color   000  font weight bold     aa suggestion a hover  color   4B89DC     baseof html       themes LoveIt layouts _default baseof html         ne  Site Params version  5 x         errorf   n nThere two possible situations led error  n 1  haven t copied config toml yet  https   github com dillonzq LoveIt installation  n 2  incompatible update  https   github com  dillonzq LoveIt blob master CHANGELOG md  n n                   n 1         config toml    https   github com dillonzq LoveIt installation  n 2                  https   github com  dillonzq LoveIt blob master CHANGELOG md  n         end        block  title          Site Title      end        partial  head html       window isDark    window localStorage    window localStorage getItem  theme         dark   window isDark    document body classList add  dark theme       partial  header html           block  content         end        partial  footer html           partial  scripts html         nbsp     partial  search html         css   js    head html            res    resources Get  css search css   ",
-        "objectID": "post/hugo-algolia",
-        "author_link": "",
         "title": "用 Hugo 配合 Algolia 实现高效美观的站内搜索",
+        "uri": "post/hugo-algolia",
+        "content": "Youtube   BiliBili        Hugo                                                   Hugo                   Algolia             EVEN       LOVEIT                      Algolia          Application   NEW APPLICATION Name       FREE                     Indices   Index      Indices     Create Index Index name             API Keys     API Keys       Keys                 config yaml  themes    config yaml        key Admin API Key  baseurl   https   www nashome cn   DefaultContentLanguage   zh cn  hasCJKLanguage  true languageCode   zh cn  title   zhaoqiang s blog  theme   loveit  metaDataFormat   yaml  algolia  index     blogloveit  key    9748e4cf6b  appID    KWB5  hugo aligolia         hugo algolia                   hugo aligolia               npm    yarn                       npm install hugo algolia  g                         hugo algolia  s JSON index file created public algolia json   updatedAt   2020 01 23T02 36 09 480Z   taskID  249063848950           dashboard     Indices                                             index     false            search html  themes LoveIt layouts partials  search html          search js  themes LoveIt assets js   search js   function              algolia   var client   algoliasearch  KWB5    7139d  9748e4cf6bc36ab191d    var index   client initIndex    blogloveit    autocomplete    aa search input     hint  false      source  autocomplete sources hits index    hitsPerPage  8     displayKey   name   templates    suggestion  function suggestion    console log suggestion   var search   suggestion search    search   suggestion search    else   search   suggestion uri    return             suggestion _highlightResult title value                    document  on  click     aa suggestion   function      var aa     this  find  a   attr  href    window location href   aa           search css    themes LoveIt assets css     search css      import  https   fonts googleapis com css family Montserrat 400 700    aa input container   display  inline block  position  relative  width  100      aa input container span  aa input container input   width  inherit     aa input search   width  300px  padding  12px 28px 12px 12px  border 0px  border  2px solid  e4e4e4  border radius  4px   webkit transition   2s  transition   2s  font family   Montserrat   sans serif  box shadow  4px 4px 0 rgba 241  241  241  0 35   font size  11px  box sizing  border box  color  black   webkit appearance  none   moz appearance  none  appearance  none  font weight  bold     aa input search   webkit search decoration   aa input search   webkit search cancel button   aa input search   webkit search results button   aa input search   webkit search results decoration   display  none     aa input search focus   outline  0  border color   D3D3D3  box shadow  4px 4px 0 rgba 58  150  207  0 1      aa input icon   height  16px  width  16px  position  absolute  top  50   right  16px   webkit transform  translateY  50    transform  translateY  50    fill   e4e4e4     aa hint   color  yellow     aa dropdown menu   background color   fff  border  2px solid rgba 228  228  228  0 6   border top width  1px  font family   Montserrat   sans serif  width  300px  margin top  10px  box shadow  4px 4px 0 rgba 241  241  241  0 35   font size  11px  border radius  4px  box sizing  border box     aa suggestion   padding  12px  border top  1px solid gray  cursor  pointer   webkit transition   2s  transition   2s  display   webkit box  display   ms flexbox  display  flex   webkit box pack  justify   ms flex pack  justify  justify content  space between   webkit box align  center   ms flex align  center  align items  center               aa suggestion hover   aa suggestion aa cursor   background color   F5F5F5     aa suggestion   span first child   color   000     aa suggestion   span last child   text transform  uppercase  color   000     aa suggestion   span first child em   aa suggestion   span last child em   font weight  700  font style  normal  background color  rgba 0  0  0  0 1   padding  2px 0 2px 2px     aa suggestion a  color   000  font weight bold     aa suggestion a hover  color   4B89DC     baseof html       themes LoveIt layouts _default baseof html         ne  Site Params version  5 x         errorf   n nThere two possible situations led error  n 1  haven t copied config toml yet  https   github com dillonzq LoveIt installation  n 2  incompatible update  https   github com  dillonzq LoveIt blob master CHANGELOG md  n n                   n 1         config toml    https   github com dillonzq LoveIt installation  n 2                  https   github com  dillonzq LoveIt blob master CHANGELOG md  n         end        block  title          Site Title      end        partial  head html       window isDark    window localStorage    window localStorage getItem  theme         dark   window isDark    document body classList add  dark theme       partial  header html           block  content         end        partial  footer html           partial  scripts html         nbsp     partial  search html         css   js    head html            res    resources Ge",
+        "objectID": "post/hugo-algolia",
         "date": "2020-02-18T01:13:13.000Z",
         "lastmod": "2020-02-18T01:13:13.000Z",
         "draft": false,
-        "description": "很多的 `Hugo` 主题是没有自带搜索功能的，但是们为了方便用户浏览和查找内容是需要在网站上提供搜索功能。大家可以查看 [Hugo 官方推荐的搜索方案](https://gohugo.io/tools/search/)，这里我选择的是 [Algolia](https://www.algolia.com/) ",
+        "description": "",
         "show_in_homepage": true,
         "description_as_summary": false,
         "license": "",
@@ -256,7 +360,7 @@
     {
         "title": "用 Hugo 配合 Github Actions 自动构建我的博客",
         "uri": "post/hugo-github-actions",
-        "content": "admonition  success   Admonition success              Youtube   BiliBili      admonition         GitHub                develop         Hugo            gh pages                  GitHub Pages        GitHub Pages                                             git checkout  b gh pages git push origin gh pages git checkout  b develop git push origin develop       Hugo           Hugo                Actions             Hugo                                                  Even       git clone https   github com olOwOlo hugo theme even themes even      blog themes even exampleSite       config tom                 blog themes even exampleSite content             content               hugo  D server   hugo             public                 public              gh_pages            GitHub Pages      Actions                  develop                        1       1     Hugo    1     Hugo 1    public          gh pages        github workflows        gh_pages yml   name  GitHub Page Deploy on  push  branches  develop jobs  build deploy  runs on  ubuntu 18 04 steps  name  Checkout master uses  actions checkout v1 name  Setup Hugo uses  peaceiris actions hugo v2 with  hugo version   0 61 0  extended  true name  Build Hugo run    hugo name  Deploy Hugo gh pages uses  peaceiris actions gh pages v2 env  ACTIONSDEPLOYKEY      secrets ACTIONSDEPLOYKEY    PUBLISH_BRANCH  gh pages PUBLISH_DIR    public      action       github actions marketplace                     uses     actions               shell                                          gh pages                   settings secrets                 peaceiris actions gh pages v2                  secrets                 peaceiris actions gh pages v2                  ACTIONSDEPLOYKEY        secrets                  Github  text    bin bash echo  e   033 0 32mDeploying updates GitHub    033 0m  Build project  hugo  t even Add changes git  git add   Commit changes  msg  rebuilding site date        eq 1   msg   1  fi git commit  m   msg  Push source build repos  git push origin develop            Github   PUSH Actions                 1",
+        "content": "Youtube   BiliBili     GitHub                develop         Hugo            gh pages                  GitHub Pages        GitHub Pages                                             git checkout  b gh pages git push origin gh pages git checkout  b develop git push origin develop       Hugo           Hugo                Actions             Hugo                                                  Even       git clone https   github com olOwOlo hugo theme even themes even      blog themes even exampleSite       config tom                 blog themes even exampleSite content             content               hugo  D server   hugo             public                 public              gh_pages            GitHub Pages      Actions                  develop                        1       1     Hugo    1     Hugo 1    public          gh pages        github workflows        gh_pages yml   name  GitHub Page Deploy on  push  branches  develop jobs  build deploy  runs on  ubuntu 18 04 steps  name  Checkout master uses  actions checkout v1 name  Setup Hugo uses  peaceiris actions hugo v2 with  hugo version   0 61 0  extended  true name  Build Hugo run    hugo name  Deploy Hugo gh pages uses  peaceiris actions gh pages v2 env  ACTIONSDEPLOYKEY      secrets ACTIONSDEPLOYKEY    PUBLISH_BRANCH  gh pages PUBLISH_DIR    public      action       github actions marketplace                     uses     actions               shell                                          gh pages                   settings secrets                 peaceiris actions gh pages v2                  secrets                 peaceiris actions gh pages v2                  ACTIONSDEPLOYKEY        secrets                  Github  text    bin bash echo  e   033 0 32mDeploying updates GitHub    033 0m  Build project  hugo  t even Add changes git  git add   Commit changes  msg  rebuilding site date        eq 1   msg   1  fi git commit  m   msg  Push source build repos  git push origin develop            Github   PUSH Actions                 1",
         "objectID": "post/hugo-github-actions",
         "date": "2020-01-09T06:52:40.000Z",
         "description": "",
@@ -269,12 +373,15 @@
             "hugo"
         ],
         "autoCollapseToc": true,
-        "toc": true
+        "toc": true,
+        "aliases": [
+            "/post/Hugo-Github-Actions/"
+        ]
     },
     {
         "title": " 同时部署 Hugo 静态博客到 Netlify 和 Github Pages",
         "uri": "post/hugo-netlify",
-        "content": "admonition  success   Admonition success              Youtube   BiliBili      admonition        Github Pages       Hugo    GithubActions            Even                              git submodule add https   github com zhaoqiangcn hugo theme even git themes even                gitmodules                       submodule  themes even   path   themes even url   https   github com zhaoqiangcn hugo theme even git              git push                         Hugo     Netlify                            Netlify                                              Domain settings                Custom domains       Add domain alias                                     DNS       DNS             NETLIFY DNS               dns1 p01 nsone net dns2 p01 nsone net dns3 p01 nsone net dns4 p01 nsone net      HTTPS   HTTPS       SSL TLS certificate                 Let s Encrypt                          Chrome                              https                   F12               Network                 https",
+        "content": "Youtube   BiliBili    Github Pages       Hugo    GithubActions            Even                              git submodule add https   github com zhaoqiangcn hugo theme even git themes even                gitmodules                       submodule  themes even   path   themes even url   https   github com zhaoqiangcn hugo theme even git              git push                         Hugo     Netlify                            Netlify                                              Domain settings                Custom domains       Add domain alias                                     DNS       DNS             NETLIFY DNS               dns1 p01 nsone net dns2 p01 nsone net dns3 p01 nsone net dns4 p01 nsone net      HTTPS   HTTPS       SSL TLS certificate                 Let s Encrypt                          Chrome                              https                   F12               Network                 https",
         "objectID": "post/hugo-netlify",
         "date": "2020-01-12T06:49:17.000Z",
         "description": "百度无法收录github pages，因此本文介绍如何把hugo 同时部署到github pages和netlify而且每次更新文章只需要push到github即可",
@@ -293,7 +400,7 @@
     {
         "title": "用 Hugo 配合 Valine 实现评论后实时邮件通知",
         "uri": "post/hugo-valine-email",
-        "content": "admonition  success   Admonition success              Youtube   BiliBili      admonition          Valine                              Valine Admin  by  zhaojun1998     Valine Admin                  Valine               Valine            Leancloud                                                    Github                     Valine                config toml    notify     false     Leancloud     Valine                           https   github com zhaojun1998 Valine Admin             Git           master                                                                                          SITE_NAME         SITE_URL                   SMTP_USER   SMTP                SMTP_PASS   SMTP                                        SMTP_SERVICE              QQ 163 126 Gmail  Yahoo                    Nodemailer Supported services                               SENDER_NAME               SMTP                    SMTP_USER        SMTP        QQ                    SMTPUSER           SMTPPASS SMTP_SERVICE     QQ      TEMPLATE_NAME                         default   rainbow     default   TOEMAIL                              SMTPUSER     SMTP_SERVICE                                   SMTP_HOST           SMTP      qq   smtp qq com                  SMTP_PORT           SMTP                      SMTP_SECURE               true                                                               SMTPSERVICE   SMTPSERVICE                   LeanCloud         LeanCloud                  24              6     30                                                                                        7   23    20                                          Web                                         Web                    Web                                                          ADMIN_URL Web                                                                         self_wake Cron                7    23  20                                  20                                                       LeanCloud      LeanCloud                                       email password username             email                    email         SMTPUSER   TOEMAIL                 Web",
+        "content": "Youtube   BiliBili      Valine                              Valine Admin  by  zhaojun1998     Valine Admin                  Valine               Valine            Leancloud                                                    Github                     Valine                config toml    notify     false     Leancloud     Valine                           https   github com zhaojun1998 Valine Admin             Git           master                                                                                          SITE_NAME         SITE_URL                   SMTP_USER   SMTP                SMTP_PASS   SMTP                                        SMTP_SERVICE              QQ 163 126 Gmail  Yahoo                    Nodemailer Supported services                               SENDER_NAME               SMTP                    SMTP_USER        SMTP        QQ                    SMTPUSER           SMTPPASS SMTP_SERVICE     QQ      TEMPLATE_NAME                         default   rainbow     default   TOEMAIL                              SMTPUSER     SMTP_SERVICE                                   SMTP_HOST           SMTP      qq   smtp qq com                  SMTP_PORT           SMTP                      SMTP_SECURE               true                                                               SMTPSERVICE   SMTPSERVICE                   LeanCloud         LeanCloud                  24              6     30                                                                                        7   23    20                                          Web                                         Web                    Web                                                          ADMIN_URL Web                                                                         self_wake Cron                7    23  20                                  20                                                       LeanCloud      LeanCloud                                       email password username             email                    email         SMTPUSER   TOEMAIL                 Web",
         "objectID": "post/hugo-valine-email",
         "date": "2020-01-16T06:54:04.000Z",
         "description": "Valine 评论系统 邮件通知",
@@ -305,12 +412,15 @@
             "hugo"
         ],
         "autoCollapseToc": true,
-        "toc": true
+        "toc": true,
+        "aliases": [
+            "/post/Hugo-Valine-Email/"
+        ]
     },
     {
         "title": "用 Hugo 配合 Valine 实现简洁的评论交互",
         "uri": "post/hugo-valine",
-        "content": "admonition  success   Admonition success              Youtube   BiliBili      admonition     Leancloud            leancloud       leancloud                    LeanCloud                                        Key     App ID App Key                                       Class       Class        Counter   Comment                                                    config toml                Valine                           config toml                params gitment        toml  params gitment    Gitment comment system based GitHub issues  https   github com imsun gitment owner        GitHub ID repo        repo store comments clientId        client ID clientSecret        client secret     Valine           Valine       toml Valine  appid appkey https   leancloud cn info please open https   valine js org  params valine  enable   true appId      appId  appKey      appKey  notify   false   mail notifier   https   github com xCss Valine wiki verify   false   Verification code avatar    mm  placeholder              visitor   true                           Valine                                                                                                        enable                  Valine    true               appId       leancloud                   App ID     appKey       leancloud                   App Key     notify                                 verify                       avatar                        mm  identicon  monsterid  wavatar  retro  hide               placehoder               visitor                   i                                         themes even layouts partials comments html    Valine        Valine               55 81       html      Site Params gitment enable     Please enable JavaScript view comments powered gitment      end          Valine           html      Site Params valine enable           1000000 new Valine   el    vcomments    appId       Site Params valine appId      appKey       Site Params valine appKey      notify      Site Params valine notify     verify      Site Params valine verify     avatar      Site Params valine avatar      placeholder       Site Params valine placeholder      visitor      Site Params valine visitor            end                                                       config toml                                  valine     eanble     true                                                                                                         leancloud      Comment   Counter",
+        "content": "Youtube   BiliBili Leancloud            leancloud       leancloud                    LeanCloud                                        Key     App ID App Key                                       Class       Class        Counter   Comment                                                    config toml                Valine                           config toml                params gitment        toml  params gitment    Gitment comment system based GitHub issues  https   github com imsun gitment owner        GitHub ID repo        repo store comments clientId        client ID clientSecret        client secret     Valine           Valine       toml Valine  appid appkey https   leancloud cn info please open https   valine js org  params valine  enable   true appId      appId  appKey      appKey  notify   false   mail notifier   https   github com xCss Valine wiki verify   false   Verification code avatar    mm  placeholder              visitor   true                           Valine                                                                                                        enable                  Valine    true               appId       leancloud                   App ID     appKey       leancloud                   App Key     notify                                 verify                       avatar                        mm  identicon  monsterid  wavatar  retro  hide               placehoder               visitor                   i                                         themes even layouts partials comments html    Valine        Valine               55 81       html      Site Params gitment enable     Please enable JavaScript view comments powered gitment      end          Valine           html      Site Params valine enable           1000000 new Valine   el    vcomments    appId       Site Params valine appId      appKey       Site Params valine appKey      notify      Site Params valine notify     verify      Site Params valine verify     avatar      Site Params valine avatar      placeholder       Site Params valine placeholder      visitor      Site Params valine visitor            end                                                       config toml                                  valine     eanble     true                                                                                                         leancloud      Comment   Counter",
         "objectID": "post/hugo-valine",
         "date": "2020-01-10T06:41:18.000Z",
         "description": "Valine 评论系统 leancloud",
@@ -322,7 +432,10 @@
             "hugo"
         ],
         "autoCollapseToc": true,
-        "toc": true
+        "toc": true,
+        "aliases": [
+            "/post/Hugo-Valine/"
+        ]
     },
     {
         "title": "NaiveBoom 阅后即焚",
@@ -377,7 +490,10 @@
         "comment": true,
         "toc": true,
         "auto_collapse_toc": true,
-        "math": false
+        "math": false,
+        "aliases": [
+            "/post/NextCloud-Optimize/"
+        ]
     },
     {
         "title": "NextCloud Scan Files on Server",
@@ -396,7 +512,10 @@
         "comment": true,
         "toc": true,
         "auto_collapse_toc": true,
-        "math": false
+        "math": false,
+        "aliases": [
+            "/post/NextCloud-Scan-Files-On-Server/"
+        ]
     },
     {
         "title": "免费申请 Office365 企业版一年试用教程",
@@ -415,7 +534,10 @@
         "comment": true,
         "toc": true,
         "auto_collapse_toc": true,
-        "math": false
+        "math": false,
+        "aliases": [
+            "/post/Office-365-Apply/"
+        ]
     },
     {
         "title": "使用 GitHub Actions 编译 OpenWrt",
@@ -435,7 +557,10 @@
         "comment": true,
         "toc": true,
         "auto_collapse_toc": true,
-        "math": false
+        "math": false,
+        "aliases": [
+            "/post/Openwrt-Build/"
+        ]
     },
     {
         "title": "学习强国",
@@ -462,7 +587,7 @@
     {
         "title": "Synology DDNS 01",
         "uri": "post/synology-ddns-01",
-        "content": "DDNS              DDNS               A     IP                     IP          1     IP             IP                  http   www ipip net           IP     172 192 10        IP            IP                     10        IP  2                                 ping     IP              ISP                    ping               ping                                                                                                             NAS                                                                       http   canyouseeme org            DMZ DMZ                                          NAS                   DSM    Web   Cloud   VPN                            3                     OSS CDN            9 9         VIP                                                      DDNS                                     A      IP                                                               IP    CNAME                          test domain com         www domainA com         test domain com     www domainA com       CNAME                   IP    4 DDNS    DDNS              DDNS            DDNS        DDNS                              DSM            http   example synology me 5000",
+        "content": "DDNS              DDNS               A     IP                     IP          1     IP             IP                  http   www ipip net           IP     172 192 10        IP            IP                     10        IP  2                                 ping     IP              ISP                    ping               ping                                                                                                                         NAS                                                                       http   canyouseeme org            DMZ DMZ                                          NAS                   DSM    Web   Cloud   VPN                            3                     OSS CDN            9 9         VIP                                                      DDNS                                     A      IP                                                               IP    CNAME                          test domain com         www domainA com         test domain com     www domainA com       CNAME                   IP    4 DDNS    DDNS              DDNS            DDNS        DDNS                              DSM            http   example synology me 5000",
         "objectID": "post/synology-ddns-01",
         "date": "2016-07-10T05:55:24.000Z",
         "description": "",
@@ -476,7 +601,10 @@
         "comment": true,
         "toc": true,
         "auto_collapse_toc": true,
-        "math": false
+        "math": false,
+        "aliases": [
+            "/post/Synology-DDNS-01/"
+        ]
     },
     {
         "title": "Synology DDNS 02",
@@ -495,7 +623,10 @@
         "comment": true,
         "toc": true,
         "auto_collapse_toc": true,
-        "math": false
+        "math": false,
+        "aliases": [
+            "/post/Synology-DDNS-02/"
+        ]
     },
     {
         "title": "Synology With Linux",
@@ -518,6 +649,9 @@
         "comment": true,
         "toc": true,
         "auto_collapse_toc": true,
-        "math": false
+        "math": false,
+        "aliases": [
+            "/post/Synology-with-linux/"
+        ]
     }
 ]
