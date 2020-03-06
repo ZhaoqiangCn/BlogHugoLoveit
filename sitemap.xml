@@ -3,15 +3,64 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.nashome.cn/post/aria2-baiduyun/</loc>
+    <lastmod>2020-03-04T16:35:28+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nashome.cn/tags/aria2/</loc>
+    <lastmod>2020-03-04T16:35:28+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nashome.cn/tags/baiduyun/</loc>
+    <lastmod>2020-03-04T16:35:28+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://www.nashome.cn/</loc>
-    <lastmod>2020-02-28T15:03:59+08:00</lastmod>
+    <lastmod>2020-03-04T16:35:28+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.nashome.cn/categories/</loc>
-    <lastmod>2020-02-28T15:03:59+08:00</lastmod>
+    <lastmod>2020-03-04T16:35:28+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nashome.cn/tags/googledrive/</loc>
+    <lastmod>2020-03-04T16:35:28+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nashome.cn/categories/linux/</loc>
+    <lastmod>2020-03-04T16:35:28+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nashome.cn/post/</loc>
+    <lastmod>2020-03-04T16:35:28+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nashome.cn/tags/</loc>
+    <lastmod>2020-03-04T16:35:28+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -32,20 +81,6 @@
   
   <url>
     <loc>https://www.nashome.cn/post/dynamics-365-how-to-deploy-non-production-data-to-production-server/</loc>
-    <lastmod>2020-02-28T15:03:59+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nashome.cn/post/</loc>
-    <lastmod>2020-02-28T15:03:59+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nashome.cn/tags/</loc>
     <lastmod>2020-02-28T15:03:59+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -124,13 +159,6 @@
   <url>
     <loc>https://www.nashome.cn/post/hugo-valine-email/</loc>
     <lastmod>2020-01-16T14:54:04+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nashome.cn/categories/linux/</loc>
-    <lastmod>2020-01-16T09:16:23+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -494,20 +522,6 @@
   
   <url>
     <loc>https://www.nashome.cn/post/aria2/</loc>
-    <lastmod>2018-05-12T15:49:55+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nashome.cn/tags/aria2/</loc>
-    <lastmod>2018-05-12T15:49:55+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nashome.cn/tags/googledrive/</loc>
     <lastmod>2018-05-12T15:49:55+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
