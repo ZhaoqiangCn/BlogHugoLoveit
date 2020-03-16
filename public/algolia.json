@@ -24,7 +24,7 @@
     {
         "author": "ZhaoQiang",
         "uri": "post/aria2-baiduyun",
-        "content": "Aria2           Google Drive     Aria2              Google Drive                 Aria2                        Google Drive                  BaiduExporter           Chrome         Aria2        BaiduExporter      BaiduExporter    chrome                           rar                Chrome    Chrome                                                                                                         ARIA2                                      googledrive                                             ARIA2 RPC",
+        "content": "Aria2           Google Drive     Aria2              Google Drive                 Aria2                        Google Drive                  BaiduExporter           Chrome         Aria2        BaiduExporter      BaiduExporter    chrome                           rar                Chrome    Chrome                                                                                                         ARIA2                                      googledrive                 RPC     http   token 123456qwerty example com 6800 jsonrpc                             ARIA2 RPC",
         "objectID": "post/aria2-baiduyun",
         "author_link": "",
         "title": " 使用 Aria2 实现百度云(Baiduyun)自动转存到谷歌云(GoogleDrive)",
@@ -579,6 +579,35 @@
         "categories": [
             "Linux"
         ],
+        "comment": true,
+        "toc": true,
+        "auto_collapse_toc": true,
+        "math": false
+    },
+    {
+        "author": "ZhaoQiang",
+        "uri": "post/setup-folderclone",
+        "content": "Folderclone Linux Debian Ubuntu    apt update apt install python3 pip git screen  y git clone https   github com Spazzlo folderclone git cd folderclone pip3 install folderclone CentOS apt get   yum                   screen     screen         screen   folderclone       screen  S folderclone       screen           Ctrl  a  d    screen   screen  r folderclone Windows   Python   Python 3 7 4 64 bit   Python 3 8 1   folderclone             E  folderclone master          cmd Windows PowerShell        cmd Windows PowerShell           folderclone      cd E  folderclone master pip install folderclone    Drive API      Python Quickstart    Enable Drive API   DOWNLOAD CLIENT CONFIGUIRATION      credentials json     credentials json     folderclone                                folderclone     multimanager interactive                                             API            API       Enter                                                   Quickstart          Quickstart        The authentication flow completed  may close window          3 URL             Service Usage API   Cloud Resource Manager API   Cloud Resource Manager API      Enter       Multi Manager    Multi Manager mm        Multi Manager    SA               folderclone             service accounts          mm  quick setup N SHAREDDRIVEID N           SHAREDDRIVEID           ID               100 TB       134 SA   750 GB           2         ID 0ABCdeyz_ZaMsxxxLGA               mm  quick setup 2 0ABCdeyz_ZaMsxxxLGA         2                                             accounts mm  quick setup 2 0AKqujK7R10w9Uk9PVA Creating 2 projects  Enabling services  Creating Service Accounts mm q1n5s5q0tenwkm6i 844bj5 43n Creating Service Account keys mm q1n5s5q0tenwkm6i 844bj5 43n Creating Service Accounts mm bj81pc594lhe8z4rr1jkk0871k5 Creating Service Account keys mm bj81pc594lhe8z4rr1jkk0871k5 Fetching emails  Adding 200 users       Done  mm                  multifoldeclone                           multifolderclone  s SOURCEFOLDERID  d DESTINATIONFOLDERID  SOURCEFOLDERID                                                      ID   DESTINATIONFOLDERID           ID           ID",
+        "objectID": "post/setup-folderclone",
+        "author_link": "",
+        "title": "使用 Folderclone 批量转存共享内容到自己的Google Drive",
+        "date": "2020-03-11T05:49:04.000Z",
+        "lastmod": "2020-03-11T05:49:04.000Z",
+        "draft": false,
+        "description": "突破 Google 750 GB 每日的限制",
+        "show_in_homepage": true,
+        "description_as_summary": false,
+        "license": "",
+        "tags": [
+            "GoogleDrive",
+            "Folderclone"
+        ],
+        "categories": [
+            "Linux",
+            ""
+        ],
+        "featured_image": "",
+        "featured_image_preview": "",
         "comment": true,
         "toc": true,
         "auto_collapse_toc": true,
