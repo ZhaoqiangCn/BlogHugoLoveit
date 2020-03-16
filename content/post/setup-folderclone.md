@@ -1,17 +1,17 @@
 ---
 author: "ZhaoQiang"
 author_link: ""
-title: "Setup Folderclone"
+title: "使用 Folderclone 批量转存共享内容到自己的Google Drive"
 date: 2020-03-11T13:49:04+08:00
 lastmod: 2020-03-11T13:49:04+08:00
 draft: false
-description: ""
+description: "突破 Google 750 GB 每日的限制"
 show_in_homepage: true
 description_as_summary: false
 license: ""
 
 tags: ["GoogleDrive",
-""
+"Folderclone"
 ]
 categories: ["Linux",
 ""
