@@ -1,4 +1,4 @@
-# Setup Folderclone
+# 使用 Folderclone 批量转存共享内容到自己的Google Drive
 
 
 ## 安装 Folderclone
