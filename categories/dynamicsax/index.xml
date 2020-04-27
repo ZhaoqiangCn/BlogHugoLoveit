@@ -7,20 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Wed, 18 Mar 2020 16:39:38 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 01 Apr 2020 09:26:29 +0800</lastBuildDate>
     
 	<atom:link href="https://www.nashome.cn/categories/dynamicsax/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Dynamics 365 Shipping Container Labeling Guide</title>
+      <title>如何将生产环境数据还原到 Dev 环境(Dynamics 365 How to Restore Live Data to Dev)</title>
+      <link>https://www.nashome.cn/post/dynamics-365-how-to-restore-live-data-to-dev/</link>
+      <pubDate>Wed, 01 Apr 2020 09:26:29 +0800</pubDate>
+      
+      <guid>https://www.nashome.cn/post/dynamics-365-how-to-restore-live-data-to-dev/</guid>
+      <description>This blog post is for my notes, you can find more details on Microsoft link. There are some extra steps in the Microsoft link, which I never used. I usually follow only these steps and it works for me. So Instead I need to search on Microsoft link. I wrote this post for my future use. Step 1: You have to restore production database to UAT and then from uat</description>
+    </item>
+    
+    <item>
+      <title>Dynamics 365 货运集装箱标签指南</title>
       <link>https://www.nashome.cn/post/dynamics-365-shipping-container-labeling-guide/</link>
       <pubDate>Wed, 18 Mar 2020 16:39:38 +0800</pubDate>
       
       <guid>https://www.nashome.cn/post/dynamics-365-shipping-container-labeling-guide/</guid>
-      <description>Author link: https://en.gravatar.com/hatlevik
- Major retailers have identified incorrect logistic unit (pallet) labeling as a major emerging supply chain issue. A recent sample audit found that approximately 44% of pallet labels are not meeting agreed upon industry requirements. The issues they face include:
- No label has been applied Label is in the wrong location Information on the label does not match what is on the pallet Multiple labels with different Serial Shipping Container Codes (SSCC) been applied Pallet label will not scan Stretch-wrap has been applied over the pallet label so it doesn’t scan  The following information contains guidelines and general information on how to create and apply good quality logistic (pallet) labels as per the standard requirements of the Retail Industry.</description>
+      <description>Major retailers have identified incorrect logistic unit (pallet) labeling as a major emerging supply chain issue. A recent sample audit found that approximately 44% of pallet labels are not meeting agreed upon industry requirements. The issues they face include: No label has been applied Label is in the wrong location Information on the label does not match what is on the pallet Multiple labels with different Serial Shipping Container Codes</description>
     </item>
     
     <item>
@@ -45,7 +52,7 @@ By default, after a batch is scheduled, the batch is no longer associated with t
     </item>
     
     <item>
-      <title>How to Deploy UAT Data to Production Server in Dynamics 365</title>
+      <title>如何将 UAT 的数据在上线时部署到生产环境(How to Deploy UAT Data to Production Server in Dynamics 365)</title>
       <link>https://www.nashome.cn/post/dynamics-365-how-to-deploy-non-production-data-to-production-server/</link>
       <pubDate>Fri, 28 Feb 2020 15:03:59 +0800</pubDate>
       

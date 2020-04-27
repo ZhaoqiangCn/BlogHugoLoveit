@@ -1,0 +1,140 @@
+<!doctype html><html lang=zh><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="noodp"><meta http-equiv=x-ua-compatible content="IE=edge, chrome=1"><title>如何将生产环境数据还原到 Dev 环境(Dynamics 365 How to Restore Live Data to Dev) | Blog My Life</title><meta name=Description content="如何将生产环境数据还原到 Dev 环境(Dynamics 365 How to Restore Live Data to Dev)"><meta property="og:title" content="如何将生产环境数据还原到 Dev 环境(Dynamics 365 How to Restore Live Data to Dev)"><meta property="og:description" content="如何将生产环境数据还原到 Dev 环境(Dynamics 365 How to Restore Live Data to Dev)"><meta property="og:type" content="article"><meta property="og:url" content="https://www.nashome.cn/post/dynamics-365-how-to-restore-live-data-to-dev/"><meta property="article:published_time" content="2020-04-01T09:26:29+08:00"><meta property="article:modified_time" content="2020-04-01T09:26:29+08:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="如何将生产环境数据还原到 Dev 环境(Dynamics 365 How to Restore Live Data to Dev)"><meta name=twitter:description content="如何将生产环境数据还原到 Dev 环境(Dynamics 365 How to Restore Live Data to Dev)"><meta name=theme-color content="#ffffff"><meta name=msapplication-TileColor content="#da532c"><link rel=canonical href=https://www.nashome.cn/post/dynamics-365-how-to-restore-live-data-to-dev/><link rel="shortcut icon" type=image/x-icon href=/favicon.ico><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=prev href=https://www.nashome.cn/post/dynamics-365-pre-go-live-checklist/><link rel=next href=https://www.nashome.cn/post/dynamics-ax-upgrade-to-cu9/><link rel=stylesheet href=/css/style.min.css><link href=https://cdn.staticfile.org/font-awesome/5.12.1/css/all.min.css rel=stylesheet><link href=https://cdn.staticfile.org/animate.css/3.7.2/animate.css rel=stylesheet><link rel=stylesheet href=/css/search.min.css><link rel=stylesheet href=https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"如何将生产环境数据还原到 Dev 环境(Dynamics 365 How to Restore Live Data to Dev)","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nashome.cn\/post\/dynamics-365-how-to-restore-live-data-to-dev\/"},"image":{"@type":"ImageObject","url":"https:\/\/www.nashome.cn\/","width":800,"height":600},"genre":"post","keywords":"Dynamics365","wordcount":601,"url":"https:\/\/www.nashome.cn\/post\/dynamics-365-how-to-restore-live-data-to-dev\/","datePublished":"2020-04-01T09:26:29\x2b08:00","dateModified":"2020-04-01T09:26:29\x2b08:00","license":"This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher":{"@type":"Organization","name":"ZhaoQiang","logo":{"@type":"ImageObject","url":"https:\/\/www.nashome.cn\/","width":127,"height":40}},"description":"如何将生产环境数据还原到 Dev 环境(Dynamics 365 How to Restore Live Data to Dev)"}</script></head><body><script>if(!window.localStorage||!window.localStorage.getItem('theme')){window.isDark=window.matchMedia('(prefers-color-scheme: dark)').matches;}else{window.isDark=(window.localStorage&&window.localStorage.getItem('theme'))==='dark';}
+window.isDark&&document.body.classList.add('dark-theme');</script><div class=wrapper><header class=desktop id=header-desktop><div class=header-wrapper><div class="header-title animated bounceIn"><a href=https://www.nashome.cn/>Blog My Life</a></div><div class=menu><a class=menu-item href=https://www.nashome.cn/post>文章</a><a class=menu-item href=https://www.nashome.cn/tags>标签</a><a class=menu-item href=https://www.nashome.cn/categories>分类</a><a href=javascript:void(0); class=theme-switch title=切换主题>
+<i class="fas fa-adjust fa-rotate-180 fa-fw"></i></a><a href=#ex1 rel=modal:open><i class="fas fa-search fa-fw"></i></a></div></div></header><header class=mobile id=header-mobile><div class=header-wrapper><div class=header-container><div class="header-title animated bounceIn"><a href=https://www.nashome.cn/>Blog My Life</a></div><div class=menu-toggle id=menu-toggle><span></span><span></span><span></span></div></div><div class=menu id=menu-mobile><a class=menu-item href=https://www.nashome.cn/post>文章</a><a class=menu-item href=https://www.nashome.cn/tags>标签</a><a class=menu-item href=https://www.nashome.cn/categories>分类</a><a href=javascript:void(0); class=theme-switch title=切换主题>
+<i class="fas fa-adjust fa-rotate-180 fa-fw"></i></a><a href=#ex1 rel=modal:open><i class="fas fa-search fa-fw"></i></a></div></div></header><script>window.desktopHeaderMode=null;window.mobileHeaderMode=null;</script><main class=main><div class=container><article class="page single"><h1 class="single-title animated flipInX">如何将生产环境数据还原到 Dev 环境(Dynamics 365 How to Restore Live Data to Dev)</h1><div class=meta><div class=meta-line><a class=author href=https://www.nashome.cn/ rel=author target=_blank><i class="fas fa-user-circle fa-fw"></i>ZhaoQiang
+</a>&nbsp;<span class=post-category>收录于&nbsp;<i class="far fa-folder fa-fw"></i><a href=https://www.nashome.cn/categories/dynamicsax/>Dynamicsax</a>&nbsp;</span></div><div class=meta-line><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-04-01>2020-04-01</time>&nbsp;
+<i class="fas fa-pencil-alt fa-fw"></i>约 601 字&nbsp;
+<i class="far fa-clock fa-fw"></i>预计阅读 2 分钟&nbsp;</div></div><div class=post-toc id=post-toc><h2 class=post-toc-title>目录</h2><div class=post-toc-content><nav id=TableOfContents><ul><li><ul><li><ul><li><a href=#一还原生产环境数据库到uat环境再从uat导出到-asset-library>一.还原生产环境数据库到UAT环境，再从UAT导出到 Asset Library。</a></li><li><a href=#二下载backpac文件>二.下载Backpac文件</a></li><li><a href=#三使用管理员权限登录cmd>三.使用管理员权限登录CMD</a></li><li><a href=#执行如下代码>执行如下代码</a></li><li><a href=#四等待数据库还原后在sql-server-management中执行如下代码>四.等待数据库还原后，在SQL Server management中执行如下代码</a></li><li><a href=#五删除老axdb创建备份然后重命名新的db为axdb>五.删除老AXDB，创建备份然后重命名新的DB为AXDB</a></li></ul></li></ul></li></ul></nav></div></div><div class=post-toc-mobile id=post-toc-mobile><details><summary><div class=post-toc-title><span>目录</span>
+<span><i class="details icon fas fa-angle-down"></i></span></div></summary><div class=post-toc-content><nav id=TableOfContentsMobile><ul><li><ul><li><ul><li><a href=#一还原生产环境数据库到uat环境再从uat导出到-asset-library>一.还原生产环境数据库到UAT环境，再从UAT导出到 Asset Library。</a></li><li><a href=#二下载backpac文件>二.下载Backpac文件</a></li><li><a href=#三使用管理员权限登录cmd>三.使用管理员权限登录CMD</a></li><li><a href=#执行如下代码>执行如下代码</a></li><li><a href=#四等待数据库还原后在sql-server-management中执行如下代码>四.等待数据库还原后，在SQL Server management中执行如下代码</a></li><li><a href=#五删除老axdb创建备份然后重命名新的db为axdb>五.删除老AXDB，创建备份然后重命名新的DB为AXDB</a></li></ul></li></ul></li></ul></nav></div></details></div><div class=content><p>This blog post is for my notes, you can find more details on Microsoft link. There are some extra steps in the Microsoft link, which I never used. I usually follow only these steps and it works for me. So Instead I need to search on Microsoft link. I wrote this post for my future use. Step 1: You have to restore production database to UAT and then from uat to export it to Asset library Step 2: Download Backpac file in specific location Step 3: Open Command prompt with run as administrator for locally hosted VM and go to following location</p><p>这是我的操作笔记，微软提供更详细的内容，其中有一些步骤我从来没有使用过，对于我来说仅仅使用以下这几步操作即可。</p><h4 id=一还原生产环境数据库到uat环境再从uat导出到-asset-library>一.还原生产环境数据库到UAT环境，再从UAT导出到 Asset Library。</h4><h4 id=二下载backpac文件>二.下载Backpac文件</h4><h4 id=三使用管理员权限登录cmd>三.使用管理员权限登录CMD</h4><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-fallback data-lang=fallback>Cd C:\Program Files (x86)\Microsoft SQL Server\140\DAC\bin
+</code></pre></td></tr></table></div></div><h4 id=执行如下代码>执行如下代码</h4><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-fallback data-lang=fallback>SqlPackage.exe /a:import /sf:D:\Exportedbacpac\my.bacpac /tsn:localhost /tdn:&lt;target database name&gt; /p:CommandTimeout=1200
+
+I modified the above statement as
+
+SqlPackage.exe /a:import /sf:C:\Temp\hsauatbackup.bacpac /tsn:localhost /tdn:AxDb_6 /p:CommandTimeout=1200
+</code></pre></td></tr></table></div></div><h4 id=四等待数据库还原后在sql-server-management中执行如下代码>四.等待数据库还原后，在SQL Server management中执行如下代码</h4><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span><span class=lnt>42
+</span><span class=lnt>43
+</span><span class=lnt>44
+</span><span class=lnt>45
+</span><span class=lnt>46
+</span><span class=lnt>47
+</span><span class=lnt>48
+</span><span class=lnt>49
+</span><span class=lnt>50
+</span><span class=lnt>51
+</span><span class=lnt>52
+</span><span class=lnt>53
+</span><span class=lnt>54
+</span><span class=lnt>55
+</span><span class=lnt>56
+</span><span class=lnt>57
+</span><span class=lnt>58
+</span><span class=lnt>59
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-fallback data-lang=fallback>CREATE USER axdeployuser FROM LOGIN axdeployuser
+EXEC sp_addrolemember &#39;db_owner&#39;, &#39;axdeployuser&#39;
+
+CREATE USER axdbadmin FROM LOGIN axdbadmin
+EXEC sp_addrolemember &#39;db_owner&#39;, &#39;axdbadmin&#39;
+
+CREATE USER axmrruntimeuser FROM LOGIN axmrruntimeuser
+EXEC sp_addrolemember &#39;db_datareader&#39;, &#39;axmrruntimeuser&#39;
+EXEC sp_addrolemember &#39;db_datawriter&#39;, &#39;axmrruntimeuser&#39;
+
+CREATE USER axretaildatasyncuser FROM LOGIN axretaildatasyncuser
+EXEC sp_addrolemember &#39;DataSyncUsersRole&#39;, &#39;axretaildatasyncuser&#39;
+
+CREATE USER axretailruntimeuser FROM LOGIN axretailruntimeuser
+EXEC sp_addrolemember &#39;UsersRole&#39;, &#39;axretailruntimeuser&#39;
+EXEC sp_addrolemember &#39;ReportUsersRole&#39;, &#39;axretailruntimeuser&#39;
+
+CREATE USER axdeployextuser FROM LOGIN axdeployextuser
+EXEC sp_addrolemember &#39;DeployExtensibilityRole&#39;, &#39;axdeployextuser&#39;
+
+CREATE USER [NT AUTHORITY\NETWORK SERVICE] FROM LOGIN [NT AUTHORITY\NETWORK SERVICE]
+EXEC sp_addrolemember &#39;db_owner&#39;, &#39;NT AUTHORITY\NETWORK SERVICE&#39;
+
+UPDATE T1
+SET T1.storageproviderid = 0
+    , T1.accessinformation = &#39;&#39;
+    , T1.modifiedby = &#39;Admin&#39;
+    , T1.modifieddatetime = getdate()
+FROM docuvalue T1
+WHERE T1.storageproviderid = 1 --Azure storage
+
+DROP PROCEDURE IF EXISTS SP_ConfigureTablesForChangeTracking
+DROP PROCEDURE IF EXISTS SP_ConfigureTablesForChangeTracking_V2
+GO
+-- Begin Refresh Retail FullText Catalogs
+DECLARE @RFTXNAME NVARCHAR(MAX);
+DECLARE @RFTXSQL NVARCHAR(MAX);
+DECLARE retail_ftx CURSOR FOR
+SELECT OBJECT_SCHEMA_NAME(object_id) + &#39;.&#39; + OBJECT_NAME(object_id) fullname FROM SYS.FULLTEXT_INDEXES
+    WHERE FULLTEXT_CATALOG_ID = (SELECT TOP 1 FULLTEXT_CATALOG_ID FROM SYS.FULLTEXT_CATALOGS WHERE NAME = &#39;COMMERCEFULLTEXTCATALOG&#39;);
+OPEN retail_ftx;
+FETCH NEXT FROM retail_ftx INTO @RFTXNAME;
+
+BEGIN TRY
+    WHILE @@FETCH_STATUS = 0 
+    BEGIN 
+        PRINT &#39;Refreshing Full Text Index &#39; + @RFTXNAME;
+        EXEC SP_FULLTEXT_TABLE @RFTXNAME, &#39;activate&#39;;
+        SET @RFTXSQL = &#39;ALTER FULLTEXT INDEX ON &#39; + @RFTXNAME + &#39; START FULL POPULATION&#39;;
+        EXEC SP_EXECUTESQL @RFTXSQL;
+        FETCH NEXT FROM retail_ftx INTO @RFTXNAME;
+    END
+END TRY
+BEGIN CATCH
+    PRINT error_message()
+END CATCH
+
+CLOSE retail_ftx; 
+DEALLOCATE retail_ftx; 
+</code></pre></td></tr></table></div></div><h4 id=五删除老axdb创建备份然后重命名新的db为axdb>五.删除老AXDB，创建备份然后重命名新的DB为AXDB</h4></div><div class=post-footer id=post-footer><div class=post-info><div class=post-info-line><div class=post-info-mod><span>本文于 2020-04-01 更新</span></div><div class=post-info-license></div></div><div class=post-info-line><div class=post-info-md><span><a class=link-to-markdown href=https://www.nashome.cn/post/dynamics-365-how-to-restore-live-data-to-dev/index.md target=_blank>阅读原始文档</a></span></div><div class=post-info-share><span><a href=javascript:void(0); title="分享到 微博" data-sharer=weibo data-url=https://www.nashome.cn/post/dynamics-365-how-to-restore-live-data-to-dev/ data-title="如何将生产环境数据还原到 Dev 环境(Dynamics 365 How to Restore Live Data to Dev)"><i class="fab fa-weibo fa-fw"></i></a><a href=javascript:void(0); title="分享到 百度" data-sharer=baidu data-url=https://www.nashome.cn/post/dynamics-365-how-to-restore-live-data-to-dev/ data-title="如何将生产环境数据还原到 Dev 环境(Dynamics 365 How to Restore Live Data to Dev)"><i class="loveit it-baidu-fill"></i></a><a href=javascript:void(0); title="分享到 Evernote" data-sharer=evernote data-url=https://www.nashome.cn/post/dynamics-365-how-to-restore-live-data-to-dev/ data-title="如何将生产环境数据还原到 Dev 环境(Dynamics 365 How to Restore Live Data to Dev)"><i class="fab fa-evernote fa-fw"></i></a></span></div></div></div><div class=post-info-more><section><span class=tag><a href=https://www.nashome.cn/tags/dynamics365/><i class="fas fa-tag fa-fw"></i>&nbsp;Dynamics365</a>&nbsp;</span></section><section><span><a href=javascript:window.history.back();>返回</a></span>&nbsp;|&nbsp;<span><a href=https://www.nashome.cn/>主页</a></span></section></div><div class=post-nav><a href=https://www.nashome.cn/post/dynamics-365-pre-go-live-checklist/ class=prev rel=prev title="Dynamics 365 Pre Go Live Checklist"><i class="fas fa-angle-left fa-fw"></i>Dynamics 365 Pre Go Live Checklist</a>
+<a href=https://www.nashome.cn/post/dynamics-ax-upgrade-to-cu9/ class=next rel=next title="Dynamics AX Upgrade to Cu9">Dynamics AX Upgrade to Cu9<i class="fas fa-angle-right fa-fw"></i></a></div></div><div class=comment><div id=valine></div><script>document.addEventListener("DOMContentLoaded",function(event){new Valine({el:'#valine',appId:'Bu42IhLNJc94WvCDKSsRwTqa-gzGzoHsz',appKey:'bKSP5XiBoIHs8PyXC4uhGhqQ',placeholder:'说点什么吧...',avatar:'mm',pageSize:10,lang:'zh-cn',visitor:true,recordIP:true,});});</script><noscript>Please enable JavaScript to view the <a href=https://valine.js.org/>comments powered by Valine.</a></noscript></div></article></div></main><footer class=footer><div class=copyright><div class=copyright-line>由 <a href=https://gohugo.io/ target=_blank rel="external nofollow noopener noreffer">Hugo</a> 强力驱动 | 主题 - <a href=https://github.com/dillonzq/LoveIt target=_blank rel="external nofollow noopener noreffer">LoveIt<i class="far fa-heart fa-fw"></i></a></div><div class=copyright-line><i class="far fa-copyright fa-fw"></i><span itemprop=copyrightYear>2016 - 2020</span><span class=author itemprop=copyrightHolder>&nbsp;<a href=https://www.nashome.cn/ target=_blank>ZhaoQiang</a></span>&nbsp;|&nbsp;<span class=license><a rel="license external nofollow noopener noreffer" href=https://creativecommons.org/licenses/by-nc/4.0/ target=_blank>CC BY-NC 4.0</a></span><span class=icp-splitter>&nbsp;|&nbsp;</span><br class=icp-br><span class=icp><a href=http://www.beian.miit.gov.cn>沪ICP备17033498号</a></span></div></div></footer></div><a href=# class="dynamic-to-top animated faster" id=dynamic-to-top><span>&nbsp;</span>
+</a><link rel=stylesheet href=/css/lib/valine/dark.css><link rel=stylesheet href=/css/lib/iconfont/iconfont.min.css><script src=https://cdn.staticfile.org/valine/1.3.10/Valine.min.js></script><script src=https://cdn.staticfile.org/smooth-scroll/16.1.0/smooth-scroll.polyfills.min.js></script><script src=https://cdn.staticfile.org/lazysizes/5.2.0/lazysizes.min.js></script><script src=/js/lib/sharer/sharer.min.js></script><script src=/js/theme.min.js></script><script type=application/javascript>var doNotTrack=false;if(!doNotTrack){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;ga('create','UA-105751499-1','auto');ga('set','anonymizeIp',true);ga('send','pageview');}</script><script async src=https://www.google-analytics.com/analytics.js></script><script src=https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js></script><script src=https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js></script><script src=https://res.cloudinary.com/jimmysong/raw/upload/rootsongjc-hugo/algoliasearch.min.js></script><script src=https://cdn.staticfile.org/autocomplete.js/0.37.1/autocomplete.min.js></script><script src=/js/search.js type=text/javascript></script><script data-ad-client=ca-pub-3216129127646136 async src=https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js></script><script src=/js/baidutuisong.js async></script><div id=ex1 class=modal><div class=aa-input-container id=aa-input-container><input type=search id=aa-search-input class=aa-input-search placeholder="Search for titles or URIs..." name=search autocomplete=off><svg class="aa-input-icon" viewBox="654 -372 1664 1664"><path d="M1806 332c0-123.3-43.8-228.8-131.5-316.5C1586.8-72.2 1481.3-116 1358-116s-228.8 43.8-316.5 131.5S910 208.7 910 332s43.8 228.8 131.5 316.5S1234.7 780 1358 780s228.8-43.8 316.5-131.5S1806 455.3 1806 332zm512 832c0 34.7-12.7 64.7-38 90s-55.3 38-90 38c-36 0-66-12.7-90-38l-343-342c-119.3 82.7-252.3 124-399 124-95.3.0-186.5-18.5-273.5-55.5s-162-87-225-150-113-138-150-225S654 427.3 654 332s18.5-186.5 55.5-273.5 87-162 150-225 138-113 225-150S1262.7-372 1358-372s186.5 18.5 273.5 55.5 162 87 225 150 113 138 150 225S2062 236.7 2062 332c0 146.7-41.3 279.7-124 399l343 343C2305.7 1098.7 2318 1128.7 2318 1164z" /></svg></div></div></body></html>

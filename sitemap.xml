@@ -4,48 +4,76 @@
   
   <url>
     <loc>https://www.nashome.cn/</loc>
-    <lastmod>2020-03-18T16:39:38+08:00</lastmod>
+    <lastmod>2020-04-14T15:11:59+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.nashome.cn/categories/</loc>
-    <lastmod>2020-03-18T16:39:38+08:00</lastmod>
+    <lastmod>2020-04-14T15:11:59+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.nashome.cn/post/dynamics-365-shipping-container-labeling-guide/</loc>
-    <lastmod>2020-03-18T16:39:38+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nashome.cn/tags/dynamics365/</loc>
-    <lastmod>2020-03-18T16:39:38+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nashome.cn/categories/dynamicsax/</loc>
-    <lastmod>2020-03-18T16:39:38+08:00</lastmod>
+    <loc>https://www.nashome.cn/post/dynamics-ax-upgrade-to-cu9/</loc>
+    <lastmod>2020-04-14T15:11:59+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.nashome.cn/post/</loc>
-    <lastmod>2020-03-18T16:39:38+08:00</lastmod>
+    <lastmod>2020-04-14T15:11:59+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.nashome.cn/tags/</loc>
+    <lastmod>2020-04-14T15:11:59+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nashome.cn/tags/dynamics365/</loc>
+    <lastmod>2020-04-01T09:26:29+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nashome.cn/categories/dynamicsax/</loc>
+    <lastmod>2020-04-01T09:26:29+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nashome.cn/post/dynamics-365-how-to-restore-live-data-to-dev/</loc>
+    <lastmod>2020-04-01T09:26:29+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nashome.cn/post/dynamics-365-pre-go-live-checklist/</loc>
+    <lastmod>2020-03-18T17:03:19+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nashome.cn/post/dynamics-365-selecting-the-correct-tier-level-on-your-sandboxes/</loc>
+    <lastmod>2020-03-18T16:46:16+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nashome.cn/post/dynamics-365-shipping-container-labeling-guide/</loc>
     <lastmod>2020-03-18T16:39:38+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -150,14 +178,14 @@
   </url>
   
   <url>
-    <loc>https://www.nashome.cn/tags/hugo/</loc>
+    <loc>https://www.nashome.cn/categories/hugo/</loc>
     <lastmod>2020-02-18T09:13:13+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.nashome.cn/categories/hugo/</loc>
+    <loc>https://www.nashome.cn/tags/hugo/</loc>
     <lastmod>2020-02-18T09:13:13+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
