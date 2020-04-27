@@ -1,11 +1,11 @@
 ---
 author: "ZhaoQiang"
 author_link: ""
-title: "How to Deploy UAT Data to Production Server in Dynamics 365"
+title: "如何将 UAT 的数据在上线时部署到生产环境(How to Deploy UAT Data to Production Server in Dynamics 365)"
 date: 2020-02-28T15:03:59+08:00
 lastmod: 2020-02-28T15:03:59+08:00
 draft: false
-description: "如何将UAT的数据在上线时部署到生产环境"
+description: "如何将UAT的数据在上线时部署到生产环境(How to Deploy UAT Data to Production Server in Dynamics 365)"
 show_in_homepage: true
 description_as_summary: false
 license: ""

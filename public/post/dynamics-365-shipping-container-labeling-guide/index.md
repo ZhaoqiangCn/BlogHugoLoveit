@@ -1,10 +1,5 @@
-# Dynamics 365 Shipping Container Labeling Guide
+# Dynamics 365 货运集装箱标签指南
 
->
-> Author link: https://en.gravatar.com/hatlevik
->
-
-![image](https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/D365LabelingGuide/1.png)
 
 Major retailers have identified incorrect logistic unit (pallet) labeling as a major emerging supply chain issue. A recent sample audit found that approximately 44% of pallet labels are not meeting agreed upon industry requirements. The issues they face include:
 
@@ -23,7 +18,7 @@ With the migration to more and more automated scanning in warehouses and distrib
 
 This document and its recommendation should be read in conjunction with other GS1 technical guidelines as well as retailer specific documentation all of which can be accessed and downloaded from their respective websites.
 
-## The Importance of Logistic (Pallet) Labels
+## 物流（托盘）标签的重要性
 
 The use of the logistic label incorporating the Serial Shipping Container Code (SSCC) by all parties in the supply chain, from manufacturers to transporters, distributors and retailers, is seen to be inevitable for the identification and tracking of pallets and other forms of logistic units. The purpose of the GS1 logistics label is to uniquely identify specific information about the pallet clearly and concisely in a standard format, to facilitate the process of moving products through the supply chain quickly and efficiently.
 
@@ -33,7 +28,7 @@ Industry Business Benefits of GS1 Logistics LabelLogistics Units are identified 
 
 Fig 1: Example of Numbering & Bar coding Labelling Hierarchy
 
-## Logistic (Pallet) Label Requirements for the Retail Industry
+## 零售业的物流（托盘）标签要求
 
 The GS1 Logistics Label can typically have many different formats. The SSCC is the only mandatory piece of information that must be contained on the label itself as ideally the information flow, which accompanies the physical flow of goods, is communicated between trading partners by EDI.
 
@@ -41,7 +36,7 @@ In practice, however, fully automated communication channels, which make it poss
 
 The purpose of the GS1 logistics label is to provide information about the unit to which it is fixed, clearly and concisely. The core information on the label should be represented both in machine (bar code) and human readable form. There may be other information, which is represented in human readable form only.
 
-### What can go wrong? – Common Pitfalls
+### 有什么问题吗？ –常见陷阱
 
 It is imperative that suppliers and logistics providers ensure 100% scannability of all barcodes. There are many reasons as to why pallet labels may not meet industry requirements. Here are some examples:
 
@@ -93,27 +88,27 @@ Example label used for single product parcels and pallets, with GTIN information
 
 Example label used for parcels and pallets with AI 403 – Routing code without GTIN and product information.
 
-## Logistics Label Requirements
+## 物流标签要求
 
 
 
-### Label Size
+### 标签尺寸
 
 - The minimum label size is A6, 105mm x 148mm, however larger label sizes such as A5 or A4 are permitted
 
-### Label Format
+### 标签格式
 
 - The label layout can be either portrait or landscape
 - Information contained in the top bar code can be broken down into more multiple bar codes if required, in order to maintain a larger magnification (bar width)
 
-### Label Location
+### 标签位置
 
 - Two identical labels, one placed on each fork entry side
 - Label should be placed between 50mm – 100mm from the right hand vertical edge
 - Label should be placed between 400mm – 800mm from the base of the pallet
 - The target placement of the label (top of SSCC bar code) is 600mm from ground level
 
-### Label Data and Application Identifiers
+### 标签数据和应用程序标识符
 
 - · SSCC (Serial Shipping Container Code) – AI (00)
 
@@ -137,7 +132,7 @@ Example label used for parcels and pallets with AI 403 – Routing code without 
 
 
 
-## What is a Serial Shipping Container Code (SSCC)
+## 系列货运包装箱代码（SSCC）
 
 The Serial Shipping Container Code (SSCC) is a reference number or license plate used to uniquely identify logistic units (pallets). In Dynamics AX the Pallet ID is most used for this.
 
@@ -151,7 +146,7 @@ The SSCC is used to uniquely identify goods on the way from sender to final reci
 
 Figure 3: The Use of the SSCC throughout the supply chain.
 
-### Allocating an SSCC
+### 分配SSCC
 
 The SSCC is a unique, non-significant, eighteen-digit number which is assigned by the company constructing the logistic unit. It remains the same for the life of the logistic unit. The SSCC is encoded in a GS1-128 Bar Code and is represented by the Application Identifier (AI) 00.
 
@@ -168,7 +163,7 @@ How you allocate an SSCC depends on the length of your assigned GS1 Company Pref
 | Serial Reference:           | A Serial Reference usually comprises seven digits (nine digits if the GS1 Company Prefix is seven digits) and uniquely identifies each transport package or logistic unit. The method used to allocate a Serial Reference is at the discretion of the company coding the package. In Dynamics AX this can be the number sequence of a WMS pallet |
 | Check Digit:                | Calculated using a mathematical formula.                     |
 
-## Logistic Label Location on parcels
+## 包裹上的物流标签位置
 
 For parcels, symbol placement will vary slightly in practice; however the target placement for the bottom of the bar code symbol is 32 mm (1.25 inches) from the natural base of the item. The symbol including, its quiet zones, should be at least 19 mm (0.75 inches) from any vertical edge to avoid damage.
 
@@ -178,7 +173,7 @@ For smaller packages, which may be sorted automatically on a conveyor, the label
 
 
 
-## Logistic Label Location on pallet
+## 托盘上的物流标签位置
 
 Industry Requirements is a GS1 Logistics Label to be placed on each fork entry side.
 
@@ -190,7 +185,7 @@ If the pallet needs to be stretch wrapped for stability, the pallet labels must 
 
 Where there is only one layer high of the trade unit on a pallet and the trade unit height is less than the height of the pallet labels. Please ensure that the bar codes of the labels are on the vertical face of the trade unit with the human readable portion of the labels folded over onto the horizontal surface of the trade unit as shown below.
 
-### Typical Retailer Receival Processes
+### 典型的零售商收货流程
 
 - On arrival, a receiving checker will key the purchase order number or appointment number (for a multiple PO truck) into the PDA/Radio Frequency (RF) receiving unit.
 - The receiver will then proceed to the first pallet on the truck and scan all of the bar codes on the pallet label.
@@ -198,7 +193,7 @@ Where there is only one layer high of the trade unit on a pallet and the trade u
 - If the pallet is accepted then the receiver moves along to the next pallet and repeats the process. If the pallet is not accepted the checker will conduct an investigation to identify the issue and will re label with a generic label if required.
 - Once all pallets are received, the checker will confirm the total quantity against the invoiced quantity and then close the load ready for the pallets to be put away by forklifts using RF scanners. The WMS determines the final location in the warehouse during the receival process.
 
-### Typical B2B ASN Receival Processes
+### 典型的B2B ASN收货流程
 
 - On delivery into any receiving location, a receive checker will count the logistics units, (eg: number of pallets) and compare them to the driver’s consignment note and stamp the document accordingly. This is the initial proof of delivery.
 - The merchandise is then electronically scan receipted once it arrives at receiving locations. The Advanced Shipping Notice (ASN) must have been transmitted to the receiving company before the goods arrive in order for it to be validated (and rectified if necessary).
@@ -206,9 +201,9 @@ Where there is only one layer high of the trade unit on a pallet and the trade u
 - When all SSCCs are accounted for, this will trigger the internal processing to update the stock and PO records and provides information to payment systems.
 - Logistic unit contents will be checked to ensure contents exactly match ASN details.
 
-# Manufacturer/Supplier Considerations
+## 制造商/供应商注意事项
 
-### Pallet Label Quality Standards
+### 托盘标签质量标准
 
 Controlling label quality variation requires an integrated quality process incorporating people, processes, procedures and equipment.
 
@@ -223,7 +218,7 @@ The SSCC label standards should be incorporated into internal standards and avai
 
 With many automated and manual labeling systems check scanning controls can be purchased as part of the system, providing a level of automated bar code quality checking and control. These systems incorporate a check scanner at the front of the label printer so that as each label is printed the bar code is scanned to check quality. If a fail to read occurs the printer can print void on the erroneous label and re-print. After multiple failures i.e. 2 or 3, the unit will stop and raise an alarm.
 
-#### Considerations
+#### 注意事项
 
 - Automate the data sources to simplify printing and reduce the need for data entry.
 
@@ -238,7 +233,7 @@ With many automated and manual labeling systems check scanning controls can be p
 
 **Incorporate checks for**Correct Bar code symbology (GS1-128)Label placementLabel verificationLabel Defects
 
-#### Visual Checklist
+#### 视觉清单
 
 Does the data encoded in the pallet label bar codes match the product on the pallet eg
 
@@ -249,17 +244,17 @@ Does the data encoded in the pallet label bar codes match the product on the pal
 
 The pallet labels applied to the pallet must contain the same SSCC. Pallet labels should not be placed over two separate cartons. Pallet labels should be placed on the outside of the stretch-wrap. Determine if any white lines running vertically through the black lines of the bar code that may hinder the bar code from scanning are evident.
 
-#### Audits
+#### 审核
 
 It is recommended to perform a compliance audit of the labels coming from each factory, warehouse and third party provider every quarter. Results should be reported back as percentage compliance and the issues found highlighted, together with photos, if necessary.
 
-#### Training
+#### 培训
 
 It is imperative that anyone that is required to print or apply pallet labels understand
 
 the industry requirements. Training and documentation is widely available.
 
-#### Use of KPIs
+#### KPI的使用
 
 Establish performance metrics as part of the pallet quality checking procedures. This could be plotted graphically by warehouse upon feedback from trading partners.
 
@@ -267,7 +262,7 @@ The data should be circulated to all factories and warehouses including third pa
 
 Communicate progress to factory and warehouse managers at regular operations meetings to ensure the focus is maintained on the importance of achieving this and other key supply chain standards.
 
-#### Third Party (3PL) Logistic Service Providers
+#### 第三方（3PL）物流服务供应商
 
 - What role/service are they providing
 - Are they applying labels

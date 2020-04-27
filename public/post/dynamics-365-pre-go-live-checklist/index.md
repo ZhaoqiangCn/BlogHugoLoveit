@@ -1,30 +1,5 @@
----
-author: "ZhaoQiang"
-author_link: ""
-title: "Dynamics 365 Pre Go Live Checklist"
-date: 2020-03-18T17:03:19+08:00
-lastmod: 2020-03-18T17:03:19+08:00
-draft: false
-description: ""
-show_in_homepage: true
-description_as_summary: false
-license: ""
+# Dynamics 365 Pre Go Live Checklist
 
-tags: ["",
-""
-]
-categories: ["",
-""
-]
-
-featured_image: ""
-featured_image_preview: ""
-
-comment: true
-toc: true
-auto_collapse_toc: true
-math: false
----
 
 #### Pre Go-live Health Check list:
 

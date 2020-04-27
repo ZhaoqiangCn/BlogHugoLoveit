@@ -1,30 +1,5 @@
----
-author: "ZhaoQiang"
-author_link: ""
-title: "Dynamics 365 Selecting the Correct Tier Level on Your Sandboxes"
-date: 2020-03-18T16:46:16+08:00
-lastmod: 2020-03-18T16:46:16+08:00
-draft: false
-description: ""
-show_in_homepage: true
-description_as_summary: false
-license: ""
+# Dynamics 365 Selecting the Correct Tier Level on Your Sandboxes
 
-tags: ["",
-""
-]
-categories: ["",
-""
-]
-
-featured_image: ""
-featured_image_preview: ""
-
-comment: true
-toc: true
-auto_collapse_toc: true
-math: false
----
 
 ![img](http://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/D365tierlevel/1.png)
 
