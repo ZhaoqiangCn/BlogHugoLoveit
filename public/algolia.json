@@ -120,11 +120,38 @@
         "content": "UAT                                                                           Service Request      Service Request    LCS    Project Details        Service request                 Sandbox production              Sandbox source  downtime                             5                 1",
         "objectID": "post/dynamics-365-how-to-deploy-non-production-data-to-production-server",
         "author_link": "",
-        "title": "How to Deploy UAT Data to Production Server in Dynamics 365",
+        "title": "如何将 UAT 的数据在上线时部署到生产环境(How to Deploy UAT Data to Production Server in Dynamics 365)",
         "date": "2020-02-28T07:03:59.000Z",
         "lastmod": "2020-02-28T07:03:59.000Z",
         "draft": false,
-        "description": "如何将UAT的数据在上线时部署到生产环境",
+        "description": "如何将UAT的数据在上线时部署到生产环境(How to Deploy UAT Data to Production Server in Dynamics 365)",
+        "show_in_homepage": true,
+        "description_as_summary": false,
+        "license": "",
+        "tags": [
+            "Dynamics365"
+        ],
+        "categories": [
+            "Dynamicsax"
+        ],
+        "featured_image": "",
+        "featured_image_preview": "",
+        "comment": true,
+        "toc": true,
+        "auto_collapse_toc": true,
+        "math": false
+    },
+    {
+        "author": "ZhaoQiang",
+        "uri": "post/dynamics-365-how-to-restore-live-data-to-dev",
+        "content": "blog post notes  find details Microsoft link  extra steps Microsoft link  used  usually follow steps works me  So Instead need search Microsoft link  wrote post future use  Step 1  restore production database UAT uat export Asset library Step 2  Download Backpac file specific location Step 3  Open Command prompt run administrator locally hosted VM go following location                                                                     UAT     UAT    Asset Library      Backpac              CMD Cd C  Program Files  x86  Microsoft SQL Server 140 DAC bin        SqlPackage exe  a import  sf D  Exportedbacpac my bacpac  tsn localhost  tdn   p CommandTimeout 1200 modified above statement SqlPackage exe  a import  sf C  Temp hsauatbackup bacpac  tsn localhost  tdn AxDb_6  p CommandTimeout 1200             SQL Server management        CREATE USER axdeployuser LOGIN axdeployuser EXEC spaddrolemember  dbowner    axdeployuser  CREATE USER axdbadmin LOGIN axdbadmin EXEC spaddrolemember  dbowner    axdbadmin  CREATE USER axmrruntimeuser LOGIN axmrruntimeuser EXEC spaddrolemember  dbdatareader    axmrruntimeuser  EXEC spaddrolemember  dbdatawriter    axmrruntimeuser  CREATE USER axretaildatasyncuser LOGIN axretaildatasyncuser EXEC sp_addrolemember  DataSyncUsersRole    axretaildatasyncuser  CREATE USER axretailruntimeuser LOGIN axretailruntimeuser EXEC sp_addrolemember  UsersRole    axretailruntimeuser  EXEC sp_addrolemember  ReportUsersRole    axretailruntimeuser  CREATE USER axdeployextuser LOGIN axdeployextuser EXEC sp_addrolemember  DeployExtensibilityRole    axdeployextuser  CREATE USER  NT AUTHORITY NETWORK SERVICE  LOGIN  NT AUTHORITY NETWORK SERVICE  EXEC spaddrolemember  dbowner    NT AUTHORITY NETWORK SERVICE  UPDATE T1 SET T1 storageproviderid   0   T1 accessinformation        T1 modifiedby    Admin    T1 modifieddatetime   getdate   docuvalue T1 T1 storageproviderid   1   Azure storage DROP PROCEDURE EXISTS SP_ConfigureTablesForChangeTracking DROP PROCEDURE EXISTS SPConfigureTablesForChangeTrackingV2 GO    Begin Refresh Retail FullText Catalogs DECLARE  RFTXNAME NVARCHAR MAX   DECLARE  RFTXSQL NVARCHAR MAX   DECLARE retail_ftx CURSOR SELECT OBJECTSCHEMANAME objectid          OBJECTNAME objectid  fullname SYS FULLTEXTINDEXES FULLTEXTCATALOGID    SELECT TOP 1 FULLTEXTCATALOGID SYS FULLTEXT_CATALOGS NAME    COMMERCEFULLTEXTCATALOG    OPEN retail_ftx  FETCH NEXT retail_ftx  RFTXNAME  BEGIN TRY   FETCH_STATUS   0 BEGIN PRINT  Refreshing Full Text Index      RFTXNAME  EXEC SPFULLTEXTTABLE  RFTXNAME   activate   SET  RFTXSQL    ALTER FULLTEXT INDEX      RFTXNAME     START FULL POPULATION   EXEC SP_EXECUTESQL  RFTXSQL  FETCH NEXT retail_ftx  RFTXNAME  END END TRY BEGIN CATCH PRINT error_message   END CATCH CLOSE retail_ftx  DEALLOCATE retail_ftx       AXDB            DB AXDB",
+        "objectID": "post/dynamics-365-how-to-restore-live-data-to-dev",
+        "author_link": "",
+        "title": "如何将生产环境数据还原到 Dev 环境(Dynamics 365 How to Restore Live Data to Dev)",
+        "date": "2020-04-01T01:26:29.000Z",
+        "lastmod": "2020-04-01T01:26:29.000Z",
+        "draft": false,
+        "description": "如何将生产环境数据还原到 Dev 环境(Dynamics 365 How to Restore Live Data to Dev)",
         "show_in_homepage": true,
         "description_as_summary": false,
         "license": "",
@@ -187,11 +214,69 @@
     },
     {
         "author": "ZhaoQiang",
-        "uri": "post/dynamics-365-shipping-container-labeling-guide",
-        "content": "Author link  https   en gravatar com hatlevik   Major retailers identified incorrect logistic unit  pallet  labeling major emerging supply chain issue  recent sample audit found approximately 44  pallet labels not meeting agreed upon industry requirements  issues face include  No label applied Label wrong location Information label does not match pallet Multiple labels different Serial Shipping Container Codes  SSCC  applied Pallet label will not scan Stretch wrap applied pallet label so doesn t scan following information contains guidelines general information create apply good quality logistic  pallet  labels per standard requirements Retail Industry  Retail Industry adopts key principles Efficient Consumer Response  ECR  increased demand high quality data capture points supply chain  Although industry numbering bar coding trade items number years  biggest emerging problem supply chain logistic unit labeling  migration automated scanning warehouses distribution centres  imperative suppliers logistics providers ensure 100  scannability bar codes will bring mutual benefits trading partners  Printing applying good quality bar code label complies industry standards scannable trading partners  costs no printing applying bar code label doesn t scan  document its recommendation read conjunction GS1 technical guidelines retailer specific documentation accessed downloaded respective websites  Importance Logistic  Pallet  Labels use logistic label incorporating Serial Shipping Container Code  SSCC  parties supply chain  manufacturers transporters  distributors retailers  seen inevitable identification tracking pallets forms logistic units  purpose GS1 logistics label uniquely identify specific information pallet clearly concisely standard format  facilitate process moving products supply chain quickly efficiently  Industry Business Benefits GS1 Logistics LabelLogistics Units identified number unique worldwideGS1 standards global apply entire supply chain  raw materials supplier manufacturer distributor wholesaler end user retailer Provides link bar coded information logistics unit information communicated trading partners via electronic business transactions Use identify contents pallets  including stock data  use by dates etcContributes efficient management stock rotation glanceSaves costs doing onceAvoids multiple label types  industry standard Faster receiving  quick turnaroundImproves data integrity   use date quantity fieldsStock rotation based use datePallet tracking vendor retailer assist product recallsWorks conjunction Dispatch Advice   Advanced Shipping Notice  ASN SSCC used inter intra company transactions  Fig 1  Example Numbering   Bar coding Labelling Hierarchy Logistic  Pallet  Label Requirements Retail Industry GS1 Logistics Label typically different formats  SSCC mandatory piece information contained label itself ideally information flow  accompanies physical flow goods  communicated trading partners EDI  practice  however  fully automated communication channels  possible rely exclusively electronic files retrieving information movements goods  not always available  situation may requirement add additional information logistics label facilitate process logistic units supply chain  purpose GS1 logistics label provide information unit fixed  clearly concisely  core information label represented machine  bar code  human readable form  may information  represented human readable form only  go wrong    Common Pitfalls imperative suppliers logistics providers ensure 100  scannability barcodes  reasons why pallet labels may not meet industry requirements  examples  Label position incorrect No pallet label applied Multiple mismatching SSCCs pallet Duplicated SSCCs Damaged label creases folds  Will not scan due incorrect bar code symbology poor print quality Label applied underneath stretch wrap Pallet label applied one side pallet Product information applied bar code does not match product pallet Pallet label bar codes not scanning   Ribbon wrinkle thermal transfer application Print head element failure leading line black bar  split bar  within bar code Poor print quality   faint print due label print head heat low print speed high Poor print quality   bleeding print due label printer print head heat high print speed low Handwritten changes not reflected bar code therefore not permitted pallet labels Label applied carton joins seams causing tearing Label Dimensions business requirements users GS1 Logistic Labels met using one following  A6  105 mm x 148 mm    4 x 6 inch  particularly suitable when SSCC  SSCC limited additional data  encoded A5  148 mm x 210 mm    6 x 8 inch However  label size suits labeller s requirements  large enough carry information required together GS1 128 bar codes  Factors influencing label sizes include amount type data required content X dimensions bar code symbols used  dimensions logistic unit labeled  Example label used single product parcels pallets  GTIN information  Example label used parcels pallets AI 403   Routing code without GTIN product information  Logistics Label Requirements Label ",
-        "objectID": "post/dynamics-365-shipping-container-labeling-guide",
+        "uri": "post/dynamics-365-pre-go-live-checklist",
+        "content": "Pre Go live Health Check list  Solution acceptance users  UAT UAT completed successfully  users participated UAT  UAT test cases cover entire scope requirements planned go live  bugs issues UAT open  open bugs issues showstopper go live  UAT done using migrated data  Business signoff  Business signed off UAT solution meets business needs  Solution adheres company industry specific compliance  where necessary  Training complete features going live documented  approved signed off customer Performance  performance UAT  acceptable go live  Performance testing done  open actions it  User   Security setup  security roles used  security roles setup tested  Users will need access go live setup correct security role  Data Migration  Data migration status   Masters   Open Transactions Balances Business identified owners data validation  Review cut over plan  Business   Partner teams comfortable plan  Does Data migration performance fits within cut over window  Configuration Management  configurations updated Golden Configuration environment based changes UAT  Data stewards owners identified process place post go live changes Master Configuration data  Legal Entities configured Go Live  configurations documented  Integrations  Review list integrations readiness plan Latency requirements performance criteria met Integration support place named contacts owners Code Management Production fixes maintenance process defined  Code promotion  between environments  process place  documented entire team knows understands process Code promotion schedule production place  Emergency process code promotion production defined  Monitoring Microsoft Support LCS diagnostics setup knowledge transfer customer Issue resolution Escalation process defined   LCS support verified",
+        "objectID": "post/dynamics-365-pre-go-live-checklist",
         "author_link": "",
-        "title": "Dynamics 365 Shipping Container Labeling Guide",
+        "title": "Dynamics 365 Pre Go Live Checklist",
+        "date": "2020-03-18T09:03:19.000Z",
+        "lastmod": "2020-03-18T09:03:19.000Z",
+        "draft": false,
+        "description": "",
+        "show_in_homepage": true,
+        "description_as_summary": false,
+        "license": "",
+        "tags": [
+            "",
+            ""
+        ],
+        "categories": [
+            "",
+            ""
+        ],
+        "featured_image": "",
+        "featured_image_preview": "",
+        "comment": true,
+        "toc": true,
+        "auto_collapse_toc": true,
+        "math": false
+    },
+    {
+        "author": "ZhaoQiang",
+        "uri": "post/dynamics-365-selecting-the-correct-tier-level-on-your-sandboxes",
+        "content": "When purchasing Dynamics 365 F O  Microsoft managed  but self service  environments included standard offer   Production  Tier 2 Standard Acceptance Testing Tier 1 Develop Build test environment   Microsoft described environment planning docs  will not discuss Tier 1 environments here  environments optimized development experiences  not perform performance testing tier 1 environment  Tier 2  environments based architecture production environment uses Azure SQL Database service  When running implementation project  common purchase additional tier 2  environment used different purposes shown table below  from Microsoft Docs  Selecting correct level important depending environment going used for  guidance  Microsoft following baseline recommendation  projects involved  often 3 4 Tier 2  environment purpose changed project  flow data environments included Sprint Cycle  process will start defining general parameters golden configuration environment  1   system setup  number sequences  master data will uploaded entered legacy systems  Test Stage Migration environment  2  will created based golden environment   transactional data packages initial startup data  will database refresh Test  2    UAT  2   test scripts will run approved  results configuration changes master data fed golden environment ready next data movement cycle  reason why this  ensure golden environment migration environment not corrupted testing  Go Live  when UAT approved  after few iterations   Migration environment will copied production environment  happen once  Subsequent updates production environment done manually using data packages   1   Tier 2 Golden environment  before PROD deployed   environment often changed become staging environment contains exact replica production environment  prefer golden environments Tier 2  simplifies transfer data using LCS self service database refresh   2   Tier 2 data migration  environment used making transactional data ready imported production environment Go Live   3   Tier 2 3 User acceptance  system really tested  Lot s regression testing running test scripts  focus functionality  concerns performance  Tier 5 environment purchased shorter period validate system handle full load large scale production environment  performance testing  recommended invest automation test script   Unless ask entire organization participate manual test   performance system combination raw computing power VM s hosing AOS  sizing Azure SQL  Dynamics 365 don t way s influencing sizing this  managed Microsoft  will size production environment according number users transactions per hour  Azure SQL boundaries Microsoft often related following sizing steps  don t exactly understand Microsoft mapping Tier 2  5 towards steps  experienced Tier 2 level cases P1  P2  P4 P6  information DTU capacity found here  summary expect 48 IOPS per DTU  So  P6 will provide 48000 IOPS  want check DTP limit  open SQL manager towards Azure SQL database  execute following script  SELECT sys dmdbresource_stats ORDER end_time DESC  DTU limit shown here  Tier 2 environment belonging initial subscription  seams 250 DTU s P2  puzzles go Tier 2 add on environment 500 DTU  P4  third Tier 2 add on environment 1000 DTU  P6  So seams not consistency DTU s provided Tier 2 add on purchased  far know  case production environment 1000 DTU s Or P6  customers  AOS es Tier 2 environment seams mostly D12 DS12 DS12_v2 4 CPU 28 Gb RAM 8x500Gb storage  capable giving 12 800 IOPS  puzzles number Tier 2 AOS s deployed  environments one AOS  one BI server  Tier 2 environments two AOS es one BI server assume differences related subscription estimator filled out  may impact deployed sandbox Tier 2 environments  Dynamics 365 performance indicators system administrator menu  gives numbers  cannot clear correlation environments performance  Maybe smart guys explain interpret performance test results  good  not   LargeBufferReads   does environments perform",
+        "objectID": "post/dynamics-365-selecting-the-correct-tier-level-on-your-sandboxes",
+        "author_link": "",
+        "title": "Dynamics 365 Selecting the Correct Tier Level on Your Sandboxes",
+        "date": "2020-03-18T08:46:16.000Z",
+        "lastmod": "2020-03-18T08:46:16.000Z",
+        "draft": false,
+        "description": "",
+        "show_in_homepage": true,
+        "description_as_summary": false,
+        "license": "",
+        "tags": [
+            "",
+            ""
+        ],
+        "categories": [
+            "",
+            ""
+        ],
+        "featured_image": "",
+        "featured_image_preview": "",
+        "comment": true,
+        "toc": true,
+        "auto_collapse_toc": true,
+        "math": false
+    },
+    {
+        "author": "hatlevik",
+        "uri": "post/dynamics-365-shipping-container-labeling-guide",
+        "content": "Major retailers identified incorrect logistic unit  pallet  labeling major emerging supply chain issue  recent sample audit found approximately 44  pallet labels not meeting agreed upon industry requirements  issues face include  No label applied Label wrong location Information label does not match pallet Multiple labels different Serial Shipping Container Codes  SSCC  applied Pallet label will not scan Stretch wrap applied pallet label so doesn t scan following information contains guidelines general information create apply good quality logistic  pallet  labels per standard requirements Retail Industry  Retail Industry adopts key principles Efficient Consumer Response  ECR  increased demand high quality data capture points supply chain  Although industry numbering bar coding trade items number years  biggest emerging problem supply chain logistic unit labeling  migration automated scanning warehouses distribution centres  imperative suppliers logistics providers ensure 100  scannability bar codes will bring mutual benefits trading partners  Printing applying good quality bar code label complies industry standards scannable trading partners  costs no printing applying bar code label doesn t scan  document its recommendation read conjunction GS1 technical guidelines retailer specific documentation accessed downloaded respective websites               use logistic label incorporating Serial Shipping Container Code  SSCC  parties supply chain  manufacturers transporters  distributors retailers  seen inevitable identification tracking pallets forms logistic units  purpose GS1 logistics label uniquely identify specific information pallet clearly concisely standard format  facilitate process moving products supply chain quickly efficiently  Industry Business Benefits GS1 Logistics LabelLogistics Units identified number unique worldwideGS1 standards global apply entire supply chain  raw materials supplier manufacturer distributor wholesaler end user retailer Provides link bar coded information logistics unit information communicated trading partners via electronic business transactions Use identify contents pallets  including stock data  use by dates etcContributes efficient management stock rotation glanceSaves costs doing onceAvoids multiple label types  industry standard Faster receiving  quick turnaroundImproves data integrity   use date quantity fieldsStock rotation based use datePallet tracking vendor retailer assist product recallsWorks conjunction Dispatch Advice   Advanced Shipping Notice  ASN SSCC used inter intra company transactions  Fig 1  Example Numbering   Bar coding Labelling Hierarchy                GS1 Logistics Label typically different formats  SSCC mandatory piece information contained label itself ideally information flow  accompanies physical flow goods  communicated trading partners EDI  practice  however  fully automated communication channels  possible rely exclusively electronic files retrieving information movements goods  not always available  situation may requirement add additional information logistics label facilitate process logistic units supply chain  purpose GS1 logistics label provide information unit fixed  clearly concisely  core information label represented machine  bar code  human readable form  may information  represented human readable form only                imperative suppliers logistics providers ensure 100  scannability barcodes  reasons why pallet labels may not meet industry requirements  examples  Label position incorrect No pallet label applied Multiple mismatching SSCCs pallet Duplicated SSCCs Damaged label creases folds  Will not scan due incorrect bar code symbology poor print quality Label applied underneath stretch wrap Pallet label applied one side pallet Product information applied bar code does not match product pallet Pallet label bar codes not scanning   Ribbon wrinkle thermal transfer application Print head element failure leading line black bar  split bar  within bar code Poor print quality   faint print due label print head heat low print speed high Poor print quality   bleeding print due label printer print head heat high print speed low Handwritten changes not reflected bar code therefore not permitted pallet labels Label applied carton joins seams causing tearing Label Dimensions business requirements users GS1 Logistic Labels met using one following  A6  105 mm x 148 mm    4 x 6 inch  particularly suitable when SSCC  SSCC limited additional data  encoded A5  148 mm x 210 mm    6 x 8 inch However  label size suits labeller s requirements  large enough carry information required together GS1 128 bar codes  Factors influencing label sizes include amount type data required content X dimensions bar code symbols used  dimensions logistic unit labeled  Example label used single product parcels pallets  GTIN information  Example label used parcels pallets AI 403   Routing code without GTIN product information              minimum label size A6  105mm x 148mm  however larger label sizes A5 A4 permitted      label layout either portrait landscape Information contained",
+        "objectID": "post/dynamics-365-shipping-container-labeling-guide",
+        "author_link": "https://en.gravatar.com/hatlevik",
+        "title": "Dynamics 365 货运集装箱标签指南",
         "date": "2020-03-18T08:39:38.000Z",
         "lastmod": "2020-03-18T08:39:38.000Z",
         "draft": false,
@@ -200,12 +285,10 @@
         "description_as_summary": false,
         "license": "",
         "tags": [
-            "Dynamics365",
-            ""
+            "Dynamics365"
         ],
         "categories": [
-            "Dynamicsax",
-            ""
+            "Dynamicsax"
         ],
         "featured_image": "",
         "featured_image_preview": "",
@@ -386,6 +469,35 @@
         ],
         "categories": [
             "Dynamicsax",
+            ""
+        ],
+        "featured_image": "",
+        "featured_image_preview": "",
+        "comment": true,
+        "toc": true,
+        "auto_collapse_toc": true,
+        "math": false
+    },
+    {
+        "author": "ZhaoQiang",
+        "uri": "post/dynamics-ax-upgrade-to-cu9",
+        "content": "Dynamics AX 2012 R3 CU 9       CU 9                           Microsoft Dynamics AX 2012 R3 CU8      9        MS Dynamics AX 2012 R3 CU 9                 slipstream       slipstreaming                              MS Dynamics AX 2012 R3 CU 9                     CU9   MS Dynamics AX 2012 R3 CU 8             Microsoft Dynamics Lifecycle Services    CU 9      Microsoft Dynamics Lifecycle Services PartnerSource     Dynamics AX                      LCS Dynamics AX      CU 9                                                Admin Dynamics AX             SQL Server     SecurityAdmin                        db_owner                                              PartnerSource Microsoft Dynamics                                                                                 axupdate exe       AX                                                                                                                             17                                                          LCS                    8 9 10                 LCS                  LCS                                                                                                                                                                                                                                                                                                    Dynamics AX   CIL                                                                                                                                                7                                                                                                                              64        32                                                                                       AOS      Microsoft Dynamics AX2012",
+        "objectID": "post/dynamics-ax-upgrade-to-cu9",
+        "author_link": "",
+        "title": "Dynamics AX Upgrade to Cu9",
+        "date": "2020-04-14T07:11:59.000Z",
+        "lastmod": "2020-04-14T07:11:59.000Z",
+        "draft": false,
+        "description": "",
+        "show_in_homepage": true,
+        "description_as_summary": false,
+        "license": "",
+        "tags": [
+            "",
+            ""
+        ],
+        "categories": [
+            "",
             ""
         ],
         "featured_image": "",

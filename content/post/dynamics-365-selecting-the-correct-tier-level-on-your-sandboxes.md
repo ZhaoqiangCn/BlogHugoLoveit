@@ -10,12 +10,8 @@ show_in_homepage: true
 description_as_summary: false
 license: ""
 
-tags: ["",
-""
-]
-categories: ["",
-""
-]
+tags: ["Dynamics365"]
+categories: ["Dynamicsax"]
 
 featured_image: ""
 featured_image_preview: ""
