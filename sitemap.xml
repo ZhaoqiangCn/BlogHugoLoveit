@@ -3,6 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.nashome.cn/tags/ax2012/</loc>
+    <lastmod>2020-04-14T15:11:59+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://www.nashome.cn/</loc>
     <lastmod>2020-04-14T15:11:59+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -24,6 +31,13 @@
   </url>
   
   <url>
+    <loc>https://www.nashome.cn/categories/dynamicsax/</loc>
+    <lastmod>2020-04-14T15:11:59+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://www.nashome.cn/post/</loc>
     <lastmod>2020-04-14T15:11:59+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -39,13 +53,6 @@
   
   <url>
     <loc>https://www.nashome.cn/tags/dynamics365/</loc>
-    <lastmod>2020-04-01T09:26:29+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nashome.cn/categories/dynamicsax/</loc>
     <lastmod>2020-04-01T09:26:29+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -88,13 +95,6 @@
   
   <url>
     <loc>https://www.nashome.cn/post/dynamics-ax-run-a-batch/</loc>
-    <lastmod>2020-03-18T09:55:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nashome.cn/tags/ax2012/</loc>
     <lastmod>2020-03-18T09:55:23+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

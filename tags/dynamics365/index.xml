@@ -22,6 +22,25 @@
     </item>
     
     <item>
+      <title>Dynamics 365 Pre Go Live Checklist</title>
+      <link>https://www.nashome.cn/post/dynamics-365-pre-go-live-checklist/</link>
+      <pubDate>Wed, 18 Mar 2020 17:03:19 +0800</pubDate>
+      
+      <guid>https://www.nashome.cn/post/dynamics-365-pre-go-live-checklist/</guid>
+      <description>Pre Go-live Health Check list:  Solution acceptance by users: UAT  Is UAT completed successfully? How many users participated in UAT? Did UAT test cases cover entire scope of requirements planned for go-live? How many bugs/issues from UAT are still open? Any of the open bugs/issues a showstopper for go-live? Was UAT done using migrated data?   Business signoff:  Business has signed off after UAT that the solution meets business needs?</description>
+    </item>
+    
+    <item>
+      <title>Dynamics 365 Selecting the Correct Tier Level on Your Sandboxes</title>
+      <link>https://www.nashome.cn/post/dynamics-365-selecting-the-correct-tier-level-on-your-sandboxes/</link>
+      <pubDate>Wed, 18 Mar 2020 16:46:16 +0800</pubDate>
+      
+      <guid>https://www.nashome.cn/post/dynamics-365-selecting-the-correct-tier-level-on-your-sandboxes/</guid>
+      <description>When purchasing Dynamics 365 F&amp;amp;O, you a get of Microsoft managed (but self-service) environments that is included with the standard offer. (Production, Tier-2 Standard Acceptance Testing and a Tier-1 Develop/Build and test environment.)
+Microsoft have described this on the environment planning docs. I will not discuss Tier-1 environments here, as these environments is optimized for development experiences. Do not perform performance testing on a tier-1 environment. Tier-2+ environments is based on the same architecture as a production environment and uses the Azure SQL Database service.</description>
+    </item>
+    
+    <item>
       <title>Dynamics 365 货运集装箱标签指南</title>
       <link>https://www.nashome.cn/post/dynamics-365-shipping-container-labeling-guide/</link>
       <pubDate>Wed, 18 Mar 2020 16:39:38 +0800</pubDate>
