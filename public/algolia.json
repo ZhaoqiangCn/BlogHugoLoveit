@@ -1,5 +1,59 @@
 [
     {
+        "title": "About LoveIt",
+        "uri": "about",
+        "content": "far fa kiss wink heart fa fw   LoveIt clean  elegant advanced blog theme Hugo developed Dillon      based original LeaveIt Theme KeepIt Theme  Features Performance SEO   fas fa rocket fa fw   Optimized performance  99   100  mobile  100   100  desktop  Google PageSpeed Insights   fab fa searchengin fa fw   Optimized SEO performance correct SEO SCHEMA based JSON LD   fab fa google fa fw   Google Analytics supported   far fa chart bar fa fw   Fathom Analytics supported   fas fa search fa fw   Search engine verification supported  Google  Bind  Yandex Baidu    fas fa tachometer alt fa fw   CDN third party libraries supported   fas fa cloud download alt fa fw   Automatically converted images Lazy Load lazysizes Appearance Layout    fas fa desktop       fas fa mobile    Responsive layout    fas fa sun       fas fa moon     Light   Dark  mode   fas fa layer group fa fw   Globally consistent design language   fas fa ellipsis h fa fw   Pagination supported   far fa list alt fa fw   Easy to use self expanding table contents   fas fa language fa fw   Multilanguage supported i18n ready   fab fa css3 alt fa fw   Beautiful CSS animation Social Comment Systems   far fa user fa fw   Gravatar supported Gravatar   fas fa user circle fa fw   Local Avatar supported   far fa id card fa fw   64 social links supported   fas fa share square fa fw   28 share sites supported   far fa comment fa fw   Disqus comment system supported Disqus   far fa comment dots fa fw   Gitalk comment system supported Gitalk   far fa comment alt fa fw   Valine comment system supported Valine   far fa comments fa fw   Facebook comments system supported Facebook   fas fa comment fa fw   Telegram comments system supported Comments   fas fa comment dots fa fw   Commento comment system supported Commento   fas fa comment alt fa fw   Utterances comment system supported Utterances Extended Features   fas fa search fa fw   Search supported Lunr js algolia   far fa grin tongue wink fa fw   Twemoji supported   fas fa code fa fw   Automatically highlighting code   far fa copy fa fw   Copy code clipboard one click   far fa images fa fw   Images gallery supported lightgallery js   fab fa font awesome fa fw   Extended Markdown syntax Font Awesome icons   far fa sticky note fa fw   Extended Markdown syntax ruby annotation   fas fa percentage fa fw   Extended Markdown syntax fraction   fas fa square root alt fa fw   Mathematical formula supported    KaTeX     fas fa project diagram fa fw   Diagrams shortcode supported mermaid   fas fa chart pie fa fw   Interactive data visualization shortcode supported ECharts   fas fa map marked alt fa fw   Mapbox shortcode supported Mapbox GL JS   fas fa music fa fw   Music player shortcode supported APlayer MetingJS   fas fa video fa fw   Bilibili player shortcode   far fa bell fa fw   Kinds admonitions shortcode   fas fa align left fa fw   Custom style shortcode   fab fa js square fa fw   Custom script shortcode   fas fa i cursor fa fw   Animated typing supported TypeIt   fas fa arrow down fa fw   Dynamic scroll supported Smooth Scroll   fas fa cookie bite fa fw   Cookie consent banner supported cookieconsent     License LoveIt licensed MIT license  Check LICENSE file details  Thanks authors following resources included theme  normalize css Font Awesome Simple Icons Animate css Smooth Scroll autocomplete js Lunr js algoliasearch lazysizes object fit images Twemoji lightgallery js clipboard js Sharer js TypeIt    KaTeX   mermaid ECharts Mapbox GL JS APlayer MetingJS Gitalk Valine cookieconsent",
+        "objectID": "about",
+        "date": "2019-08-02T03:04:49.000Z",
+        "draft": false,
+        "lightgallery": true,
+        "math": {
+            "enable": true
+        }
+    },
+    {
+        "title": "À propos de LoveIt",
+        "uri": "about",
+        "content": "Sorry  article not completely translated French  Welcome time propose translation   fas fa code branch fa fw   making PR theme           far fa kiss wink heart fa fw   LoveIt clean  elegant advanced blog theme Hugo developed Dillon      based original LeaveIt Theme KeepIt Theme  Features Performance SEO   fas fa rocket fa fw   Optimized performance  99   100  mobile  100   100  desktop  Google PageSpeed Insights   fab fa searchengin fa fw   Optimized SEO performance correct SEO SCHEMA based JSON LD   fab fa google fa fw   Google Analytics supported   far fa chart bar fa fw   Fathom Analytics supported   fas fa search fa fw   Search engine verification supported  Google  Bind  Yandex Baidu    fas fa tachometer alt fa fw   CDN third party libraries supported   fas fa cloud download alt fa fw   Automatically converted images Lazy Load lazysizes Appearance Layout    fas fa desktop       fas fa mobile    Responsive layout    fas fa sun       fas fa moon     Light   Dark  mode   fas fa layer group fa fw   Globally consistent design language   fas fa ellipsis h fa fw   Pagination supported   far fa list alt fa fw   Easy to use self expanding table contents   fas fa language fa fw   Multilanguage supported i18n ready   fab fa css3 alt fa fw   Beautiful CSS animation Social Comment Systems   far fa user fa fw   Gravatar supported Gravatar   fas fa user circle fa fw   Local Avatar supported   far fa id card fa fw   64 social links supported   fas fa share square fa fw   28 share sites supported   far fa comment fa fw   Disqus comment system supported Disqus   far fa comment dots fa fw   Gitalk comment system supported Gitalk   far fa comment alt fa fw   Valine comment system supported Valine   far fa comments fa fw   Facebook comments system supported Facebook   fas fa comment fa fw   Telegram comments system supported Comments   fas fa comment dots fa fw   Commento comment system supported Commento   fas fa comment alt fa fw   Utterances comment system supported Utterances Extended Features   fas fa search fa fw   Search supported Lunr js algolia   far fa grin tongue wink fa fw   Twemoji supported   fas fa code fa fw   Automatically highlighting code   far fa copy fa fw   Copy code clipboard one click   far fa images fa fw   Images gallery supported lightgallery js   fab fa font awesome fa fw   Extended Markdown syntax Font Awesome icons   far fa sticky note fa fw   Extended Markdown syntax ruby annotation   fas fa percentage fa fw   Extended Markdown syntax fraction   fas fa square root alt fa fw   Mathematical formula supported    KaTeX     fas fa project diagram fa fw   Diagrams shortcode supported mermaid   fas fa chart pie fa fw   Interactive data visualization shortcode supported ECharts   fas fa map marked alt fa fw   Mapbox shortcode supported Mapbox GL JS   fas fa music fa fw   Music player shortcode supported APlayer MetingJS   fas fa video fa fw   Bilibili player shortcode   far fa bell fa fw   Kinds admonitions shortcode   fas fa align left fa fw   Custom style shortcode   fab fa js square fa fw   Custom script shortcode   fas fa i cursor fa fw   Animated typing supported TypeIt   fas fa arrow down fa fw   Dynamic scroll supported Smooth Scroll   fas fa cookie bite fa fw   Cookie consent banner supported cookieconsent     License LoveIt licensed MIT license  Check LICENSE file details  Thanks authors following resources included theme  normalize css Font Awesome Simple Icons Animate css Smooth Scroll autocomplete js Lunr js algoliasearch lazysizes object fit images Twemoji lightgallery js clipboard js Sharer js TypeIt    KaTeX   mermaid ECharts Mapbox GL JS APlayer MetingJS Gitalk Valine cookieconsent",
+        "objectID": "about",
+        "date": "2019-08-02T03:04:49.000Z",
+        "draft": false,
+        "lightgallery": true,
+        "math": {
+            "enable": true
+        }
+    },
+    {
+        "title": "关于 LoveIt",
+        "uri": "about",
+        "content": "far fa kiss wink heart fa fw   LoveIt      Dillon              Hugo                  LeaveIt      KeepIt            SEO   fas fa rocket fa fw          Google PageSpeed Insights     99   100            100   100            fab fa searchengin fa fw        JSON LD      SEO SCHEMA      SEO      fab fa google fa fw      Google Analytics   far fa chart bar fa fw      Fathom Analytics   fas fa search fa fw                Google  Bind  Yandex Baidu    fas fa tachometer alt fa fw             CDN   fas fa cloud download alt fa fw      lazysizes                     fas fa desktop       fas fa mobile             fas fa sun       fas fa moon                     fas fa layer group fa fw               fas fa ellipsis h fa fw          far fa list alt fa fw                  fas fa language fa fw               fab fa css3 alt fa fw       CSS              far fa user fa fw      Gravatar      fas fa user circle fa fw            far fa id card fa fw        64         fas fa share square fa fw        28         far fa comment fa fw      Disqus        far fa comment dots fa fw      Gitalk        far fa comment alt fa fw      Valine        far fa comments fa fw      Facebook        fas fa comment fa fw      Telegram comments        fas fa comment dots fa fw      Commento        far fa comment alt fa fw      Utterances             fas fa search fa fw        Lunr js   algolia       far fa grin tongue wink fa fw      Twemoji   fas fa code fa fw            far fa copy fa fw                far fa images fa fw        lightgallery js         fab fa font awesome fa fw      Font Awesome       Markdown      far fa sticky note fa fw             Markdown      fas fa percentage fa fw           Markdown      fas fa square root alt fa fw           KaTeX           fas fa project diagram fa fw        mermaid     shortcode   fas fa chart pie fa fw        ECharts           shortcode   fas fa map marked alt fa fw        Mapbox GL JS   Mapbox shortcode   fas fa music fa fw        APlayer   MetingJS        shortcode   fas fa video fa fw      Bilibili    shortcode   far fa bell fa fw           shortcode   fas fa align left fa fw            shortcode   fab fa js square fa fw            shortcode   fas fa i cursor fa fw        TypeIt       shortcode   fas fa arrow down fa fw        Smooth Scroll         fas fa cookie bite fa fw        cookieconsent   Cookie               LoveIt    MIT                 LICENSE     LoveIt                     normalize css Font Awesome Simple Icons Animate css Smooth Scroll autocomplete js Lunr js algoliasearch lazysizes object fit images Twemoji lightgallery js clipboard js Sharer js TypeIt    KaTeX   mermaid ECharts Mapbox GL JS APlayer MetingJS Gitalk Valine cookieconsent",
+        "objectID": "about",
+        "date": "2019-08-02T03:04:49.000Z",
+        "draft": false,
+        "lightgallery": true,
+        "math": {
+            "enable": true
+        }
+    },
+    {
+        "title": "Documentation",
+        "uri": "categories/documentation",
+        "content": "",
+        "objectID": "categories/documentation"
+    },
+    {
+        "title": "Documentation",
+        "uri": "categories/documentation",
+        "content": "",
+        "objectID": "categories/documentation"
+    },
+    {
+        "title": "文档",
+        "uri": "categories/documentation",
+        "content": "",
+        "objectID": "categories/documentation"
+    },
+    {
         "title": "使用 ACME 免费申请 Let's Encrypt 证书",
         "uri": "post/acme",
         "content": "1     acme sh               text curl https   get acme sh   sh         root                           acme sh       home       text    acme sh           bash   alias          alias acme sh    acme sh acme sh 2           cronjob     0 00                                                  https   github com Neilpang acme sh wiki How to install                                          acme sh  2       acme sh     acme                         http   dns     1  http                                                    text acme sh   issue  d mydomain com  d www mydomain com   webroot  home wwwroot mydomain com                            acme sh                                                                    apache     acme sh         apache                          text acme sh   issue  d mydomain com   apache         nginx           acme sh         nginx                          text acme sh   issue  d mydomain com   nginx           apache    nginx     acme sh                                                                  ssl                            https                                  web     80            acme sh          webserver      80            text acme sh   issue  d mydomain com   standalone              https   github com Neilpang acme sh wiki How to issue a cert 2     dns                txt                                             ip      dns                          Automatic DNS API        acme sh                                  text acme sh   issue   dns  d mydomain com       acme sh                                    txt                          text acme sh   renew  d mydomain com                renew dns                         api      txt         acme sh      cloudflare  dnspod  cloudxns  godaddy    ovh                 dnspod             dnspod          api id   api key              text export DP_Id  1234  export DP_Key  sADDsdasdgdsf  acme sh   issue   dns dns_dp  d aa com  d www aa com                    api id   api key                  dnspod api                           text acme sh   issue  d mydomain2 com   dns dns_dp        api     https   github com Neilpang acme sh blob master dnsapi README md First need login Aliyun account API key  https   ak console aliyun com    accesskey  text export Ali_Key  sdfsdfsdfljlbjkljlkjsdfoiwje  export Ali_Secret  jlsdflanljkljlfdsaklkjflsa    Ok  let s issue cert now   text acme sh   issue   dns dns_ali  d example com  d www example com   AliKey AliSecret will saved    acme sh account conf will reused when needed  3  copy                          copy                                     acme sh                             nginx apache                                                        installcert                     copy             text acme sh   installcert  d  com     key file  etc nginx ssl  key     fullchain file  etc nginx ssl fullchain cer     reloadcmd  service nginx force reload                   service nginx force reload     service nginx reload       reload                 force reload   Nginx     ssl_certificate     etc nginx ssl fullchain cer      etc nginx ssl  cer     SSL Labs       Chain issues Incomplete       installcert                            reloadcmd           reloadcmd                        https   github com Neilpang acme sh  3 install the issued cert to apachenginx etc                                                    4             60                                                  5     acme sh      acme     letsencrypt CA             acme sh                acme sh         text acme sh   upgrade                         text acme sh   upgrade   auto upgrade       acme sh                           text acme sh   upgrade   auto upgrade 0   6                   debug log   text acme sh   issue         debug        text acme sh   issue         debug 2        https   github com Neilpang acme sh wiki How to debug acme sh                                         wiki     https   github com Neilpang acme sh wiki",
@@ -227,12 +281,10 @@
         "description_as_summary": false,
         "license": "",
         "tags": [
-            "",
-            ""
+            "Dynamics365"
         ],
         "categories": [
-            "",
-            ""
+            "Dynamicsax"
         ],
         "featured_image": "",
         "featured_image_preview": "",
@@ -256,12 +308,10 @@
         "description_as_summary": false,
         "license": "",
         "tags": [
-            "",
-            ""
+            "Dynamics365"
         ],
         "categories": [
-            "",
-            ""
+            "Dynamicsax"
         ],
         "featured_image": "",
         "featured_image_preview": "",
@@ -493,12 +543,10 @@
         "description_as_summary": false,
         "license": "",
         "tags": [
-            "",
-            ""
+            "Ax2012"
         ],
         "categories": [
-            "",
-            ""
+            "Dynamicsax"
         ],
         "featured_image": "",
         "featured_image_preview": "",
@@ -599,7 +647,7 @@
     {
         "title": "用 Hugo 配合 Valine 实现评论后实时邮件通知",
         "uri": "post/hugo-valine-email",
-        "content": "Youtube   BiliBili      Valine                              Valine Admin  by  zhaojun1998     Valine Admin                  Valine               Valine            Leancloud                                                    Github                     Valine                config toml    notify     false     Leancloud     Valine                           https   github com zhaojun1998 Valine Admin             Git           master                                                                                          SITE_NAME         SITE_URL                   SMTP_USER   SMTP                SMTP_PASS   SMTP                                        SMTP_SERVICE              QQ 163 126 Gmail  Yahoo                    Nodemailer Supported services                               SENDER_NAME               SMTP                    SMTP_USER        SMTP        QQ                    SMTPUSER           SMTPPASS SMTP_SERVICE     QQ      TEMPLATE_NAME                         default   rainbow     default   TOEMAIL                              SMTPUSER     SMTP_SERVICE                                   SMTP_HOST           SMTP      qq   smtp qq com                  SMTP_PORT           SMTP                      SMTP_SECURE               true                                                               SMTPSERVICE   SMTPSERVICE                   LeanCloud         LeanCloud                  24              6     30                                                                                        7   23    20                                          Web                                         Web                    Web                                                          ADMIN_URL Web                                                                         self_wake Cron                7    23  20                                  20                                                       LeanCloud      LeanCloud                                       email password username             email                    email         SMTPUSER   TOEMAIL                 Web",
+        "content": "Youtube   BiliBili       Leancloud                             Valine                              Valine Admin  by  zhaojun1998     Valine Admin                  Valine               Valine            Leancloud                                                    Github                     Valine                config toml    notify     false     Leancloud     Valine                           https   github com zhaojun1998 Valine Admin             Git           master                                                                                          SITE_NAME         SITE_URL                   SMTP_USER   SMTP                SMTP_PASS   SMTP                                        SMTP_SERVICE              QQ 163 126 Gmail  Yahoo                    Nodemailer Supported services                               SENDER_NAME               SMTP                    SMTP_USER        SMTP        QQ                    SMTPUSER           SMTPPASS SMTP_SERVICE     QQ      TEMPLATE_NAME                         default   rainbow     default   TOEMAIL                              SMTPUSER     SMTP_SERVICE                                   SMTP_HOST           SMTP      qq   smtp qq com                  SMTP_PORT           SMTP                      SMTP_SECURE               true                                                               SMTPSERVICE   SMTPSERVICE                   LeanCloud         LeanCloud                  24              6     30                                                                                        7   23    20                                          Web                                         Web                    Web                                                          ADMIN_URL Web                                                                         self_wake Cron                7    23  20                                  20                                                       LeanCloud      LeanCloud                                       email password username             email                    email         SMTPUSER   TOEMAIL                 Web",
         "objectID": "post/hugo-valine-email",
         "date": "2020-01-16T06:54:04.000Z",
         "description": "Valine 评论系统 邮件通知",
@@ -813,6 +861,35 @@
         "math": false
     },
     {
+        "author": "ZhaoQiang",
+        "uri": "post/speedtest-iperf3",
+        "content": "Iperf3  docker Synology    NAS synogear Diagnosis Tool   sudo  s synogear list Tools not installed yet  run command install it  synogear install synogear install root nas    iperf3  ash  iperf3  command not found root nas    synogear install root nas    iperf3 iperf3  parameter error   either client   c  server   s  Usage  iperf   s  c host   options  iperf   h   help    v   version  Server Client   p    port   server port listen on connect  f    format  kmgKMG  format report  Kbits  Mbits  KBytes  MBytes  i    interval   seconds periodic bandwidth reports  F    file name xmit recv specified file  A    affinity n n m set CPU affinity  B    bind bind specific interface  V    verbose detailed output  J    json output JSON format   logfile f send output log file  d    debug emit debugging output  v    version show version information quit  h    help show message quit Server specific   s    server run server mode  D    daemon run server daemon  I    pidfile file write PID file Client specific   c    client run client mode  connecting  u    udp use UDP rather TCP  b    bandwidth  KMG target bandwidth bits sec  0 unlimited   default 1 Mbit sec UDP  unlimited TCP   optional slash packet count burst mode   t    time   time seconds transmit  default 10 secs   n    bytes   KMG  number bytes transmit  instead  t   k    blockcount   KMG  number blocks  packets  transmit  instead   t  n   l    len   KMG  length buffer read write  default 128 KB TCP  8 KB UDP    cport bind specific client port  TCP UDP  default   ephemeral port   P    parallel   number parallel client streams run  R    reverse run reverse mode  server sends  client receives   w    window   KMG  TCP window size  socket buffer size   C    congestion set TCP congestion control algorithm  Linux Free BSD only   M    set mss   set TCP maximum segment size  MTU   40 bytes   N    nodelay set TCP no delay  disabling Nagle s Algorithm  4    version4 use IPv4  6    version6 use IPv6  S    tos N set IP  type service   L    flowlabel N set IPv6 flow label  only supported Linux   Z    zerocopy use  zero copy  method sending data  O    omit N omit first n seconds  T    title str prefix every output line string   get server output results server   udp counters 64bit use 64 bit counters UDP test packets  KMG  indicates options support K M G suffix kilo   mega   giga  iperf3 homepage at  http   software es net iperf  Report bugs to  https   github com esnet iperf root nas    synogear list tools      iperf3      iperf3  ssh                           iperf3         opkg update opkg install iperf3 2         iperf3                                iperf3  s  D    s                      D                                           ssh   3                                   iperf3            https   iperf fr iperf download php                   Windows 64        https   iperf fr download windows iperf 3 1 3 win64 zip                           CMD              iperf3  c 192 168 123 1  b 1000m  t 60  i 1  u         192 168 123 1     ip            Padavan                     c                      b        t              60   i               1        u    udp         tcp       tcp         udp                               iperf3  c 192 168 123 1  b 1000m  t 60  i 1  u  P 2                              2 4",
+        "objectID": "post/speedtest-iperf3",
+        "author_link": "",
+        "title": "Speedtest Iperf3",
+        "date": "2020-05-21T05:13:03.000Z",
+        "lastmod": "2020-05-21T05:13:03.000Z",
+        "draft": false,
+        "description": "",
+        "show_in_homepage": true,
+        "description_as_summary": false,
+        "license": "",
+        "tags": [
+            "",
+            ""
+        ],
+        "categories": [
+            "",
+            ""
+        ],
+        "featured_image": "",
+        "featured_image_preview": "",
+        "comment": true,
+        "toc": true,
+        "auto_collapse_toc": true,
+        "math": false
+    },
+    {
         "title": "Synology DDNS 01",
         "uri": "post/synology-ddns-01",
         "content": "DDNS              DDNS               A     IP                     IP          1     IP             IP                  http   www ipip net           IP     172 192 10        IP            IP                     10        IP  2                                 ping     IP              ISP                    ping               ping                                                                                                                         NAS                                                                       http   canyouseeme org            DMZ DMZ                                          NAS                   DSM    Web   Cloud   VPN                            3                     OSS CDN            9 9         VIP                                                      DDNS                                     A      IP                                                               IP    CNAME                          test domain com         www domainA com         test domain com     www domainA com       CNAME                   IP    4 DDNS    DDNS              DDNS            DDNS        DDNS                              DSM            http   example synology me 5000",
@@ -881,5 +958,29 @@
         "aliases": [
             "/post/Synology-with-linux/"
         ]
+    },
+    {
+        "title": "配置",
+        "uri": "tags/configuration",
+        "content": "",
+        "objectID": "tags/configuration"
+    },
+    {
+        "title": "contenu",
+        "uri": "tags/content",
+        "content": "",
+        "objectID": "tags/content"
+    },
+    {
+        "title": "内容",
+        "uri": "tags/content",
+        "content": "",
+        "objectID": "tags/content"
+    },
+    {
+        "title": "安装",
+        "uri": "tags/installation",
+        "content": "",
+        "objectID": "tags/installation"
     }
 ]

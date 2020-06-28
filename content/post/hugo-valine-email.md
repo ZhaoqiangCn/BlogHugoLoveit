@@ -14,6 +14,8 @@ aliases: [
 
 <!--more-->
 >**本文同步更新至 [Youtube ](https://youtu.be/y45Y_bYHBk8) 和 [BiliBili ](https://www.bilibili.com/video/av84409002/)**
+>
+>注意：Leancloud已经改版，有些界面位置已经与本文内容有所变化。
 
 如果你对 `Valine` 自带的`邮件提醒`不满意，还可以使用更完善的第三方`邮件提醒`：
 

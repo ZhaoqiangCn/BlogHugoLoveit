@@ -4,7 +4,7 @@ DefaultContentLanguage: "zh-cn"
 hasCJKLanguage: true
 languageCode: "zh-cn"
 title: "zhaoqiang's blog"
-theme: "loveit"
+theme: "LoveIt"
 metaDataFormat: "yaml"
 algolia:
   index: "hugoblogloveit"
