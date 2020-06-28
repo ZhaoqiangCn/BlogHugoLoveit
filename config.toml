@@ -11,7 +11,7 @@ themesDir = "themes"
 
 # website title
 # 网站标题
-title = "Blog My Life"
+title = ""
 
 # whether to use robots.txt
 # 是否使用 robots.txt
@@ -82,7 +82,7 @@ enableEmoji = true
       # 应用图标配置
       [languages.zh-cn.params.app]
         # 当添加到 iOS 主屏幕或者 Android 启动器时的标题, 覆盖默认标题
-        title = "Blog My Life"
+        title = ""
         # 是否隐藏网站图标资源链接
         noFavicon = false
         # 更现代的 SVG 网站图标, 可替代旧的 .png 和 .ico 文件
@@ -217,7 +217,7 @@ enableEmoji = true
   defaultTheme = "auto"
   # public git repo url only then enableGitInfo is true
   # 公共 git 仓库路径，仅在 enableGitInfo 设为 true 时有效
-  gitRepo = "https://github.com/dillonzq/LoveIt"
+  gitRepo = ""
   # which hash function used for SRI, when empty, no SRI is used ("sha256", "sha384", "sha512", "md5")
   # 哪种哈希函数用来 SRI, 为空时表示不使用 SRI ("sha256", "sha384", "sha512", "md5")
   fingerprint = ""
@@ -245,7 +245,7 @@ enableEmoji = true
       logo = ""
       # title name
       # 标题名称
-      name = "Blog my life"
+      name = ""
       # you can add extra information before the name (HTML format is supported), such as icons
       # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
       pre = "<i class='far fa-kiss-wink-heart fa-fw'></i>"
