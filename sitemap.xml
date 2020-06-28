@@ -3,21 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://www.nashome.cn/tags/ax2012/</loc>
-    <lastmod>2020-04-14T15:11:59+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://www.nashome.cn/</loc>
-    <lastmod>2020-04-14T15:11:59+08:00</lastmod>
+    <lastmod>2020-05-21T13:13:03+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.nashome.cn/categories/</loc>
+    <lastmod>2020-05-21T13:13:03+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nashome.cn/post/</loc>
+    <lastmod>2020-05-21T13:13:03+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nashome.cn/post/speedtest-iperf3/</loc>
+    <lastmod>2020-05-21T13:13:03+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nashome.cn/tags/</loc>
+    <lastmod>2020-05-21T13:13:03+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nashome.cn/tags/ax2012/</loc>
     <lastmod>2020-04-14T15:11:59+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -32,20 +53,6 @@
   
   <url>
     <loc>https://www.nashome.cn/categories/dynamicsax/</loc>
-    <lastmod>2020-04-14T15:11:59+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nashome.cn/post/</loc>
-    <lastmod>2020-04-14T15:11:59+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nashome.cn/tags/</loc>
     <lastmod>2020-04-14T15:11:59+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -600,6 +607,30 @@
   <url>
     <loc>https://www.nashome.cn/post/synology-ddns-01/</loc>
     <lastmod>2016-07-10T13:55:24+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nashome.cn/tags/content/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nashome.cn/tags/installation/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nashome.cn/categories/documentation/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nashome.cn/tags/configuration/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

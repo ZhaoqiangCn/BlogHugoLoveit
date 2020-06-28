@@ -5,12 +5,21 @@
     <link>https://www.nashome.cn/post/</link>
     <description>Recent content in Posts on Blog My Life</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
+    <language>zh-CN</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Tue, 14 Apr 2020 15:11:59 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 21 May 2020 13:13:03 +0800</lastBuildDate>
     
 	<atom:link href="https://www.nashome.cn/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Speedtest Iperf3</title>
+      <link>https://www.nashome.cn/post/speedtest-iperf3/</link>
+      <pubDate>Thu, 21 May 2020 13:13:03 +0800</pubDate>
+      
+      <guid>https://www.nashome.cn/post/speedtest-iperf3/</guid>
+      <description>群晖安装Iperf3 非docker Synology 群晖 NAS synogear Diagnosis Tool 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46</description>
+    </item>
     
     <item>
       <title>Dynamics AX Upgrade to Cu9</title>

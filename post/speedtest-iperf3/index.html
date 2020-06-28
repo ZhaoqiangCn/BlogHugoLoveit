@@ -1,0 +1,152 @@
+<!doctype html><html lang=zh-cn><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="noodp"><meta http-equiv=x-ua-compatible content="IE=edge, chrome=1"><title>Speedtest Iperf3 - Blog My Life</title><meta name=Description content="A blog recording my life"><meta property="og:title" content="Speedtest Iperf3"><meta property="og:description" content="群晖安装Iperf3 非docker Synology 群晖 NAS synogear Diagnosis Tool 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46"><meta property="og:type" content="article"><meta property="og:url" content="https://www.nashome.cn/post/speedtest-iperf3/"><meta property="og:image" content="https://www.nashome.cn/logo.png"><meta property="article:published_time" content="2020-05-21T13:13:03+08:00"><meta property="article:modified_time" content="2020-05-21T13:13:03+08:00"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://www.nashome.cn/logo.png"><meta name=twitter:title content="Speedtest Iperf3"><meta name=twitter:description content="群晖安装Iperf3 非docker Synology 群晖 NAS synogear Diagnosis Tool 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46"><meta name=application-name content="Blog My Life"><meta name=apple-mobile-web-app-title content="Blog My Life"><meta name=theme-color content="#ffffff"><meta name=msapplication-TileColor content="#da532c"><link rel="shortcut icon" type=image/x-icon href=/favicon.ico><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://www.nashome.cn/post/speedtest-iperf3/><link rel=prev href=https://www.nashome.cn/post/dynamics-ax-upgrade-to-cu9/><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css><link rel=stylesheet href=/css/style.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"Speedtest Iperf3","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nashome.cn\/post\/speedtest-iperf3\/"},"image":[{"@type":"ImageObject","url":"https:\/\/www.nashome.cn\/images\/Apple-Devices-Preview.png","width":3200,"height":2048}],"genre":"post","keywords":", ","wordcount":1349,"url":"https:\/\/www.nashome.cn\/post\/speedtest-iperf3\/","datePublished":"2020-05-21T13:13:03+08:00","dateModified":"2020-05-21T13:13:03+08:00","license":"This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher":{"@type":"Organization","name":"zhaoqiang","logo":{"@type":"ImageObject","url":"https:\/\/www.nashome.cn\/images\/avatar.png","width":528,"height":560}},"author":{"@type":"Person","name":"ZhaoQiang"},"description":""}</script></head><body header-desktop=fixed header-mobile=auto><script type=text/javascript>(window.localStorage&&localStorage.getItem('theme')?localStorage.getItem('theme')==='dark':('auto'==='auto'?window.matchMedia('(prefers-color-scheme: dark)').matches:'auto'==='dark'))&&document.body.setAttribute('theme','dark');</script><div id=mask></div><div class=wrapper><header class=desktop id=header-desktop><div class=header-wrapper><div class=header-title><a href=/ title="Blog My Life"><span class=header-title-pre><i class="far fa-kiss-wink-heart fa-fw"></i></span>Blog My Life</a></div><div class=menu><div class=menu-inner><a class=menu-item href=/post/>所有文章 </a><a class=menu-item href=/tags/>标签 </a><a class=menu-item href=/categories/>分类 </a><a class=menu-item href=/ title=GitHub><i class="fab fa-github fa-fw"></i></a><span class="menu-item delimiter"></span><span class="menu-item search" id=search-desktop><input type=text placeholder=搜索文章标题或内容... id=search-input-desktop>
+<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-desktop title=搜索><i class="fas fa-search fa-fw"></i></a><a href=javascript:void(0); class="search-button search-clear" id=search-clear-desktop title=清空><i class="fas fa-times-circle fa-fw"></i></a><span class="search-button search-loading" id=search-loading-desktop><i class="fas fa-spinner fa-fw fa-spin"></i></span></span><a href=javascript:void(0); class="menu-item theme-switch" title=切换主题><i class="fas fa-adjust fa-fw"></i></a></div></div></div></header><header class=mobile id=header-mobile><div class=header-container><div class=header-wrapper><div class=header-title><a href=/ title="Blog My Life"><span class=header-title-pre><i class="far fa-kiss-wink-heart fa-fw"></i></span>Blog My Life</a></div><div class=menu-toggle id=menu-toggle-mobile><span></span><span></span><span></span></div></div><div class=menu id=menu-mobile><div class=search-wrapper><div class="search mobile" id=search-mobile><input type=text placeholder=搜索文章标题或内容... id=search-input-mobile>
+<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-mobile title=搜索><i class="fas fa-search fa-fw"></i></a><a href=javascript:void(0); class="search-button search-clear" id=search-clear-mobile title=清空><i class="fas fa-times-circle fa-fw"></i></a><span class="search-button search-loading" id=search-loading-mobile><i class="fas fa-spinner fa-fw fa-spin"></i></span></div><a href=javascript:void(0); class=search-cancel id=search-cancel-mobile>取消</a></div><a class=menu-item href=/post/>所有文章</a><a class=menu-item href=/tags/>标签</a><a class=menu-item href=/categories/>分类</a><a class=menu-item href=/ title=GitHub><i class="fab fa-github fa-fw"></i></a><a href=javascript:void(0); class="menu-item theme-switch" title=切换主题>
+<i class="fas fa-adjust fa-fw"></i></a></div></div></header><div class="search-dropdown desktop"><div id=search-dropdown-desktop></div></div><div class="search-dropdown mobile"><div id=search-dropdown-mobile></div></div><main class=main><div class=container><div class="page single special"><h1 class="single-title animated pulse faster">Speedtest Iperf3</h1><div class=content id=content><h2 id=群晖安装iperf3-非docker>群晖安装Iperf3 非docker</h2><h3 id=synology-群晖-nas-synogear-diagnosis-tool><strong>Synology 群晖 NAS synogear Diagnosis Tool</strong></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span><span class=lnt>42
+</span><span class=lnt>43
+</span><span class=lnt>44
+</span><span class=lnt>45
+</span><span class=lnt>46
+</span><span class=lnt>47
+</span><span class=lnt>48
+</span><span class=lnt>49
+</span><span class=lnt>50
+</span><span class=lnt>51
+</span><span class=lnt>52
+</span><span class=lnt>53
+</span><span class=lnt>54
+</span><span class=lnt>55
+</span><span class=lnt>56
+</span><span class=lnt>57
+</span><span class=lnt>58
+</span><span class=lnt>59
+</span><span class=lnt>60
+</span><span class=lnt>61
+</span><span class=lnt>62
+</span><span class=lnt>63
+</span><span class=lnt>64
+</span><span class=lnt>65
+</span><span class=lnt>66
+</span><span class=lnt>67
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-fallback data-lang=fallback>$ sudo -s
+# synogear list
+Tools are not installed yet. You can run this command to install it:
+   synogear install
+   synogear install
+   root@nas:~# iperf3
+-ash: iperf3: command not found
+root@nas:~# synogear install
+root@nas:~# iperf3
+iperf3: parameter error - must either be a client (-c) or server (-s)
+
+Usage: iperf [-s|-c host] [options]
+       iperf [-h|--help] [-v|--version]
+
+Server or Client:
+  -p, --port      #         server port to listen on/connect to
+  -f, --format    [kmgKMG]  format to report: Kbits, Mbits, KBytes, MBytes
+  -i, --interval  #         seconds between periodic bandwidth reports
+  -F, --file name           xmit/recv the specified file
+  -A, --affinity n/n,m      set CPU affinity
+  -B, --bind      &lt;host&gt;    bind to a specific interface
+  -V, --verbose             more detailed output
+  -J, --json                output in JSON format
+  --logfile f               send output to a log file
+  -d, --debug               emit debugging output
+  -v, --version             show version information and quit
+  -h, --help                show this message and quit
+Server specific:
+  -s, --server              run in server mode
+  -D, --daemon              run the server as a daemon
+  -I, --pidfile file        write PID file
+Client specific:
+  -c, --client    &lt;host&gt;    run in client mode, connecting to &lt;host&gt;
+  -u, --udp                 use UDP rather than TCP
+  -b, --bandwidth #[KMG][/#] target bandwidth in bits/sec (0 for unlimited)
+                            (default 1 Mbit/sec for UDP, unlimited for TCP)
+                            (optional slash and packet count for burst mode)
+  -t, --time      #         time in seconds to transmit for (default 10 secs)
+  -n, --bytes     #[KMG]    number of bytes to transmit (instead of -t)
+  -k, --blockcount #[KMG]   number of blocks (packets) to transmit (instead of -                                                                                                                                                             t or -n)
+  -l, --len       #[KMG]    length of buffer to read or write
+                            (default 128 KB for TCP, 8 KB for UDP)
+  --cport         &lt;port&gt;    bind to a specific client port (TCP and UDP, default                                                                                                                                                             : ephemeral port)
+  -P, --parallel  #         number of parallel client streams to run
+  -R, --reverse             run in reverse mode (server sends, client receives)
+  -w, --window    #[KMG]    TCP window size (socket buffer size)
+  -C, --congestion &lt;algo&gt;   set TCP congestion control algorithm (Linux and Free                                                                                                                                                             BSD only)
+  -M, --set-mss   #         set TCP maximum segment size (MTU - 40 bytes)
+  -N, --nodelay             set TCP no delay, disabling Nagle&#39;s Algorithm
+  -4, --version4            only use IPv4
+  -6, --version6            only use IPv6
+  -S, --tos N               set the IP &#39;type of service&#39;
+  -L, --flowlabel N         set the IPv6 flow label (only supported on Linux)
+  -Z, --zerocopy            use a &#39;zero copy&#39; method of sending data
+  -O, --omit N              omit the first n seconds
+  -T, --title str           prefix every output line with this string
+  --get-server-output       get results from server
+  --udp-counters-64bit      use 64-bit counters in UDP test packets
+
+[KMG] indicates options that support a K/M/G suffix for kilo-, mega-, or giga-
+
+iperf3 homepage at: http://software.es.net/iperf/
+Report bugs to:     https://github.com/esnet/iperf
+
+root@nas:~# synogear list
+All tools:
+
+</code></pre></td></tr></table></div></div><h2 id=电脑安装iperf3>电脑安装iperf3</h2><ol><li>路由器安装iperf3。用ssh或者网页控制台进入路由器后台，然后先执行包更新，再安装iperf3软件，代码如下：</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-fallback data-lang=fallback>1. opkg update
+2. opkg install iperf3
+</code></pre></td></tr></table></div></div><p>2.路由器端后台运行iperf3.最好使用后台运行否则测速过程中连接断开，就会中断。代码如下：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-fallback data-lang=fallback>iperf3 -s -D
+</code></pre></td></tr></table></div></div><p>这里-s 表示运行的是服务器模式，就是测速接收方，-D（大写字母）表示后台运行，断开连接之后还会运行。好了，这样路由器端就弄好了，你可以断开ssh了。</p><p>3.电脑或者手机连接上路由器的无线（或者有线，看你测什么速度），然后运行iperf3测速。
+软件下载链接如下https://iperf.fr/iperf-download.php
+找到适合自己平台的下载下来。如果你是Windows 64位用户，下载这个https://iperf.fr/download/windows/iperf-3.1.3-win64.zip
+下载之后解压缩，然后在解压的文件夹目录运行命令提示符CMD，然后执行测速，代码如下：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-fallback data-lang=fallback>iperf3 -c 192.168.123.1 -b 1000m -t 60 -i 1 -u
+</code></pre></td></tr></table></div></div><p>上面这个讲一下，192.168.123.1是路由器的ip地址，我这里用的是老毛子Padavan固件，请你根据自己的路由器地址进行替换。-c表示运行的是客户端模式，就是测速发送方。 -b表示估计带宽，-t表示持续测速时间，就是一共跑60秒，-i表示间隔输出结果时间，就是每隔1秒钟输出一次，-u表示使用udp连接来测速，默认是tcp连接测速，因为tcp要进行确认所以不如udp测速更准确。当然这里默认使用了单线程，你可以使用多线程命令。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-fallback data-lang=fallback>iperf3 -c 192.168.123.1 -b 1000m -t 60 -i 1 -u -P 2
+</code></pre></td></tr></table></div></div><p>这里是使用了两个线程来跑。我自己测试下来，如果要用多线程，2-4个最好，太多了路由器吃不消（也可能是我手机吃不消）。</p><p>以上方法是从电脑发数据到路由器，测试的是上传速度。同样的你可以在电脑上运行服务端，路由器运行客户端，这样就是测量路由器下载速度了。
+有线链接也可以测一下，看看千兆口是不是真的跑到了千兆网速。</p></div></div></div></main><footer class=footer><div class=footer-container><div class=footer-line>由 <a href=https://gohugo.io/ target=_blank rel="noopener noreffer" title="Hugo 0.64.1">Hugo</a> 强力驱动 | 主题 - <a href=https://github.com/dillonzq/LoveIt target=_blank rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i>LoveIt</a></div><div class=footer-line><i class="far fa-copyright fa-fw"></i><span itemprop=copyrightYear>2016 - 2020</span><span class=author itemprop=copyrightHolder>&nbsp;<a href=/ target=_blank>zhaoqiang</a></span>&nbsp;|&nbsp;<span class=license><a rel="license external nofollow noopener noreffer" href=https://creativecommons.org/licenses/by-nc/4.0/ target=_blank>CC BY-NC 4.0</a></span><span class=icp-splitter>&nbsp;|&nbsp;</span><br class=icp-br><span class=icp><a href=http://www.beian.miit.gov.cn>沪ICP备17033498号</a></span></div></div></footer></div><div id=fixed-buttons><a href=# id=back-to-top class=fixed-button title=回到顶部><i class="fas fa-arrow-up fa-fw"></i></a><a href=# id=view-comments class=fixed-button title=查看评论><i class="fas fa-comment fa-fw"></i></a></div><script type=text/javascript src=https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/algoliasearch@4.2.0/dist/algoliasearch-lite.umd.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/sharer.js@0.4.0/sharer.min.js></script><script type=text/javascript>window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{},"search":{"algoliaAppID":"EO42BFKWB5","algoliaIndex":"hugoblogloveit","algoliaSearchKey":"d3ef25fc7cb90a144ea0139748e4cf6b","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};</script><script type=text/javascript src=/js/theme.min.js></script><script type=text/javascript>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','UA-105751499-1',{'anonymize_ip':true});</script><script type=text/javascript src="https://www.googletagmanager.com/gtag/js?id=UA-105751499-1" async></script></body></html>
