@@ -4,34 +4,41 @@
   
   <url>
     <loc>https://www.nashome.cn/</loc>
-    <lastmod>2020-06-28T14:04:00+08:00</lastmod>
+    <lastmod>2020-06-28T17:19:50+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.nashome.cn/categories/</loc>
-    <lastmod>2020-06-28T14:04:00+08:00</lastmod>
+    <lastmod>2020-06-28T17:19:50+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.nashome.cn/post/</loc>
-    <lastmod>2020-06-28T14:04:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nashome.cn/post/speedtest-iperf3/</loc>
-    <lastmod>2020-06-28T14:04:00+08:00</lastmod>
+    <lastmod>2020-06-28T17:19:50+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://www.nashome.cn/tags/</loc>
+    <lastmod>2020-06-28T17:19:50+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nashome.cn/post/test01/</loc>
+    <lastmod>2020-06-28T17:19:50+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nashome.cn/post/speedtest-iperf3/</loc>
     <lastmod>2020-06-28T14:04:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -185,15 +192,15 @@
   </url>
   
   <url>
-    <loc>https://www.nashome.cn/tags/hugo/</loc>
-    <lastmod>2020-02-27T14:04:41+08:00</lastmod>
+    <loc>https://www.nashome.cn/categories/hugo/</loc>
+    <lastmod>2020-06-28T14:04:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://www.nashome.cn/categories/hugo/</loc>
-    <lastmod>2020-06-28T14:04:00+08:00</lastmod>
+    <loc>https://www.nashome.cn/tags/hugo/</loc>
+    <lastmod>2020-02-27T14:04:41+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
