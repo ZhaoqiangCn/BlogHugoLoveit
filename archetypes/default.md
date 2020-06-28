@@ -1,27 +1,28 @@
 ---
-author: "ZhaoQiang"
-author_link: ""
 title: "{{ replace .TranslationBaseName "-" " " | title }}"
+subtitle: ""
 date: {{ .Date }}
 lastmod: {{ .Date }}
-draft: false
+draft: true
+author: ""
+authorLink: ""
 description: ""
-show_in_homepage: true
-description_as_summary: false
+
+tags: []
+categories: []
+
+hiddenFromHomePage: false
+hiddenFromSearch: false
+
+featuredImage: ""
+featuredImagePreview: ""
+
+toc:
+  enable: true
+math:
+  enable: false
+lightgallery: false
 license: ""
-
-tags: ["",
-""
-]
-categories: ["",
-""
-]
-
-featured_image: ""
-featured_image_preview: ""
-
-comment: true
-toc: true
-auto_collapse_toc: true
-math: false
 ---
+
+<!--more-->

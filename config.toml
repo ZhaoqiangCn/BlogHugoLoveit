@@ -18,7 +18,7 @@ title = "Blog My Life"
 enableRobotsTXT = true
 # whether to use git commit log
 # 是否使用 git 信息
-enableGitInfo = false
+enableGitInfo = true
 # whether to use emoji code
 # 是否使用 emoji 代码
 enableEmoji = true
@@ -245,7 +245,7 @@ enableEmoji = true
       logo = ""
       # title name
       # 标题名称
-      name = "Blog My Life"
+      name = "Welcome to my blog"
       # you can add extra information before the name (HTML format is supported), such as icons
       # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
       pre = "<i class='far fa-kiss-wink-heart fa-fw'></i>"
@@ -346,7 +346,7 @@ enableEmoji = true
       enable = true
       # whether to keep the static table of the contents in front of the post
       # 是否保持使用文章前面的静态目录
-      keepStatic = false
+      keepStatic = true
       # whether to make the table of the contents in the sidebar automatically collapsed
       # 是否使侧边目录自动折叠展开
       auto = true
@@ -458,7 +458,7 @@ enableEmoji = true
         appId = 'Bu42IhLNJc94WvCDKSsRwTqa-gzGzoHsz'
         appKey = 'bKSP5XiBoIHs8PyXC4uhGhqQ'
         placeholder = ""
-        avatar = "mp"
+        avatar = "mm"
         meta= ""
         pageSize = 10
         lang = ""
@@ -466,7 +466,7 @@ enableEmoji = true
         recordIP = true
         highlight = true
         enableQQ = false
-        serverURLs = "https://leancloud.hugoloveit.com"
+        serverURLs = ""
         # emoji data file name, default is "google.yml"
         # ("apple.yml", "google.yml", "facebook.yml", "twitter.yml")
         # located in "themes/LoveIt/assets/data/emoji/" directory
@@ -676,7 +676,7 @@ enableEmoji = true
 # Permalinks 配置 (https://gohugo.io/content-management/urls/#permalinks)
 [Permalinks]
   # posts = ":year/:month/:filename"
-  # posts = ":filename"
+   posts = ":filename"
 
 # Privacy config (https://gohugo.io/about/hugo-and-gdpr/)
 # 隐私信息配置 (https://gohugo.io/about/hugo-and-gdpr/)
