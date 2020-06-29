@@ -18,7 +18,7 @@
       <pubDate>Wed, 01 Apr 2020 09:26:29 +0800</pubDate>
       
       <guid>https://www.nashome.cn/post/dynamics-365-how-to-restore-live-data-to-dev/</guid>
-      <description>This blog post is for my notes, you can find more details on Microsoft link. There are some extra steps in the Microsoft link, which I never used. I usually follow only these steps and it works for me. So Instead I need to search on Microsoft link. I wrote this post for my future use. Step 1: You have to restore production database to UAT and then from uat</description>
+      <description>This blog post is for my notes, you can find more details on Microsoft link. There are some extra steps in the Microsoft link, which I never used. I usually follow only these steps and it works for me. So Instead I need to search on Microsoft link. I wrote this post for my future use. Step 1: You have to restore production database to UAT and then from uat to export it to Asset library Step 2: Download Backpac file in specific location Step 3: Open Command prompt with run as administrator for locally hosted VM and go to following location</description>
     </item>
     
     <item>
@@ -46,7 +46,8 @@ Microsoft have described this on the environment planning docs. I will not discu
       <pubDate>Wed, 18 Mar 2020 16:39:38 +0800</pubDate>
       
       <guid>https://www.nashome.cn/post/dynamics-365-shipping-container-labeling-guide/</guid>
-      <description>Major retailers have identified incorrect logistic unit (pallet) labeling as a major emerging supply chain issue. A recent sample audit found that approximately 44% of pallet labels are not meeting agreed upon industry requirements. The issues they face include: No label has been applied Label is in the wrong location Information on the label does not match what is on the pallet Multiple labels with different Serial Shipping Container Codes</description>
+      <description>Major retailers have identified incorrect logistic unit (pallet) labeling as a major emerging supply chain issue. A recent sample audit found that approximately 44% of pallet labels are not meeting agreed upon industry requirements. The issues they face include:
+ No label has been applied Label is in the wrong location Information on the label does not match what is on the pallet Multiple labels with different Serial Shipping Container Codes (SSCC) been applied Pallet label will not scan Stretch-wrap has been applied over the pallet label so it doesn’t scan  The following information contains guidelines and general information on how to create and apply good quality logistic (pallet) labels as per the standard requirements of the Retail Industry.</description>
     </item>
     
     <item>
@@ -65,7 +66,17 @@ Microsoft have described this on the environment planning docs. I will not discu
       <pubDate>Fri, 28 Feb 2020 15:03:59 +0800</pubDate>
       
       <guid>https://www.nashome.cn/post/dynamics-365-how-to-deploy-non-production-data-to-production-server/</guid>
-      <description>前言 首先这次的操作并不是官方推荐的，但是在绝大多数上线的时候，主数据都是在UAT环境配置和测试，并且绝大多数的应用顾问或者用户都不希望做这种</description>
+      <description>前言 首先这次的操作并不是官方推荐的，但是在绝大多数上线的时候，主数据都是在UAT环境配置和测试，并且绝大多数的应用顾问或者用户都不希望做这种重复劳动，他们太忙了吧～
+然而系统并没有提供可以直接部署或者还原的功能，那么我们就创建一个Service Request给微软吧。
+Service Request 登录 LCS，打开 Project Details ,创建一个新的Service request
+如下图：
+新建
+如下图：
+选择 Sandbox to production
+如下图：
+接下来需要选择 Sandbox source 、downtime 等等
+提交
+勾选所有选项后提交吧，提示说这个过程至少需要5个小时的停机时间，但是绝大多数情况1小时左右就能完成了。</description>
     </item>
     
     <item>
