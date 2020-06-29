@@ -19,22 +19,19 @@ categories: ["",
 
 featured_image: ""
 featured_image_preview: ""
+linkToMarkdown: true
 
 toc:
   enable: true
-  auto: true
+  auto: false
 code:
   copy: true
-  # ...
 math:
   enable: true
-  # ...
 mapbox:
   accessToken: ""
-  # ...
 share:
   enable: true
-  # ...
 comment:
   enable: true
 ---
