@@ -19,10 +19,19 @@ categories: ["hugo"
 featured_image: ""
 featured_image_preview: ""
 
-comment: true
-toc: true
-auto_collapse_toc: true
-math: false
+toc:
+  enable: true
+  auto: false
+code:
+  copy: true
+math:
+  enable: true
+mapbox:
+  accessToken: ""
+share:
+  enable: true
+comment:
+  enable: true
 ---
 > **本文同步更新至 [Youtube ](https://youtu.be/D77dMN_U4YA) 和 [BiliBili ](https://www.bilibili.com/video/av91537755/)**
 

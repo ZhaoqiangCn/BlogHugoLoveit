@@ -5,8 +5,19 @@ description: "百度无法收录github pages，因此本文介绍如何把hugo �
 draft: false
 tags: [Netlify,GithubPages,Even]
 categories: [hugo]
-autoCollapseToc: true
-toc: true
+toc:
+  enable: true
+  auto: false
+code:
+  copy: true
+math:
+  enable: true
+mapbox:
+  accessToken: ""
+share:
+  enable: true
+comment:
+  enable: true
 ---
 
 <!--more-->

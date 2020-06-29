@@ -5,10 +5,19 @@ description: "#offline download #Aria2 搭建离线下载并自动上传到 Goog
 draft: false
 tags: [Aria2,GoogleDrive]
 categories: [Linux]
-comment: true
-toc: true
-auto_collapse_toc: true
-math: false
+toc:
+  enable: true
+  auto: false
+code:
+  copy: true
+math:
+  enable: true
+mapbox:
+  accessToken: ""
+share:
+  enable: true
+comment:
+  enable: true
 ---
 
 <!--more-->

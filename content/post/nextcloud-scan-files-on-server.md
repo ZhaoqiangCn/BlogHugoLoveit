@@ -5,10 +5,19 @@ description: "使用 OCC 命令从服务器上给 Nextcloud 手动添加文件"
 draft: false
 tags: [Nextcloud]
 categories: [Linux]
-comment: true
-toc: true
-auto_collapse_toc: true
-math: false
+toc:
+  enable: true
+  auto: false
+code:
+  copy: true
+math:
+  enable: true
+mapbox:
+  accessToken: ""
+share:
+  enable: true
+comment:
+  enable: true
 aliases: [
     "/post/NextCloud-Scan-Files-On-Server/"
 ]

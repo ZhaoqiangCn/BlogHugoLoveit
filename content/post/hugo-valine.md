@@ -5,8 +5,19 @@ description: "Valine 评论系统 leancloud"
 draft: false
 tags: [Valine]
 categories: [hugo]
-autoCollapseToc: true
-toc: true
+toc:
+  enable: true
+  auto: false
+code:
+  copy: true
+math:
+  enable: true
+mapbox:
+  accessToken: ""
+share:
+  enable: true
+comment:
+  enable: true
 aliases: [
     "/post/Hugo-Valine/"
 ]

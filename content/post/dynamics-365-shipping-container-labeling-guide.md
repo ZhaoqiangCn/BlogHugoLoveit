@@ -18,10 +18,19 @@ categories: ["Dynamicsax"
 featured_image: ""
 featured_image_preview: ""
 
-comment: true
-toc: true
-auto_collapse_toc: true
-math: false
+toc:
+  enable: true
+  auto: false
+code:
+  copy: true
+math:
+  enable: true
+mapbox:
+  accessToken: ""
+share:
+  enable: true
+comment:
+  enable: true
 ---
 
 Major retailers have identified incorrect logistic unit (pallet) labeling as a major emerging supply chain issue. A recent sample audit found that approximately 44% of pallet labels are not meeting agreed upon industry requirements. The issues they face include:

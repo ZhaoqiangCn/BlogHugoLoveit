@@ -18,10 +18,19 @@ categories: ["Dynamicsax"
 featured_image: ""
 featured_image_preview: ""
 
-comment: true
-toc: true
-auto_collapse_toc: true
-math: false
+toc:
+  enable: true
+  auto: false
+code:
+  copy: true
+math:
+  enable: true
+mapbox:
+  accessToken: ""
+share:
+  enable: true
+comment:
+  enable: true
 ---
 
 This blog post is for my notes, you can find more details on Microsoft link. There are some extra steps in the Microsoft link, which I never used. I usually follow only these steps and it works for me. So Instead I need to search on Microsoft link. I wrote this post for my future use. Step 1: You have to restore production database to UAT and then from uat to export it to Asset library Step 2: Download Backpac file in specific location Step 3: Open Command prompt with run as administrator for locally hosted VM and go to following location

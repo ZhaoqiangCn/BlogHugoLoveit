@@ -5,10 +5,19 @@ description: ""
 draft: false
 tags: ["Dynamics365","Customization"]
 categories: ["Dynamicsax"]
-comment: true
-toc: true
-auto_collapse_toc: true
-math: false
+toc:
+  enable: true
+  auto: false
+code:
+  copy: true
+math:
+  enable: true
+mapbox:
+  accessToken: ""
+share:
+  enable: true
+comment:
+  enable: true
 aliases: [
     "/post/Dynamics-365-deployable-packages/"
 ]

@@ -20,11 +20,22 @@ categories: ["Linux",
 featured_image: ""
 featured_image_preview: ""
 
-comment: true
-toc: true
-auto_collapse_toc: true
-math: false
+toc:
+  enable: true
+  auto: false
+code:
+  copy: true
+math:
+  enable: true
+mapbox:
+  accessToken: ""
+share:
+  enable: true
+comment:
+  enable: true
 ---
+
+<!--more-->
 
 ## 安装 Folderclone
 

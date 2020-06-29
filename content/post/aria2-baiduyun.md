@@ -21,10 +21,19 @@ categories: ["Linux",
 featured_image: ""
 featured_image_preview: ""
 
-comment: true
-toc: true
-auto_collapse_toc: true
-math: false
+toc:
+  enable: true
+  auto: false
+code:
+  copy: true
+math:
+  enable: true
+mapbox:
+  accessToken: ""
+share:
+  enable: true
+comment:
+  enable: true
 ---
 
 > 前文已经说过如何通过 Aria2离线下载并自动上传到 Google Drive，请参照 [Aria2 搭建离线下载并自动上传到 Google Drive]({{< ref "aria2.md" >}})

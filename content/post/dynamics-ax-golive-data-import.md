@@ -5,10 +5,19 @@ description: "DynamicsAX项目上线期初数据的初始化-期初余额导入�
 draft: false
 tags: [Ax2009,Data,Golive]
 categories: [Dynamicsax]
-comment: true
-toc: true
-auto_collapse_toc: true
-math: false
+toc:
+  enable: true
+  auto: false
+code:
+  copy: true
+math:
+  enable: true
+mapbox:
+  accessToken: ""
+share:
+  enable: true
+comment:
+  enable: true
 aliases: [
     "/post/Dynamics-AX-GoLive-Data-Import/"
 ]
