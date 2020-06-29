@@ -31,7 +31,7 @@ enableEmoji = true
     # 语言名称
     languageName = "简体中文"
     # 是否包括中日韩文字
-    hasCJKLanguage = true
+    hasCJKLanguage = false
     # 默认每页列表显示的文章数目
     paginate = 12
     # [UA-XXXXXXXX-X] 谷歌分析代号
@@ -128,7 +128,7 @@ enableEmoji = true
           # 主页显示的网站标题 (支持 HTML 格式)
           title = "Blog My Life"
           # 主页显示的网站副标题
-          subtitle = ""
+          subtitle = "A blog recording my life"
           # 是否为副标题显示打字机动画
           typeit = true
           # 是否显示社交账号
@@ -349,7 +349,7 @@ enableEmoji = true
       keepStatic = true
       # whether to make the table of the contents in the sidebar automatically collapsed
       # 是否使侧边目录自动折叠展开
-      auto = true
+      auto = false
     # Code config
     # 代码配置
     [params.page.code]
