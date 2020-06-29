@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Sun, 28 Jun 2020 14:45:53 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 29 Jun 2020 13:39:01 +0800</lastBuildDate>
     
 	<atom:link href="https://www.nashome.cn/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Test02</title>
+      <link>https://www.nashome.cn/post/test02/</link>
+      <pubDate>Mon, 29 Jun 2020 13:39:01 +0800</pubDate>
+      
+      <guid>https://www.nashome.cn/post/test02/</guid>
+      <description>&lt;p&gt;测试摘要&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Test01</title>
