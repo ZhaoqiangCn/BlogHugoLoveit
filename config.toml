@@ -149,8 +149,8 @@ enableEmoji = true
   [params.page]
     hiddenFromHomePage = false
     hiddenFromSearch = false
-    twemoji = false
-    lightgallery = false
+    twemoji = true
+    lightgallery = true
     ruby = true
     fraction = true
     fontawesome = true
