@@ -1,44 +1,5 @@
----
-title: "使用宝塔面板安装和管理 Google Drive 百宝箱"
-subtitle: ""
-date: 2020-07-01T16:42:31+08:00
-lastmod: 2020-07-01T16:42:31+08:00
-draft: false
-author: "ZhaoQiang"
-authorLink: ""
-description: ""
+# 使用宝塔面板安装和管理 Google Drive 百宝箱
 
-tags: ["宝塔面板",
-"GoogleDrive",
-"telegrambot"
-]
-categories: ["Linux",
-""
-]
-
-hiddenFromHomePage: false
-hiddenFromSearch: false
-
-featuredImage: ""
-featuredImagePreview: ""
-
-toc:
-  enable: true
-  auto: false
-code:
-  copy: true
-math:
-  enable: true
-mapbox:
-  accessToken: ""
-share:
-  enable: true
-comment:
-  enable: true
-
-lightgallery: false
-license: ""
----
 
 在Telegram中使用 /copy SourceId即可转存到GoogleDrive指定路径
 
