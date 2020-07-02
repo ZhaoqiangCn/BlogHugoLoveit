@@ -89,7 +89,7 @@ enableEmoji = true
           enable = true
           gravatarEmail = ""
           avatarURL = "https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/avatar.png?x-oss-process=style/thumbnail"
-          title = "zhaoqiang's blog"
+          title = "" #zhaoqiang's blog
           subtitle = "A blog recording my life"
           typeit = true
           social = true
@@ -121,7 +121,7 @@ enableEmoji = true
     mobileMode = "auto"
     [params.header.title]
       logo = ""
-      name = ""
+      name = "zhaoqiang's blog"
       pre = "<i class='far fa-kiss-wink-heart fa-fw'></i>"
       post = ""
       typeit = false
@@ -328,7 +328,7 @@ enableEmoji = true
     [markup.goldmark.renderer]
       unsafe = true
   [markup.tableOfContents]
-    startLevel = 2
+    startLevel = 1
     endLevel = 6
 [author]
   name = "zhaoqiang"
