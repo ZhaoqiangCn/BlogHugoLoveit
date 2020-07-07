@@ -13,19 +13,23 @@ Error executing code: Insufficient memory to run script.
 
 **For the \*Dynamics AX Client\* the correct Registry value is:**
 
-AX 4.0:
+**AX 4.0:**
 
-  Key name:  [HKEY_CURRENT_USER\Software\Microsoft\Dynamics\4.0\Configuration\*(configuration name)*]
-  Value name: maxbuffersize
-  Value type: REG_SZ
-  Value:   (Maximum amount of memory in MB or 0 for no limit)
+```
+Key name:  [HKEY_CURRENT_USER\Software\Microsoft\Dynamics\4.0\Configuration\*(configuration name)*]
+Value name: maxbuffersize
+Value type: REG_SZ
+Value:   (Maximum amount of memory in MB or 0 for no limit)
+```
 
-AX 2009:
+**AX 2009:**
 
-  Key name:  [HKEY_CURRENT_USER\Software\Microsoft\Dynamics\5.0\Configuration\*(configuration name)*]
-  Value name: maxbuffersize
-  Value type: REG_SZ
-  Value:   (Maximum amount of memory in MB or 0 for no limit)
+```
+Key name:  [HKEY_CURRENT_USER\Software\Microsoft\Dynamics\5.0\Configuration\*(configuration name)*]
+Value name: maxbuffersize
+Value type: REG_SZ
+Value:   (Maximum amount of memory in MB or 0 for no limit)
+```
 
 **需要注意的是：**
 
@@ -33,36 +37,39 @@ AX 2009:
 
 **For the \*Dynamics AX .Net Business Connector/AX BizTalk Adapter\* the correct location is:**
 
-AX 4.0:
+**AX 4.0:**
 
+```
   Key name:  [HKEY_LOCAL_MACHINE\Software\Microsoft\Dynamics\4.0\Configuration\*(configuration name)*]
   Value name: maxbuffersize
   Value type: REG_SZ
   Value:   (Maximum amount of memory in MB or 0 for no limit)
+```
+**AX 2009:**
 
-AX 2009:
-
+```
   Key name:  [HKEY_LOCAL_MACHINE\Software\Microsoft\Dynamics\5.0\Configuration\*(configuration name)*]
   Value name: maxbuffersize
   Value type: REG_SZ
   Value:   (Maximum amount of memory in MB or 0 for no limit)
-
+```
 **For the \*Dynamics AX AOS\* the correct Registry value is:**
 
-AX 4.0:
+**AX 4.0:**
 
+```
   Key name:  [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Dynamics Server\4.0\*(AOS instance)*\*(configuration name)*]
   Value name: maxbuffersize
   Value type: REG_SZ
   Value:   (Maximum amount of memory in MB or 0 for no limit)
-
- AX 2009:
-
+```
+ **AX 2009:**
+```
   Key name:  [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Dynamics Server\5.0\*(AOS instance)*\*(configuration name)*]
   Value name: maxbuffersize
   Value type: REG_SZ
   Value:   (Maximum amount of memory in MB or 0 for no limit)
-
+```
 **需要注意的是:**
 
 - 注册表中的*maxbuffersize*默认是不存在的 
