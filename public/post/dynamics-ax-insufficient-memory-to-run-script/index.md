@@ -1,43 +1,5 @@
----
-title: "Dynamics AX Issue： Insufficient Memory to Run Script"
-subtitle: ""
-date: 2020-07-07T09:08:44+08:00
-lastmod: 2020-07-07T09:08:44+08:00
-draft: false
-author: "ZhaoQiang"
-authorLink: ""
-description: ""
+# Dynamics AX Issue： Insufficient Memory to Run Script
 
-tags: ["Ax2009","Ax4.0",
-""
-]
-categories: ["Dynamicsax",
-""
-]
-
-hiddenFromHomePage: false
-hiddenFromSearch: false
-
-featuredImage: ""
-featuredImagePreview: ""
-
-toc:
-  enable: true
-  auto: false
-code:
-  copy: true
-math:
-  enable: true
-mapbox:
-  accessToken: ""
-share:
-  enable: true
-comment:
-  enable: true
-
-lightgallery: false
-license: ""
----
 
 在AX4.0和5.0中，有时候在读取一些内容比较多的文件的时候会报错中断：在AX2012中是50MB，但是在AX2009中大约是7MB
 
