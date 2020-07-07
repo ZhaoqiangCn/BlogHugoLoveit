@@ -45,11 +45,15 @@ git clone https://github.com/xyou365/AutoRclone && cd AutoRclone && pip3 install
 ### 三、生成SA账号
 
 1. 获取账户的JSON
-   在[Python Quickstart ](https://developers.google.com/drive/api/v3/quickstart/python)
-   ![img](https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/AutoRclone/1.png)
-   ![img](https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/AutoRclone/2.png)
-   ![img](https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/AutoRclone/3.png)
-   这一步会得到一个文件，保存它
+在[Python Quickstart ](https://developers.google.com/drive/api/v3/quickstart/python)
+
+![img](https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/AutoRclone/1.png)
+
+![img](https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/AutoRclone/2.png)
+
+![img](https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/AutoRclone/3.png)
+
+这一步会得到一个文件，保存它
 2. 生成SA账号
 ```
 python3 gen_sa_accounts.py --quick-setup 1
@@ -61,11 +65,12 @@ python3 gen_sa_accounts.py --quick-setup 1
 cat ~/AutoRclone/accounts/*.json | grep "client_email" | awk '{print $2}'| tr -d ',"' | sed 'N;N;N;N;N;N;N;N;N;/^$/d;G' > ~/email
 ```
 3. 创建[Google Group](https://groups.google.com/)
-   将上面得到的email文件中的邮箱全部加如刚创建的Group
-    ![img](https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/AutoRclone/4.png)
-    ![img](https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/AutoRclone/5.png)
-    ![img](https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/AutoRclone/6.png)
+将上面得到的email文件中的邮箱全部加如刚创建的Group
+![img](https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/AutoRclone/4.png)
 
+![img](https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/AutoRclone/5.png)
+
+![img](https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/AutoRclone/6.png)
 
 至此，Autorclone的配置全部结束
 
