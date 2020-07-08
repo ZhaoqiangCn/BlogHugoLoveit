@@ -341,7 +341,7 @@ enableEmoji = true
 
 [Permalinks]
   # posts = ":year/:month/:filename"
-   posts = ":filename"
+   #posts = ":filename"
 
 [privacy]
 
