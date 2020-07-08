@@ -31,7 +31,7 @@ enableEmoji = true
         pre = ""
         post = ""
         name = "所有文章"
-        url = "/post/"
+        url = "/posts/"
         title = ""
         weight = 1
       [[languages.zh-cn.menu.main]]
@@ -159,7 +159,7 @@ enableEmoji = true
     # 目录配置
     [params.page.toc]
       enable = true
-      keepStatic = true
+      keepStatic = false
       auto = false
     # 代码配置
     [params.page.code]

@@ -5,7 +5,7 @@
 	"sources": [
 		"themes/LoveIt/assets/css/style.scss",
 		"themes/LoveIt/assets/css/_variables.scss",
-		"themes/LoveIt/assets/css/_override.scss",
+		"assets/css/_override.scss",
 		"themes/LoveIt/assets/css/_mixin/_index.scss",
 		"themes/LoveIt/assets/css/_mixin/_compatibility.scss",
 		"themes/LoveIt/assets/css/_mixin/_link.scss",
@@ -40,7 +40,7 @@
 		"themes/LoveIt/assets/css/_partial/_footer.scss",
 		"themes/LoveIt/assets/css/_partial/_pagination.scss",
 		"themes/LoveIt/assets/css/_core/_media.scss",
-		"themes/LoveIt/assets/css/_custom.scss"
+		"assets/css/_custom.scss"
 	],
 	"sourcesContent": [
 		"@charset \"utf-8\";\r\n\r\n@import \"_variables\";\r\n@import \"_override\";\r\n\r\n@import \"_mixin/index\";\r\n\r\n@import \"_core/base\";\r\n@import \"_core/layout\";\r\n\r\n@import \"_page/index\";\r\n\r\n@import \"_partial/header\";\r\n@import \"_partial/footer\";\r\n@import \"_partial/pagination\";\r\n\r\n@import \"_core/media\";\r\n\r\n@import \"_custom\";\r\n",
