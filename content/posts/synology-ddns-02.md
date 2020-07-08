@@ -18,9 +18,7 @@ share:
   enable: true
 comment:
   enable: true
-aliases: [
-    "/post/Synology-DDNS-02/"
-]
+
 ---
 
 <!--more-->

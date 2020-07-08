@@ -18,9 +18,6 @@ share:
   enable: true
 comment:
   enable: true
-aliases: [
-    "/post/Dynamics-AX-BuildNumbers/"
-]
 ---
 
 <!--more-->

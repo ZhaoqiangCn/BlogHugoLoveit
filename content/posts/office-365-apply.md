@@ -18,9 +18,7 @@ share:
   enable: true
 comment:
   enable: true
-aliases: [
-    "/post/Office-365-Apply/"
-]
+
 ---
 
 <!--more-->

@@ -18,9 +18,7 @@ share:
   enable: true
 comment:
   enable: true
-aliases: [
-    "/post/Hugo-Valine/"
-]
+
 ---
 
 <!--more-->
