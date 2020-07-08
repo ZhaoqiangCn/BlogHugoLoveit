@@ -1,0 +1,1615 @@
+[
+    {
+        "title": "Documentation",
+        "uri": "categories/documentation",
+        "content": "",
+        "objectID": "categories/documentation"
+    },
+    {
+        "title": "Documentation",
+        "uri": "categories/documentation",
+        "content": "",
+        "objectID": "categories/documentation"
+    },
+    {
+        "title": "文档",
+        "uri": "categories/documentation",
+        "content": "",
+        "objectID": "categories/documentation"
+    },
+    {
+        "title": "使用 ACME 免费申请 Let's Encrypt 证书",
+        "uri": "posts/acme",
+        "content": "1     acme sh               text curl https   get acme sh   sh         root                           acme sh       home       text    acme sh           bash   alias          alias acme sh    acme sh acme sh 2           cronjob     0 00                                                  https   github com Neilpang acme sh wiki How to install                                          acme sh  2       acme sh     acme                         http   dns     1  http                                                    text acme sh   issue  d mydomain com  d www mydomain com   webroot  home wwwroot mydomain com                            acme sh                                                                    apache     acme sh         apache                          text acme sh   issue  d mydomain com   apache         nginx           acme sh         nginx                          text acme sh   issue  d mydomain com   nginx           apache    nginx     acme sh                                                                  ssl                            https                                  web     80            acme sh          webserver      80            text acme sh   issue  d mydomain com   standalone              https   github com Neilpang acme sh wiki How to issue a cert 2     dns                txt                                             ip      dns                          Automatic DNS API        acme sh                                  text acme sh   issue   dns  d mydomain com       acme sh                                    txt                          text acme sh   renew  d mydomain com                renew dns                         api      txt         acme sh      cloudflare  dnspod  cloudxns  godaddy    ovh                 dnspod             dnspod          api id   api key              text export DP_Id  1234  export DP_Key  sADDsdasdgdsf  acme sh   issue   dns dns_dp  d aa com  d www aa com                    api id   api key                  dnspod api                           text acme sh   issue  d mydomain2 com   dns dns_dp        api     https   github com Neilpang acme sh blob master dnsapi README md First need login Aliyun account API key  https   ak console aliyun com    accesskey  text export Ali_Key  sdfsdfsdfljlbjkljlkjsdfoiwje  export Ali_Secret  jlsdflanljkljlfdsaklkjflsa    Ok  let s issue cert now   text acme sh   issue   dns dns_ali  d example com  d www example com   AliKey AliSecret will saved    acme sh account conf will reused when needed  3  copy                          copy                                     acme sh                             nginx apache                                                        installcert                     copy             text acme sh   installcert  d  com     key file  etc nginx ssl  key     fullchain file  etc nginx ssl fullchain cer     reloadcmd  service nginx force reload                   service nginx force reload     service nginx reload       reload                 force reload   Nginx     ssl_certificate     etc nginx ssl fullchain cer      etc nginx ssl  cer     SSL Labs       Chain issues Incomplete       installcert                            reloadcmd           reloadcmd                        https   github com Neilpang acme sh  3 install the issued cert to apachenginx etc                                                    4             60                                                  5     acme sh      acme     letsencrypt CA             acme sh                acme sh         text acme sh   upgrade                         text acme sh   upgrade   auto upgrade       acme sh                           text acme sh   upgrade   auto upgrade 0   6                   debug log   text acme sh   issue         debug        text acme sh   issue         debug 2        https   github com Neilpang acme sh wiki How to debug acme sh                                         wiki     https   github com Neilpang acme sh wiki",
+        "objectID": "posts/acme",
+        "date": "2019-01-15T08:05:16.000Z",
+        "description": "",
+        "draft": false,
+        "tags": [
+            "acme",
+            "letsencrypt",
+            "https",
+            "证书"
+        ],
+        "categories": [
+            "Linux"
+        ],
+        "toc": {
+            "enable": true,
+            "auto": false
+        },
+        "code": {
+            "copy": true
+        },
+        "math": {
+            "enable": true
+        },
+        "mapbox": {
+            "accessToken": ""
+        },
+        "share": {
+            "enable": true
+        },
+        "comment": {
+            "enable": true
+        }
+    },
+    {
+        "author": "ZhaoQiang",
+        "uri": "posts/aria2-baiduyun",
+        "content": "Aria2           Google Drive     Aria2              Google Drive                 Aria2                        Google Drive                  BaiduExporter           Chrome         Aria2        BaiduExporter      BaiduExporter    chrome                           rar                Chrome    Chrome                                                                                                         ARIA2                                      googledrive                 RPC     http   token 123456qwerty example com 6800 jsonrpc                             ARIA2 RPC",
+        "objectID": "posts/aria2-baiduyun",
+        "author_link": "",
+        "title": " 使用 Aria2 实现百度云(Baiduyun)自动转存到谷歌云(GoogleDrive)",
+        "date": "2020-03-04T08:35:28.000Z",
+        "lastmod": "2020-03-04T08:35:28.000Z",
+        "draft": false,
+        "description": "",
+        "show_in_homepage": true,
+        "description_as_summary": false,
+        "license": "",
+        "tags": [
+            "Aria2",
+            "Baiduyun",
+            "GoogleDrive"
+        ],
+        "categories": [
+            "Linux",
+            ""
+        ],
+        "featured_image": "",
+        "featured_image_preview": "",
+        "toc": {
+            "enable": true,
+            "auto": false
+        },
+        "code": {
+            "copy": true
+        },
+        "math": {
+            "enable": true
+        },
+        "mapbox": {
+            "accessToken": ""
+        },
+        "share": {
+            "enable": true
+        },
+        "comment": {
+            "enable": true
+        }
+    },
+    {
+        "title": " Aria2 搭建离线下载并自动上传到 Google Drive",
+        "uri": "posts/aria2",
+        "content": "Google VPS                        Google Drive         GD           nPlayer    Google Drive                                  GD                 CentOS 7     Linux                       VPS     KVM          Linux     text   yum install  y wget    wget  O install sh http   download bt cn install install_6 0 sh    bash install sh                                    Nginx   Redis                                    Nginx   Redis     Nginx         AriaNg        Redis         GD                           GD               Aria2 Aria2                         HTTP HTTPS FTP SFTP BitTorrent   Metalink                         Aria2    text   wget  N   no check certificate https   raw githubusercontent com ToyoDAdoubi doubi master aria2 sh    chmod  x aria2 sh    bash aria2 sh                                BT Tracker            Aria2    Aria2                text   wget  N   no check certificate https   raw githubusercontent com meishixiu note master Aria2 2BAriaNg 2BRclone 2BGoogleDrive aria2 sh    chmod  x aria2 sh    bash aria2 sh                       root  aria2 aria2 conf     aria2 conf               Aria2 RPC    rpc secret              Aria2                dir            AriaNg                                            Nginx                                     AriaNg AriaNg      Aria2          Web                      Aria2            Aria2                            AriaNg                                  AriaNg                                                          lixian xxx com                                                lixian xxx com            home wwwroot lixian xxx com            AriaNg      home wwwroot lixian xxx com       text   cd  home wwwroot lixian xxx com   wget https   github com mayswind AriaNg releases download 1 0 0 AriaNg 1 0 0 zip   unzip AriaNg 1 0 0 zip   AriaNg               AriaNg      Aria2                      http   lixian xxx com        AriaNg           PRC       Aria2 RPC      Aria2 RPC                         Aria2               Rclone Rclone                                              Rclone   text   curl https   rclone org install sh   sudo bash   Rclone   Google Drive        text   rclone config             text n  New remote s  Set configuration password q  Quit config n s q n      n          text name  gd                 gd          text Type storage configure  Enter string value  Press Enter default       Choose number below  type own value 1   stackable unification remote  appear merge contents several remotes    union  2   Alias existing remote    alias  3   Amazon Drive    amazon cloud drive  4   Amazon S3 Compliant Storage Providers  AWS  Ceph  Dreamhost  IBM COS  Minio     s3  5   Backblaze B2    b2  6   Box    box  7   Cache remote    cache  8   Dropbox    dropbox  9   Encrypt Decrypt remote    crypt  10   FTP Connection    ftp  11   Google Cloud Storage  this not Google Drive     google cloud storage  12   Google Drive    drive  13   Hubic    hubic  14   JottaCloud    jottacloud  15   Local Disk    local  16   Mega    mega  17   Microsoft Azure Blob Storage    azureblob  18   Microsoft OneDrive    onedrive  19   OpenDrive    opendrive  20   Openstack Swift  Rackspace Cloud Files  Memset Memstore  OVH     swift  21   Pcloud    pcloud  22   QingCloud Object Storage    qingstor  23   SSH SFTP Connection    sftp  24   Webdav    webdav  25   Yandex Disk    yandex  26   http Connection    http  Storage 12   12    Google Drive      12          text   help drive backend at  https   rclone org drive    Google Application Client Id Leave blank normally  Enter string value  Press Enter default       client_id                    text Google Application Client Secret Leave blank normally  Enter string value  Press Enter default       client_secret                    text Scope rclone use when requesting access drive  Enter string value  Press Enter default       Choose number below  type own value 1   Full access files  excluding Application Data Folder     drive  2   Read only access file metadata file contents     drive readonly    Access files created rclone only  3   visible drive website    File authorization revoked when user deauthorizes app     drive file    Allows read write access Application Data folder  4   not visible drive website     drive appfolder    Allows read only access file metadata 5   does not allow access read download file content     drive metadata readonly  scope 1      1          text ID root folder Leave blank normally  Fill access  Computers  folders   see docs   Enter string value  Press Enter default       rootfolderid                    text Service Account Credentials JSON file path Leave blank normally  Needed want use SA instead interactive login  Enter string value  Press Enter default       serviceaccountfile                    text Edit advanced config   y n  y  Yes n  No y n n      n          text Remote config Use auto config  Say Y not sure Say N working remote headless machine Y didn t work y  Yes n  No y n n      n          text browser doesn t open automatically go following link  https   accounts google com o oauth2 auth accesstype offline client",
+        "objectID": "posts/aria2",
+        "date": "2018-05-12T07:49:55.000Z",
+        "description": "#offline download #Aria2 搭建离线下载并自动上传到 Google Drive",
+        "draft": false,
+        "tags": [
+            "Aria2",
+            "GoogleDrive"
+        ],
+        "categories": [
+            "Linux"
+        ],
+        "toc": {
+            "enable": true,
+            "auto": false
+        },
+        "code": {
+            "copy": true
+        },
+        "math": {
+            "enable": true
+        },
+        "mapbox": {
+            "accessToken": ""
+        },
+        "share": {
+            "enable": true
+        },
+        "comment": {
+            "enable": true
+        }
+    },
+    {
+        "title": "使用宝塔面板安装和管理 Google Drive 百宝箱",
+        "uri": "posts/bt-gdutils",
+        "content": "Telegram     copy SourceId     GoogleDrive          Rclone       Autorclone       Gclone              git clone https   github com iwestlin gd utils    cd gd utils npm install   unsafe perm true   allow root                AutoRclone accounts           gd utils sa     gd utils              Telegram bot                  config js                          const DEFAULT_TARGET       ID     ID  tg_token      Token  tg_whitelist                abcberf                     gd example com              gd example com                    PM2                       npm pm2  g cd  gd utils  pm2 start server js     SSL                    URL http   127 0 0 1 23333                curl https   gd example com api gdurl count fid 124pjM5LggSuwI1n40bcD5tQ13wS0M6wg     Telegram   curl  F  url HTTPS   gd example com api gdurl tgbot   https   api telegram org bot  Token setWebhook",
+        "objectID": "posts/bt-gdutils",
+        "subtitle": "",
+        "date": "2020-07-01T08:42:31.000Z",
+        "lastmod": "2020-07-01T08:42:31.000Z",
+        "draft": false,
+        "author": "ZhaoQiang",
+        "authorLink": "",
+        "description": "",
+        "tags": [
+            "宝塔面板",
+            "GoogleDrive",
+            "telegrambot"
+        ],
+        "categories": [
+            "Linux",
+            ""
+        ],
+        "hiddenFromHomePage": false,
+        "hiddenFromSearch": false,
+        "featuredImage": "",
+        "featuredImagePreview": "",
+        "toc": {
+            "enable": true,
+            "auto": false
+        },
+        "code": {
+            "copy": true
+        },
+        "math": {
+            "enable": true
+        },
+        "mapbox": {
+            "accessToken": ""
+        },
+        "share": {
+            "enable": true
+        },
+        "comment": {
+            "enable": true
+        },
+        "lightgallery": false,
+        "license": ""
+    },
+    {
+        "title": "清理 Docker 占用的磁盘空间",
+        "uri": "posts/docker-clean",
+        "content": "Docker             Docker                                                               Fundebug          Docker                  Docker                                               Docker                                        Docker                                                                   Docker                                           Docker                             Docker                                    1  docker system           Docker System             docker system                docker system df      Linux  df       Docker            Docker     7 2GB   Docker     104 8MB   Docker      1 4GB    docker system prune                               dangling      tag      docker system prune  a                   Docker                                  Docker                        docker system prune  a     Docker              2      Docker               Docker    1 13        docker system                                     text docker ps  a   grep Exit   cut  d      f 1   xargs docker rm       dangling      tag        text docker rmi   docker images   grep       awk   print  3          dangling         volume     text docker volume rm   docker volume ls  qf dangling true    3                    1 2                                     Ubuntu  Docker                     var lib docker       text du  hs  var lib docker  97G  var lib docker    Docker       100GB           du                           text 92G  var lib docker containers a376aa694b22ee497f6fc9f7d15d943de91c853284f8f105ff5ad6c7ddae7a53    docker ps   nginx   ID   a376aa694b22        var lib docker containers a376aa694b22        text docker ps CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES a376aa694b22 192 168 59 224 5000 nginx 1 12 1  nginx  g  daemon off  9 weeks ago 10 minutes nginx      nginx       92GB                      nginx                  Fundebug                            truncate      nginx              text truncate  s 0  var lib docker containers a376aa694b22ee497f6fc9f7d15d943de91c853284f8f105ff5ad6c7ddae7a53   json log                                            nginx                     max size       nginx   docker compose       text nginx  image  nginx 1 12 1 restart  always logging  driver   json file  options  max size   5g      nginx                  5GB          4    Docker                                      Docker disk usage           Docker         83    19                3 13   BUG   Docker              it s quite likely reason when container shutdown  docker couldn t remove directory shm device busy  tends happen often 3 13 kernel  may want update 4 4 version supported trusty 14 04 5 LTS    reason disappeared restart  daemon probably tried succeeded clean left data stopped containers                  3 13   text uname  r 3 13 0 86 generic             3 13                  Docker                          Docker System     INTRODUCING DOCKER 1 13 Docker   docker system Docker   json file Docker disk usage",
+        "objectID": "posts/docker-clean",
+        "date": "2019-05-10T08:11:55.000Z",
+        "description": "",
+        "draft": false,
+        "tags": [
+            "Synology",
+            "docker"
+        ],
+        "categories": [
+            "Linux"
+        ],
+        "toc": {
+            "enable": true,
+            "auto": false
+        },
+        "code": {
+            "copy": true
+        },
+        "math": {
+            "enable": true
+        },
+        "mapbox": {
+            "accessToken": ""
+        },
+        "share": {
+            "enable": true
+        },
+        "comment": {
+            "enable": true
+        }
+    },
+    {
+        "title": "How to create deployable packages in Dynamics 365 ",
+        "uri": "posts/dynamics-365-deployable-packages",
+        "content": "Dynamics 365                            deployable packages  Deployable packages      Visual Studio dev tools    build automation process            LCS Project Asset library                    LCS    Maintain   Apply updates tool                             deployable package           Visual studio         deployable package     Dynamics 365   Deploy   Create Deployment Package                  LCS     Asset Library          deployable package     deployable package          Uninstall package",
+        "objectID": "posts/dynamics-365-deployable-packages",
+        "date": "2020-01-15T08:25:29.000Z",
+        "description": "",
+        "draft": false,
+        "tags": [
+            "Dynamics365",
+            "Customization"
+        ],
+        "categories": [
+            "Dynamicsax"
+        ],
+        "toc": {
+            "enable": true,
+            "auto": false
+        },
+        "code": {
+            "copy": true
+        },
+        "math": {
+            "enable": true
+        },
+        "mapbox": {
+            "accessToken": ""
+        },
+        "share": {
+            "enable": true
+        },
+        "comment": {
+            "enable": true
+        }
+    },
+    {
+        "author": "ZhaoQiang",
+        "uri": "posts/dynamics-365-how-to-deploy-non-production-data-to-production-server",
+        "content": "UAT                                                                           Service Request      Service Request    LCS    Project Details        Service request                 Sandbox production              Sandbox source  downtime                             5                 1",
+        "objectID": "posts/dynamics-365-how-to-deploy-non-production-data-to-production-server",
+        "author_link": "",
+        "title": "如何将 UAT 的数据在上线时部署到生产环境(How to Deploy UAT Data to Production Server in Dynamics 365)",
+        "date": "2020-02-28T07:03:59.000Z",
+        "lastmod": "2020-02-28T07:03:59.000Z",
+        "draft": false,
+        "description": "如何将UAT的数据在上线时部署到生产环境(How to Deploy UAT Data to Production Server in Dynamics 365)",
+        "show_in_homepage": true,
+        "description_as_summary": false,
+        "license": "",
+        "tags": [
+            "Dynamics365"
+        ],
+        "categories": [
+            "Dynamicsax"
+        ],
+        "featured_image": "",
+        "featured_image_preview": "",
+        "toc": {
+            "enable": true,
+            "auto": false
+        },
+        "code": {
+            "copy": true
+        },
+        "math": {
+            "enable": true
+        },
+        "mapbox": {
+            "accessToken": ""
+        },
+        "share": {
+            "enable": true
+        },
+        "comment": {
+            "enable": true
+        }
+    },
+    {
+        "author": "ZhaoQiang",
+        "uri": "posts/dynamics-365-how-to-restore-live-data-to-dev",
+        "content": "blog post notes  find details Microsoft link  extra steps Microsoft link  used  usually follow steps works me  So Instead need search Microsoft link  wrote post future use  Step 1  restore production database UAT uat export Asset library Step 2  Download Backpac file specific location Step 3  Open Command prompt run administrator locally hosted VM go following location                                                                     UAT     UAT    Asset Library      Backpac              CMD Cd C  Program Files  x86  Microsoft SQL Server 140 DAC bin        SqlPackage exe  a import  sf D  Exportedbacpac my bacpac  tsn localhost  tdn   p CommandTimeout 1200 modified above statement SqlPackage exe  a import  sf C  Temp hsauatbackup bacpac  tsn localhost  tdn AxDb_6  p CommandTimeout 1200             SQL Server management        CREATE USER axdeployuser LOGIN axdeployuser EXEC spaddrolemember  dbowner    axdeployuser  CREATE USER axdbadmin LOGIN axdbadmin EXEC spaddrolemember  dbowner    axdbadmin  CREATE USER axmrruntimeuser LOGIN axmrruntimeuser EXEC spaddrolemember  dbdatareader    axmrruntimeuser  EXEC spaddrolemember  dbdatawriter    axmrruntimeuser  CREATE USER axretaildatasyncuser LOGIN axretaildatasyncuser EXEC sp_addrolemember  DataSyncUsersRole    axretaildatasyncuser  CREATE USER axretailruntimeuser LOGIN axretailruntimeuser EXEC sp_addrolemember  UsersRole    axretailruntimeuser  EXEC sp_addrolemember  ReportUsersRole    axretailruntimeuser  CREATE USER axdeployextuser LOGIN axdeployextuser EXEC sp_addrolemember  DeployExtensibilityRole    axdeployextuser  CREATE USER  NT AUTHORITY NETWORK SERVICE  LOGIN  NT AUTHORITY NETWORK SERVICE  EXEC spaddrolemember  dbowner    NT AUTHORITY NETWORK SERVICE  UPDATE T1 SET T1 storageproviderid   0   T1 accessinformation        T1 modifiedby    Admin    T1 modifieddatetime   getdate   docuvalue T1 T1 storageproviderid   1   Azure storage DROP PROCEDURE EXISTS SP_ConfigureTablesForChangeTracking DROP PROCEDURE EXISTS SPConfigureTablesForChangeTrackingV2 GO    Begin Refresh Retail FullText Catalogs DECLARE  RFTXNAME NVARCHAR MAX   DECLARE  RFTXSQL NVARCHAR MAX   DECLARE retail_ftx CURSOR SELECT OBJECTSCHEMANAME objectid          OBJECTNAME objectid  fullname SYS FULLTEXTINDEXES FULLTEXTCATALOGID    SELECT TOP 1 FULLTEXTCATALOGID SYS FULLTEXT_CATALOGS NAME    COMMERCEFULLTEXTCATALOG    OPEN retail_ftx  FETCH NEXT retail_ftx  RFTXNAME  BEGIN TRY   FETCH_STATUS   0 BEGIN PRINT  Refreshing Full Text Index      RFTXNAME  EXEC SPFULLTEXTTABLE  RFTXNAME   activate   SET  RFTXSQL    ALTER FULLTEXT INDEX      RFTXNAME     START FULL POPULATION   EXEC SP_EXECUTESQL  RFTXSQL  FETCH NEXT retail_ftx  RFTXNAME  END END TRY BEGIN CATCH PRINT error_message   END CATCH CLOSE retail_ftx  DEALLOCATE retail_ftx       AXDB            DB AXDB",
+        "objectID": "posts/dynamics-365-how-to-restore-live-data-to-dev",
+        "author_link": "",
+        "title": "如何将生产环境数据还原到 Dev 环境(Dynamics 365 How to Restore Live Data to Dev)",
+        "date": "2020-04-01T01:26:29.000Z",
+        "lastmod": "2020-04-01T01:26:29.000Z",
+        "draft": false,
+        "description": "如何将生产环境数据还原到 Dev 环境(Dynamics 365 How to Restore Live Data to Dev)",
+        "show_in_homepage": true,
+        "description_as_summary": false,
+        "license": "",
+        "tags": [
+            "Dynamics365"
+        ],
+        "categories": [
+            "Dynamicsax"
+        ],
+        "featured_image": "",
+        "featured_image_preview": "",
+        "toc": {
+            "enable": true,
+            "auto": false
+        },
+        "code": {
+            "copy": true
+        },
+        "math": {
+            "enable": true
+        },
+        "mapbox": {
+            "accessToken": ""
+        },
+        "share": {
+            "enable": true
+        },
+        "comment": {
+            "enable": true
+        }
+    },
+    {
+        "title": "How to deploy instance in Dynamics 365",
+        "uri": "posts/dynamics-365-instance-deploy",
+        "content": "Setup Virtual Hard Disk package Dynamics 365 Operations Below pre requisites considered Access Microsoft Dynamics Lifecycle Services   LCS   required license access shared asset library data Virtualization technology enabled computers   PC Laptop    Minimum 16 GB memory system  Below steps download  Dynamics 365 Operations  package Login Microsoft Dynamics Lifecycle Services   LCS   right side portal  click  Shared asset library  tile please note partner license required access resources Shared asset library  asset library  click  Downloadable VHD  VHD s directly available download file needs downloaded individually clicking  Name  hyperlink Double click exe file  Usually part 1   Accept Microsoft Software License Terms Virtual Hard Disk image Select destination folder Virtual Hard Disk will placed click Extract Note  Once extraction process complete  Virtual Hard Disk created destination folder  Setup Virtual machine using Microsoft Hyper V Manager recommended Microsoft give 16 gigabytes   GB   memory two virtual processors VM  however experience 12 GB memory fine  don t use dynamic memory allocation  don t Microsoft Hyper V Manager  please follow instruction below install Installation Hyper V Windows Server 2012 Windows server 2012 R2 using PowerShell Click Windows Start button type PowerShell  Right click PowerShell click Run Administrator  Run following command computer name_represents remote computer want install Hyper V  install Hyper V directly console session  not include  ComputerName command  Install WindowsFeature  Name Hyper V  ComputerName  IncludeManagementTools  Restart Click information enable Hyper V role Windows Server 2012 Windows server 2012 R2 Install Hyper V role Windows 8 Windows 8 1  Windows 10 0 Click Windows Start button type PowerShell  Right click PowerShell Run Administrator  Run following command  When installation finished  reboot computer  Enable WindowsOptionalFeature  Online  FeatureName Microsoft Hyper V  All Click information enable Hyper V role Windows Server 2012 Windows server 2012 R2 Once Hyper V Manager ready  create Virtual switch network connection inside VM Create Virtual Switch  Open Hyper V Manager  navigation pane Hyper V Manager  select computer running Hyper V  Actions pane  click Virtual Switch Manager Select External virtual switch  click  Create Virtual Switch  Upon clicking  Create Virtual Switch   Enter name  VIR SWITCH   For article  _ Select External network Realtek PCIe GBE Family Controller Mark  Allow management operation system share network adapter  Click Apply Ok Note  important step access Dynamics 365 Operations instance  Create Virtual Machine  Open Hyper V Manager  navigation pane Hyper V Manager  select computer running Hyper V  Actions pane  click New  gt  Virtual Machine  Click Next New Virtual Machine wizard  Specify Name Location page  type appropriate name  D365TrainingMC    Example article    Click Next Specify Generation page  Choose Generation 1  Click Next Assign Memory page  specify memory 12 288   16 384 MB Configure Networking page  connect virtual machine switch  VIR SWITCH _ created when installed Hyper V  Connect Virtual Hard Disk  choose Use existing virtual hard disk select VHD location Summary page  verify selections click Finish  Connecting Virtual machine using Microsoft Hyper V Manager even connecting virtual machine  sure virtualization support turned BIOS settings computer laptop  setup varies different computer laptop brands  Just google search enable virtualization support computer  example using HP laptop use keywords  Enable virtualization HP laptop  Once virtualization support turned BIOS settings successfully  Open Hyper V manager Select  D365TrainingMC  VM just created  Right click Start Once VM started click connect Go Action  Click Ctrl Alt Delete button toolbar Sign VM using following credentials  User name  Administrator Password  pass word1 Access Dynamics 365 instance using base URL local application Provision administrator user  accessing authenticate credentials administrator instance  please follow steps below  desktop  run admin user provisioning tool administrator   right click icon  click Run administrator    Enter email address   Make sure Office365 ID Azure AD credentials    click Submit  Access instance using URL local application user authenticated above step access instance computer navigating base URL  https   usnconeboxax1aos cloud onebox dynamics com  Open internet explorer Click link above Enter credentials authenticated step above it s set access  Dynamics 365 Operation  instance References    TOPICS   SOURCES                                                                                                                               Access Microsoft Dynamics 365 Operations instances   https   ax help dynamics com en wiki access microsoft dynamics ax 7 instances 2      Installation Hyper V creating virtual machine   https   technet microsoft com enus library hh846766  v ws 11   aspx",
+        "objectID": "posts/dynamics-365-instance-deploy",
+        "date": "2019-12-11T05:53:26.000Z",
+        "description": "",
+        "draft": false,
+        "tags": [
+            "Dynamics365"
+        ],
+        "categories": [
+            "Dynamicsax"
+        ],
+        "toc": {
+            "enable": true,
+            "auto": false
+        },
+        "code": {
+            "copy": true
+        },
+        "math": {
+            "enable": true
+        },
+        "mapbox": {
+            "accessToken": ""
+        },
+        "share": {
+            "enable": true
+        },
+        "comment": {
+            "enable": true
+        }
+    },
+    {
+        "title": "Dynamics 365 On-premises Environments",
+        "uri": "posts/dynamics-365-on-premises",
+        "content": "Environments                                Demo environment                         Demo        dynamics365         demo     Dynamics365                      Sign preview subscriptions  Developer environment                                            Deploy access development environments  Sandbox environment                                        AX2012                   Set deploy on premises environments home page               3 machines running Environment Orchestrator 2 machines running Application Object Servers  AOS  1 machine running Management Reporter  MR  1 machine running SQL Server Reporting Services  SSRS  1 machine running Active Directory 1 machine running SQL Server Production environment                Set deploy on premises environments home page               3 machines running Environment Orchestrator 3 machines running Application Object Servers  AOS  1 machine running Management Reporter  MR  1 machine running SQL Server Reporting Services  SSRS  2 machines running SQL Server 2 machines running Active Directory",
+        "objectID": "posts/dynamics-365-on-premises",
+        "date": "2020-01-15T06:24:30.000Z",
+        "description": "",
+        "draft": false,
+        "tags": [
+            "Dynamics365"
+        ],
+        "categories": [
+            "Dynamicsax"
+        ],
+        "toc": {
+            "enable": true,
+            "auto": false
+        },
+        "code": {
+            "copy": true
+        },
+        "math": {
+            "enable": true
+        },
+        "mapbox": {
+            "accessToken": ""
+        },
+        "share": {
+            "enable": true
+        },
+        "comment": {
+            "enable": true
+        }
+    },
+    {
+        "author": "ZhaoQiang",
+        "uri": "posts/dynamics-365-pre-go-live-checklist",
+        "content": "Pre Go live Health Check list  Solution acceptance users  UAT UAT completed successfully  users participated UAT  UAT test cases cover entire scope requirements planned go live  bugs issues UAT open  open bugs issues showstopper go live  UAT done using migrated data  Business signoff  Business signed off UAT solution meets business needs  Solution adheres company industry specific compliance  where necessary  Training complete features going live documented  approved signed off customer Performance  performance UAT  acceptable go live  Performance testing done  open actions it  User   Security setup  security roles used  security roles setup tested  Users will need access go live setup correct security role  Data Migration  Data migration status   Masters   Open Transactions Balances Business identified owners data validation  Review cut over plan  Business   Partner teams comfortable plan  Does Data migration performance fits within cut over window  Configuration Management  configurations updated Golden Configuration environment based changes UAT  Data stewards owners identified process place post go live changes Master Configuration data  Legal Entities configured Go Live  configurations documented  Integrations  Review list integrations readiness plan Latency requirements performance criteria met Integration support place named contacts owners Code Management Production fixes maintenance process defined  Code promotion  between environments  process place  documented entire team knows understands process Code promotion schedule production place  Emergency process code promotion production defined  Monitoring Microsoft Support LCS diagnostics setup knowledge transfer customer Issue resolution Escalation process defined   LCS support verified",
+        "objectID": "posts/dynamics-365-pre-go-live-checklist",
+        "author_link": "",
+        "title": "Dynamics 365 Pre Go Live Checklist",
+        "date": "2020-03-18T09:03:19.000Z",
+        "lastmod": "2020-03-18T09:03:19.000Z",
+        "draft": false,
+        "description": "",
+        "show_in_homepage": true,
+        "description_as_summary": false,
+        "license": "",
+        "tags": [
+            "Dynamics365"
+        ],
+        "categories": [
+            "Dynamicsax"
+        ],
+        "featured_image": "",
+        "featured_image_preview": "",
+        "toc": {
+            "enable": true,
+            "auto": false
+        },
+        "code": {
+            "copy": true
+        },
+        "math": {
+            "enable": true
+        },
+        "mapbox": {
+            "accessToken": ""
+        },
+        "share": {
+            "enable": true
+        },
+        "comment": {
+            "enable": true
+        }
+    },
+    {
+        "author": "ZhaoQiang",
+        "uri": "posts/dynamics-365-selecting-the-correct-tier-level-on-your-sandboxes",
+        "content": "When purchasing Dynamics 365 F O  Microsoft managed  but self service  environments included standard offer   Production  Tier 2 Standard Acceptance Testing Tier 1 Develop Build test environment   Microsoft described environment planning docs  will not discuss Tier 1 environments here  environments optimized development experiences  not perform performance testing tier 1 environment  Tier 2  environments based architecture production environment uses Azure SQL Database service  When running implementation project  common purchase additional tier 2  environment used different purposes shown table below  from Microsoft Docs  Selecting correct level important depending environment going used for  guidance  Microsoft following baseline recommendation  projects involved  often 3 4 Tier 2  environment purpose changed project  flow data environments included Sprint Cycle  process will start defining general parameters golden configuration environment  1   system setup  number sequences  master data will uploaded entered legacy systems  Test Stage Migration environment  2  will created based golden environment   transactional data packages initial startup data  will database refresh Test  2    UAT  2   test scripts will run approved  results configuration changes master data fed golden environment ready next data movement cycle  reason why this  ensure golden environment migration environment not corrupted testing  Go Live  when UAT approved  after few iterations   Migration environment will copied production environment  happen once  Subsequent updates production environment done manually using data packages   1   Tier 2 Golden environment  before PROD deployed   environment often changed become staging environment contains exact replica production environment  prefer golden environments Tier 2  simplifies transfer data using LCS self service database refresh   2   Tier 2 data migration  environment used making transactional data ready imported production environment Go Live   3   Tier 2 3 User acceptance  system really tested  Lot s regression testing running test scripts  focus functionality  concerns performance  Tier 5 environment purchased shorter period validate system handle full load large scale production environment  performance testing  recommended invest automation test script   Unless ask entire organization participate manual test   performance system combination raw computing power VM s hosing AOS  sizing Azure SQL  Dynamics 365 don t way s influencing sizing this  managed Microsoft  will size production environment according number users transactions per hour  Azure SQL boundaries Microsoft often related following sizing steps  don t exactly understand Microsoft mapping Tier 2  5 towards steps  experienced Tier 2 level cases P1  P2  P4 P6  information DTU capacity found here  summary expect 48 IOPS per DTU  So  P6 will provide 48000 IOPS  want check DTP limit  open SQL manager towards Azure SQL database  execute following script  SELECT sys dmdbresource_stats ORDER end_time DESC  DTU limit shown here  Tier 2 environment belonging initial subscription  seams 250 DTU s P2  puzzles go Tier 2 add on environment 500 DTU  P4  third Tier 2 add on environment 1000 DTU  P6  So seams not consistency DTU s provided Tier 2 add on purchased  far know  case production environment 1000 DTU s Or P6  customers  AOS es Tier 2 environment seams mostly D12 DS12 DS12_v2 4 CPU 28 Gb RAM 8x500Gb storage  capable giving 12 800 IOPS  puzzles number Tier 2 AOS s deployed  environments one AOS  one BI server  Tier 2 environments two AOS es one BI server assume differences related subscription estimator filled out  may impact deployed sandbox Tier 2 environments  Dynamics 365 performance indicators system administrator menu  gives numbers  cannot clear correlation environments performance  Maybe smart guys explain interpret performance test results  good  not   LargeBufferReads   does environments perform",
+        "objectID": "posts/dynamics-365-selecting-the-correct-tier-level-on-your-sandboxes",
+        "author_link": "",
+        "title": "Dynamics 365 Selecting the Correct Tier Level on Your Sandboxes",
+        "date": "2020-03-18T08:46:16.000Z",
+        "lastmod": "2020-03-18T08:46:16.000Z",
+        "draft": false,
+        "description": "",
+        "show_in_homepage": true,
+        "description_as_summary": false,
+        "license": "",
+        "tags": [
+            "Dynamics365"
+        ],
+        "categories": [
+            "Dynamicsax"
+        ],
+        "featured_image": "",
+        "featured_image_preview": "",
+        "toc": {
+            "enable": true,
+            "auto": false
+        },
+        "code": {
+            "copy": true
+        },
+        "math": {
+            "enable": true
+        },
+        "mapbox": {
+            "accessToken": ""
+        },
+        "share": {
+            "enable": true
+        },
+        "comment": {
+            "enable": true
+        }
+    },
+    {
+        "author": "hatlevik",
+        "uri": "posts/dynamics-365-shipping-container-labeling-guide",
+        "content": "Major retailers identified incorrect logistic unit  pallet  labeling major emerging supply chain issue  recent sample audit found approximately 44  pallet labels not meeting agreed upon industry requirements  issues face include  No label applied Label wrong location Information label does not match pallet Multiple labels different Serial Shipping Container Codes  SSCC  applied Pallet label will not scan Stretch wrap applied pallet label so doesn t scan following information contains guidelines general information create apply good quality logistic  pallet  labels per standard requirements Retail Industry  Retail Industry adopts key principles Efficient Consumer Response  ECR  increased demand high quality data capture points supply chain  Although industry numbering bar coding trade items number years  biggest emerging problem supply chain logistic unit labeling  migration automated scanning warehouses distribution centres  imperative suppliers logistics providers ensure 100  scannability bar codes will bring mutual benefits trading partners  Printing applying good quality bar code label complies industry standards scannable trading partners  costs no printing applying bar code label doesn t scan  document its recommendation read conjunction GS1 technical guidelines retailer specific documentation accessed downloaded respective websites               use logistic label incorporating Serial Shipping Container Code  SSCC  parties supply chain  manufacturers transporters  distributors retailers  seen inevitable identification tracking pallets forms logistic units  purpose GS1 logistics label uniquely identify specific information pallet clearly concisely standard format  facilitate process moving products supply chain quickly efficiently  Industry Business Benefits GS1 Logistics LabelLogistics Units identified number unique worldwideGS1 standards global apply entire supply chain  raw materials supplier manufacturer distributor wholesaler end user retailer Provides link bar coded information logistics unit information communicated trading partners via electronic business transactions Use identify contents pallets  including stock data  use by dates etcContributes efficient management stock rotation glanceSaves costs doing onceAvoids multiple label types  industry standard Faster receiving  quick turnaroundImproves data integrity   use date quantity fieldsStock rotation based use datePallet tracking vendor retailer assist product recallsWorks conjunction Dispatch Advice   Advanced Shipping Notice  ASN SSCC used inter intra company transactions  Fig 1  Example Numbering   Bar coding Labelling Hierarchy                GS1 Logistics Label typically different formats  SSCC mandatory piece information contained label itself ideally information flow  accompanies physical flow goods  communicated trading partners EDI  practice  however  fully automated communication channels  possible rely exclusively electronic files retrieving information movements goods  not always available  situation may requirement add additional information logistics label facilitate process logistic units supply chain  purpose GS1 logistics label provide information unit fixed  clearly concisely  core information label represented machine  bar code  human readable form  may information  represented human readable form only                imperative suppliers logistics providers ensure 100  scannability barcodes  reasons why pallet labels may not meet industry requirements  examples  Label position incorrect No pallet label applied Multiple mismatching SSCCs pallet Duplicated SSCCs Damaged label creases folds  Will not scan due incorrect bar code symbology poor print quality Label applied underneath stretch wrap Pallet label applied one side pallet Product information applied bar code does not match product pallet Pallet label bar codes not scanning   Ribbon wrinkle thermal transfer application Print head element failure leading line black bar  split bar  within bar code Poor print quality   faint print due label print head heat low print speed high Poor print quality   bleeding print due label printer print head heat high print speed low Handwritten changes not reflected bar code therefore not permitted pallet labels Label applied carton joins seams causing tearing Label Dimensions business requirements users GS1 Logistic Labels met using one following  A6  105 mm x 148 mm    4 x 6 inch  particularly suitable when SSCC  SSCC limited additional data  encoded A5  148 mm x 210 mm    6 x 8 inch However  label size suits labeller s requirements  large enough carry information required together GS1 128 bar codes  Factors influencing label sizes include amount type data required content X dimensions bar code symbols used  dimensions logistic unit labeled  Example label used single product parcels pallets  GTIN information  Example label used parcels pallets AI 403   Routing code without GTIN product information              minimum label size A6  105mm x 148mm  however larger label sizes A5 A4 permitted      label layout either portrait landscape Information contained",
+        "objectID": "posts/dynamics-365-shipping-container-labeling-guide",
+        "author_link": "https://en.gravatar.com/hatlevik",
+        "title": "Dynamics 365 货运集装箱标签指南",
+        "date": "2020-03-18T08:39:38.000Z",
+        "lastmod": "2020-03-18T08:39:38.000Z",
+        "draft": false,
+        "description": "",
+        "show_in_homepage": true,
+        "description_as_summary": false,
+        "license": "",
+        "tags": [
+            "Dynamics365"
+        ],
+        "categories": [
+            "Dynamicsax"
+        ],
+        "featured_image": "",
+        "featured_image_preview": "",
+        "toc": {
+            "enable": true,
+            "auto": false
+        },
+        "code": {
+            "copy": true
+        },
+        "math": {
+            "enable": true
+        },
+        "mapbox": {
+            "accessToken": ""
+        },
+        "share": {
+            "enable": true
+        },
+        "comment": {
+            "enable": true
+        }
+    },
+    {
+        "author": "ZhaoQiang",
+        "uri": "posts/dynamics-365-supply-structures-in-grocery-retail-industry",
+        "content": "Author link  https   en gravatar com hatlevik   Today will write bit supply chain structure retail grocery industry  challengers Dynamics 365 may face  address them  grocery industry years seen industry collaboration brings benefits synergies throughout value chain  industry collaboration offers range services its owners  customers partners  country I m from  main collaboration initiative TradeSolution  owned main grocery chains Norway  TradeSolution operates maintains central registers  databases  various IT  reporting analysis services Norway  pattern countries industries also  One essential element unification identify products products packed  ordered shipped  Norway term EPD  Electronic Product Database   makes easy entire Norwegian grocery marked purchase sell products  information shown blogpost originating TradeSolutions public pages here  EPD  Dynamics 365  one essential SCM elements products released products  associated master data tables related this  grocery industry actually packaging center all  products etc actually properties packing structure  oversimplification say EPD products  EPD describing not products  packaging products  EPD standard describing products 4 levels  basis  inner box  outer box pallet with SCCS   level identified GTIN  old blogpostabout SSCC  So far so good  model Dynamics 365 having product defined  Basis   use inner box  outer box pallet unit conversions  D365 possibility create barcodes unit measurement  UOM   quick assume EPD number external item description  Unfortunately  grocery industry bit complex  Let s quick look EPD numbers Coca Cola  actually 7 packing structure EPD numbers  shown right 7digits   represents different packaging basis unit  different properties attributes  boxes marked  F   means consumer unit  So talk D365 language  sold consumers  marked  B  means unit EPD number purchased in  So detailed look EPD 4507224  defined units sell  units purchase  single EPD number one level choose purchase of  2 examples describes complexity  First example EPD  grocer sell basis unit inner box unit  EPD 4507224  next example grocer sell basis unit inner box unit type  EPD 2142941    As here  conversion inner boxes pallet results different quantities     further add complexity add definition mix element  ordering happening inner box level  actually contains separate products sold stores  last element concept unmarked variants  package yogurts  Summary EPD product identified EPD number  EPDnr  unit identified GTIN  Global Trade Item Number  unit called  pakning  EPD product 4 levels units  hierarchy  product mix multiple  basis   mellom innerbox  units  basis  unit shared products first level units called  basis  EPD  often referred customer unit base unit  top level units called  topp  EPD  often referred load carrier unit  levels  basis   topp   if any  called   mellom innerbox outerbox   units basis unit consist units without identification called unmarked variants   umerkede varianter   Within EPD structure  one packings used ordering  Multiple packings used sale  key issues faced Dynamics 365 industry modelling products following  Cost  seen  product sold different UOM s  industry different purchase prices depending EPD number choose order  Meaning 4 pcs pack different cost 24 pcs pack  product purchased multiple UOM different prices  difficult model cost pricing correctly  inventory transactions will lowest item  inventory transaction costing based lowest level  meaning basis  costing problem reason why suggest FIFO retail grocery implementations  On hand  Keeping track basis units  consumer units difficult  not always know consumer breaking coca cola inner box  cost from  when having multiple purchasing units shown figure  makes difficult Dynamics 365 100  correctly model revenue per pcs sold  Unit conversion  shown example  unit  like pallet  contain different number basis products  means insufficient unify UoM per product  UoM conversion EPD dependent  Clear relationships UoM modelled  product may multiple definitions inner box  outer box pallet  External item descriptions  Dynamics 365 external item description cannot used  supports one external item description per vendor  UoM not taken consideration  Attributes  grocery industry  may different attributes per EPD number  different attributes per UoM  model Dynamics 365  solve distribution requirements  grocery industry  required front end remodeling products represented  grocery industry focused packaging Dynamics 365 product oriented  key EPD Object Oriented  product represented several packaging structures  entities disposal Dynamics 365 following  Products released products Unit measurement conversion Barcodes External item descriptions BOM s Dynamics 365 it  change architecture products transactions handled not near roadmap  try model structure way  EPD standard Dynamics 365 standard modelled work jointly together  First  lets try model EPD Only subset  grocery supply perspective Not D365    EPD consist multiple packaging structures  package main contain packages  bottom packing structure reference basic package  des",
+        "objectID": "posts/dynamics-365-supply-structures-in-grocery-retail-industry",
+        "author_link": "",
+        "title": "Dynamics 365 Supply Structures in Grocery Retail Industry",
+        "date": "2020-03-18T08:33:31.000Z",
+        "lastmod": "2020-03-18T08:33:31.000Z",
+        "draft": false,
+        "description": "",
+        "show_in_homepage": true,
+        "description_as_summary": false,
+        "license": "",
+        "tags": [
+            "Dynamics365",
+            ""
+        ],
+        "categories": [
+            "Dynamicsax",
+            ""
+        ],
+        "featured_image": "",
+        "featured_image_preview": "",
+        "toc": {
+            "enable": true,
+            "auto": false
+        },
+        "code": {
+            "copy": true
+        },
+        "math": {
+            "enable": true
+        },
+        "mapbox": {
+            "accessToken": ""
+        },
+        "share": {
+            "enable": true
+        },
+        "comment": {
+            "enable": true
+        }
+    },
+    {
+        "title": "Dynamics AX Auto Generate XML",
+        "uri": "posts/dynamics-ax-auto-generate-xml",
+        "content": "Query          Index               gt         gt  AIF   gt                Pravite Project                       Job    XML XSD CIG _ICTradeOrderService           XML                        XML            CIG _ICTradeOrderTable        Query           XML    text static void ExportOrderXml CIGICTradeOrderTable tradeOrderTable    AxdCIG_ICTradeOrder TradeOrder  AifEntityKey key  Map map  AifPropertyBag bag  XmlDocument xmlDocument   new XmlDocument    FileIoPermission perm  CIGICTradeOrderTable tradeOrderTable      CIGICTradeOrderTable  find _transRefId   CIG_ICTradeOrderLine tradeOrderLine  filename filename      strfmt    editest AX TEST  1_ 2 xml  strrem strrem salesTable SalesId           timenow     Boolean loadStatus    if _tradeOrderTable    filename   strfmt    edilive edilive FileSystem Root Inbound ORDER ORDER 2 xml  strrem strrem tradeOrderTable SalesPurchOrderId           tradeOrderTable EDIGUID   perm   new FileIoPermission fileName  wr    perm assert    map   new Map Types  Integer  Types  Container   map insert fieldnum CIGICTradeOrderTable  EDIGUID    tradeOrderTable EDIGUID    map insert fieldnum CIGICTradeOrderTable  OrderType    tradeOrderTable OrderType    key   new AifEntityKey    key parmTableId tablenum CIG_ICTradeOrderTable    key parmKeyDataMap map   try   tradeOrder   new AxdCIG_ICTradeOrder    loadStatus   xmlDocument loadXml tradeOrder read key  null  new AifEndPointActionPolicyInfo    new AifConstraintList    bag    if loadStatus    xmlDocument save filename   CIGQueueManager  createQueueManagerData tradeOrderTable  xmlDocument xml        AifMessageDirection  Outbound  filename   CIGTradeInterCompanyEDI  updateStatus _tradeOrderTable  Sent      CodeAccessPermission  revertAssert      catch   throw error  Error document service outbound",
+        "objectID": "posts/dynamics-ax-auto-generate-xml",
+        "date": "2020-01-13T01:50:21.000Z",
+        "description": "Auto Generate XML From AX Document Service",
+        "draft": false,
+        "tags": [
+            "Ax2009",
+            "Xml",
+            "DocumentService"
+        ],
+        "categories": [
+            "Dynamicsax"
+        ],
+        "toc": {
+            "enable": true,
+            "auto": false
+        },
+        "code": {
+            "copy": true
+        },
+        "math": {
+            "enable": true
+        },
+        "mapbox": {
+            "accessToken": ""
+        },
+        "share": {
+            "enable": true
+        },
+        "comment": {
+            "enable": true
+        }
+    },
+    {
+        "title": "Dynamics AX 版本号大全",
+        "uri": "posts/dynamics-ax-buildnumbers",
+        "content": "Microsoft Dynamics 365 Finance Operations                              Dynamics 365                                                                              Dynamics 365                  Microsoft Dynamics 365 Finance Operations                                    Microsoft                 2          Dynamics 365 Operations  1611 2016 11   Dynamics 365          2017 7   Dynamics 365 Finance Operations Enterprise edition 7 3 Dynamics 365 Finance Operations   8 0 2018 4                                                                                                                             SLA              8 1                                                    Microsoft                  Dynamics 365                   Microsoft                                                                                                                      Dynamics 365 Operations  1611 2016 11   Dynamics 365          2017 7   Dynamics 365 Finance Operations Enterprise edition 7 3 Dynamics 365 Finance Operations   8 0 2018 4    8 1                                                               Microsoft                       Microsoft                                                                               Microsoft                                                        1                                                                                                                                                                                                                                                              Dynamics 365                 10 0   10 0 8   2019 4                   Dynamics 365                 8 1   8 1 136   2018 10                                                                                                  3         8 1 x        10 0           2019 4                               2                                                                                                                                                                                                                                                                           Dynamics 365                 8   8 0 30   2018 4    2019 4 30      Dynamics 365 Finance Operations              7 3   7 3 11971 56116   2017 12    2019 4 30       Dynamics 365 Finance Operations              2017 7    7 2 11792 56024   2017 6    2019 4 30      Dynamics 365 Operations          1611   7 1 1541 3036   2016 11    2019 4 30      Dynamics AX          7 0 1   7 0 1265 23014   2016 5    2017 6      Dynamics AX          7   7 0 1265 3015   2016 2    2017 6            2019 4                         Microsoft                      2019 1 1                7 3                                         90                              FAQ   3                                                                                                                                                                                               26   7 0 5257   2019 5    N   A               25   7 0 5222   2019 4    N   A               24   7 0 5179   2019 3    N   A               23   7 0 5126   2019 1    N   A               22   7 0 5095   2018 12    N   A                  21   7 0 5073   2018 10    N   A                  20      7 0 5030   2018 10    N   A                  15     7 0 4841   2018 3    N   A                  12   7 0 4709   2017 11    2018 11          11   7 0 4679 35176   2017 10    2018 10          10   7 0 4641 16233   2017 8    2018 8          9   7 0 4612 35162   2017 7    2018 7          8   7 0 4565 16212   2017 6    2018 6          7   7 0 4542 16189   2017 5    2018 5          6   7 0 4509 16180   2017 4    2018 4          5   7 0 4475 16165   2017 3    2018 3          4   7 0 4425 16161   2017 2    2018 2          3   7 0 4307 16141   2016 11    2017 11          2   7 0 4230 16130   2016 8    2017 8          1   7 0 4127 16103   2016 5    2017 5        7 0   7 0 4030 16079   2016 2    2017 1          16 17 18 19             13 14         4                      Dynamics 365       8 0 7 3 7 2 2017 7                                                                                                                                                                                                                                                                                                                                   Dynamics 365          8 1 3 KB 4470000       Microsoft Dynamics 365       8 1 3     8 1 227   2019 1      Dynamics 365          8 1 2 KB 4470000       Microsoft Dynamics 365       8 1 2     8 1 195   2018 12      Dynamics 365          8 1 1 KB 4470000       Microsoft Dynamics 365       8 1 1     8 1 170   2018 10      Dynamics 365          8 0 4 KB 4458992 Microsoft Dynamics 365          8 0 4        KB 4458993 Microsoft Dynamics 365 Finance Operations     8 0 4 X         8 0 35 15532   2018 8      Dynamics 365          8 0 3 KB 4346176 Microsoft Dynamics 365          8 0 3        KB 4346172 Microsoft Dynamics 365          8 0 3 X         8 0 35 15342   2018 7      Dynamics 365          8 0 2 KB 4340414 Microsoft Dynamics 365          8 0 2       ",
+        "objectID": "posts/dynamics-ax-buildnumbers",
+        "date": "2019-12-09T09:57:40.000Z",
+        "description": "",
+        "draft": false,
+        "tags": [
+            "版本号",
+            "BuildNumber"
+        ],
+        "categories": [
+            "Dynamicsax"
+        ],
+        "toc": {
+            "enable": true,
+            "auto": false
+        },
+        "code": {
+            "copy": true
+        },
+        "math": {
+            "enable": true
+        },
+        "mapbox": {
+            "accessToken": ""
+        },
+        "share": {
+            "enable": true
+        },
+        "comment": {
+            "enable": true
+        }
+    },
+    {
+        "title": "Dynamics AX GoLive Data Import",
+        "uri": "posts/dynamics-ax-golive-data-import",
+        "content": "Dynamics AX GoLive Data Initialize GL      static void ImportTBGL Args _args       try   axLedgerJournalTable   new AxLedgerJournalTable    axLedgerJournalTable parmJournalName  FIOpening    axLedgerJournalTable parmName  TB GL 20190831    axLedgerJournalTable save    numImported   0  lineNo   1  record   csvFile read     csvFile status      IO_Status  Ok    record   csvFile read    lineNo   lineNo  1    record  break  ttsBegin   conPeek record 1         axLedgerJournalTrans   new AxLedgerJournalTrans    axLedgerJournalTrans parmJournalNum axLedgerJournalTable ledgerJournalTable   JournalNum   axLedgerJournalTrans parmTransDate str2Date  2019 8 31  321    axLedgerJournalTrans parmTxt  TBGL20190831    axLedgerJournalTrans parmAccountType LedgerJournalACType  Ledger   axLedgerJournalTrans parmAccountNum conPeek record 1    axLedgerJournalTrans parmCurrencyCode conPeek record 2     str2num conPeek record 3     0    axLedgerJournalTrans parmAmountCurDebit str2num conPeek record 3       else   axLedgerJournalTrans parmAmountCurCredit abs str2num conPeek record 3        axLedgerJournalTrans parmExchRate round conPeek record 4  0 0001    axLedgerJournalTrans parmOffsetAccountType LedgerJournalACType  Ledger   axLedgerJournalTrans parmOffsetAccount  9999    axLedgerJournalTrans save    numImported   numImported   1    else   info strfmt  line No     1    no accountNum  not imported  lineNo      ttsCommit      while        AP        static void ImportTBAP Args _args       try   axLedgerJournalTable   new AxLedgerJournalTable    axLedgerJournalTable parmJournalName  FIOpening    axLedgerJournalTable parmName  TB AP 20190831    axLedgerJournalTable save    numImported   0  lineNo   1  record   csvFile read     csvFile status      IO_Status  Ok    record   csvFile read    lineNo   lineNo  1    record  break  ttsBegin    conPeek record 1           VendTable  find conPeek record 1  false      axLedgerJournalTrans   new AxLedgerJournalTrans    axLedgerJournalTrans parmJournalNum axLedgerJournalTable ledgerJournalTable   JournalNum   axLedgerJournalTrans parmTransDate str2Date  2019 8 31  321    axLedgerJournalTrans parmTxt conPeek record 5    axLedgerJournalTrans parmAccountType LedgerJournalACType  Vend   axLedgerJournalTrans parmAccountNum conPeek record 1    axLedgerJournalTrans parmInvoice conPeek record 2    axLedgerJournalTrans parmDue str2Date conPeek record 3  321    axLedgerJournalTrans parmPostingProfile conPeek record 4    axLedgerJournalTrans parmCurrencyCode conPeek record 6     str2num conPeek record 8     0    axLedgerJournalTrans parmAmountCurDebit str2num conPeek record 8       else   axLedgerJournalTrans parmAmountCurCredit abs str2num conPeek record 8        axLedgerJournalTrans parmExchRate conPeek record 7    axLedgerJournalTrans parmOffsetAccountType LedgerJournalACType  Ledger   axLedgerJournalTrans parmOffsetAccount  9999    axLedgerJournalTrans save    numImported   numImported   1    else   info strfmt  line No     1    no accountNum  2  not imported  lineNo conPeek record 1       ttsCommit      while        AR OR            AR OR         OR    static void ImportTBAR Args _args       try   axLedgerJournalTable   new AxLedgerJournalTable    axLedgerJournalTable parmJournalName  FIOpening    axLedgerJournalTable parmName  TB AR 20190831    axLedgerJournalTable save    numImported   0  lineNo   1  record   csvFile read     csvFile status      IO_Status  Ok    record   csvFile read    lineNo   lineNo  1    record  break  ttsBegin    conPeek record 1           CustTable  find conPeek record 1  false      axLedgerJournalTrans   new AxLedgerJournalTrans    axLedgerJournalTrans parmJournalNum axLedgerJournalTable ledgerJournalTable   JournalNum   axLedgerJournalTrans parmTransDate str2Date  2019 8 31  321    axLedgerJournalTrans parmTxt conPeek record 5    axLedgerJournalTrans parmAccountType LedgerJournalACType  Cust   axLedgerJournalTrans parmAccountNum conPeek record 1    axLedgerJournalTrans parmInvoice conPeek record 2    axLedgerJournalTrans parmDue str2Date conPeek record 3  321    axLedgerJournalTrans parmPostingProfile conPeek record 4    axLedgerJournalTrans parmCurrencyCode conPeek record 6     str2num conPeek record 8     0    axLedgerJournalTrans parmAmountCurDebit str2num conPeek record 8       else   axLedgerJournalTrans parmAmountCurCredit abs str2num conPeek record 8        axLedgerJournalTrans parmExchRate conPeek record 7    axLedgerJournalTrans parmOffsetAccountType LedgerJournalACType  Ledger   axLedgerJournalTrans parmOffsetAccount  9999    axLedgerJournalTrans save    numImported   numImported   1    else   info strfmt  line No     1    no accountNum  2   not imported  lineNo conPeek record 1       ttsCommit      while          INVENTORY                               static void ImportTBInvent Args _args       try   numImported   0  lineNo   1  axInventJournalTable   new AxInventJournalTable    axInventJournalTable parmJournalNameId  MovInventoryAdjust     MovInventoryAdjust axInventJournalTable parmDescription  TB Invent 20190831    axInventJournalTable save    _journalId   axInventJournalTable inv",
+        "objectID": "posts/dynamics-ax-golive-data-import",
+        "date": "2020-01-13T06:58:36.000Z",
+        "description": "DynamicsAX项目上线期初数据的初始化-期初余额导入功能",
+        "draft": false,
+        "tags": [
+            "Ax2009",
+            "Data",
+            "Golive"
+        ],
+        "categories": [
+            "Dynamicsax"
+        ],
+        "toc": {
+            "enable": true,
+            "auto": false
+        },
+        "code": {
+            "copy": true
+        },
+        "math": {
+            "enable": true
+        },
+        "mapbox": {
+            "accessToken": ""
+        },
+        "share": {
+            "enable": true
+        },
+        "comment": {
+            "enable": true
+        }
+    },
+    {
+        "title": "Dynamics AX GoLive Data Initialize",
+        "uri": "posts/dynamics-ax-golive-data-initialize",
+        "content": "1 88                     AX                                         201 213                     AX   01 Open SO                                                      02 Open PO                                                      03 Opening Balance                                                                                              01               02                         Dynamics AX GoLive Data Import                                                Go live check list                                                                                                            Date used Sheet based China Time zone           Task   Type   Module     1   Validate Inventory Module Parameter   Parameter   Inventory     2   Validate Production Module Parameter   Parameter   Production     3   Validate Master Plan Module Parameter   Parameter   Master Plan     4   Validate Master Plan Setup   Setup   Master Plan     5   Validate Sales Module Parameter   Parameter   Sales     6   Validate Purchase Module Parameter   Parameter   Purchase     7   Validate Accounts Receivable Module Parameter   Parameter   AR     8   Validate Accounts Payable Module Parameter   Parameter   AP     9   Validate General Ledger Module Parameter   Parameter   GL     10   Validate Fixed Assets Module Parameter   Parameter   FA     11   Validate Organization Module Setup   Parameter   System     12   Validate System Administration Setup   Parameter   System     13   Validate Number sequence Inventory Module   Parameter   System     14   Validate Number sequence Production Module   Parameter   System     15   Validate Number sequence General Journal   Parameter   System     16   Validate Number sequence Accounts Receivable   Parameter   System     17   Validate Number sequence Accounts Payable   Parameter   System     18   Validate Number sequence Fixed Assets   Parameter   System     19   Validate Number sequence Sales Order Module   Parameter   System     20   Validate Number sequence Purchase Order Module   Parameter   System     21   Validate User Permission Setup   Parameter   System     22   Units   Setup   Inventory     23   Unit Convert   Setup   Inventory     24   Site   Setup   Inventory     25   Warehouse   Setup   Inventory     26   Locations   Setup   Inventory     27   Item Group   Setup   Finance     28   Inventory Model Group   Setup   Inventory     29   Dimension Group   Setup   Inventory     30   Cost group   Setup   Costing     31   Calculation group   Setup   Costing     32   Counting Group   Setup   Inventory     33   Intercompany Setup   Setup   Inventory     34   Validate Item Master   Master Data   Engerring     35   Validate BOM   Master Data   Engerring     36   Validate Routes   Master Data   Engerring     37   Validate Operations   Master Data   Engerring     38   Inventory Journal Name   Setup   Inventory     39   Working Time Template   Setup   Production     40   Working Calendar   Setup   Production     41   Production Pool   Setup   Production     42   Coverage Group   Setup   Master Plan     43   Cost Catergory   Setup   Costing     44   Resource Group   Setup   Production     45   Resources   Setup   Production     46   Chart Accounts   Master Data   GL     47   Finance Dimensions   Master Data   GL     48   Currency Rates   Setup   GL     49   Financial Report Setup   Setup   GL     50   Sales Tax Group   Setup   GL     51   Item sales tax group   Setup   GL     52   Sales tax codes   Setup   GL     53   Fixed assets cards   Master Data   FA     54   Fixed assets group   Setup   FA     55   Fixed assets value model   Setup   FA     56   Fixed assets posting profile   Setup   FA     57   Fixed assets depreciation profile   Setup   FA     58   Finance Calendar   Setup   GL     59   Generla Ledger Journal Names   Setup   GL     60   General Ledger   System accounts   Setup   GL     61   Bank Group   Setup   Bank     62   Bank Accounts   Setup   Bank     63   Employees   Setup   System     64   Customer Group   Setup   AR     65   Customer Master   Master Data   Sales     66   Accounts Receivable Posting profile   Setup   AR     67   Accounts Receivable Misc Charge   Setup   AR     68   Payment Term   Setup   AR     69   Method payment   Setup   AR     70   Vendor Group   Setup   AP     71   Vendor Master   Master Data   Purchase     72   Accounts Payable Posting profile   Setup   AP     73   Accounts Payeble Misc Charge   Setup   AP     74   Inventory Posting Item   Item Group    Setup   Inventory     75   Accounts setup Inventory Journal   Setup   Inventory     76   Accounts setup cost categories   Setup   Inventory     77   Sales Forecast   Setup   Master Plan     78   Sales trade agreement   Setup   Sales     79   Purchase trade agreement   Setup   Purchase     80   Mode delivery   Setup   Sales     81   Delivery term   Setup   Sales     82   address book   Setup       83   Contact   Setup   Sales     84   Shipping instruction   Setup   Sales     85   Billing instruction   Setup   Sales     86   CustExternalItem   Setup   Sales     87   Item  defaul warehouse    Setup   Inventory     88   Order pool   Setup   Sales    ",
+        "objectID": "posts/dynamics-ax-golive-data-initialize",
+        "date": "2020-01-02T02:19:24.000Z",
+        "description": "DynamicsAX项目上线期初数据的初始化",
+        "draft": false,
+        "tags": [
+            "Ax2009",
+            "Data",
+            "Golive"
+        ],
+        "categories": [
+            "Dynamicsax"
+        ],
+        "toc": {
+            "enable": true,
+            "auto": false
+        },
+        "code": {
+            "copy": true
+        },
+        "math": {
+            "enable": true
+        },
+        "mapbox": {
+            "accessToken": ""
+        },
+        "share": {
+            "enable": true
+        },
+        "comment": {
+            "enable": true
+        }
+    },
+    {
+        "title": "Dynamics AX Issue： Insufficient Memory to Run Script",
+        "uri": "posts/dynamics-ax-insufficient-memory-to-run-script",
+        "content": "AX4 0 5 0                            AX2012  50MB    AX2009    7MB Error executing code  Insufficient memory run script  Error executing code  Insufficient memory run script                        Dynamics AX Client  correct Registry value is  AX 4 0    Key name   HKEYCURRENTUSER Software Microsoft Dynamics 4 0 Configuration  configuration name   Value name  maxbuffersize Value type  REG_SZ Value   Maximum amount memory MB 0 no limit    AX 2009    Key name   HKEYCURRENTUSER Software Microsoft Dynamics 5 0 Configuration  configuration name   Value name  maxbuffersize Value type  REG_SZ Value   Maximum amount memory MB 0 no limit                   maxbuffersize Text 15    axc     15  15MB   Dynamics AX  Net Business Connector AX BizTalk Adapter  correct location is  AX 4 0    Key name   HKEYLOCALMACHINE Software Microsoft Dynamics 4 0 Configuration  configuration name   Value name  maxbuffersize Value type  REG_SZ Value   Maximum amount memory MB 0 no limit    AX 2009    Key name   HKEYLOCALMACHINE Software Microsoft Dynamics 5 0 Configuration  configuration name   Value name  maxbuffersize Value type  REG_SZ Value   Maximum amount memory MB 0 no limit     Dynamics AX AOS  correct Registry value is  AX 4 0    Key name   HKEYLOCALMACHINE SYSTEM CurrentControlSet Services Dynamics Server 4 0  AOS instance   configuration name   Value name  maxbuffersize Value type  REG_SZ Value   Maximum amount memory MB 0 no limit    AX 2009    Key name   HKEYLOCALMACHINE SYSTEM CurrentControlSet Services Dynamics Server 5 0  AOS instance   configuration name   Value name  maxbuffersize Value type  REG_SZ Value   Maximum amount memory MB 0 no limit                 maxbuffersize                                 0               References  KB961548  KB953914",
+        "objectID": "posts/dynamics-ax-insufficient-memory-to-run-script",
+        "subtitle": "",
+        "date": "2020-07-07T01:08:44.000Z",
+        "lastmod": "2020-07-07T01:08:44.000Z",
+        "draft": false,
+        "author": "ZhaoQiang",
+        "authorLink": "",
+        "description": "",
+        "tags": [
+            "Ax2009",
+            "Ax4.0",
+            ""
+        ],
+        "categories": [
+            "Dynamicsax",
+            ""
+        ],
+        "hiddenFromHomePage": false,
+        "hiddenFromSearch": false,
+        "featuredImage": "",
+        "featuredImagePreview": "",
+        "toc": {
+            "enable": true,
+            "auto": false
+        },
+        "code": {
+            "copy": true
+        },
+        "math": {
+            "enable": true
+        },
+        "mapbox": {
+            "accessToken": ""
+        },
+        "share": {
+            "enable": true
+        },
+        "comment": {
+            "enable": true
+        },
+        "lightgallery": false,
+        "license": ""
+    },
+    {
+        "author": "ZhaoQiang",
+        "uri": "posts/dynamics-ax-record-level-security",
+        "content": "Record Level Security Applies To  Microsoft Dynamics AX 2012 R3  Microsoft Dynamics AX 2012 R2  Microsoft Dynamics AX 2012 Feature Pack  Microsoft Dynamics AX 2012  Microsoft Dynamics AX 2009 Record level security  RLS  automatically handled kernel when form report opened  However  record level security bypassed following situations  Using display edit methods Using FormListControl  FormTreeControl TableListControl show data Using temporary table data source enable Database trace option view messages indicate when record level security applied method call  Note   record level security feature will removed future release  previously set record level security filters  will continue function  setting new filters  recommend create data security policies using extensible data security framework  information data security policies  Overview Security Policies Table Records    Note   Record level security its own configuration key  SysRecordLevelSecurity     Using Display Edit Methods Whenever display edit method used return value row  evaluate business impact displaying data  determine displaying data cause unwanted data disclosure  perform explicit authorization check call methods  Record level security not required situations  When value calculated  When value based values fields current record  Using FormListControl  FormTreeControl  TableListControl Show Data Populating FormListControl  FormTreeControl  TableListControl data query lead unwanted information disclosure  cases manually enable record level security  following example illustrates manually enable record level security  public void run   CustTable custTable  super       Ensure record level security  RLS  used custTable recordLevelSecurity true   select custTable   listView add custTable AccountNum       Using Temporary Table Data Source When form cache filled data temporary table  sure data uses record level security  includes tables declared temporary code Temporary property table Application Object Tree  AOT  set Yes  following example shows use record level security temporary table  public void run   CustTable custTable  tmpDatasource       Ensure record level security  RLS  used custTable recordLevelSecurity true   select custTable   tmpDataSource data custTable   tmpDataSource insert      formDataSource setTmp    formDataSource checkRecord false   formDataSource setTmpData tmpDatasource   super      Using Database Tracing Identify Record Level Security Applied When database trace started  output sends message window includes information statements record level security applied  line displaying  RLS  end indicates record level security enabled call method  following example message shows record level security enabled call salesLine select method  salesLine select    RLS  enable database tracing Click Tools   Options  click Development link  Trace FastTab  select Database trace check box",
+        "objectID": "posts/dynamics-ax-record-level-security",
+        "author_link": "",
+        "title": "Dynamics AX Record Level Security",
+        "date": "2020-02-27T01:21:37.000Z",
+        "lastmod": "2020-02-27T01:21:37.000Z",
+        "draft": false,
+        "description": "",
+        "show_in_homepage": true,
+        "description_as_summary": false,
+        "license": "",
+        "tags": [
+            "Ax2009",
+            "Ax2012"
+        ],
+        "categories": [
+            "Dynamicsax"
+        ],
+        "featured_image": "",
+        "featured_image_preview": "",
+        "toc": {
+            "enable": true,
+            "auto": false
+        },
+        "code": {
+            "copy": true
+        },
+        "math": {
+            "enable": true
+        },
+        "mapbox": {
+            "accessToken": ""
+        },
+        "share": {
+            "enable": true
+        },
+        "comment": {
+            "enable": true
+        }
+    },
+    {
+        "author": "ZhaoQiang",
+        "uri": "posts/dynamics-ax-run-a-batch",
+        "content": "Walkthrough  Extending RunBaseBatch Class Create Run Batch Applies To  Microsoft Dynamics AX 2012 R3  Microsoft Dynamics AX 2012 R2  Microsoft Dynamics AX 2012 Feature Pack  Microsoft Dynamics AX 2012 design own batch job extending RunBaseBatch class  write code schedule batch run  default  batch scheduled  batch no longer associated client  batch runs Application Object Server  AOS   However  option batch run client  walkthrough illustrates following tasks  Configuring AOS batch server Extending RunBaseBatch class Scheduling batch Viewing scheduled batch Making batch dependent client session Running batch client Configuring AOS Batch Server procedure will configure AOS batch server  configure AOS batch server Open application workspace  Navigation Pane  click Administration  expand Setup  expand System  click Server configuration  Server configuration form  click row AOS listed  details section form  select check box labeled batch server  Batch server schedule section  sure server process least few concurrent threads  eight nice default   Ensure start to end time range broad enough include time when want test  Close form  Extending RunBaseBatch Class procedure  will extend RunBaseBatch class  Objects type RunBaseBatch implement methods system needs order run object batch job  will extend RunBaseBatch override run method  run method contains logic handles particular processing need solving  extend RunBaseBatch Press Ctrl D open Application Object Tree  AOT  development workspace  Right click Classes node  select New Class  Expand node new class  Rename Batch4DemoClass  Right click classDeclaration node Batch4DemoClass  click View Code  code Editor window  Batch4DemoClass  add extends RunBaseBatch  Save change  AOT right click Batch4DemoClass node  select Override method  select run method  Edit run method match code shown following example  Override methods pack unpack  Edit match code shown following example  Note example  not yet override runsImpersonated method  base method always returns true  true means batch run authority person scheduled batch  no client session involved  X  Copy class Batch4DemoClass extends RunBaseBatch   public void run        purpose job  info strFmt  Hello Batch4DemoClass  run  1   DateTimeUtil   toStr  DateTimeUtil   utcNow          public container pack     return conNull      public boolean unpack container packedClass    return true      Scheduling Batch procedure  will write X   job run schedule occurrence batch  will run job  schedule batch job AOT  right click Jobs node  select New Job  Editor window  enter X   code shown following example  save changes  Editor window  press F7 compile job  press F5 run job  Note result job batch scheduled run  X  Copy static void JobScheduleBatch2 Args args    BatchHeader batHeader  BatchInfo batInfo  RunBaseBatch rbbTask  str sParmCaption    My Demonstration  b351      rbbTask   new Batch4DemoClass    batInfo   rbbTask  batchInfo    batInfo  parmCaption sParmCaption   batInfo  parmGroupId          Empty batch group   batHeader   BatchHeader   construct    batHeader  addTask rbbTask   batHeader  save    info strFmt    1  batch scheduled    sParmCaption      Click Build menu  click Generate Incremental CIL  CIL build necessary batch jobs run AOS run  NET Framework managed mode  Viewing Scheduled Batch procedure  will use Navigation Pane view line item represents scheduled batch  view scheduled batch Navigation Pane  click System administration  expand Inquiries  expand Batch jobs  click Batch jobs  Batch job form   find row batch job read its value Status column  status becomes Ended  click Batch job history button  Batch job history form  click Log button  displays Infolog form shows output message Batch4DemoClass  run method  following actual output messages captured Infolog  Message_ SYS14327  02 12 57 pm  Hello Batch4DemoClass  run  2008 01 25T22 05 48 Infolog Job Demonstration  b351   5637144579  Infolog Task Demonstration  b351   5637144579  Hello Batch4DemoClass  run  2008 01 25T22 05 48 Making Batch Dependent Client Session procedure  add override runsImpersonated method Batch4DemoClass class  override method return false  value false means system cannot run batch having impersonate logged session  Instead  system find client session user system run batch  on server  always   client session exist different computer AOS running  batch dependent client session Override runsImpersonated method Batch4DemoClass class  override code shown example  Rerun job ScheduleMyBatchJob_Job  View batch Batch job form  X  Copy public boolean runsImpersonated        false means batch run client  return false    Running Batch Client batch class overrides runImpersonated method  override makes batch eligible run client computer  run job schedules batch  batch remains waiting status until use client tell AOS send client bound batch client so batch run  procedure  will use Navigation Pane tell AOS send client bound batches client  run batch client Navigation Pane  click Basic  expand Periodic  expand Batch  click Processing  displays form Set batch processing  Click drop",
+        "objectID": "posts/dynamics-ax-run-a-batch",
+        "author_link": "",
+        "title": " Walkthrough: Extending RunBaseBatch Class to Create and Run a Batch",
+        "date": "2020-03-18T01:55:23.000Z",
+        "lastmod": "2020-03-18T01:55:23.000Z",
+        "draft": false,
+        "description": "Applies To: Microsoft Dynamics AX 2012 R3, Microsoft Dynamics AX 2012 R2, Microsoft Dynamics AX 2012 Feature Pack, Microsoft Dynamics AX 2012",
+        "show_in_homepage": true,
+        "description_as_summary": false,
+        "license": "",
+        "tags": [
+            "Ax2012",
+            ""
+        ],
+        "categories": [
+            "Dynamicsax",
+            ""
+        ],
+        "featured_image": "",
+        "featured_image_preview": "",
+        "toc": {
+            "enable": true,
+            "auto": false
+        },
+        "code": {
+            "copy": true
+        },
+        "math": {
+            "enable": true
+        },
+        "mapbox": {
+            "accessToken": ""
+        },
+        "share": {
+            "enable": true
+        },
+        "comment": {
+            "enable": true
+        }
+    },
+    {
+        "author": "ZhaoQiang",
+        "uri": "posts/dynamics-ax-upgrade-to-cu9",
+        "content": "Dynamics AX 2012 R3 CU 9       CU 9                           Microsoft Dynamics AX 2012 R3 CU8      9        MS Dynamics AX 2012 R3 CU 9                 slipstream       slipstreaming                              MS Dynamics AX 2012 R3 CU 9                     CU9   MS Dynamics AX 2012 R3 CU 8             Microsoft Dynamics Lifecycle Services    CU 9      Microsoft Dynamics Lifecycle Services PartnerSource     Dynamics AX                      LCS Dynamics AX      CU 9                                                Admin Dynamics AX             SQL Server     SecurityAdmin                        db_owner                                              PartnerSource Microsoft Dynamics                                                                                 axupdate exe       AX                                                                                                                             17                                                          LCS                    8 9 10                 LCS                  LCS                                                                                                                                                                                                                                                                                                    Dynamics AX   CIL                                                                                                                                                7                                                                                                                              64        32                                                                                       AOS      Microsoft Dynamics AX2012",
+        "objectID": "posts/dynamics-ax-upgrade-to-cu9",
+        "author_link": "",
+        "title": "Dynamics AX Upgrade to Cu9",
+        "date": "2020-04-14T07:11:59.000Z",
+        "lastmod": "2020-04-14T07:11:59.000Z",
+        "draft": false,
+        "description": "",
+        "show_in_homepage": true,
+        "description_as_summary": false,
+        "license": "",
+        "tags": [
+            "Ax2012"
+        ],
+        "categories": [
+            "Dynamicsax"
+        ],
+        "featured_image": "",
+        "featured_image_preview": "",
+        "toc": {
+            "enable": true,
+            "auto": false
+        },
+        "code": {
+            "copy": true
+        },
+        "math": {
+            "enable": true
+        },
+        "mapbox": {
+            "accessToken": ""
+        },
+        "share": {
+            "enable": true
+        },
+        "comment": {
+            "enable": true
+        }
+    },
+    {
+        "title": "Using webservice to connect with Dynamics AX",
+        "uri": "posts/dynamics-ax-webservice",
+        "content": "AX     SystemConnector   Csharp              Systemconnector            AX             c axServiceProvider handleAgileData  cig   _XMLStr          axServiceProvider           CallStaticClassMethod       AX       c string returnStr    string op CallStaticClassMethod  AX Class    Class Method   legal  XMLStr                XML       AX AX        XML                   axServiceProvider        AX2009                                Ax             Csharp            Consume SystemConnector VS  c using System  using System Collections Generic  using System IO  using System Linq  using System Web  using System Web UI  using System Web UI WebControls  using System Xml  using SystemConnector DynamicsAX  namespace CIG_WCF4AgileAX   public partial class WebForm1   System Web UI Page   protected void Page_Load object sender  EventArgs e    string ret         string _XMLStr   GetXmlDocument   D  AgileXml HDC000076 utf xml      string _XMLStr   GetXmlDocument   E  AgileXml test1014 UPD 1014 33 01 xml    string _XMLStr   GetXmlDocument   E  AgileXml test1014 CIG000780 xml      string _XMLStr    AX MES RDIF Go   try   AXServiceProvider axServiceProvider   new AXServiceProvider      ret   axServiceProvider handleRFIDData  cig   _XMLStr   ret   axServiceProvider handleAgileData  cig   _XMLStr     catch  Exception ex    ret  ex ToString      Response Write ret     private static string GetXmlDocument string xmlPath    try   XmlDocument doc   null   File Exists xmlPath     doc   new XmlDocument    doc Load xmlPath     return doc InnerXml    catch  Exception ex    System Diagnostics Debug Write ex Message     return null              AX            AX2009            AOT Reference                     dll",
+        "objectID": "posts/dynamics-ax-webservice",
+        "date": "2020-01-14T03:03:30.000Z",
+        "description": "",
+        "draft": false,
+        "tags": [
+            "Ax2009",
+            "WebService",
+            "Wcf"
+        ],
+        "categories": [
+            "Dynamicsax"
+        ],
+        "toc": {
+            "enable": true,
+            "auto": false
+        },
+        "code": {
+            "copy": true
+        },
+        "math": {
+            "enable": true
+        },
+        "mapbox": {
+            "accessToken": ""
+        },
+        "share": {
+            "enable": true
+        },
+        "comment": {
+            "enable": true
+        }
+    },
+    {
+        "title": "用 Hugo 配合 Algolia 实现高效美观的站内搜索",
+        "uri": "posts/hugo-algolia",
+        "content": "Youtube   BiliBili        Hugo                                                   Hugo                   Algolia             EVEN       LOVEIT                      Algolia          Application   NEW APPLICATION Name       FREE                     Indices   Index      Indices     Create Index Index name             API Keys     API Keys       Keys                 config yaml  themes    config yaml        key Admin API Key  baseurl   https   www nashome cn   DefaultContentLanguage   zh cn  hasCJKLanguage  true languageCode   zh cn  title   zhaoqiang s blog  theme   loveit  metaDataFormat   yaml  algolia  index     blogloveit  key    9748e4cf6b  appID    KWB5  hugo aligolia         hugo algolia                   hugo aligolia               npm    yarn                       npm install hugo algolia  g                         hugo algolia  s JSON index file created public algolia json   updatedAt   2020 01 23T02 36 09 480Z   taskID  249063848950           dashboard     Indices                                             index     false            search html  themes LoveIt layouts partials  search html          search js  themes LoveIt assets js   search js   function              algolia   var client   algoliasearch  KWB5    7139d  9748e4cf6bc36ab191d    var index   client initIndex    blogloveit    autocomplete    aa search input     hint  false      source  autocomplete sources hits index    hitsPerPage  8     displayKey   name   templates    suggestion  function suggestion    console log suggestion   var search   suggestion search    search   suggestion search    else   search   suggestion uri    return             suggestion _highlightResult title value                    document  on  click     aa suggestion   function      var aa     this  find  a   attr  href    window location href   aa           search css    themes LoveIt assets css     search css      import  https   fonts googleapis com css family Montserrat 400 700    aa input container   display  inline block  position  relative  width  100      aa input container span  aa input container input   width  inherit     aa input search   width  300px  padding  12px 28px 12px 12px  border 0px  border  2px solid  e4e4e4  border radius  4px   webkit transition   2s  transition   2s  font family   Montserrat   sans serif  box shadow  4px 4px 0 rgba 241  241  241  0 35   font size  11px  box sizing  border box  color  black   webkit appearance  none   moz appearance  none  appearance  none  font weight  bold     aa input search   webkit search decoration   aa input search   webkit search cancel button   aa input search   webkit search results button   aa input search   webkit search results decoration   display  none     aa input search focus   outline  0  border color   D3D3D3  box shadow  4px 4px 0 rgba 58  150  207  0 1      aa input icon   height  16px  width  16px  position  absolute  top  50   right  16px   webkit transform  translateY  50    transform  translateY  50    fill   e4e4e4     aa hint   color  yellow     aa dropdown menu   background color   fff  border  2px solid rgba 228  228  228  0 6   border top width  1px  font family   Montserrat   sans serif  width  300px  margin top  10px  box shadow  4px 4px 0 rgba 241  241  241  0 35   font size  11px  border radius  4px  box sizing  border box     aa suggestion   padding  12px  border top  1px solid gray  cursor  pointer   webkit transition   2s  transition   2s  display   webkit box  display   ms flexbox  display  flex   webkit box pack  justify   ms flex pack  justify  justify content  space between   webkit box align  center   ms flex align  center  align items  center               aa suggestion hover   aa suggestion aa cursor   background color   F5F5F5     aa suggestion   span first child   color   000     aa suggestion   span last child   text transform  uppercase  color   000     aa suggestion   span first child em   aa suggestion   span last child em   font weight  700  font style  normal  background color  rgba 0  0  0  0 1   padding  2px 0 2px 2px     aa suggestion a  color   000  font weight bold     aa suggestion a hover  color   4B89DC     baseof html       themes LoveIt layouts _default baseof html         ne  Site Params version  5 x         errorf   n nThere two possible situations led error  n 1  haven t copied config toml yet  https   github com dillonzq LoveIt installation  n 2  incompatible update  https   github com  dillonzq LoveIt blob master CHANGELOG md  n n                   n 1         config toml    https   github com dillonzq LoveIt installation  n 2                  https   github com  dillonzq LoveIt blob master CHANGELOG md  n         end        block  title          Site Title      end        partial  head html       window isDark    window localStorage    window localStorage getItem  theme         dark   window isDark    document body classList add  dark theme       partial  header html           block  content         end        partial  footer html           partial  scripts html         nbsp     partial  search html         css   js    head html            res    resources Ge",
+        "objectID": "posts/hugo-algolia",
+        "date": "2020-02-18T01:13:13.000Z",
+        "lastmod": "2020-02-18T01:13:13.000Z",
+        "draft": false,
+        "description": "",
+        "show_in_homepage": true,
+        "description_as_summary": false,
+        "license": "",
+        "tags": [
+            "hugo",
+            "algolia",
+            "站内搜索",
+            "search"
+        ],
+        "categories": [
+            "hugo"
+        ],
+        "featured_image": "",
+        "featured_image_preview": "",
+        "toc": {
+            "enable": true,
+            "auto": false
+        },
+        "code": {
+            "copy": true
+        },
+        "math": {
+            "enable": true
+        },
+        "mapbox": {
+            "accessToken": ""
+        },
+        "share": {
+            "enable": true
+        },
+        "comment": {
+            "enable": true
+        }
+    },
+    {
+        "title": "用 Hugo 配合 Github Actions 自动构建我的博客",
+        "uri": "posts/hugo-github-actions",
+        "content": "Youtube   BiliBili     GitHub                develop         Hugo            gh pages                  GitHub Pages        GitHub Pages                                             git checkout  b gh pages git push origin gh pages git checkout  b develop git push origin develop       Hugo           Hugo                Actions             Hugo                                                  Even       git clone https   github com olOwOlo hugo theme even themes even      blog themes even exampleSite       config tom                 blog themes even exampleSite content             content               hugo  D server   hugo             public                 public              gh_pages            GitHub Pages      Actions                  develop                        1       1     Hugo    1     Hugo 1    public          gh pages        github workflows        gh_pages yml   name  GitHub Page Deploy on  push  branches  develop jobs  build deploy  runs on  ubuntu 18 04 steps  name  Checkout master uses  actions checkout v1 name  Setup Hugo uses  peaceiris actions hugo v2 with  hugo version   0 61 0  extended  true name  Build Hugo run    hugo name  Deploy Hugo gh pages uses  peaceiris actions gh pages v2 env  ACTIONSDEPLOYKEY      secrets ACTIONSDEPLOYKEY    PUBLISH_BRANCH  gh pages PUBLISH_DIR    public      action       github actions marketplace                     uses     actions               shell                                          gh pages                   settings secrets                 peaceiris actions gh pages v2                  secrets                 peaceiris actions gh pages v2                  ACTIONSDEPLOYKEY        secrets                  Github  text    bin bash echo  e   033 0 32mDeploying updates GitHub    033 0m  Build project  hugo  t even Add changes git  git add   Commit changes  msg  rebuilding site date        eq 1   msg   1  fi git commit  m   msg  Push source build repos  git push origin develop            Github   PUSH Actions                 1",
+        "objectID": "posts/hugo-github-actions",
+        "date": "2020-01-09T06:52:40.000Z",
+        "description": "",
+        "draft": false,
+        "tags": [
+            "GithubPages",
+            "GithubActions"
+        ],
+        "categories": [
+            "hugo"
+        ],
+        "toc": {
+            "enable": true,
+            "auto": false
+        },
+        "code": {
+            "copy": true
+        },
+        "math": {
+            "enable": true
+        },
+        "mapbox": {
+            "accessToken": ""
+        },
+        "share": {
+            "enable": true
+        },
+        "comment": {
+            "enable": true
+        }
+    },
+    {
+        "title": " 同时部署 Hugo 静态博客到 Netlify 和 Github Pages",
+        "uri": "posts/hugo-netlify",
+        "content": "Youtube   BiliBili    Github Pages       Hugo    GithubActions            Even                              git submodule add https   github com zhaoqiangcn hugo theme even git themes even                gitmodules                       submodule  themes even   path   themes even url   https   github com zhaoqiangcn hugo theme even git              git push                         Hugo     Netlify                            Netlify                                              Domain settings                Custom domains       Add domain alias                                     DNS       DNS             NETLIFY DNS               dns1 p01 nsone net dns2 p01 nsone net dns3 p01 nsone net dns4 p01 nsone net      HTTPS   HTTPS       SSL TLS certificate                 Let s Encrypt                          Chrome                              https                   F12               Network                 https",
+        "objectID": "posts/hugo-netlify",
+        "date": "2020-01-12T06:49:17.000Z",
+        "description": "百度无法收录github pages，因此本文介绍如何把hugo 同时部署到github pages和netlify而且每次更新文章只需要push到github即可",
+        "draft": false,
+        "tags": [
+            "Netlify",
+            "GithubPages",
+            "Even"
+        ],
+        "categories": [
+            "hugo"
+        ],
+        "toc": {
+            "enable": true,
+            "auto": false
+        },
+        "code": {
+            "copy": true
+        },
+        "math": {
+            "enable": true
+        },
+        "mapbox": {
+            "accessToken": ""
+        },
+        "share": {
+            "enable": true
+        },
+        "comment": {
+            "enable": true
+        }
+    },
+    {
+        "title": "用 Hugo 配合 Valine 实现评论后实时邮件通知",
+        "uri": "posts/hugo-valine-email",
+        "content": "Youtube   BiliBili       Leancloud                             Valine                              Valine Admin  by  zhaojun1998     Valine Admin                  Valine               Valine            Leancloud                                                    Github                     Valine                config toml    notify     false     Leancloud     Valine                           https   github com zhaojun1998 Valine Admin             Git           master                                                                                          SITE_NAME         SITE_URL                   SMTP_USER   SMTP                SMTP_PASS   SMTP                                        SMTP_SERVICE              QQ 163 126 Gmail  Yahoo                    Nodemailer Supported services                               SENDER_NAME               SMTP                    SMTP_USER        SMTP        QQ                    SMTPUSER           SMTPPASS SMTP_SERVICE     QQ      TEMPLATE_NAME                         default   rainbow     default   TOEMAIL                              SMTPUSER     SMTP_SERVICE                                   SMTP_HOST           SMTP      qq   smtp qq com                  SMTP_PORT           SMTP                      SMTP_SECURE               true                                                               SMTPSERVICE   SMTPSERVICE                   LeanCloud         LeanCloud                  24              6     30                                                                                        7   23    20                                          Web                                         Web                    Web                                                          ADMIN_URL Web                                                                         self_wake Cron                7    23  20                                  20                                                       LeanCloud      LeanCloud                                       email password username             email                    email         SMTPUSER   TOEMAIL                 Web",
+        "objectID": "posts/hugo-valine-email",
+        "date": "2020-01-16T06:54:04.000Z",
+        "description": "Valine 评论系统 邮件通知",
+        "draft": false,
+        "tags": [
+            "Valine"
+        ],
+        "categories": [
+            "hugo"
+        ],
+        "toc": {
+            "enable": true,
+            "auto": false
+        },
+        "code": {
+            "copy": true
+        },
+        "math": {
+            "enable": true
+        },
+        "mapbox": {
+            "accessToken": ""
+        },
+        "share": {
+            "enable": true
+        },
+        "comment": {
+            "enable": true
+        }
+    },
+    {
+        "title": "用 Hugo 配合 Valine 实现简洁的评论交互",
+        "uri": "posts/hugo-valine",
+        "content": "Youtube   BiliBili Leancloud            leancloud       leancloud                    LeanCloud                                        Key     App ID App Key                                       Class       Class        Counter   Comment                                                    config toml                Valine                           config toml                params gitment        toml  params gitment    Gitment comment system based GitHub issues  https   github com imsun gitment owner        GitHub ID repo        repo store comments clientId        client ID clientSecret        client secret     Valine           Valine       toml Valine  appid appkey https   leancloud cn info please open https   valine js org  params valine  enable   true appId      appId  appKey      appKey  notify   false   mail notifier   https   github com xCss Valine wiki verify   false   Verification code avatar    mm  placeholder              visitor   true                           Valine                                                                                                        enable                  Valine    true               appId       leancloud                   App ID     appKey       leancloud                   App Key     notify                                 verify                       avatar                        mm  identicon  monsterid  wavatar  retro  hide               placehoder               visitor                   i                                         themes even layouts partials comments html    Valine        Valine               55 81       html      Site Params gitment enable     Please enable JavaScript view comments powered gitment      end          Valine           html      Site Params valine enable           1000000 new Valine   el    vcomments    appId       Site Params valine appId      appKey       Site Params valine appKey      notify      Site Params valine notify     verify      Site Params valine verify     avatar      Site Params valine avatar      placeholder       Site Params valine placeholder      visitor      Site Params valine visitor            end                                                       config toml                                  valine     eanble     true                                                                                                         leancloud      Comment   Counter",
+        "objectID": "posts/hugo-valine",
+        "date": "2020-01-10T06:41:18.000Z",
+        "description": "Valine 评论系统 leancloud",
+        "draft": false,
+        "tags": [
+            "Valine"
+        ],
+        "categories": [
+            "hugo"
+        ],
+        "toc": {
+            "enable": true,
+            "auto": false
+        },
+        "code": {
+            "copy": true
+        },
+        "math": {
+            "enable": true
+        },
+        "mapbox": {
+            "accessToken": ""
+        },
+        "share": {
+            "enable": true
+        },
+        "comment": {
+            "enable": true
+        }
+    },
+    {
+        "title": "如何安装和配置 Autorclone Gclone",
+        "uri": "posts/install-autorclone-gclone",
+        "content": "Gclone  Google Drive   Autorclone   Gclone            Rclone Gclone   curl https   rclone org install sh   sudo bash     rclone bash   email     Google Group       email              Group    Autorclone            Gclone   gclone config  root izj6cfrhpszlpag2u50h1pz     gclone config Current remotes  Name Type      gc drive gc1 drive jygd drive sjhl onedrive e  Edit existing remote n  New remote d  Delete remote r  Rename remote c  Copy remote s  Set configuration password q  Quit config e n d r c s q  n name  gc Remote  gc  already exists  name  gc2 Type storage configure  Enter string value  Press Enter default       Choose number below  type own value 1   1Fichier    fichier  2   Alias existing remote    alias  3   Amazon Drive    amazon cloud drive  4   Amazon S3 Compliant Storage Provider  AWS  Alibaba  Ceph  Digital Ocean  Dreamhost  IBM COS  Minio  etc     s3  5   Backblaze B2    b2  6   Box    box  7   Cache remote    cache  8   Citrix Sharefile    sharefile  9   Dropbox    dropbox  10   Encrypt Decrypt remote    crypt  11   FTP Connection    ftp  12   Google Cloud Storage  this not Google Drive     google cloud storage  13   Google Drive    drive  14   Google Photos    google photos  15   Hubic    hubic  16   memory object storage system     memory  17   JottaCloud    jottacloud  18   Koofr    koofr  19   Local Disk    local  20   Mail ru Cloud    mailru  21   Mega    mega  22   Microsoft Azure Blob Storage    azureblob  23   Microsoft OneDrive    onedrive  24   OpenDrive    opendrive  25   Openstack Swift  Rackspace Cloud Files  Memset Memstore  OVH     swift  26   Pcloud    pcloud  27   Put io    putio  28   QingCloud Object Storage    qingstor  29   SSH SFTP Connection    sftp  30   Sugarsync    sugarsync  31   Transparently chunk split large files    chunker  32   Union merges contents several remotes    union  33   Webdav    webdav  34   Yandex Disk    yandex  35   http Connection    http  36   premiumize me    premiumizeme  Storage  13   help drive backend at  https   rclone org drive    Google Application Client Id Setting own recommended  https   rclone org drive  making your own client id create own  leave blank  will use internal key low performance  Enter string value  Press Enter default       client_id  Google Application Client Secret Setting own recommended  Enter string value  Press Enter default       client_secret  Scope rclone use when requesting access drive  Enter string value  Press Enter default       Choose number below  type own value 1   Full access files  excluding Application Data Folder     drive  2   Read only access file metadata file contents     drive readonly    Access files created rclone only  3   visible drive website    File authorization revoked when user deauthorizes app     drive file    Allows read write access Application Data folder  4   not visible drive website     drive appfolder    Allows read only access file metadata 5   does not allow access read download file content     drive metadata readonly  scope  1 ID root folder Leave blank normally  Fill access  Computers  folders  see docs   rclone use non root folder its starting point  Note blank  first time rclone runs will fill ID root folder  Enter string value  Press Enter default       rootfolderid  Service Account Credentials JSON file path Leave blank normally  Needed want use SA instead interactive login  Enter string value  Press Enter default                 serviceaccountfile       root     Autorclone         root AutoRclone accounts     json              Enter string value  Press Enter default       serviceaccountfile_path       root AutoRclone accounts  Enter string value  Press Enter default       serviceaccountfile_path  Edit advanced config   y n  y  Yes n  No  default  y n  n Remote config Use auto config  Say Y not sure Say N working remote headless machine y  Yes  default  n  No y n  n Please go following link                               token Log authorize rclone access Enter verification code  token                                                  AutoRclone Gclone                Google Drive",
+        "objectID": "posts/install-autorclone-gclone",
+        "subtitle": "",
+        "date": "2020-07-07T06:00:58.000Z",
+        "lastmod": "2020-07-07T06:00:58.000Z",
+        "draft": false,
+        "author": "ZhaoQiang",
+        "authorLink": "",
+        "description": "",
+        "tags": [
+            "GoogleDrive"
+        ],
+        "categories": [
+            "Linux"
+        ],
+        "hiddenFromHomePage": false,
+        "hiddenFromSearch": false,
+        "featuredImage": "",
+        "featuredImagePreview": "",
+        "toc": {
+            "enable": true,
+            "auto": false
+        },
+        "code": {
+            "copy": true
+        },
+        "math": {
+            "enable": true
+        },
+        "mapbox": {
+            "accessToken": ""
+        },
+        "share": {
+            "enable": true
+        },
+        "comment": {
+            "enable": true
+        },
+        "lightgallery": false,
+        "license": ""
+    },
+    {
+        "title": "NaiveBoom 阅后即焚",
+        "uri": "posts/naiveboom",
+        "content": "NaiveBoom                                            MIT            nodejs redis Nginx Apache      Github   https   github com kchown naiveboom       Web      iOS   Web             Redis     VPS     lnmp 1 5 https   lnmp org install html              Redis             lnmp            text   addons sh install redis                           text  etc init d redis  start stop restart kill            nodejs         Node js v8 x    Debian 8   text Using Debian  root curl  sL https   deb nodesource com setup_8 x   bash   apt get install  y nodejs       npm         build essential   text apt get install build essential     PM2            Node js     text npm install  g pm2     NaiveBoom    NaiveBoom clone      text git clone https   github com kchown naiveboom git               Redis   config js                   NaiveBoom               text npm install           PM2                 text pm2 start run js              NaiveBoom                  http   ip 3000         NaiveBoom",
+        "objectID": "posts/naiveboom",
+        "date": "2020-01-02T07:32:50.000Z",
+        "description": "",
+        "draft": false,
+        "tags": [],
+        "categories": [
+            "Linux"
+        ],
+        "toc": {
+            "enable": true,
+            "auto": false
+        },
+        "code": {
+            "copy": true
+        },
+        "math": {
+            "enable": true
+        },
+        "mapbox": {
+            "accessToken": ""
+        },
+        "share": {
+            "enable": true
+        },
+        "comment": {
+            "enable": true
+        }
+    },
+    {
+        "title": " 在宝塔面板部署Nextcloud服务",
+        "uri": "posts/nextcloud-deploy",
+        "content": "centos7 4   nginx   php7 2   MariaDB      Nextcloud14             Nextcloud15                  Nextcloud                                  Nextcloud15  Nextcloud15          PHP7 2   SQL5 6   Nginx                    Nextcloud  1               2           wwwroot          nextclou zip                    3      zip           4                nextcloud              5                             6                                                                                                                                 755        770  7                     8                                                9",
+        "objectID": "posts/nextcloud-deploy",
+        "date": "2019-11-29T07:58:17.000Z",
+        "description": "",
+        "draft": false,
+        "tags": [
+            "Nextcloud"
+        ],
+        "categories": [
+            "Linux"
+        ],
+        "toc": {
+            "enable": true,
+            "auto": false
+        },
+        "code": {
+            "copy": true
+        },
+        "math": {
+            "enable": true
+        },
+        "mapbox": {
+            "accessToken": ""
+        },
+        "share": {
+            "enable": true
+        },
+        "comment": {
+            "enable": true
+        }
+    },
+    {
+        "title": " Nextcloud 性能优化",
+        "uri": "posts/nextcloud-optimize",
+        "content": "Nxtcloud15                                                                  1                      htaccess                Web                               Web                  nextcloud            nextcloud                   text location        build tests config lib 3rdparty templates data     deny all        2 PHP                    getenv   PATH                             PHP           PHP           php fpm              www server php 72 etc php fpm conf           text env PATH     usr local bin  usr bin  bin  usr local php bin        PHP           3    HTTP                      HTTPS                      SSL    crt key                                                 4                   well known caldav                                 well known carddav                                                                             text rewrite   well known carddav  remote php dav permanent  rewrite   well known caldav  remote php dav permanent      5     PHP    fileinfo                       MIME           php         fileinfo                 PHP       fileinfo      6                                         php Memcached apcu      memcached  memcache      Memcached apcu                  www wwwroot      config config php    nextcloud                 APCu      1         APCu  2 3          Memcached  text  memcache local        OC  Memcache  APCu    memcache distributed        OC  Memcache  Memcached    memcached_servers     array   0    array   0     localhost   1    11211            7 PHP   OPcache                      php opcache               text opcache enable 1 opcache enable_cli 1 opcache internedstringsbuffer 8 opcache maxacceleratedfiles 10000 opcache memory_consumption 128 opcache save_comments 1 opcache revalidate_freq 1     8            PHP                             imagick   php imagemagick       9                                                                        occ db convert filecache bigint                                                filecache mtime filecache storage _mtime   SSH              cd           text php occ db add missing indices                 www              text sudo  u www php occ db add missing indices               y   10 HTTP      Referrer Policy        no referrer    no referrer when downgrade    strict origin   strict origin when cross origin                   Referrer Policy            text add_header Referrer Policy  no referrer     4 The  Strict Transport Security  HTTP header not set least  15552000  seconds  enhanced security  recommended enable HSTS described security tips          nextcloud              header    text add_header Strict Transport Security  max age 63072000                  Nextcloud  Nginx    text server                     listen 80  listen 443 ssl http2  server_name www chyiyang net  index index php index html index htm default php default htm default html  root  www wwwroot wwwchyiyangnet  ssl_certificate  etc letsencrypt live www chyiyang net fullchain pem  sslcertificatekey  etc letsencrypt live www chyiyang net privkey pem  ssl_protocols TLSv1 TLSv1 1 TLSv1 2  ssl_ciphers ECDHE RSA AES128 GCM SHA256 HIGH  aNULL  MD5  RC4  DHE  sslpreferserver_ciphers on  sslsessioncache shared SSL 10m  sslsessiontimeout 10m  errorpage 497 https    host requesturi   nextcloud   403 404      error_page 403  core templates 403 php  error_page 404  core templates 404 php   HSTS      add_header Strict Transport Security  max age 15768000  includeSubDomains  preload    largeclientheader_buffers 4 16k  clientmaxbody_size 10G  fastcgi_buffers 64 4K  gzip off        include  PHP                 php       frontcontrolleractive         URL  index php location     php        try_files  uri  404  fastcgi_pass unix  tmp php cgi 72 sock  fastcgi_index index php  include fastcgi conf  include pathinfo conf  fastcgiparam frontcontroller_active true         SSL           location     well known  allow all     nextcloud            location      data config   ht db_structure  xml README    deny all            1 location      core     js  oc  js preview  png       rewrite    index php last     webdav    location     rewrite    index php uri  rewrite   caldav       remote php caldav 1 redirect  rewrite   carddav       remote php carddav 1 redirect  rewrite   webdav       remote php webdav 1 redirect  rewrite    core doc       1 index html          2     acme                 uri             css js svg gif png html ttf woff         remote public cron status ocs  v1 ocs  v2   php      well known  acme challenge         rewrite    index php last              3 location         png html ttf ico jpg jpeg     tryfiles  uri  index php uri isargs args  access_log off    location        updater ocs provider           try_files  uri   404  index index php            header location        css js woff svg gif     tryfiles  uri  index php uri isargs args  add_header Cache Control  public  max age 15778463   add_header X Content Type Options nosniff  add_header X XSS Protection  1  mode block   add_header X Robots Tag none  add_header X Download Options noopen  add_header X Permitted Cross Domain",
+        "objectID": "posts/nextcloud-optimize",
+        "date": "2019-11-30T07:58:17.000Z",
+        "description": "",
+        "draft": false,
+        "tags": [
+            "Nextcloud"
+        ],
+        "categories": [
+            "Linux"
+        ],
+        "toc": {
+            "enable": true,
+            "auto": false
+        },
+        "code": {
+            "copy": true
+        },
+        "math": {
+            "enable": true
+        },
+        "mapbox": {
+            "accessToken": ""
+        },
+        "share": {
+            "enable": true
+        },
+        "comment": {
+            "enable": true
+        }
+    },
+    {
+        "title": "NextCloud Scan Files on Server",
+        "uri": "posts/nextcloud-scan-files-on-server",
+        "content": "Nextcloud                                         oc_filecache    OCC      OCC             OCC        Nextcloud          files files cleanup         files scan           files transfer ownership                                 files scan         files scan   p   path          q   quiet    v vv vvv   verbose     all   userid1       useridN      user_id                     ID                      path           all                  quiet            verbose                       unscanned                                   Nextcloud       sudo  u www php occ files scan   all                                                         quiet     sudo  u www data php occ files scan   all   quiet                                        1                   sudo  u www data php occ user list      zhaoqiang         sudo  u www data php occ files scan zhaoqiang   2                path                       user_id files path     userid files mountname     userid files mountname path           files                        sudo  u www data php occ files scan   path   ChengYe files Photos       ChengYe Photos",
+        "objectID": "posts/nextcloud-scan-files-on-server",
+        "date": "2020-01-16T01:16:23.000Z",
+        "description": "使用 OCC 命令从服务器上给 Nextcloud 手动添加文件",
+        "draft": false,
+        "tags": [
+            "Nextcloud"
+        ],
+        "categories": [
+            "Linux"
+        ],
+        "toc": {
+            "enable": true,
+            "auto": false
+        },
+        "code": {
+            "copy": true
+        },
+        "math": {
+            "enable": true
+        },
+        "mapbox": {
+            "accessToken": ""
+        },
+        "share": {
+            "enable": true
+        },
+        "comment": {
+            "enable": true
+        }
+    },
+    {
+        "title": "免费申请 Office365 企业版一年试用教程",
+        "uri": "posts/office-365-apply",
+        "content": "1                                                 https   account microsoft com profile                       2   Office           https   developer microsoft com en us office profile             China 3                                    Chrome     F12                              ms Checkbox   each function i o    o  0  click       4                        SET SUBSCRIPTION                                      5                              https   portal office com AdminPortal Home                              E3          1234567891011121314   Office 365 Enterprise E3 DeveloperTo Do  Plan 3 Microsoft Forms  Plan E5 Microsoft Stream O365 E5 SKUFlow Office 365PowerApps Office 365Microsoft TeamsMicrosoft PlannerSwayOffice        Skype Business Online  Plan 2 Exchange Online  Plan 2 Office Online DeveloperSharePoint Online Developer                                                                                                       5      Mac 5                Office                        E3   E3 MSDN                                                              4              90                          oneindex                               30           60                       office365                                   90     office365                                                                     azuread         e3",
+        "objectID": "posts/office-365-apply",
+        "date": "2020-01-14T06:45:12.000Z",
+        "description": "",
+        "draft": false,
+        "tags": [
+            "Office365"
+        ],
+        "categories": [
+            "Dynamicsax"
+        ],
+        "toc": {
+            "enable": true,
+            "auto": false
+        },
+        "code": {
+            "copy": true
+        },
+        "math": {
+            "enable": true
+        },
+        "mapbox": {
+            "accessToken": ""
+        },
+        "share": {
+            "enable": true
+        },
+        "comment": {
+            "enable": true
+        }
+    },
+    {
+        "title": "使用 GitHub Actions 编译 OpenWrt",
+        "uri": "posts/openwrt-build",
+        "content": "Github Ac tions   GitHub          Con tin u ous in te gra tion    CI                        E5 2vCPU 7G RAM                                                                 workflow                       work flow                      Open Wrt                 GitHub Actions Channel        2019 12 10    macOS           2019 12 06    tmate          2019 12 05              lietxia           2019 12 04    menuconfig     2019 12 03            2019 11 30               2019 11 14                                              20 5                  make menuconfig                              E5                  60G                      boom             1 2                                                                    https   github com P3TERX Actions OpenWrt            star           GitHub       GitHub Actions                  config          TIPS                          Win dows 10      WSL  ma cOS Linux      Docker                                    L                x86_64                                  L                  TIPS      L                work flow                   fork        releases        release              Actions                          star                        Actions       Artifacts                               Linux   Git              OpenWrt                                               fork                   Lean s OpenWrt      config                menuconfig    SSH   Actions             config             push   GitHub                  Actions                          star                        Actions       Artifacts                           lietxia                                    Linux   Git              OpenWrt              90             re leases        re lease                    TIPS        re lease                                             config     push                                          DIY           diy sh                               IP                                                       TIPS                       IP                   DIY                                none git clone https   github com P3TERX xxx package xxx                            TIPS     config                       Open Wrt                                      Open Wrt                 DIY     Custom files            files               files                                           Star                                                                                                  L                                                             GitHub Ac tions                           20                                GitHub Ac tions            20   Ubuntu                     5   ma cOS                                menuconfig SSH     Actions     tmate     GitHub Ac tions               menuconfig                                                     GitHub Ac tions     Open Wrt          macOS       GitHub Ac tions   ma cOS          Ubuntu             Open Wrt                            macOS    OpenWrt                    ma cOS       Open Wrt       work flow                                                                      TG    GitHub Actions Group        TG                       TG                             P3TERX          https   p3terx com archives build openwrt with github actions html                            CC BY NC SA 4 0",
+        "objectID": "posts/openwrt-build",
+        "date": "2020-01-10T08:15:18.000Z",
+        "description": "",
+        "draft": false,
+        "tags": [
+            "Openwrt",
+            "GithubActions"
+        ],
+        "categories": [
+            "Linux"
+        ],
+        "toc": {
+            "enable": true,
+            "auto": false
+        },
+        "code": {
+            "copy": true
+        },
+        "math": {
+            "enable": true
+        },
+        "mapbox": {
+            "accessToken": ""
+        },
+        "share": {
+            "enable": true
+        },
+        "comment": {
+            "enable": true
+        }
+    },
+    {
+        "title": "学习强国",
+        "uri": "posts/pandalearning",
+        "content": "GCP      Debian9                   chromium    etc apt sources list           text deb http   dl google com linux chrome deb  stable main             text   wget https   dl ssl google com linux linuxsigningkey pub   sudo apt key add linuxsigningkey pub   sudo apt get update   sudo apt get install google chrome stable     Chromium  text sudo apt get update sudo apt get install chromium chromium l10n     chromedriver   chromedriver   chrome          driver            http   chromedriver storage googleapis com index html  text wget http   chromedriver storage googleapis com 73 0 3683 68 chromedriver_linux64 zip sudo apt get install unzip unzip chromedriver_linux64 zip sudo mv chromedriver  usr bin chromedriver sudo chown root root  usr bin chromedriver sudo chmod  x  usr bin chromedriver     xvfb  text sudo apt get install xvfb     Python3   make  text apt get install gcc automake autoconf libtool     python                       apt get                    text apt get update apt get upgrade     python           Python  text cd  usr src wget https   www python org ftp python 3 7 2 Python 3 7 2 tgz sudo tar xzf Python 3 7 2 tgz               python     text cd Python 3 7 2 sudo   configure   enable optimizations sudo altinstall             Python 3     python python3 7  V     pip3   get pip py    text wget https   bootstrap pypa io get pip py python3 get pip py     pip3 python get pip py     pip2     Selenium  text pip3 install selenium       text PYTHONIOENCODING utf 8 python3 Panda Learning 2 5  Source Packages  pandalearning py 13482308316",
+        "objectID": "posts/pandalearning",
+        "date": "2018-09-10T08:09:33.000Z",
+        "description": "",
+        "draft": false,
+        "tags": [
+            "Chromium",
+            "Chromedriver",
+            "Selenium",
+            "Debian9"
+        ],
+        "categories": [
+            "Linux"
+        ],
+        "toc": {
+            "enable": true,
+            "auto": false
+        },
+        "code": {
+            "copy": true
+        },
+        "math": {
+            "enable": true
+        },
+        "mapbox": {
+            "accessToken": ""
+        },
+        "share": {
+            "enable": true
+        },
+        "comment": {
+            "enable": true
+        }
+    },
+    {
+        "author": "ZhaoQiang",
+        "uri": "posts/setup-folderclone",
+        "content": "Folderclone Linux Debian Ubuntu    apt update apt install python3 pip git screen  y git clone https   github com Spazzlo folderclone git cd folderclone pip3 install folderclone CentOS apt get   yum                   screen     screen         screen   folderclone       screen  S folderclone       screen           Ctrl  a  d    screen   screen  r folderclone Windows   Python   Python 3 7 4 64 bit   Python 3 8 1   folderclone             E  folderclone master          cmd Windows PowerShell        cmd Windows PowerShell           folderclone      cd E  folderclone master pip install folderclone    Drive API      Python Quickstart    Enable Drive API   DOWNLOAD CLIENT CONFIGUIRATION      credentials json     credentials json     folderclone                                folderclone     multimanager interactive                                             API            API       Enter                                                   Quickstart          Quickstart        The authentication flow completed  may close window          3 URL             Service Usage API   Cloud Resource Manager API   Cloud Resource Manager API      Enter       Multi Manager    Multi Manager mm        Multi Manager    SA               folderclone             service accounts          mm  quick setup N SHAREDDRIVEID N           SHAREDDRIVEID           ID               100 TB       134 SA   750 GB           2         ID 0ABCdeyz_ZaMsxxxLGA               mm  quick setup 2 0ABCdeyz_ZaMsxxxLGA         2                                             accounts mm  quick setup 2 0AKqujK7R10w9Uk9PVA Creating 2 projects  Enabling services  Creating Service Accounts mm q1n5s5q0tenwkm6i 844bj5 43n Creating Service Account keys mm q1n5s5q0tenwkm6i 844bj5 43n Creating Service Accounts mm bj81pc594lhe8z4rr1jkk0871k5 Creating Service Account keys mm bj81pc594lhe8z4rr1jkk0871k5 Fetching emails  Adding 200 users       Done  mm                  multifoldeclone                           multifolderclone  s SOURCEFOLDERID  d DESTINATIONFOLDERID  SOURCEFOLDERID                                                      ID   DESTINATIONFOLDERID           ID           ID",
+        "objectID": "posts/setup-folderclone",
+        "author_link": "",
+        "title": "使用 Folderclone 批量转存共享内容到自己的Google Drive",
+        "date": "2020-03-11T05:49:04.000Z",
+        "lastmod": "2020-03-11T05:49:04.000Z",
+        "draft": false,
+        "description": "突破 Google 750 GB 每日的限制",
+        "show_in_homepage": true,
+        "description_as_summary": false,
+        "license": "",
+        "tags": [
+            "GoogleDrive",
+            "Folderclone"
+        ],
+        "categories": [
+            "Linux",
+            ""
+        ],
+        "featured_image": "",
+        "featured_image_preview": "",
+        "toc": {
+            "enable": true,
+            "auto": false
+        },
+        "code": {
+            "copy": true
+        },
+        "math": {
+            "enable": true
+        },
+        "mapbox": {
+            "accessToken": ""
+        },
+        "share": {
+            "enable": true
+        },
+        "comment": {
+            "enable": true
+        }
+    },
+    {
+        "author": "ZhaoQiang",
+        "uri": "posts/speedtest-iperf3",
+        "content": "Iperf3  docker Synology    NAS synogear Diagnosis Tool   sudo  s synogear list Tools not installed yet  run command install it  synogear install synogear install root nas    iperf3  ash  iperf3  command not found root nas    synogear install root nas    iperf3 iperf3  parameter error   either client   c  server   s  Usage  iperf   s  c host   options  iperf   h   help    v   version  Server Client   p    port   server port listen on connect  f    format  kmgKMG  format report  Kbits  Mbits  KBytes  MBytes  i    interval   seconds periodic bandwidth reports  F    file name xmit recv specified file  A    affinity n n m set CPU affinity  B    bind bind specific interface  V    verbose detailed output  J    json output JSON format   logfile f send output log file  d    debug emit debugging output  v    version show version information quit  h    help show message quit Server specific   s    server run server mode  D    daemon run server daemon  I    pidfile file write PID file Client specific   c    client run client mode  connecting  u    udp use UDP rather TCP  b    bandwidth  KMG target bandwidth bits sec  0 unlimited   default 1 Mbit sec UDP  unlimited TCP   optional slash packet count burst mode   t    time   time seconds transmit  default 10 secs   n    bytes   KMG  number bytes transmit  instead  t   k    blockcount   KMG  number blocks  packets  transmit  instead   t  n   l    len   KMG  length buffer read write  default 128 KB TCP  8 KB UDP    cport bind specific client port  TCP UDP  default   ephemeral port   P    parallel   number parallel client streams run  R    reverse run reverse mode  server sends  client receives   w    window   KMG  TCP window size  socket buffer size   C    congestion set TCP congestion control algorithm  Linux Free BSD only   M    set mss   set TCP maximum segment size  MTU   40 bytes   N    nodelay set TCP no delay  disabling Nagle s Algorithm  4    version4 use IPv4  6    version6 use IPv6  S    tos N set IP  type service   L    flowlabel N set IPv6 flow label  only supported Linux   Z    zerocopy use  zero copy  method sending data  O    omit N omit first n seconds  T    title str prefix every output line string   get server output results server   udp counters 64bit use 64 bit counters UDP test packets  KMG  indicates options support K M G suffix kilo   mega   giga  iperf3 homepage at  http   software es net iperf  Report bugs to  https   github com esnet iperf root nas    synogear list tools      iperf3      iperf3  ssh                           iperf3         opkg update opkg install iperf3 2         iperf3                                iperf3  s  D    s                      D                                           ssh   3                                   iperf3            https   iperf fr iperf download php                   Windows 64        https   iperf fr download windows iperf 3 1 3 win64 zip                           CMD              iperf3  c 192 168 123 1  b 1000m  t 60  i 1  u         192 168 123 1     ip            Padavan                     c                      b        t              60   i               1        u    udp         tcp       tcp         udp                               iperf3  c 192 168 123 1  b 1000m  t 60  i 1  u  P 2                              2 4",
+        "objectID": "posts/speedtest-iperf3",
+        "author_link": "",
+        "title": "Speedtest Iperf3",
+        "date": "2020-05-21T05:13:03.000Z",
+        "lastmod": "2020-05-21T05:13:03.000Z",
+        "draft": false,
+        "description": "",
+        "show_in_homepage": true,
+        "description_as_summary": false,
+        "license": "",
+        "tags": [
+            "",
+            ""
+        ],
+        "categories": [
+            "",
+            ""
+        ],
+        "featured_image": "",
+        "featured_image_preview": "",
+        "toc": {
+            "enable": true,
+            "auto": false
+        },
+        "code": {
+            "copy": true
+        },
+        "math": {
+            "enable": true
+        },
+        "mapbox": {
+            "accessToken": ""
+        },
+        "share": {
+            "enable": true
+        },
+        "comment": {
+            "enable": true
+        }
+    },
+    {
+        "title": "Synology DDNS 01",
+        "uri": "posts/synology-ddns-01",
+        "content": "DDNS              DDNS               A     IP                     IP          1     IP             IP                  http   www ipip net           IP     172 192 10        IP            IP                     10        IP  2                                 ping     IP              ISP                    ping               ping                                                                                                                         NAS                                                                       http   canyouseeme org            DMZ DMZ                                          NAS                   DSM    Web   Cloud   VPN                            3                     OSS CDN            9 9         VIP                                                      DDNS                                     A      IP                                                               IP    CNAME                          test domain com         www domainA com         test domain com     www domainA com       CNAME                   IP    4 DDNS    DDNS              DDNS            DDNS        DDNS                              DSM            http   example synology me 5000",
+        "objectID": "posts/synology-ddns-01",
+        "date": "2016-07-10T05:55:24.000Z",
+        "description": "",
+        "draft": false,
+        "tags": [
+            "Synology"
+        ],
+        "categories": [
+            "Linux"
+        ],
+        "toc": {
+            "enable": true,
+            "auto": false
+        },
+        "code": {
+            "copy": true
+        },
+        "math": {
+            "enable": true
+        },
+        "mapbox": {
+            "accessToken": ""
+        },
+        "share": {
+            "enable": true
+        },
+        "comment": {
+            "enable": true
+        }
+    },
+    {
+        "title": "Synology DDNS 02",
+        "uri": "posts/synology-ddns-02",
+        "content": "DDNS                    DDNS                      DDNS                       DSM   DDNS 1    QuickConnect QuickConnect           ID       quickconnect to example      Synology Router     Synology      Download Station File Station                QuickConnect          gt  Internet  gt  QuickConnect   DDNS       QuickConnect        Synology                               Synology               QuickConnect ID          QuickConnect ID     QuickConnect                 Synology Router                  QuickConnect                 QuickConnect                      2    DDNS       Synology   DDNS          DDNS      Synology                         DDNS                                                      Synology                   Synology                             DDNS       john synology me              DDNS                             DDNS                        Heartbeat                           Synology                                                                                                                     DDNS",
+        "objectID": "posts/synology-ddns-02",
+        "date": "2016-08-10T05:55:28.000Z",
+        "description": "",
+        "draft": false,
+        "tags": [
+            "Synology"
+        ],
+        "categories": [
+            "Linux"
+        ],
+        "toc": {
+            "enable": true,
+            "auto": false
+        },
+        "code": {
+            "copy": true
+        },
+        "math": {
+            "enable": true
+        },
+        "mapbox": {
+            "accessToken": ""
+        },
+        "share": {
+            "enable": true
+        },
+        "comment": {
+            "enable": true
+        }
+    },
+    {
+        "title": "Synology With Linux",
+        "uri": "posts/synology-with-linux",
+        "content": "BestTrace      windows        BestTrace   DNS                                BestTrace linux                        text wget http   cdn ipip net 17mon besttrace4linux zip unzip besttrace4linux zip  7z chmod  x besttrace32         besttrace32  q 1   IP             IPKG              text cat  proc cpuinfo   grep cpu uname  machine     CPU        CPU Bootstrap Script      text ARM  armv5tejl   http   ipkg nslu2 linux org feeds optware syno x07 cross unstable syno x07 bootstrap1 2 7arm xsh PowerPC  ppc_6xx   http   ipkg nslu2 linux org feeds optware ds101g cross unstable ds101 bootstrap1 0 4powerpc xsh PowerPC  ppc_85xx  e500v    http   ipkg nslu2 linux org feeds optware syno e500 cross unstable syno e500 bootstrap1 2 7powerpc xsh Marvell Kirkwood 88F6281  88F6282  88FR131  ARMv5TE Feroceon   http   ipkg nslu2 linux org feeds optware cs08q1armel cross stable syno mvkw bootstrap1 2 7arm xsh Intel Atom  http   ipkg nslu2 linux org feeds optware syno i686 cross unstable syno i686 bootstrap1 2 7i686 xsh    text Synology ds216 ii  wget http   ipkg nslu2 linux org feeds optware syno i686 cross unstable syno i686 bootstrap1 2 7i686 xsh          chmod  x syno i686 bootstrap1 2 7i686 xsh       sh syno i686 bootstrap1 2 7i686 xsh       rm syno i686 bootstrap1 2 7i686 xsh           opt bin ipkg update ipkg   ipkg  v     http   ipkg nslu2 linux org feeds optware syno i686 cross unstable          path  vi  root  profile path             opt sbin  opt bin             su                       Rclone             bash    bin bash    usr bin rclone script executable with  chmod a x  root scripts nas mountOnStartup sh  usr bin rclone mount driveteamspacesh   volume1 video DriveSpaceSH    config  root  config rclone rclone conf    allow other    dir cache time 672h    vfs cache max age 675h    vfs read chunk size 64M    vfs read chunk size limit 1G    buffer size 32M   exit             SpeedTest    windows        SpeedTest                             SpeedTest linux                        text wget https   raw githubusercontent com sivel speedtest cli master speedtest py chmod  x speedtest py   speedtest py   server 3633   speedtest py   list   grep Shanghai    text 22145  ESUN Technology  Shanghai  Co   Ltd   Shanghai  China   4 49 km  21005  China Unicom  Shanghai  China   19 64 km  16803  China Mobile Group Shanghai Co  Ltd   Shanghai  China   19 64 km  3633  China Telecom  Shanghai  China   19 64 km  16719  China Mobile Group Shanghai Co  Ltd   Shanghai  China   19 64 km",
+        "objectID": "posts/synology-with-linux",
+        "date": "2020-01-01T08:19:26.000Z",
+        "description": "",
+        "draft": false,
+        "tags": [
+            "Synology",
+            "BestTrace",
+            "Ipkg",
+            "Rclone",
+            "SpeedTest"
+        ],
+        "categories": [
+            "Linux"
+        ],
+        "toc": {
+            "enable": true,
+            "auto": false
+        },
+        "code": {
+            "copy": true
+        },
+        "math": {
+            "enable": true
+        },
+        "mapbox": {
+            "accessToken": ""
+        },
+        "share": {
+            "enable": true
+        },
+        "comment": {
+            "enable": true
+        }
+    },
+    {
+        "title": "配置",
+        "uri": "tags/configuration",
+        "content": "",
+        "objectID": "tags/configuration"
+    },
+    {
+        "title": "contenu",
+        "uri": "tags/content",
+        "content": "",
+        "objectID": "tags/content"
+    },
+    {
+        "title": "内容",
+        "uri": "tags/content",
+        "content": "",
+        "objectID": "tags/content"
+    },
+    {
+        "title": "安装",
+        "uri": "tags/installation",
+        "content": "",
+        "objectID": "tags/installation"
+    }
+]
