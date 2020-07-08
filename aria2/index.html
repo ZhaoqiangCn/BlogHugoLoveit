@@ -1,0 +1,379 @@
+<!doctype html><html lang=zh-cn><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="noodp"><meta http-equiv=x-ua-compatible content="IE=edge, chrome=1"><title>Aria2 搭建离线下载并自动上传到 Google Drive - Blog My Life</title><meta name=Description content="#offline download #Aria2 搭建离线下载并自动上传到 Google Drive"><meta property="og:title" content="Aria2 搭建离线下载并自动上传到 Google Drive"><meta property="og:description" content="#offline download #Aria2 搭建离线下载并自动上传到 Google Drive"><meta property="og:type" content="article"><meta property="og:url" content="https://www.nashome.cn/aria2/"><meta property="og:image" content="https://www.nashome.cn/logo.png"><meta property="article:published_time" content="2018-05-12T15:49:55+08:00"><meta property="article:modified_time" content="2020-07-08T14:34:13+08:00"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://www.nashome.cn/logo.png"><meta name=twitter:title content="Aria2 搭建离线下载并自动上传到 Google Drive"><meta name=twitter:description content="#offline download #Aria2 搭建离线下载并自动上传到 Google Drive"><meta name=application-name content="Blog My Life"><meta name=apple-mobile-web-app-title content="Blog My Life"><meta name=theme-color content="#ffffff"><meta name=msapplication-TileColor content="#da532c"><link rel="shortcut icon" type=image/x-icon href=/favicon.ico><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://www.nashome.cn/aria2/><link rel=prev href=https://www.nashome.cn/synology-ddns-02/><link rel=next href=https://www.nashome.cn/pandalearning/><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css><link rel=stylesheet href=/css/style.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":" Aria2 搭建离线下载并自动上传到 Google Drive","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nashome.cn\/aria2\/"},"image":[{"@type":"ImageObject","url":"https:\/\/www.nashome.cn\/images\/Apple-Devices-Preview.png","width":3200,"height":2048}],"genre":"posts","keywords":"Aria2, GoogleDrive","wordcount":1395,"url":"https:\/\/www.nashome.cn\/aria2\/","datePublished":"2018-05-12T15:49:55+08:00","dateModified":"2020-07-08T14:34:13+08:00","license":"This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher":{"@type":"Organization","name":"zhaoqiang","logo":{"@type":"ImageObject","url":"https:\/\/www.nashome.cn\/images\/avatar.png","width":528,"height":560}},"author":{"@type":"Person","name":"zhaoqiang"},"description":"#offline download #Aria2 搭建离线下载并自动上传到 Google Drive"}</script></head><body header-desktop=fixed header-mobile=auto><script type=text/javascript>(window.localStorage&&localStorage.getItem('theme')?localStorage.getItem('theme')==='dark':('auto'==='auto'?window.matchMedia('(prefers-color-scheme: dark)').matches:'auto'==='dark'))&&document.body.setAttribute('theme','dark');</script><div id=mask></div><div class=wrapper><header class=desktop id=header-desktop><div class=header-wrapper><div class=header-title><a href=/ title="Blog My Life"><span class=header-title-pre><i class="far fa-kiss-wink-heart fa-fw"></i></span>zhaoqiang's blog</a></div><div class=menu><div class=menu-inner><a class=menu-item href=/posts/>所有文章 </a><a class=menu-item href=/tags/>标签 </a><a class=menu-item href=/categories/>分类 </a><a class=menu-item href=/ title=GitHub><i class="fab fa-github fa-fw"></i></a><span class="menu-item delimiter"></span><span class="menu-item search" id=search-desktop><input type=text placeholder=搜索文章标题或内容... id=search-input-desktop>
+<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-desktop title=搜索><i class="fas fa-search fa-fw"></i></a><a href=javascript:void(0); class="search-button search-clear" id=search-clear-desktop title=清空><i class="fas fa-times-circle fa-fw"></i></a><span class="search-button search-loading" id=search-loading-desktop><i class="fas fa-spinner fa-fw fa-spin"></i></span></span><a href=javascript:void(0); class="menu-item theme-switch" title=切换主题><i class="fas fa-adjust fa-fw"></i></a></div></div></div></header><header class=mobile id=header-mobile><div class=header-container><div class=header-wrapper><div class=header-title><a href=/ title="Blog My Life"><span class=header-title-pre><i class="far fa-kiss-wink-heart fa-fw"></i></span>zhaoqiang's blog</a></div><div class=menu-toggle id=menu-toggle-mobile><span></span><span></span><span></span></div></div><div class=menu id=menu-mobile><div class=search-wrapper><div class="search mobile" id=search-mobile><input type=text placeholder=搜索文章标题或内容... id=search-input-mobile>
+<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-mobile title=搜索><i class="fas fa-search fa-fw"></i></a><a href=javascript:void(0); class="search-button search-clear" id=search-clear-mobile title=清空><i class="fas fa-times-circle fa-fw"></i></a><span class="search-button search-loading" id=search-loading-mobile><i class="fas fa-spinner fa-fw fa-spin"></i></span></div><a href=javascript:void(0); class=search-cancel id=search-cancel-mobile>取消</a></div><a class=menu-item href=/posts/>所有文章</a><a class=menu-item href=/tags/>标签</a><a class=menu-item href=/categories/>分类</a><a class=menu-item href=/ title=GitHub><i class="fab fa-github fa-fw"></i></a><a href=javascript:void(0); class="menu-item theme-switch" title=切换主题>
+<i class="fas fa-adjust fa-fw"></i></a></div></div></header><div class="search-dropdown desktop"><div id=search-dropdown-desktop></div></div><div class="search-dropdown mobile"><div id=search-dropdown-mobile></div></div><main class=main><div class=container><div class=toc id=toc-auto><h2 class=toc-title>目录</h2><div class="toc-content always-active" id=toc-content-auto></div></div><article class="page single"><h1 class="single-title animated flipInX">Aria2 搭建离线下载并自动上传到 Google Drive</h1><div class=post-meta><div class=post-meta-line><span class=post-author><a href=/ title=Author rel=author class=author><i class="fas fa-user-circle fa-fw"></i>zhaoqiang</a></span>&nbsp;<span class=post-category>收录于 <a href=/categories/linux/><i class="far fa-folder fa-fw"></i>Linux</a></span></div><div class=post-meta-line><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime=2018-05-12>2018-05-12</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1395 字&nbsp;
+<i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 7 分钟&nbsp;<span id=/aria2/ class=leancloud_visitors data-flag-title="Aria2 搭建离线下载并自动上传到 Google Drive">
+<i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
+</span>&nbsp;</div></div><div class="details toc" id=toc-static kept><div class="details-summary toc-title"><span>目录</span>
+<span><i class="details-icon fas fa-angle-right"></i></span></div><div class="details-content toc-content" id=toc-content-static><nav id=TableOfContents><ul><li><ul><li><ul><li><a href=#安装>安装</a><ul><li><a href=#系统环境>系统环境</a></li><li><a href=#安装宝塔-linux-面板>安装宝塔 Linux 面板</a></li><li><a href=#安装-nginx-和-redis>安装 Nginx 和 Redis</a></li><li><a href=#安装-aria2>安装 Aria2</a></li><li><a href=#安装-ariang>安装 AriaNg</a></li><li><a href=#安装-rclone>安装 Rclone</a></li><li><a href=#安装-python3>安装 Python3</a></li><li><a href=#安装-python-的-redis-库>安装 Python 的 Redis 库</a></li><li><a href=#安装-python-的-python-telegram-bot-库>安装 Python 的 python-telegram-bot 库</a></li><li><a href=#上传处理脚本>上传处理脚本</a></li><li><a href=#计划任务>计划任务</a></li><li><a href=#开放端口>开放端口</a></li><li><a href=#telegram-bot-通知>Telegram Bot 通知</a></li></ul></li><li><a href=#使用>使用</a><ul><li><a href=#ios--安卓平台在线播放>iOS / 安卓平台在线播放</a></li></ul></li></ul></li></ul></li></ul></nav></div></div><div class=content id=content><p>使用Google VPS 来做自己的离线下载服务器，下载完后自动上传到 Google Drive ( 以后简称 GD ) 里存储，再用 nPlayer 登录 Google Drive 实现在线观看。</p><h3 id=安装>安装</h3><p>下面介绍如何搭建一个自己的离线下载并上传到 GD 的环境。</p><h4 id=系统环境>系统环境</h4><p>我的系统是 CentOS 7 ，其他 Linux 发行版请自行调整相关命令或系统环境配置，但 VPS 必须是 <code>KVM</code> 架构！</p><h4 id=安装宝塔-linux-面板>安装宝塔 Linux 面板</h4><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-text data-lang=text>$ yum install -y wget &amp;&amp; wget -O install.sh http://download.bt.cn/install/install_6.0.sh &amp;&amp; bash install.sh
+</code></pre></td></tr></table></div></div><p>这是 <a href=https://www.bt.cn/ target=_blank rel="noopener noreffer">宝塔面板官网</a> ，如果如果不会用可以上去看下使用手册。</p><h4 id=安装-nginx-和-redis>安装 Nginx 和 Redis</h4><p>面板安装好后，通过浏览器打开并登录面板，在面板的 <strong>软件管理</strong> 里面安装 <code>Nginx</code> 和 <code>Redis</code>。</p><p>其中，<code>Nginx</code> 是用来作为访问 <a href=http://ariang.mayswind.net/zh_Hans/ target=_blank rel="noopener noreffer">AriaNg</a> 的服务器用的；<code>Redis</code> 是用来做上传到 GD 的任务队列的，如果不做队列处理，大量任务同时上传到 GD 的话会出现很多问题。</p><h4 id=安装-aria2>安装 Aria2</h4><p><code>Aria2</code> 是一款开源、轻量级的多协议命令行下载工具，支持 <code>HTTP/HTTPS</code>、<code>FTP</code>、<code>SFTP</code>、<code>BitTorrent</code> 和 <code>Metalink</code> 协议，我们以后的下载任务都会交给它。</p><p>一键安装 <a href=https://aria2.github.io/ target=_blank rel="noopener noreffer">Aria2</a> ：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-text data-lang=text>$ wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/aria2.sh &amp;&amp; chmod +x aria2.sh &amp;&amp; bash aria2.sh
+</code></pre></td></tr></table></div></div><p>下面是我自己根据上面脚本做的修改版，解决了在开启自动更新 <code>BT-Tracker 服务器</code> 时会强制重启 <code>Aria2</code> 导致 <code>Aria2</code> 任务有可能出现异常的问题：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-text data-lang=text>$ wget -N --no-check-certificate https://raw.githubusercontent.com/meishixiu/note/master/Aria2%2BAriaNg%2BRclone%2BGoogleDrive/aria2.sh &amp;&amp; chmod +x aria2.sh &amp;&amp; bash aria2.sh
+</code></pre></td></tr></table></div></div><p>两个脚本任选一个就行。</p><p>打开配置文件 <code>/root/.aria2/aria2.conf</code>，替换为 <a href=https://github.com/meishixiu/note/raw/master/Aria2+AriaNg+Rclone+GoogleDrive/aria2.conf target=_blank rel="noopener noreffer">aria2.conf</a> 里面的配置；</p><p>最后把里面的 Aria2 RPC 密钥 <code>rpc-secret</code> 自己随便换一个，然后重启 <code>Aria2</code> 使配置生效；</p><p>文件的保存路径 <code>dir</code> 我用的是后面要安装的 <code>AriaNg</code> 网站的一个子目录，这样做的目的是如果需要通过网站在线浏览下载的文件列表，可以稍微改改 <code>Nginx</code> 的网站配置来实现，如果没有这样的需求，那可以随意换一个下载目录。</p><h4 id=安装-ariang>安装 AriaNg</h4><p><a href=http://ariang.mayswind.net/zh_Hans/ target=_blank rel="noopener noreffer">AriaNg</a> 是一个让 <code>Aria2</code> 更容易使用的现代 <code>Web</code> 前端。为什么这么说呢，因为以前如果要使用 <code>Aria2</code> ，我们得去记忆大量的 <code>Aria2</code> 的命令和参数才能下载东西，这简直就是噩梦。而如果使用 <code>AriaNg</code> ，只需要用电脑或手机浏览器打开我们的离线下载网站 ( 就是打开 <code>AriaNg</code> )，就能轻松的添加下载任务了。</p><p>既然是 “离线下载网站” ，那就得有个 “网站” 的样子，所以我把我的一个域名 <code>lixian.xxx.com</code> 解析到我的离线下载服务器上，然后在宝塔面板的 <strong>网站</strong> 里 <strong>添加站点</strong> ，<code>域名</code> 填写刚才解析过来的 <code>lixian.xxx.com</code> ，<code>根目录</code> 我用的是 <code>/home/wwwroot/lixian.xxx.com</code>，如下图所示：</p><p><img class=lazyload src=/svg/loading.min.svg data-src=/Images/Aria2Image/baotatianjiawangzhan.png data-srcset="/Images/Aria2Image/baotatianjiawangzhan.png, /Images/Aria2Image/baotatianjiawangzhan.png 1.5x, /Images/Aria2Image/baotatianjiawangzhan.png 2x" data-sizes=auto alt=/Images/Aria2Image/baotatianjiawangzhan.png title=PNG></p><p>然后把 <code>AriaNg</code> 下载到 <code>/home/wwwroot/lixian.xxx.com</code> 并解压：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-text data-lang=text>$ cd /home/wwwroot/lixian.xxx.com
+$ wget https://github.com/mayswind/AriaNg/releases/download/1.0.0/AriaNg-1.0.0.zip
+$ unzip AriaNg-1.0.0.zip
+</code></pre></td></tr></table></div></div><p><code>AriaNg</code> 的程序安装好了，下面是设置 <code>AriaNg</code> ，让它与 <code>Aria2</code> 能够连接 ( 通信 )。</p><p>浏览器访问 <a href=http://lixian.xxx.com/ target=_blank rel="noopener noreffer">http://lixian.xxx.com</a> ，点击左侧的 <strong>AriaNg 设置</strong> ，再点上面的 <strong>PRC</strong> 选项卡，把 <code>Aria2 RPC 地址</code> 和 <code>Aria2 RPC 密钥</code> 填上，如下图所示：</p><p><img class=lazyload src=/svg/loading.min.svg data-src=https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Aria2Image/AriaNgRPCshezhi.png data-srcset="https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Aria2Image/AriaNgRPCshezhi.png, https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Aria2Image/AriaNgRPCshezhi.png 1.5x, https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Aria2Image/AriaNgRPCshezhi.png 2x" data-sizes=auto alt=https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Aria2Image/AriaNgRPCshezhi.png title=PNG></p><p>如果不出意外，左侧的 <strong>Aria2 状态</strong> 会显示 <code>已连接</code></p><h4 id=安装-rclone>安装 Rclone</h4><p>Rclone 是一个用于将文件同步到各大云存储商的命令行工具，同时也支持云存储商之间的文件同步。</p><p>安装 Rclone：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-text data-lang=text>$ curl https://rclone.org/install.sh | sudo bash
+</code></pre></td></tr></table></div></div><p>Rclone 的 Google Drive 授权配置：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-text data-lang=text>$ rclone config
+</code></pre></td></tr></table></div></div><p>会出现以下信息：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-text data-lang=text>n) New remote
+s) Set configuration password
+q) Quit config
+n/s/q&gt;n
+</code></pre></td></tr></table></div></div><p>输入 <code>n</code> 后按回车键继续</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-text data-lang=text>name&gt; gd  #随便填，后面要用到
+</code></pre></td></tr></table></div></div><p>输入 <code>gd</code> 后按回车键继续</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span><span class=lnt>42
+</span><span class=lnt>43
+</span><span class=lnt>44
+</span><span class=lnt>45
+</span><span class=lnt>46
+</span><span class=lnt>47
+</span><span class=lnt>48
+</span><span class=lnt>49
+</span><span class=lnt>50
+</span><span class=lnt>51
+</span><span class=lnt>52
+</span><span class=lnt>53
+</span><span class=lnt>54
+</span><span class=lnt>55
+</span><span class=lnt>56
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-text data-lang=text>Type of storage to configure.
+Enter a string value. Press Enter for the default (&#34;&#34;).
+Choose a number from below, or type in your own value
+ 1 / A stackable unification remote, which can appear to merge the contents of several remotes
+   \ &#34;union&#34;
+ 2 / Alias for a existing remote
+   \ &#34;alias&#34;
+ 3 / Amazon Drive
+   \ &#34;amazon cloud drive&#34;
+ 4 / Amazon S3 Compliant Storage Providers (AWS, Ceph, Dreamhost, IBM COS, Minio)
+   \ &#34;s3&#34;
+ 5 / Backblaze B2
+   \ &#34;b2&#34;
+ 6 / Box
+   \ &#34;box&#34;
+ 7 / Cache a remote
+   \ &#34;cache&#34;
+ 8 / Dropbox
+   \ &#34;dropbox&#34;
+ 9 / Encrypt/Decrypt a remote
+   \ &#34;crypt&#34;
+10 / FTP Connection
+   \ &#34;ftp&#34;
+11 / Google Cloud Storage (this is not Google Drive)
+   \ &#34;google cloud storage&#34;
+12 / Google Drive
+   \ &#34;drive&#34;
+13 / Hubic
+   \ &#34;hubic&#34;
+14 / JottaCloud
+   \ &#34;jottacloud&#34;
+15 / Local Disk
+   \ &#34;local&#34;
+16 / Mega
+   \ &#34;mega&#34;
+17 / Microsoft Azure Blob Storage
+   \ &#34;azureblob&#34;
+18 / Microsoft OneDrive
+   \ &#34;onedrive&#34;
+19 / OpenDrive
+   \ &#34;opendrive&#34;
+20 / Openstack Swift (Rackspace Cloud Files, Memset Memstore, OVH)
+   \ &#34;swift&#34;
+21 / Pcloud
+   \ &#34;pcloud&#34;
+22 / QingCloud Object Storage
+   \ &#34;qingstor&#34;
+23 / SSH/SFTP Connection
+   \ &#34;sftp&#34;
+24 / Webdav
+   \ &#34;webdav&#34;
+25 / Yandex Disk
+   \ &#34;yandex&#34;
+26 / http Connection
+   \ &#34;http&#34;
+Storage&gt;12	# 12 对应 Google Drive
+</code></pre></td></tr></table></div></div><p>输入 <code>12</code> 后按回车键继续</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-text data-lang=text>** See help for drive backend at: https://rclone.org/drive/ **
+
+Google Application Client Id
+Leave blank normally.
+Enter a string value. Press Enter for the default (&#34;&#34;).
+client_id&gt;
+</code></pre></td></tr></table></div></div><p>什么也不填，直接按回车键继续</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-text data-lang=text>Google Application Client Secret
+Leave blank normally.
+Enter a string value. Press Enter for the default (&#34;&#34;).
+client_secret&gt;
+</code></pre></td></tr></table></div></div><p>什么也不填，直接按回车键继续</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-text data-lang=text>Scope that rclone should use when requesting access from drive.
+Enter a string value. Press Enter for the default (&#34;&#34;).
+Choose a number from below, or type in your own value
+ 1 / Full access all files, excluding Application Data Folder.
+   \ &#34;drive&#34;
+ 2 / Read-only access to file metadata and file contents.
+   \ &#34;drive.readonly&#34;
+   / Access to files created by rclone only.
+ 3 | These are visible in the drive website.
+   | File authorization is revoked when the user deauthorizes the app.
+   \ &#34;drive.file&#34;
+   / Allows read and write access to the Application Data folder.
+ 4 | This is not visible in the drive website.
+   \ &#34;drive.appfolder&#34;
+   / Allows read-only access to file metadata but
+ 5 | does not allow any access to read or download file content.
+   \ &#34;drive.metadata.readonly&#34;
+scope&gt;1
+</code></pre></td></tr></table></div></div><p>输入 <code>1</code> 后按回车键继续</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-text data-lang=text>ID of the root folder
+Leave blank normally.
+Fill in to access &#34;Computers&#34; folders. (see docs).
+Enter a string value. Press Enter for the default (&#34;&#34;).
+root_folder_id&gt;
+</code></pre></td></tr></table></div></div><p>什么也不填，直接按回车键继续</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-text data-lang=text>Service Account Credentials JSON file path
+Leave blank normally.
+Needed only if you want use SA instead of interactive login.
+Enter a string value. Press Enter for the default (&#34;&#34;).
+service_account_file&gt;
+</code></pre></td></tr></table></div></div><p>什么也不填，直接按回车键继续</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-text data-lang=text>Edit advanced config? (y/n)
+y) Yes
+n) No
+y/n&gt;n
+</code></pre></td></tr></table></div></div><p>输入 <code>n</code> 后按回车键继续</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-text data-lang=text>Remote config
+Use auto config?
+ * Say Y if not sure
+ * Say N if you are working on a remote or headless machine or Y didn&#39;t work
+y) Yes
+n) No
+y/n&gt;n
+</code></pre></td></tr></table></div></div><p>输入 <code>n</code> 后按回车键继续</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-text data-lang=text>If your browser doesn&#39;t open automatically go to the following link: https://accounts.google.com/o/oauth2/auth?access_type=offline&amp;client_id=202264815644.apps.googleusercontent.com&amp;redirect_uri=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob&amp;response_type=code&amp;scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive&amp;state=82f32ec9a39f1f00487d512287676715
+Log in and authorize rclone for access
+Enter verification code&gt;4/pwBniPjAj1gnadI8njaqWYE1lfxo92Hlw8NnKYGLYlmBfyopyl-mOWs # 填写验证码
+</code></pre></td></tr></table></div></div><p>这时会得到一个链接，把这个链接复制出来，在浏览器中打开，登录谷歌账号，得到一个验证码，填写后按回车键继续</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-text data-lang=text>Configure this as a team drive?
+y) Yes
+n) No
+y/n&gt;n
+</code></pre></td></tr></table></div></div><p>输入 <code>n</code> 后按回车键继续</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-text data-lang=text>Fetching team drive list...
+No team drives found in your account--------------------
+[gd]
+type = drive
+scope = drive
+token = {&#34;access_token&#34;:&#34;ya29.BlRMXReIsfNRXFhrq4EyrOkImRWmfd3DitxdjGz2PVEBROyI_mA0YZPGltmAmjaNLTxZciI3IHHuNyHKwnMbFZbQmO7L4cuwVN3Xh2SFvNatTfwL4XwxOhRQnmgv&#34;,&#34;token_type&#34;:&#34;Bearer&#34;,&#34;refresh_token&#34;:&#34;1/WD0wd8g-w2S6vLJCseQ2PL9X-Wed5nko8JbByU3qLOk&#34;,&#34;expiry&#34;:&#34;2018-12-03T03:00:03.961221503+08:00&#34;}
+--------------------
+y) Yes this is OK
+e) Edit this remote
+d) Delete this remote
+y/e/d&gt;y
+</code></pre></td></tr></table></div></div><p>输入 <code>y</code> 后按回车键继续</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-text data-lang=text>Current remotes:
+
+Name                 Type
+====                 ====
+gd                   drive
+
+e) Edit existing remote
+n) New remote
+d) Delete remote
+r) Rename remote
+c) Copy remote
+s) Set configuration password
+q) Quit config
+e/n/d/r/c/s/q&gt;q
+</code></pre></td></tr></table></div></div><p>输入 <code>q</code> 后按回车键退出。</p><h4 id=安装-python3>安装 Python3</h4><p>使用 Python3 是因为 <code>Aria2</code> 中的任务下载完后需要做一些处理，然后调用 <code>Rclone</code> 上传到 GD。CentOS 7 虽然系统自带了 Python2，但我从来没有学过 Python 这个语言，百度上现学的时候搜出来的都是 Python3 的教程，所以就用 Python3 来做任务下载的后续处理了。</p><p>下面是下载 Python3 源码，然后配置、编译、安装步骤：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-text data-lang=text>$ wget https://www.python.org/ftp/python/3.6.8/Python-3.6.8.tar.xz
+$ tar -xvJf Python-3.6.8.tar.xz
+$ cd Python-3.6.8
+$ ./configure prefix=/usr/local/python3
+$ make &amp;&amp; make install
+</code></pre></td></tr></table></div></div><p>安装完后创建一个软连接到 <code>/usr/bin/python3</code> ：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-text data-lang=text>$ ln -s /usr/local/python3/bin/python3 /usr/bin/python3
+$ ln -s /usr/local/python3/bin/pip3 /usr/bin/pip3
+</code></pre></td></tr></table></div></div><p>使用下面命令查看一下是否生效：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-text data-lang=text>$ python3 -V
+</code></pre></td></tr></table></div></div><h4 id=安装-python-的-redis-库>安装 Python 的 Redis 库</h4><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-text data-lang=text>$ pip3 install redis
+</code></pre></td></tr></table></div></div><p>安装这个库是因为我要使用 <code>Python</code> 来操作 <code>Redis</code> 。</p><h4 id=安装-python-的-python-telegram-bot-库>安装 Python 的 python-telegram-bot 库</h4><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-text data-lang=text>$ pip3 install python-telegram-bot
+</code></pre></td></tr></table></div></div><p>安装这个库是因为我要使用 <code>Python</code> 来发送离线任务完成通知到 <code>Telegram</code> 。</p><h4 id=上传处理脚本>上传处理脚本</h4><p>下载 <a href=https://github.com/meishixiu/note/raw/master/Aria2+AriaNg+Rclone+GoogleDrive/autoupload.sh target=_blank rel="noopener noreffer">autoupload.sh</a> 、 <a href=https://github.com/meishixiu/note/raw/master/Aria2+AriaNg+Rclone+GoogleDrive/add_upload_queue.py target=_blank rel="noopener noreffer">add_upload_queue.py</a> 、 <a href=https://github.com/meishixiu/note/raw/master/Aria2+AriaNg+Rclone+GoogleDrive/work_upload.py target=_blank rel="noopener noreffer">work_upload.py</a> 、 <a href=https://github.com/meishixiu/note/raw/master/Aria2+AriaNg+Rclone+GoogleDrive/clear_down.py target=_blank rel="noopener noreffer">clear_down.py</a> 、 <a href=https://github.com/meishixiu/note/raw/master/Aria2+AriaNg+Rclone+GoogleDrive/config.py target=_blank rel="noopener noreffer">config.py</a> 、<a href=https://github.com/meishixiu/note/raw/master/Aria2+AriaNg+Rclone+GoogleDrive/filter-file.txt target=_blank rel="noopener noreffer">filter-file.txt</a> 这 6 的文件到放到 <code>/home</code> 里，然后给 <code>autoupload.sh</code> 执行权限：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-text data-lang=text>$ chmod +x /home/autoupload.sh
+</code></pre></td></tr></table></div></div><p>由于我在 <code>Aria2</code> 的配置文件 <code>aria2.conf</code> 里配置了 <code>on-download-complete=/home/autoupload.sh</code> ，他是让 <code>Aria2</code> 下载任务完成后执行这个 shell 脚本，所以把这些脚本放到 <code>/home</code> 里。</p><p>然后根据自己的情况修改 <code>config.py</code> 中的配置，比如 <strong>Aria2 RPC 密钥</strong> 、<strong>Aria2 下载目录</strong>、<strong>Google Drive 上传目录</strong>，其他的默认就行了。<strong>Aria2 RPC 地址</strong> 一般也不用修改，使用 <code>http://127.0.0.1:6800/jsonrpc</code> 这个就行了，因为就在 VPS 本地执行，使用 127 这个更快一些。</p><p><strong>其他说明</strong></p><ul><li>上传使用的是 <code>rclone move</code> 操作，它会在文件上传到 GD 后自动删除 VPS 中的文件 ( 但不会删除被 <code>filter-file.txt</code> 过滤的文件 ) 以达到释放硬盘的目的；</li><li><code>add_upload_queue.py</code> 会把解析磁力链接时最开下载的那个已经无用的 <code>Aria2</code> 任务自动删掉，并且还做了很多上传前的细节处理，最后把上传任务添加到上传对列；</li><li><code>work_upload.py</code> 会在上传完成后把那个对应的已完成的 <code>Aria2</code> 任务删掉，因为 VPS 中文件都已经被 <code>rclone</code> 移动到了 GD 了，留那个任务也是无用。而且自动清理掉已完成的下任务，可以在所有下载任务都完成后由下面的计划任务自动清理下载目录。</li></ul><p>可能有人不太明白，我为什么要搞这么麻烦，还装了 <code>Redis</code> 来做上传队列，让下载任务排队上传。网上不是有一些简单的 <code>shell</code> 脚本，直接在 <code>Aria2</code> 的 <code>on-download-complete</code> 配置里指定这个脚本，下载完后让这个脚本调用 <code>rclone</code> 来上传文件不就行了？下面我来给大家举个例子：</p><p>比如我现在下载完了一个 <code>BT</code> 任务，这个任务总共有 47G 大小，173 个文件，目前正在往 GD 上传。我们通过宝塔面板来看一下此时 VPS 的系统状态：</p><p><img class=lazyload src=/svg/loading.min.svg data-src=https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Aria2Image/baotafuzai.png data-srcset="https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Aria2Image/baotafuzai.png, https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Aria2Image/baotafuzai.png 1.5x, https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Aria2Image/baotafuzai.png 2x" data-sizes=auto alt=https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Aria2Image/baotafuzai.png title=PNG></p><p>虽然 CPU 什么的都不高，但系统负载却达到了 100% ，宝塔面板加载明显变慢！可以想象，如果不用上传队列加以控制，此时 <code>Aria2</code> 又下载好了几个任务，然后又开始用 <code>rclone</code> 上传新的文件，而我们之前那个 47G 的大包还没上传完，这几个上传任务同时执行，我们的小鸡还不废掉？这只还仅仅只是各种坑中的一个！</p><h4 id=计划任务>计划任务</h4><p>在宝塔面板右侧点击 <strong>计划任务</strong>，然后添加两个计划任务，具体配置如下：</p><p><img class=lazyload src=/svg/loading.min.svg data-src=https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Aria2Image/baotajihua1.png data-srcset="https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Aria2Image/baotajihua1.png, https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Aria2Image/baotajihua1.png 1.5x, https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Aria2Image/baotajihua1.png 2x" data-sizes=auto alt=https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Aria2Image/baotajihua1.png title=PNG></p><p>这个计划任务会每分钟检查一次队列中是否有待上传的任务，如果有，且当前没有任务在执行上传操作就那就开始上传。但是，如果当前有任务正在上传，就跳过，待其上传完后再执行。</p><p><img class=lazyload src=/svg/loading.min.svg data-src=https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Aria2Image/baotajihua2.png data-srcset="https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Aria2Image/baotajihua2.png, https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Aria2Image/baotajihua2.png 1.5x, https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Aria2Image/baotajihua2.png 2x" data-sizes=auto alt=https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Aria2Image/baotajihua2.png title=PNG></p><p>这个计划任务会每十分钟检查一次 <code>Aria2</code> 中是否有 <strong>正在下载</strong> 、<strong>正在等待</strong>、<strong>已完成/已停止</strong> 这 3 种状态的任务，如果都没有，那就清理 <code>config.py</code> 中指定的 <code>Aria2 下载目录</code> ，这样做的原因是长期做下载，下载目录中会遗留很多乱七八糟的无用的文件或文件夹，所以在没有任务的时候清理一下，可以释放服务器的硬盘空间。</p><p>但这两个计划任务的执行周期都比较短，时间长了就会在系统里留下体积巨大的日志文件，所以还需处理一下，让他们不写日志。</p><p><img class=lazyload src=/svg/loading.min.svg data-src=https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Aria2Image/baotajihua3.png data-srcset="https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Aria2Image/baotajihua3.png, https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Aria2Image/baotajihua3.png 1.5x, https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Aria2Image/baotajihua3.png 2x" data-sizes=auto alt=https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Aria2Image/baotajihua3.png title=PNG></p><p>打开 <code>/www/server/cron</code> 这个文件夹，里面存放了刚才由宝塔面板创建的两个计划任务脚本 ( 不带 <code>.log</code> 的那两个文件 )，点击右边的 <strong>编辑</strong>，把：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-text data-lang=text>#!/bin/bash
+PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
+export PATH
+python3 /home/work_upload.py
+echo &#34;----------------------------------------------------------------------------&#34;
+endDate=`date +&#34;%Y-%m-%d %H:%M:%S&#34;`
+echo &#34;★[$endDate] Successful&#34;
+echo &#34;----------------------------------------------------------------------------&#34;
+</code></pre></td></tr></table></div></div><p>改为：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-text data-lang=text>#!/bin/bash
+PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
+export PATH
+python3 /home/work_upload.py &gt; /dev/null
+</code></pre></td></tr></table></div></div><p>把：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-text data-lang=text>#!/bin/bash
+PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
+export PATH
+python3 /home/clear_down.py
+echo &#34;----------------------------------------------------------------------------&#34;
+endDate=`date +&#34;%Y-%m-%d %H:%M:%S&#34;`
+echo &#34;★[$endDate] Successful&#34;
+echo &#34;----------------------------------------------------------------------------&#34;
+</code></pre></td></tr></table></div></div><p>改为：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-text data-lang=text>#!/bin/bash
+PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
+export PATH
+python3 /home/clear_down.py &gt; /dev/null
+</code></pre></td></tr></table></div></div><p>也就是删掉多余的输出，并且在我们的命令之后添加 <code>> /dev/null</code></p><h4 id=开放端口>开放端口</h4><p>根据 <code>Aria2</code> 的配置，还需要再开放几个端口</p><p><img class=lazyload src=/svg/loading.min.svg data-src=https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Aria2Image/baotakaifangduankou.png data-srcset="https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Aria2Image/baotakaifangduankou.png, https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Aria2Image/baotakaifangduankou.png 1.5x, https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Aria2Image/baotakaifangduankou.png 2x" data-sizes=auto alt=https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Aria2Image/baotakaifangduankou.png title=PNG></p><h4 id=telegram-bot-通知>Telegram Bot 通知</h4><p>如果需要通过 <code>Telegram</code> 来接收离线任务完成通知，可以在 <code>config.py</code> 中开启 <code>"enable_tg_bot": True,</code> 并做好相应的配置。其中 <code>tg_chat_id</code> 是通知目标，它的值可以是 <strong>个人/群组/频道</strong> 的数字 <strong>id</strong> 或者 <strong>带 @ 的 username</strong> ；<code>tg_bot_token</code> 则需要私聊 <a href=https://t.me/BotFather target=_blank rel="noopener noreffer">@BotFather</a> 并创建机器人后获取。下面是 <code>Telegram</code> 通知的效果截图：</p><p><img class=lazyload src=/svg/loading.min.svg data-src=https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Aria2Image/telegrambottongzhi.jpg data-srcset="https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Aria2Image/telegrambottongzhi.jpg, https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Aria2Image/telegrambottongzhi.jpg 1.5x, https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Aria2Image/telegrambottongzhi.jpg 2x" data-sizes=auto alt=https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Aria2Image/telegrambottongzhi.jpg title=PNG></p><p><strong>至此，所有安装、配置的工作已全部完成。</strong></p><h3 id=使用>使用</h3><h4 id=ios--安卓平台在线播放>iOS / 安卓平台在线播放</h4><p>iOS 上可以在 <a href=https://itunes.apple.com/app/id1116905928 target=_blank rel="noopener noreffer">nPlayer</a> 的 <strong>网络</strong> 里添加 <code>Google Drive</code> ，登录账号后就可以在线看片了。另外还可以使用 nPlayer 投屏到电视上播放。</p></div><div class=post-footer id=post-footer><div class=post-info><div class=post-info-line><div class=post-info-mod><span>更新于 2020-07-08</span></div><div class=post-info-license></div></div><div class=post-info-line><div class=post-info-md><span><a class=link-to-markdown href=/aria2/index.md target=_blank>阅读原始文档</a></span></div><div class=post-info-share><span><a href=javascript:void(0); title="分享到 Twitter" data-sharer=twitter data-url=https://www.nashome.cn/aria2/ data-title="Aria2 搭建离线下载并自动上传到 Google Drive" data-hashtags=Aria2,GoogleDrive><i class="fab fa-twitter fa-fw"></i></a><a href=javascript:void(0); title="分享到 Facebook" data-sharer=facebook data-url=https://www.nashome.cn/aria2/ data-hashtag=Aria2><i class="fab fa-facebook-square fa-fw"></i></a><a href=javascript:void(0); title="分享到 Hacker News" data-sharer=hackernews data-url=https://www.nashome.cn/aria2/ data-title="Aria2 搭建离线下载并自动上传到 Google Drive"><i class="fab fa-hacker-news fa-fw"></i></a><a href=javascript:void(0); title="分享到 Line" data-sharer=line data-url=https://www.nashome.cn/aria2/ data-title="Aria2 搭建离线下载并自动上传到 Google Drive"><i data-svg-src=https://cdn.jsdelivr.net/npm/simple-icons@2.14.0/icons/line.svg></i></a><a href=javascript:void(0); title="分享到 微博" data-sharer=weibo data-url=https://www.nashome.cn/aria2/ data-title="Aria2 搭建离线下载并自动上传到 Google Drive"><i class="fab fa-weibo fa-fw"></i></a></span></div></div></div><div class=post-info-more><section class=post-tags><i class="fas fa-tags fa-fw"></i>&nbsp;<a href=/tags/aria2/>Aria2</a>,&nbsp;<a href=/tags/googledrive/>GoogleDrive</a></section><section><span><a href=javascript:void(0); onclick=window.history.back();>返回</a></span>&nbsp;|&nbsp;<span><a href=/>主页</a></span></section></div><div class=post-nav><a href=/synology-ddns-02/ class=prev rel=prev title="Synology DDNS 02"><i class="fas fa-angle-left fa-fw"></i>Synology DDNS 02</a>
+<a href=/pandalearning/ class=next rel=next title=学习强国>学习强国<i class="fas fa-angle-right fa-fw"></i></a></div></div><div id=comments><div id=valine class=comment></div><noscript>Please enable JavaScript to view the comments powered by <a href=https://valine.js.org/>Valine</a>.</noscript></div></article></div></main><footer class=footer><div class=footer-container><div class=footer-line>由 <a href=https://gohugo.io/ target=_blank rel="noopener noreffer" title="Hugo 0.64.1">Hugo</a> 强力驱动 | 主题 - <a href=https://github.com/dillonzq/LoveIt target=_blank rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i>LoveIt</a></div><div class=footer-line><i class="far fa-copyright fa-fw"></i><span itemprop=copyrightYear>2016 - 2020</span><span class=author itemprop=copyrightHolder>&nbsp;<a href=/ target=_blank>zhaoqiang</a></span>&nbsp;|&nbsp;<span class=license><a rel="license external nofollow noopener noreffer" href=https://creativecommons.org/licenses/by-nc/4.0/ target=_blank>CC BY-NC 4.0</a></span><span class=icp-splitter>&nbsp;|&nbsp;</span><br class=icp-br><span class=icp><a href=http://www.beian.miit.gov.cn>沪ICP备17033498号</a></span></div></div></footer></div><div id=fixed-buttons><a href=# id=back-to-top class=fixed-button title=回到顶部><i class="fas fa-arrow-up fa-fw"></i></a><a href=# id=view-comments class=fixed-button title=查看评论><i class="fas fa-comment fa-fw"></i></a></div><link rel=stylesheet href=/lib/valine/valine.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/lightgallery.js@1.2.0/dist/css/lightgallery.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.css><script type=text/javascript src=https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/algoliasearch@4.2.0/dist/algoliasearch-lite.umd.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/twemoji@13.0.0/dist/twemoji.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/lightgallery.js@1.2.0/dist/js/lightgallery.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/lg-thumbnail.js@1.2.0/dist/lg-thumbnail.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/lg-zoom.js@1.2.0/dist/lg-zoom.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/sharer.js@0.4.0/sharer.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/mhchem.min.js></script><script type=text/javascript>window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"valine":{"appId":"Bu42IhLNJc94WvCDKSsRwTqa-gzGzoHsz","appKey":"bKSP5XiBoIHs8PyXC4uhGhqQ","avatar":"mm","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@5.0.1/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"zh-cn","pageSize":10,"placeholder":"你的评论 ...","recordIP":true,"visitor":true}},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"EO42BFKWB5","algoliaIndex":"hugoblogloveit","algoliaSearchKey":"d3ef25fc7cb90a144ea0139748e4cf6b","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"},"twemoji":true};</script><script type=text/javascript src=/js/theme.min.js></script><script type=text/javascript>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','UA-105751499-1',{'anonymize_ip':true});</script><script type=text/javascript src="https://www.googletagmanager.com/gtag/js?id=UA-105751499-1" async></script></body></html>

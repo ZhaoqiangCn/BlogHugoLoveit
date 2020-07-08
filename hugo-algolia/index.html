@@ -1,0 +1,475 @@
+<!doctype html><html lang=zh-cn><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="noodp"><meta http-equiv=x-ua-compatible content="IE=edge, chrome=1"><title>用 Hugo 配合 Algolia 实现高效美观的站内搜索 - Blog My Life</title><meta name=Description content="A blog recording my life"><meta property="og:title" content="用 Hugo 配合 Algolia 实现高效美观的站内搜索"><meta property="og:description" content="本文同步更新至 Youtube  和 BiliBili 
+ 前言 很多的 Hugo 主题是没有自带搜索功能的，但是们为了方便用户浏览和查找内容是需要在网站上提供搜索功能。大家可以查看 Hugo 官方推荐的搜索方案，这里我选择的是 Algolia ， 折腾了很久，主题也从EVEN更新到了现在的LOVEIT，发现也并非很繁琐，以下是折腾后的成果。
+在Algolia 端创建应用和索引 Application 点击NEW APPLICATION，Name可选，方案选择FREE，然后创建，随后的地区选择邻近地区即可； Indices & Index 点击侧栏的Indices，然后点击Create Index，Index name自定义（例如自己的域名） API Keys 点击侧栏API Keys，记住以下的 Keys，之后都会用到； 在本地生成索引 config.yaml 在themes同级添加config.yaml文件,注意这里的key是Admin API Key。
+1 2 3 4 5 6 7 8 9 10 11 12 13  ---baseurl:&#34;https://www.nashome.cn/&#34;DefaultContentLanguage:&#34;zh-cn&#34;hasCJKLanguage:truelanguageCode:&#34;zh-cn&#34;title:&#34;zhaoqiang's blog&#34;theme:&#34;loveit&#34;metaDataFormat:&#34;yaml&#34;algolia:index:&#34;**blogloveit&#34;key:&#34;*****9748e4cf6b&#34;appID:&#34;***KWB5&#34;---  hugo-aligolia 我们这里使用一个hugo-algolia的插件来完成我们的数据同步工作,要安装hugo-aligolia我们需要先确保我们已经安装了 npm 或者 yarn 包管理工具。
+使用下面的命令安装即可：
+1  $ npm install hugo-algolia -g   配置完成以后，在根目录下面执行下面的命令："><meta property="og:type" content="article"><meta property="og:url" content="https://www.nashome.cn/hugo-algolia/"><meta property="og:image" content="https://www.nashome.cn/logo.png"><meta property="article:published_time" content="2020-02-18T09:13:13+08:00"><meta property="article:modified_time" content="2020-07-08T14:34:13+08:00"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://www.nashome.cn/logo.png"><meta name=twitter:title content="用 Hugo 配合 Algolia 实现高效美观的站内搜索"><meta name=twitter:description content="本文同步更新至 Youtube  和 BiliBili 
+ 前言 很多的 Hugo 主题是没有自带搜索功能的，但是们为了方便用户浏览和查找内容是需要在网站上提供搜索功能。大家可以查看 Hugo 官方推荐的搜索方案，这里我选择的是 Algolia ， 折腾了很久，主题也从EVEN更新到了现在的LOVEIT，发现也并非很繁琐，以下是折腾后的成果。
+在Algolia 端创建应用和索引 Application 点击NEW APPLICATION，Name可选，方案选择FREE，然后创建，随后的地区选择邻近地区即可； Indices & Index 点击侧栏的Indices，然后点击Create Index，Index name自定义（例如自己的域名） API Keys 点击侧栏API Keys，记住以下的 Keys，之后都会用到； 在本地生成索引 config.yaml 在themes同级添加config.yaml文件,注意这里的key是Admin API Key。
+1 2 3 4 5 6 7 8 9 10 11 12 13  ---baseurl:&#34;https://www.nashome.cn/&#34;DefaultContentLanguage:&#34;zh-cn&#34;hasCJKLanguage:truelanguageCode:&#34;zh-cn&#34;title:&#34;zhaoqiang's blog&#34;theme:&#34;loveit&#34;metaDataFormat:&#34;yaml&#34;algolia:index:&#34;**blogloveit&#34;key:&#34;*****9748e4cf6b&#34;appID:&#34;***KWB5&#34;---  hugo-aligolia 我们这里使用一个hugo-algolia的插件来完成我们的数据同步工作,要安装hugo-aligolia我们需要先确保我们已经安装了 npm 或者 yarn 包管理工具。
+使用下面的命令安装即可：
+1  $ npm install hugo-algolia -g   配置完成以后，在根目录下面执行下面的命令："><meta name=application-name content="Blog My Life"><meta name=apple-mobile-web-app-title content="Blog My Life"><meta name=theme-color content="#ffffff"><meta name=msapplication-TileColor content="#da532c"><link rel="shortcut icon" type=image/x-icon href=/favicon.ico><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://www.nashome.cn/hugo-algolia/><link rel=prev href=https://www.nashome.cn/hugo-valine-email/><link rel=next href=https://www.nashome.cn/dynamics-ax-record-level-security/><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css><link rel=stylesheet href=/css/style.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"用 Hugo 配合 Algolia 实现高效美观的站内搜索","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nashome.cn\/hugo-algolia\/"},"image":[{"@type":"ImageObject","url":"https:\/\/www.nashome.cn\/images\/Apple-Devices-Preview.png","width":3200,"height":2048}],"genre":"posts","keywords":"hugo, algolia, 站内搜索, search","wordcount":913,"url":"https:\/\/www.nashome.cn\/hugo-algolia\/","datePublished":"2020-02-18T09:13:13+08:00","dateModified":"2020-07-08T14:34:13+08:00","license":"This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher":{"@type":"Organization","name":"zhaoqiang","logo":{"@type":"ImageObject","url":"https:\/\/www.nashome.cn\/images\/avatar.png","width":528,"height":560}},"author":{"@type":"Person","name":"zhaoqiang"},"description":""}</script></head><body header-desktop=fixed header-mobile=auto><script type=text/javascript>(window.localStorage&&localStorage.getItem('theme')?localStorage.getItem('theme')==='dark':('auto'==='auto'?window.matchMedia('(prefers-color-scheme: dark)').matches:'auto'==='dark'))&&document.body.setAttribute('theme','dark');</script><div id=mask></div><div class=wrapper><header class=desktop id=header-desktop><div class=header-wrapper><div class=header-title><a href=/ title="Blog My Life"><span class=header-title-pre><i class="far fa-kiss-wink-heart fa-fw"></i></span>zhaoqiang's blog</a></div><div class=menu><div class=menu-inner><a class=menu-item href=/posts/>所有文章 </a><a class=menu-item href=/tags/>标签 </a><a class=menu-item href=/categories/>分类 </a><a class=menu-item href=/ title=GitHub><i class="fab fa-github fa-fw"></i></a><span class="menu-item delimiter"></span><span class="menu-item search" id=search-desktop><input type=text placeholder=搜索文章标题或内容... id=search-input-desktop>
+<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-desktop title=搜索><i class="fas fa-search fa-fw"></i></a><a href=javascript:void(0); class="search-button search-clear" id=search-clear-desktop title=清空><i class="fas fa-times-circle fa-fw"></i></a><span class="search-button search-loading" id=search-loading-desktop><i class="fas fa-spinner fa-fw fa-spin"></i></span></span><a href=javascript:void(0); class="menu-item theme-switch" title=切换主题><i class="fas fa-adjust fa-fw"></i></a></div></div></div></header><header class=mobile id=header-mobile><div class=header-container><div class=header-wrapper><div class=header-title><a href=/ title="Blog My Life"><span class=header-title-pre><i class="far fa-kiss-wink-heart fa-fw"></i></span>zhaoqiang's blog</a></div><div class=menu-toggle id=menu-toggle-mobile><span></span><span></span><span></span></div></div><div class=menu id=menu-mobile><div class=search-wrapper><div class="search mobile" id=search-mobile><input type=text placeholder=搜索文章标题或内容... id=search-input-mobile>
+<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-mobile title=搜索><i class="fas fa-search fa-fw"></i></a><a href=javascript:void(0); class="search-button search-clear" id=search-clear-mobile title=清空><i class="fas fa-times-circle fa-fw"></i></a><span class="search-button search-loading" id=search-loading-mobile><i class="fas fa-spinner fa-fw fa-spin"></i></span></div><a href=javascript:void(0); class=search-cancel id=search-cancel-mobile>取消</a></div><a class=menu-item href=/posts/>所有文章</a><a class=menu-item href=/tags/>标签</a><a class=menu-item href=/categories/>分类</a><a class=menu-item href=/ title=GitHub><i class="fab fa-github fa-fw"></i></a><a href=javascript:void(0); class="menu-item theme-switch" title=切换主题>
+<i class="fas fa-adjust fa-fw"></i></a></div></div></header><div class="search-dropdown desktop"><div id=search-dropdown-desktop></div></div><div class="search-dropdown mobile"><div id=search-dropdown-mobile></div></div><main class=main><div class=container><div class=toc id=toc-auto><h2 class=toc-title>目录</h2><div class="toc-content always-active" id=toc-content-auto></div></div><article class="page single"><h1 class="single-title animated flipInX">用 Hugo 配合 Algolia 实现高效美观的站内搜索</h1><div class=post-meta><div class=post-meta-line><span class=post-author><a href=/ title=Author rel=author class=author><i class="fas fa-user-circle fa-fw"></i>zhaoqiang</a></span>&nbsp;<span class=post-category>收录于 <a href=/categories/hugo/><i class="far fa-folder fa-fw"></i>hugo</a></span></div><div class=post-meta-line><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime=2020-02-18>2020-02-18</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 913 字&nbsp;
+<i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 5 分钟&nbsp;<span id=/hugo-algolia/ class=leancloud_visitors data-flag-title="用 Hugo 配合 Algolia 实现高效美观的站内搜索">
+<i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
+</span>&nbsp;</div></div><div class="details toc" id=toc-static kept><div class="details-summary toc-title"><span>目录</span>
+<span><i class="details-icon fas fa-angle-right"></i></span></div><div class="details-content toc-content" id=toc-content-static><nav id=TableOfContents><ul><li><ul><li><a href=#前言>前言</a></li><li><a href=#在algolia-端创建应用和索引>在Algolia 端创建应用和索引</a><ul><li><a href=#application>Application</a></li><li><a href=#indices--index>Indices & Index</a></li><li><a href=#api-keys>API Keys</a></li></ul></li><li><a href=#在本地生成索引>在本地生成索引</a><ul><li><a href=#configyaml>config.yaml</a></li><li><a href=#hugo-aligolia>hugo-aligolia</a></li></ul></li><li><a href=#页面展示>页面展示</a><ul><li><a href=#新建searchhtml>新建search.html</a></li><li><a href=#添加searchjs>添加search.js</a></li><li><a href=#添加searchcss文件>添加search.css文件</a></li><li><a href=#在baseofhtml中添加代码>在baseof.html中添加代码</a></li><li><a href=#引用css文件和js文件>引用css文件和js文件</a></li><li><a href=#添加锚点>添加锚点</a></li></ul></li></ul></li></ul></nav></div></div><div class=content id=content><blockquote><p><strong>本文同步更新至 <a href=https://youtu.be/D77dMN_U4YA target=_blank rel="noopener noreffer">Youtube</a> 和 <a href=https://www.bilibili.com/video/av91537755/ target=_blank rel="noopener noreffer">BiliBili</a></strong></p></blockquote><h2 id=前言>前言</h2><p>很多的 <code>Hugo</code> 主题是没有自带搜索功能的，但是们为了方便用户浏览和查找内容是需要在网站上提供搜索功能。大家可以查看 <a href=https://gohugo.io/tools/search/ target=_blank rel="noopener noreffer">Hugo 官方推荐的搜索方案</a>，这里我选择的是 <a href=https://www.algolia.com/ target=_blank rel="noopener noreffer">Algolia</a> ， 折腾了很久，主题也从<code>EVEN</code>更新到了现在的<code>LOVEIT</code>，发现也并非很繁琐，以下是折腾后的成果。</p><h2 id=在algolia-端创建应用和索引>在Algolia 端创建应用和索引</h2><h3 id=application>Application</h3><p>点击<strong>NEW APPLICATION</strong>，<strong>Name</strong>可选，方案选择<strong>FREE</strong>，然后创建，随后的地区选择邻近地区即可；
+<img class=lazyload src=/svg/loading.min.svg data-src=https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Algolia/1.png data-srcset="https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Algolia/1.png, https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Algolia/1.png 1.5x, https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Algolia/1.png 2x" data-sizes=auto alt=https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Algolia/1.png title=https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Algolia/1.png></p><h3 id=indices--index>Indices & Index</h3><p>点击侧栏的<strong>Indices</strong>，然后点击<strong>Create Index</strong>，<strong>Index name</strong>自定义（例如自己的域名）
+<img class=lazyload src=/svg/loading.min.svg data-src=https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Algolia/0.png data-srcset="https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Algolia/0.png, https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Algolia/0.png 1.5x, https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Algolia/0.png 2x" data-sizes=auto alt=https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Algolia/0.png title=https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Algolia/0.png>
+<img class=lazyload src=/svg/loading.min.svg data-src=https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Algolia/2.png data-srcset="https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Algolia/2.png, https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Algolia/2.png 1.5x, https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Algolia/2.png 2x" data-sizes=auto alt=https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Algolia/2.png title=https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Algolia/2.png></p><h3 id=api-keys>API Keys</h3><p>点击侧栏<strong>API Keys</strong>，记住以下的 <strong>Keys</strong>，之后都会用到；
+<img class=lazyload src=/svg/loading.min.svg data-src=https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Algolia/3.png data-srcset="https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Algolia/3.png, https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Algolia/3.png 1.5x, https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Algolia/3.png 2x" data-sizes=auto alt=https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Algolia/3.png title=https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/Algolia/3.png></p><h2 id=在本地生成索引>在本地生成索引</h2><h3 id=configyaml>config.yaml</h3><p>在<code>themes</code>同级添加<code>config.yaml</code>文件,注意这里的<code>key</code>是<strong>Admin API Key</strong>。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-yaml data-lang=yaml>---<span class=w>
+</span><span class=w></span><span class=k>baseurl</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;https://www.nashome.cn/&#34;</span><span class=w>
+</span><span class=w></span><span class=k>DefaultContentLanguage</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;zh-cn&#34;</span><span class=w>
+</span><span class=w></span><span class=k>hasCJKLanguage</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span><span class=w></span><span class=k>languageCode</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;zh-cn&#34;</span><span class=w>
+</span><span class=w></span><span class=k>title</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;zhaoqiang&#39;s blog&#34;</span><span class=w>
+</span><span class=w></span><span class=k>theme</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;loveit&#34;</span><span class=w>
+</span><span class=w></span><span class=k>metaDataFormat</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;yaml&#34;</span><span class=w>
+</span><span class=w></span><span class=k>algolia</span><span class=p>:</span><span class=w>
+</span><span class=w></span><span class=w>  </span><span class=k>index</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;**blogloveit&#34;</span><span class=w>
+</span><span class=w>  </span><span class=k>key</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;*****9748e4cf6b&#34;</span><span class=w>
+</span><span class=w>  </span><span class=k>appID</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;***KWB5&#34;</span><span class=w>
+</span><span class=w></span>---<span class=w>
+</span></code></pre></td></tr></table></div></div><h3 id=hugo-aligolia>hugo-aligolia</h3><p>我们这里使用一个<code>hugo-algolia</code>的插件来完成我们的数据同步工作,要安装<code>hugo-aligolia</code>我们需要先确保我们已经安装了 <code>npm</code> 或者 <code>yarn</code> 包管理工具。</p><p>使用下面的命令安装即可：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-bash data-lang=bash>$ npm install hugo-algolia -g
+</code></pre></td></tr></table></div></div><p>配置完成以后，在根目录下面执行下面的命令：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-bash data-lang=bash>$ hugo-algolia -s
+JSON index file was created in public/algolia.json
+<span class=o>{</span> updatedAt: <span class=s1>&#39;2020-01-23T02:36:09.480Z&#39;</span>, taskID: <span class=m>249063848950</span> <span class=o>}</span>
+</code></pre></td></tr></table></div></div><p>这个时候我们在 <strong>dashboard</strong> 中打开 <strong>Indices</strong>，可以看到已经有几十条数据了。</p><p>如果某篇文章不想被索引的话，我们只需要在文件的最前面设置 index 参数为 false 即可。</p><h2 id=页面展示>页面展示</h2><h3 id=新建searchhtml>新建search.html</h3><p>在<code>themes\LoveIt\layouts\partials</code>新建<code>search.html</code>并添加如下代码</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>div</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;aa-input-container&#34;</span> <span class=na>id</span><span class=o>=</span><span class=s>&#34;aa-input-container&#34;</span><span class=p></span><span class=p>&gt;</span>
+    <span class=p>&lt;</span><span class=nt>input</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;search&#34;</span> <span class=na>id</span><span class=o>=</span><span class=s>&#34;aa-search-input&#34;</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;aa-input-search&#34;</span> <span class=na>placeholder</span><span class=o>=</span><span class=s>&#34;Search for titles or URIs...&#34;</span> <span class=na>name</span><span class=o>=</span><span class=s>&#34;search&#34;</span> <span class=na>autocomplete</span><span class=o>=</span><span class=s>&#34;off&#34;</span> <span class=p>/</span><span class=p>&gt;</span>
+    <span class=p>&lt;</span><span class=nt>svg</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;aa-input-icon&#34;</span> <span class=na>viewBox</span><span class=o>=</span><span class=s>&#34;654 -372 1664 1664&#34;</span><span class=p></span><span class=p>&gt;</span>
+        <span class=p>&lt;</span><span class=nt>path</span> <span class=na>d</span><span class=o>=</span><span class=s>&#34;M1806,332c0-123.3-43.8-228.8-131.5-316.5C1586.8-72.2,1481.3-116,1358-116s-228.8,43.8-316.5,131.5  C953.8,103.2,910,208.7,910,332s43.8,228.8,131.5,316.5C1129.2,736.2,1234.7,780,1358,780s228.8-43.8,316.5-131.5  C1762.2,560.8,1806,455.3,1806,332z M2318,1164c0,34.7-12.7,64.7-38,90s-55.3,38-90,38c-36,0-66-12.7-90-38l-343-342  c-119.3,82.7-252.3,124-399,124c-95.3,0-186.5-18.5-273.5-55.5s-162-87-225-150s-113-138-150-225S654,427.3,654,332  s18.5-186.5,55.5-273.5s87-162,150-225s138-113,225-150S1262.7-372,1358-372s186.5,18.5,273.5,55.5s162,87,225,150s113,138,150,225  S2062,236.7,2062,332c0,146.7-41.3,279.7-124,399l343,343C2305.7,1098.7,2318,1128.7,2318,1164z&#34;</span> <span class=p>/</span><span class=p>&gt;</span>
+    <span class=p>&lt;</span><span class=p>/</span><span class=nt>svg</span><span class=p>&gt;</span>
+<span class=p>&lt;</span><span class=p>/</span><span class=nt>div</span><span class=p>&gt;</span>
+</code></pre></td></tr></table></div></div><h3 id=添加searchjs>添加search.js</h3><p>在<code>themes\LoveIt\assets\js</code>下添加<code>search.js</code></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-javascript data-lang=javascript><span class=nx>$</span><span class=p>(</span><span class=kd>function</span><span class=p>(</span><span class=p>)</span> <span class=p>{</span>
+  <span class=c1>// 替换成自己的algolia信息
+</span><span class=c1></span>  <span class=kd>var</span> <span class=nx>client</span> <span class=o>=</span> <span class=nx>algoliasearch</span><span class=p>(</span><span class=s2>&#34;***KWB5&#34;</span><span class=p>,</span> <span class=s2>&#34;7139d*****9748e4cf6bc36ab191d&#34;</span><span class=p>)</span><span class=p>;</span>
+  <span class=kd>var</span> <span class=nx>index</span> <span class=o>=</span> <span class=nx>client</span><span class=p>.</span><span class=nx>initIndex</span><span class=p>(</span><span class=s2>&#34;**blogloveit&#34;</span><span class=p>)</span><span class=p>;</span>
+  <span class=nx>autocomplete</span><span class=p>(</span>
+    <span class=s2>&#34;#aa-search-input&#34;</span><span class=p>,</span>
+    <span class=p>{</span> <span class=nx>hint</span><span class=o>:</span> <span class=kc>false</span> <span class=p>}</span><span class=p>,</span>
+    <span class=p>{</span>
+      <span class=nx>source</span><span class=o>:</span> <span class=nx>autocomplete</span><span class=p>.</span><span class=nx>sources</span><span class=p>.</span><span class=nx>hits</span><span class=p>(</span><span class=nx>index</span><span class=p>,</span> <span class=p>{</span> <span class=nx>hitsPerPage</span><span class=o>:</span> <span class=mi>8</span> <span class=p>}</span><span class=p>)</span><span class=p>,</span>
+      <span class=nx>displayKey</span><span class=o>:</span> <span class=s2>&#34;name&#34;</span><span class=p>,</span>
+      <span class=nx>templates</span><span class=o>:</span> <span class=p>{</span>
+        <span class=nx>suggestion</span><span class=o>:</span> <span class=kd>function</span><span class=p>(</span><span class=nx>suggestion</span><span class=p>)</span> <span class=p>{</span>
+          <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=nx>suggestion</span><span class=p>)</span><span class=p>;</span>
+          <span class=kd>var</span> <span class=nx>search</span><span class=p>;</span>
+          <span class=k>if</span> <span class=p>(</span><span class=nx>suggestion</span><span class=p>.</span><span class=nx>search</span><span class=p>)</span> <span class=p>{</span>
+            <span class=nx>search</span> <span class=o>=</span> <span class=nx>suggestion</span><span class=p>.</span><span class=nx>search</span><span class=p>;</span>
+          <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
+            <span class=nx>search</span> <span class=o>=</span> <span class=nx>suggestion</span><span class=p>.</span><span class=nx>uri</span><span class=p>;</span>
+          <span class=p>}</span>
+          <span class=k>return</span> <span class=p>(</span>
+            <span class=s2>&#34;&lt;span&gt;&#34;</span> <span class=o>+</span>
+            <span class=s1>&#39;&lt;a href=&#34;/&#39;</span> <span class=o>+</span>
+            <span class=nx>search</span> <span class=o>+</span>
+            <span class=s1>&#39;&#34;&gt;&#39;</span> <span class=o>+</span>
+            <span class=nx>suggestion</span><span class=p>.</span><span class=nx>_highlightResult</span><span class=p>.</span><span class=nx>title</span><span class=p>.</span><span class=nx>value</span> <span class=o>+</span>
+            <span class=s2>&#34;&lt;/a&gt;&lt;/span&gt;&#34;</span>
+          <span class=p>)</span><span class=p>;</span>
+        <span class=p>}</span>
+      <span class=p>}</span>
+    <span class=p>}</span>
+  <span class=p>)</span><span class=p>;</span>
+
+
+  <span class=nx>$</span><span class=p>(</span><span class=nb>document</span><span class=p>)</span><span class=p>.</span><span class=nx>on</span><span class=p>(</span><span class=s2>&#34;click&#34;</span><span class=p>,</span> <span class=s2>&#34;.aa-suggestion&#34;</span><span class=p>,</span> <span class=kd>function</span> <span class=p>(</span><span class=p>)</span> <span class=p>{</span> 
+    <span class=kd>var</span> <span class=nx>aa</span> <span class=o>=</span> <span class=nx>$</span><span class=p>(</span><span class=k>this</span><span class=p>)</span><span class=p>.</span><span class=nx>find</span><span class=p>(</span><span class=s2>&#34;a&#34;</span><span class=p>)</span><span class=p>.</span><span class=nx>attr</span><span class=p>(</span><span class=s2>&#34;href&#34;</span><span class=p>)</span><span class=p>;</span>
+    <span class=nb>window</span><span class=p>.</span><span class=nx>location</span><span class=p>.</span><span class=nx>href</span> <span class=o>=</span> <span class=nx>aa</span><span class=p>;</span>
+  <span class=p>}</span><span class=p>)</span>
+<span class=p>}</span><span class=p>)</span><span class=p>;</span>
+</code></pre></td></tr></table></div></div><h3 id=添加searchcss文件>添加search.css文件</h3><p>在<code>themes\LoveIt\assets\css</code>路径下添加<code>search.css</code>样式文件</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>  1
+</span><span class=lnt>  2
+</span><span class=lnt>  3
+</span><span class=lnt>  4
+</span><span class=lnt>  5
+</span><span class=lnt>  6
+</span><span class=lnt>  7
+</span><span class=lnt>  8
+</span><span class=lnt>  9
+</span><span class=lnt> 10
+</span><span class=lnt> 11
+</span><span class=lnt> 12
+</span><span class=lnt> 13
+</span><span class=lnt> 14
+</span><span class=lnt> 15
+</span><span class=lnt> 16
+</span><span class=lnt> 17
+</span><span class=lnt> 18
+</span><span class=lnt> 19
+</span><span class=lnt> 20
+</span><span class=lnt> 21
+</span><span class=lnt> 22
+</span><span class=lnt> 23
+</span><span class=lnt> 24
+</span><span class=lnt> 25
+</span><span class=lnt> 26
+</span><span class=lnt> 27
+</span><span class=lnt> 28
+</span><span class=lnt> 29
+</span><span class=lnt> 30
+</span><span class=lnt> 31
+</span><span class=lnt> 32
+</span><span class=lnt> 33
+</span><span class=lnt> 34
+</span><span class=lnt> 35
+</span><span class=lnt> 36
+</span><span class=lnt> 37
+</span><span class=lnt> 38
+</span><span class=lnt> 39
+</span><span class=lnt> 40
+</span><span class=lnt> 41
+</span><span class=lnt> 42
+</span><span class=lnt> 43
+</span><span class=lnt> 44
+</span><span class=lnt> 45
+</span><span class=lnt> 46
+</span><span class=lnt> 47
+</span><span class=lnt> 48
+</span><span class=lnt> 49
+</span><span class=lnt> 50
+</span><span class=lnt> 51
+</span><span class=lnt> 52
+</span><span class=lnt> 53
+</span><span class=lnt> 54
+</span><span class=lnt> 55
+</span><span class=lnt> 56
+</span><span class=lnt> 57
+</span><span class=lnt> 58
+</span><span class=lnt> 59
+</span><span class=lnt> 60
+</span><span class=lnt> 61
+</span><span class=lnt> 62
+</span><span class=lnt> 63
+</span><span class=lnt> 64
+</span><span class=lnt> 65
+</span><span class=lnt> 66
+</span><span class=lnt> 67
+</span><span class=lnt> 68
+</span><span class=lnt> 69
+</span><span class=lnt> 70
+</span><span class=lnt> 71
+</span><span class=lnt> 72
+</span><span class=lnt> 73
+</span><span class=lnt> 74
+</span><span class=lnt> 75
+</span><span class=lnt> 76
+</span><span class=lnt> 77
+</span><span class=lnt> 78
+</span><span class=lnt> 79
+</span><span class=lnt> 80
+</span><span class=lnt> 81
+</span><span class=lnt> 82
+</span><span class=lnt> 83
+</span><span class=lnt> 84
+</span><span class=lnt> 85
+</span><span class=lnt> 86
+</span><span class=lnt> 87
+</span><span class=lnt> 88
+</span><span class=lnt> 89
+</span><span class=lnt> 90
+</span><span class=lnt> 91
+</span><span class=lnt> 92
+</span><span class=lnt> 93
+</span><span class=lnt> 94
+</span><span class=lnt> 95
+</span><span class=lnt> 96
+</span><span class=lnt> 97
+</span><span class=lnt> 98
+</span><span class=lnt> 99
+</span><span class=lnt>100
+</span><span class=lnt>101
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-css data-lang=css><span class=p>@</span><span class=k>import</span> <span class=s1>&#39;https://fonts.googleapis.com/css?family=Montserrat:400,700&#39;</span><span class=p>;</span>
+<span class=p>.</span><span class=nc>aa-input-container</span> <span class=p>{</span>
+  <span class=k>display</span><span class=p>:</span> <span class=kc>inline</span><span class=o>-</span><span class=kc>block</span><span class=p>;</span>
+  <span class=k>position</span><span class=p>:</span> <span class=kc>relative</span><span class=p>;</span>
+  <span class=k>width</span><span class=p>:</span> <span class=mi>100</span><span class=kt>%</span><span class=p>;</span>
+<span class=p>}</span>
+<span class=p>.</span><span class=nc>aa-input-container</span> <span class=nt>span</span><span class=o>,</span><span class=p>.</span><span class=nc>aa-input-container</span> <span class=nt>input</span> <span class=p>{</span>
+    <span class=k>width</span><span class=p>:</span> <span class=kc>inherit</span><span class=p>;</span>
+<span class=p>}</span>
+<span class=p>.</span><span class=nc>aa-input-search</span> <span class=p>{</span>
+  <span class=k>width</span><span class=p>:</span> <span class=mi>300</span><span class=kt>px</span><span class=p>;</span>
+  <span class=k>padding</span><span class=p>:</span> <span class=mi>12</span><span class=kt>px</span> <span class=mi>28</span><span class=kt>px</span> <span class=mi>12</span><span class=kt>px</span> <span class=mi>12</span><span class=kt>px</span><span class=p>;</span>
+  <span class=k>border</span><span class=p>:</span><span class=mi>0</span><span class=kt>px</span><span class=p>;</span>
+  <span class=k>border</span><span class=p>:</span> <span class=mi>2</span><span class=kt>px</span> <span class=kc>solid</span> <span class=mh>#e4e4e4</span><span class=p>;</span>
+  <span class=k>border-radius</span><span class=p>:</span> <span class=mi>4</span><span class=kt>px</span><span class=p>;</span>
+  <span class=kp>-webkit-</span><span class=k>transition</span><span class=p>:</span> <span class=mf>.2</span><span class=kt>s</span><span class=p>;</span>
+  <span class=k>transition</span><span class=p>:</span> <span class=mf>.2</span><span class=kt>s</span><span class=p>;</span>
+  <span class=k>font-family</span><span class=p>:</span> <span class=s2>&#34;Montserrat&#34;</span><span class=p>,</span> <span class=kc>sans-serif</span><span class=p>;</span>
+  <span class=k>box-shadow</span><span class=p>:</span> <span class=mi>4</span><span class=kt>px</span> <span class=mi>4</span><span class=kt>px</span> <span class=mi>0</span> <span class=nb>rgba</span><span class=p>(</span><span class=mi>241</span><span class=p>,</span> <span class=mi>241</span><span class=p>,</span> <span class=mi>241</span><span class=p>,</span> <span class=mf>0.35</span><span class=p>)</span><span class=p>;</span>
+  <span class=k>font-size</span><span class=p>:</span> <span class=mi>11</span><span class=kt>px</span><span class=p>;</span>
+  <span class=k>box-sizing</span><span class=p>:</span> <span class=kc>border-box</span><span class=p>;</span>
+  <span class=k>color</span><span class=p>:</span> <span class=kc>black</span><span class=p>;</span>
+  <span class=kp>-webkit-</span><span class=k>appearance</span><span class=p>:</span> <span class=kc>none</span><span class=p>;</span>
+  <span class=kp>-moz-</span><span class=k>appearance</span><span class=p>:</span> <span class=kc>none</span><span class=p>;</span>
+  <span class=k>appearance</span><span class=p>:</span> <span class=kc>none</span><span class=p>;</span>
+  <span class=k>font-weight</span><span class=p>:</span> <span class=kc>bold</span><span class=p>;</span>
+<span class=p>}</span>
+<span class=p>.</span><span class=nc>aa-input-search</span><span class=p>::</span><span class=nd>-webkit-search-decoration</span><span class=o>,</span> <span class=p>.</span><span class=nc>aa-input-search</span><span class=p>::</span><span class=nd>-webkit-search-cancel-button</span><span class=o>,</span> <span class=p>.</span><span class=nc>aa-input-search</span><span class=p>::</span><span class=nd>-webkit-search-results-button</span><span class=o>,</span> <span class=p>.</span><span class=nc>aa-input-search</span><span class=p>::</span><span class=nd>-webkit-search-results-decoration</span> <span class=p>{</span>
+    <span class=k>display</span><span class=p>:</span> <span class=kc>none</span><span class=p>;</span>
+<span class=p>}</span>
+<span class=p>.</span><span class=nc>aa-input-search</span><span class=p>:</span><span class=nd>focus</span> <span class=p>{</span>
+    <span class=k>outline</span><span class=p>:</span> <span class=mi>0</span><span class=p>;</span>
+    <span class=k>border-color</span><span class=p>:</span> <span class=mh>#D3D3D3</span><span class=p>;</span>
+    <span class=k>box-shadow</span><span class=p>:</span> <span class=mi>4</span><span class=kt>px</span> <span class=mi>4</span><span class=kt>px</span> <span class=mi>0</span> <span class=nb>rgba</span><span class=p>(</span><span class=mi>58</span><span class=p>,</span> <span class=mi>150</span><span class=p>,</span> <span class=mi>207</span><span class=p>,</span> <span class=mf>0.1</span><span class=p>)</span><span class=p>;</span>
+<span class=p>}</span>
+<span class=p>.</span><span class=nc>aa-input-icon</span> <span class=p>{</span>
+  <span class=k>height</span><span class=p>:</span> <span class=mi>16</span><span class=kt>px</span><span class=p>;</span>
+  <span class=k>width</span><span class=p>:</span> <span class=mi>16</span><span class=kt>px</span><span class=p>;</span>
+  <span class=k>position</span><span class=p>:</span> <span class=kc>absolute</span><span class=p>;</span>
+  <span class=k>top</span><span class=p>:</span> <span class=mi>50</span><span class=kt>%</span><span class=p>;</span>
+  <span class=k>right</span><span class=p>:</span> <span class=mi>16</span><span class=kt>px</span><span class=p>;</span>
+  <span class=kp>-webkit-</span><span class=k>transform</span><span class=p>:</span> <span class=nb>translateY</span><span class=p>(</span><span class=mi>-50</span><span class=kt>%</span><span class=p>)</span><span class=p>;</span>
+          <span class=k>transform</span><span class=p>:</span> <span class=nb>translateY</span><span class=p>(</span><span class=mi>-50</span><span class=kt>%</span><span class=p>)</span><span class=p>;</span>
+  <span class=n>fill</span><span class=p>:</span> <span class=mh>#e4e4e4</span><span class=p>;</span>
+<span class=p>}</span>
+<span class=p>.</span><span class=nc>aa-hint</span> <span class=p>{</span>
+  <span class=k>color</span><span class=p>:</span> <span class=kc>yellow</span><span class=p>;</span>
+<span class=p>}</span>
+<span class=p>.</span><span class=nc>aa-dropdown-menu</span> <span class=p>{</span>
+  <span class=k>background-color</span><span class=p>:</span> <span class=mh>#fff</span><span class=p>;</span>
+  <span class=k>border</span><span class=p>:</span> <span class=mi>2</span><span class=kt>px</span> <span class=kc>solid</span> <span class=nb>rgba</span><span class=p>(</span><span class=mi>228</span><span class=p>,</span> <span class=mi>228</span><span class=p>,</span> <span class=mi>228</span><span class=p>,</span> <span class=mf>0.6</span><span class=p>)</span><span class=p>;</span>
+  <span class=k>border-top-width</span><span class=p>:</span> <span class=mi>1</span><span class=kt>px</span><span class=p>;</span>
+  <span class=k>font-family</span><span class=p>:</span> <span class=s2>&#34;Montserrat&#34;</span><span class=p>,</span> <span class=kc>sans-serif</span><span class=p>;</span>
+  <span class=k>width</span><span class=p>:</span> <span class=mi>300</span><span class=kt>px</span><span class=p>;</span>
+  <span class=k>margin-top</span><span class=p>:</span> <span class=mi>10</span><span class=kt>px</span><span class=p>;</span>
+  <span class=k>box-shadow</span><span class=p>:</span> <span class=mi>4</span><span class=kt>px</span> <span class=mi>4</span><span class=kt>px</span> <span class=mi>0</span> <span class=nb>rgba</span><span class=p>(</span><span class=mi>241</span><span class=p>,</span> <span class=mi>241</span><span class=p>,</span> <span class=mi>241</span><span class=p>,</span> <span class=mf>0.35</span><span class=p>)</span><span class=p>;</span>
+  <span class=k>font-size</span><span class=p>:</span> <span class=mi>11</span><span class=kt>px</span><span class=p>;</span>
+  <span class=k>border-radius</span><span class=p>:</span> <span class=mi>4</span><span class=kt>px</span><span class=p>;</span>
+  <span class=k>box-sizing</span><span class=p>:</span> <span class=kc>border-box</span><span class=p>;</span>
+<span class=p>}</span>
+<span class=p>.</span><span class=nc>aa-suggestion</span> <span class=p>{</span>
+  <span class=k>padding</span><span class=p>:</span> <span class=mi>12</span><span class=kt>px</span><span class=p>;</span>
+  <span class=k>border-top</span><span class=p>:</span> <span class=mi>1</span><span class=kt>px</span> <span class=kc>solid</span> <span class=kc>gray</span><span class=p>;</span>
+  <span class=k>cursor</span><span class=p>:</span> <span class=kc>pointer</span><span class=p>;</span>
+  <span class=kp>-webkit-</span><span class=k>transition</span><span class=p>:</span> <span class=mf>.2</span><span class=kt>s</span><span class=p>;</span>
+  <span class=k>transition</span><span class=p>:</span> <span class=mf>.2</span><span class=kt>s</span><span class=p>;</span>
+  <span class=k>display</span><span class=p>:</span> <span class=kp>-webkit-</span><span class=n>box</span><span class=p>;</span>
+  <span class=k>display</span><span class=p>:</span> <span class=kp>-ms-</span><span class=n>flexbox</span><span class=p>;</span>
+  <span class=k>display</span><span class=p>:</span> <span class=kc>flex</span><span class=p>;</span>
+  <span class=kp>-webkit-</span><span class=n>box-pack</span><span class=p>:</span> <span class=kc>justify</span><span class=p>;</span>
+      <span class=kp>-ms-</span><span class=n>flex-pack</span><span class=p>:</span> <span class=kc>justify</span><span class=p>;</span>
+          <span class=k>justify-content</span><span class=p>:</span> <span class=kc>space</span><span class=o>-</span><span class=n>between</span><span class=p>;</span>
+  <span class=kp>-webkit-</span><span class=n>box-align</span><span class=p>:</span> <span class=kc>center</span><span class=p>;</span>
+      <span class=kp>-ms-</span><span class=n>flex-align</span><span class=p>:</span> <span class=kc>center</span><span class=p>;</span>
+          <span class=k>align-items</span><span class=p>:</span> <span class=kc>center</span><span class=p>;</span>
+<span class=p>}</span>
+<span class=c>/* 背景色 */</span>
+<span class=p>.</span><span class=nc>aa-suggestion</span><span class=p>:</span><span class=nd>hover</span><span class=o>,</span> <span class=p>.</span><span class=nc>aa-suggestion</span><span class=p>.</span><span class=nc>aa-cursor</span> <span class=p>{</span>
+    <span class=k>background-color</span><span class=p>:</span> <span class=mh>#F5F5F5</span><span class=p>;</span>
+<span class=p>}</span>
+<span class=p>.</span><span class=nc>aa-suggestion</span> <span class=o>&gt;</span> <span class=nt>span</span><span class=p>:</span><span class=nd>first-child</span> <span class=p>{</span>
+    <span class=k>color</span><span class=p>:</span> <span class=mh>#000</span><span class=p>;</span>
+<span class=p>}</span>
+<span class=p>.</span><span class=nc>aa-suggestion</span> <span class=o>&gt;</span> <span class=nt>span</span><span class=p>:</span><span class=nd>last-child</span> <span class=p>{</span>
+    <span class=k>text-transform</span><span class=p>:</span> <span class=kc>uppercase</span><span class=p>;</span>
+    <span class=k>color</span><span class=p>:</span> <span class=mh>#000</span><span class=p>;</span>
+<span class=p>}</span>
+<span class=p>.</span><span class=nc>aa-suggestion</span> <span class=o>&gt;</span> <span class=nt>span</span><span class=p>:</span><span class=nd>first-child</span> <span class=nt>em</span><span class=o>,</span> <span class=p>.</span><span class=nc>aa-suggestion</span> <span class=o>&gt;</span> <span class=nt>span</span><span class=p>:</span><span class=nd>last-child</span> <span class=nt>em</span> <span class=p>{</span>
+  <span class=k>font-weight</span><span class=p>:</span> <span class=mi>700</span><span class=p>;</span>
+  <span class=k>font-style</span><span class=p>:</span> <span class=kc>normal</span><span class=p>;</span>
+  <span class=k>background-color</span><span class=p>:</span> <span class=nb>rgba</span><span class=p>(</span><span class=mi>0</span><span class=p>,</span> <span class=mi>0</span><span class=p>,</span> <span class=mi>0</span><span class=p>,</span> <span class=mf>0.1</span><span class=p>)</span><span class=p>;</span>
+  <span class=k>padding</span><span class=p>:</span> <span class=mi>2</span><span class=kt>px</span> <span class=mi>0</span> <span class=mi>2</span><span class=kt>px</span> <span class=mi>2</span><span class=kt>px</span><span class=p>;</span>
+<span class=p>}</span>
+
+<span class=p>.</span><span class=nc>aa-suggestion</span> <span class=nt>a</span><span class=p>{</span>
+  <span class=k>color</span><span class=p>:</span> <span class=mh>#000</span><span class=p>;</span>
+  <span class=k>font-weight</span><span class=p>:</span><span class=kc>bold</span><span class=p>;</span>
+<span class=p>}</span>
+<span class=p>.</span><span class=nc>aa-suggestion</span> <span class=nt>a</span><span class=p>:</span><span class=nd>hover</span><span class=p>{</span>
+  <span class=k>color</span><span class=p>:</span> <span class=mh>#4B89DC</span><span class=p>;</span>
+<span class=p>}</span>
+</code></pre></td></tr></table></div></div><h3 id=在baseofhtml中添加代码>在baseof.html中添加代码</h3><p>在<code>themes\LoveIt\layouts\_default\baseof.html</code>中添加代码</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-html data-lang=html>{{ if ne .Site.Params.version &#34;5.x&#34; -}}
+{{ errorf &#34;\n\nThere are two possible situations that led to this error:\n  1. You haven&#39;t copied the config.toml yet. See https://github.com/dillonzq/LoveIt#installation \n  2. You have an incompatible update. See https://github.com//dillonzq/LoveIt/blob/master/CHANGELOG.md \n\n有两种可能的情况会导致这个错误发生:\n  1. 你还没有复制 config.toml 参考 https://github.com/dillonzq/LoveIt#installation \n  2. 你进行了一次不兼容的更新 参考 https://github.com//dillonzq/LoveIt/blob/master/CHANGELOG.md \n&#34; -}}
+{{ end -}}
+<span class=cp>&lt;!DOCTYPE html&gt;</span>
+<span class=p>&lt;</span><span class=nt>html</span> <span class=na>lang</span><span class=o>=</span><span class=s>&#34;{{ .Site.LanguageCode }}&#34;</span><span class=p></span><span class=p>&gt;</span>
+
+<span class=p>&lt;</span><span class=nt>head</span><span class=p></span><span class=p>&gt;</span>
+    <span class=p>&lt;</span><span class=nt>meta</span> <span class=na>charset</span><span class=o>=</span><span class=s>&#34;utf-8&#34;</span><span class=p></span><span class=p>&gt;</span>
+    <span class=p>&lt;</span><span class=nt>meta</span> <span class=na>http-equiv</span><span class=o>=</span><span class=s>&#34;X-UA-Compatible&#34;</span> <span class=na>content</span><span class=o>=</span><span class=s>&#34;IE=edge,chrome=1&#34;</span><span class=p></span><span class=p>&gt;</span>
+    <span class=p>&lt;</span><span class=nt>title</span><span class=p></span><span class=p>&gt;</span>{{ block &#34;title&#34; . }}{{ .Site.Title }}{{ end }}<span class=p>&lt;</span><span class=p>/</span><span class=nt>title</span><span class=p>&gt;</span>
+    {{- partial &#34;head.html&#34; . }}
+<span class=p>&lt;</span><span class=p>/</span><span class=nt>head</span><span class=p>&gt;</span>
+
+<span class=p>&lt;</span><span class=nt>body</span><span class=p></span><span class=p>&gt;</span>
+    <span class=p>&lt;</span><span class=nt>script</span><span class=p></span><span class=p>&gt;</span>
+        <span class=nb>window</span><span class=p>.</span><span class=nx>isDark</span> <span class=o>=</span> <span class=p>(</span><span class=nb>window</span><span class=p>.</span><span class=nx>localStorage</span> <span class=o>&amp;&amp;</span> <span class=nb>window</span><span class=p>.</span><span class=nx>localStorage</span><span class=p>.</span><span class=nx>getItem</span><span class=p>(</span><span class=s1>&#39;theme&#39;</span><span class=p>)</span><span class=p>)</span> <span class=o>===</span> <span class=s1>&#39;dark&#39;</span><span class=p>;</span>
+        <span class=nb>window</span><span class=p>.</span><span class=nx>isDark</span> <span class=o>&amp;&amp;</span> <span class=nb>document</span><span class=p>.</span><span class=nx>body</span><span class=p>.</span><span class=nx>classList</span><span class=p>.</span><span class=nx>add</span><span class=p>(</span><span class=s1>&#39;dark-theme&#39;</span><span class=p>)</span><span class=p>;</span>
+    <span class=p>&lt;</span><span class=p>/</span><span class=nt>script</span><span class=p>&gt;</span>
+    <span class=p>&lt;</span><span class=nt>div</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;wrapper&#34;</span><span class=p></span><span class=p>&gt;</span>
+        {{ partial &#34;header.html&#34; . -}}
+        <span class=p>&lt;</span><span class=nt>main</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;main&#34;</span><span class=p></span><span class=p>&gt;</span>
+            <span class=p>&lt;</span><span class=nt>div</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;container&#34;</span><span class=p></span><span class=p>&gt;</span>
+                {{ block &#34;content&#34; . }}{{ end -}}
+            <span class=p>&lt;</span><span class=p>/</span><span class=nt>div</span><span class=p>&gt;</span>
+        <span class=p>&lt;</span><span class=p>/</span><span class=nt>main</span><span class=p>&gt;</span>
+        {{ partial &#34;footer.html&#34; . -}}
+        {{ partial &#34;scripts.html&#34; . -}}
+    <span class=p>&lt;</span><span class=p>/</span><span class=nt>div</span><span class=p>&gt;</span>
+    <span class=p>&lt;</span><span class=nt>a</span> <span class=na>href</span><span class=o>=</span><span class=s>&#34;#&#34;</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;dynamic-to-top&#34;</span> <span class=na>id</span><span class=o>=</span><span class=s>&#34;dynamic-to-top&#34;</span> <span class=na>data-scroll</span><span class=p></span><span class=p>&gt;</span><span class=p>&lt;</span><span class=nt>span</span><span class=p></span><span class=p>&gt;</span><span class=ni>&amp;nbsp;</span><span class=p>&lt;</span><span class=p>/</span><span class=nt>span</span><span class=p>&gt;</span><span class=p>&lt;</span><span class=p>/</span><span class=nt>a</span><span class=p>&gt;</span>
+
+<span class=c>&lt;!--</span><span class=c> 添加的代码  </span><span class=c>--&gt;</span>
+    <span class=p>&lt;</span><span class=nt>div</span> <span class=na>id</span><span class=o>=</span><span class=s>&#34;ex1&#34;</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;modal&#34;</span><span class=p></span><span class=p>&gt;</span>
+        {{ partial &#34;search.html&#34; . }}
+    <span class=p>&lt;</span><span class=p>/</span><span class=nt>div</span><span class=p>&gt;</span>
+<span class=c>&lt;!--</span><span class=c> 添加代码结束 </span><span class=c>--&gt;</span>
+<span class=p>&lt;</span><span class=p>/</span><span class=nt>body</span><span class=p>&gt;</span>
+
+<span class=p>&lt;</span><span class=p>/</span><span class=nt>html</span><span class=p>&gt;</span>
+</code></pre></td></tr></table></div></div><h3 id=引用css文件和js文件>引用css文件和js文件</h3><p>在head.html中添加如下代码</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-html data-lang=html>{{ $res := resources.Get &#34;css/search.css&#34; | resources.Minify -}}
+<span class=p>&lt;</span><span class=nt>link</span> <span class=na>rel</span><span class=o>=</span><span class=s>&#34;stylesheet&#34;</span> <span class=na>href</span><span class=o>=</span><span class=s>&#34;{{ $res.RelPermalink }}&#34;</span><span class=p></span><span class=p>&gt;</span>
+
+<span class=p>&lt;</span><span class=nt>link</span> <span class=na>rel</span><span class=o>=</span><span class=s>&#34;stylesheet&#34;</span> <span class=na>href</span><span class=o>=</span><span class=s>&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css&#34;</span> <span class=p>/</span><span class=p>&gt;</span>
+</code></pre></td></tr></table></div></div><p>在scripts.html中添加如下代码</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>script</span> <span class=na>src</span><span class=o>=</span><span class=s>&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js&#34;</span><span class=p></span><span class=p>&gt;</span><span class=p>&lt;</span><span class=p>/</span><span class=nt>script</span><span class=p>&gt;</span>
+
+<span class=c>&lt;!--</span><span class=c> jQuery Modal </span><span class=c>--&gt;</span>
+<span class=p>&lt;</span><span class=nt>script</span> <span class=na>src</span><span class=o>=</span><span class=s>&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js&#34;</span><span class=p></span><span class=p>&gt;</span><span class=p>&lt;</span><span class=p>/</span><span class=nt>script</span><span class=p>&gt;</span>
+
+<span class=p>&lt;</span><span class=nt>script</span> <span class=na>src</span><span class=o>=</span><span class=s>&#34;https://res.cloudinary.com/jimmysong/raw/upload/rootsongjc-hugo/algoliasearch.min.js&#34;</span><span class=p></span><span class=p>&gt;</span><span class=p>&lt;</span><span class=p>/</span><span class=nt>script</span><span class=p>&gt;</span>
+<span class=p>&lt;</span><span class=nt>script</span> <span class=na>src</span><span class=o>=</span><span class=s>&#34;https://res.cloudinary.com/jimmysong/raw/upload/rootsongjc-hugo/autocomplete.min.js&#34;</span><span class=p></span><span class=p>&gt;</span><span class=p>&lt;</span><span class=p>/</span><span class=nt>script</span><span class=p>&gt;</span>
+
+
+ {{ $res := resources.Get &#34;/js/search.js&#34; }}
+<span class=p>&lt;</span><span class=nt>script</span> <span class=na>src</span><span class=o>=</span> <span class=s>&#34;{{ $res.RelPermalink }}&#34;</span> <span class=na>type</span><span class=o>=</span><span class=s>&#34;text/javascript&#34;</span><span class=p></span><span class=p>&gt;</span><span class=p>&lt;</span><span class=p>/</span><span class=nt>script</span><span class=p>&gt;</span>
+</code></pre></td></tr></table></div></div><h3 id=添加锚点>添加锚点</h3><p>在header.html中添加如下代码(手机端和桌面端两个地方都要添加代码)</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-html data-lang=html><span class=p>&lt;</span><span class=nt>div</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;navbar-menu&#34;</span><span class=p></span><span class=p>&gt;</span>
+            {{ $currentPage := . }}
+            {{ range .Site.Menus.main }}
+            <span class=p>&lt;</span><span class=nt>a</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;menu-item{{ if or ($currentPage.IsMenuCurrent &#34;</span><span class=na>main</span><span class=err>&#34;</span> <span class=err>.</span><span class=err>)</span> <span class=err>(</span><span class=err>$</span><span class=na>currentPage</span><span class=err>.</span><span class=na>HasMenuCurrent</span> <span class=err>&#34;</span><span class=na>main</span><span class=err>&#34;</span> <span class=err>.</span><span class=err>)</span> <span class=err>|</span> <span class=na>or</span> <span class=err>(</span><span class=na>eq</span> <span class=err>$</span><span class=na>currentPage</span><span class=err>.</span><span class=na>RelPermalink</span> <span class=err>.</span><span class=na>URL</span><span class=err>)</span> <span class=err>}</span><span class=err>}</span> <span class=na>active</span><span class=err>{</span><span class=err>{</span> <span class=na>end</span> <span class=err>}</span><span class=err>}</span><span class=err>&#34;</span>
+                <span class=na>href</span><span class=o>=</span><span class=s>&#34;{{ .URL | absLangURL }}&#34;</span> <span class=na>title</span><span class=o>=</span><span class=s>&#34;{{ .Title }}&#34;</span><span class=p></span><span class=p>&gt;</span>{{ .Name | safeHTML }}<span class=p>&lt;</span><span class=p>/</span><span class=nt>a</span><span class=p>&gt;</span>
+            {{ end }}
+            <span class=p>&lt;</span><span class=nt>a</span> <span class=na>href</span><span class=o>=</span><span class=s>&#34;javascript:void(0);&#34;</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;theme-switch&#34;</span><span class=p></span><span class=p>&gt;</span><span class=p>&lt;</span><span class=nt>i</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;fas fa-adjust fa-rotate-180 fa-fw&#34;</span><span class=p></span><span class=p>&gt;</span><span class=p>&lt;</span><span class=p>/</span><span class=nt>i</span><span class=p>&gt;</span><span class=p>&lt;</span><span class=p>/</span><span class=nt>a</span><span class=p>&gt;</span>
+            <span class=c>&lt;!--</span><span class=c> 添加的代码 </span><span class=c>--&gt;</span>
+            <span class=p>&lt;</span><span class=nt>a</span> <span class=na>href</span><span class=o>=</span><span class=s>&#34;#ex1&#34;</span> <span class=na>rel</span><span class=o>=</span><span class=s>&#34;modal:open&#34;</span><span class=p></span><span class=p>&gt;</span><span class=p>&lt;</span><span class=nt>i</span> <span class=na>class</span><span class=o>=</span><span class=s>&#34;fas fa-search fa-fw&#34;</span><span class=p></span><span class=p>&gt;</span><span class=p>&lt;</span><span class=p>/</span><span class=nt>i</span><span class=p>&gt;</span><span class=p>&lt;</span><span class=p>/</span><span class=nt>a</span><span class=p>&gt;</span>
+            <span class=c>&lt;!--</span><span class=c> 添加代码结束 </span><span class=c>--&gt;</span>
+        <span class=p>&lt;</span><span class=p>/</span><span class=nt>div</span><span class=p>&gt;</span>
+</code></pre></td></tr></table></div></div></div><div class=post-footer id=post-footer><div class=post-info><div class=post-info-line><div class=post-info-mod><span>更新于 2020-07-08</span></div><div class=post-info-license></div></div><div class=post-info-line><div class=post-info-md><span><a class=link-to-markdown href=/hugo-algolia/index.md target=_blank>阅读原始文档</a></span></div><div class=post-info-share><span><a href=javascript:void(0); title="分享到 Twitter" data-sharer=twitter data-url=https://www.nashome.cn/hugo-algolia/ data-title="用 Hugo 配合 Algolia 实现高效美观的站内搜索" data-hashtags=hugo,algolia,站内搜索,search><i class="fab fa-twitter fa-fw"></i></a><a href=javascript:void(0); title="分享到 Facebook" data-sharer=facebook data-url=https://www.nashome.cn/hugo-algolia/ data-hashtag=hugo><i class="fab fa-facebook-square fa-fw"></i></a><a href=javascript:void(0); title="分享到 Hacker News" data-sharer=hackernews data-url=https://www.nashome.cn/hugo-algolia/ data-title="用 Hugo 配合 Algolia 实现高效美观的站内搜索"><i class="fab fa-hacker-news fa-fw"></i></a><a href=javascript:void(0); title="分享到 Line" data-sharer=line data-url=https://www.nashome.cn/hugo-algolia/ data-title="用 Hugo 配合 Algolia 实现高效美观的站内搜索"><i data-svg-src=https://cdn.jsdelivr.net/npm/simple-icons@2.14.0/icons/line.svg></i></a><a href=javascript:void(0); title="分享到 微博" data-sharer=weibo data-url=https://www.nashome.cn/hugo-algolia/ data-title="用 Hugo 配合 Algolia 实现高效美观的站内搜索"><i class="fab fa-weibo fa-fw"></i></a></span></div></div></div><div class=post-info-more><section class=post-tags><i class="fas fa-tags fa-fw"></i>&nbsp;<a href=/tags/hugo/>hugo</a>,&nbsp;<a href=/tags/algolia/>algolia</a>,&nbsp;<a href=/tags/%E7%AB%99%E5%86%85%E6%90%9C%E7%B4%A2/>站内搜索</a>,&nbsp;<a href=/tags/search/>search</a></section><section><span><a href=javascript:void(0); onclick=window.history.back();>返回</a></span>&nbsp;|&nbsp;<span><a href=/>主页</a></span></section></div><div class=post-nav><a href=/hugo-valine-email/ class=prev rel=prev title="用 Hugo 配合 Valine 实现评论后实时邮件通知"><i class="fas fa-angle-left fa-fw"></i>用 Hugo 配合 Valine 实现评论后实时邮件通知</a>
+<a href=/dynamics-ax-record-level-security/ class=next rel=next title="Dynamics AX Record Level Security">Dynamics AX Record Level Security<i class="fas fa-angle-right fa-fw"></i></a></div></div><div id=comments><div id=valine class=comment></div><noscript>Please enable JavaScript to view the comments powered by <a href=https://valine.js.org/>Valine</a>.</noscript></div></article></div></main><footer class=footer><div class=footer-container><div class=footer-line>由 <a href=https://gohugo.io/ target=_blank rel="noopener noreffer" title="Hugo 0.64.1">Hugo</a> 强力驱动 | 主题 - <a href=https://github.com/dillonzq/LoveIt target=_blank rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i>LoveIt</a></div><div class=footer-line><i class="far fa-copyright fa-fw"></i><span itemprop=copyrightYear>2016 - 2020</span><span class=author itemprop=copyrightHolder>&nbsp;<a href=/ target=_blank>zhaoqiang</a></span>&nbsp;|&nbsp;<span class=license><a rel="license external nofollow noopener noreffer" href=https://creativecommons.org/licenses/by-nc/4.0/ target=_blank>CC BY-NC 4.0</a></span><span class=icp-splitter>&nbsp;|&nbsp;</span><br class=icp-br><span class=icp><a href=http://www.beian.miit.gov.cn>沪ICP备17033498号</a></span></div></div></footer></div><div id=fixed-buttons><a href=# id=back-to-top class=fixed-button title=回到顶部><i class="fas fa-arrow-up fa-fw"></i></a><a href=# id=view-comments class=fixed-button title=查看评论><i class="fas fa-comment fa-fw"></i></a></div><link rel=stylesheet href=/lib/valine/valine.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/lightgallery.js@1.2.0/dist/css/lightgallery.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.css><script type=text/javascript src=https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/algoliasearch@4.2.0/dist/algoliasearch-lite.umd.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/twemoji@13.0.0/dist/twemoji.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/lightgallery.js@1.2.0/dist/js/lightgallery.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/lg-thumbnail.js@1.2.0/dist/lg-thumbnail.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/lg-zoom.js@1.2.0/dist/lg-zoom.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/sharer.js@0.4.0/sharer.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/mhchem.min.js></script><script type=text/javascript>window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"valine":{"appId":"Bu42IhLNJc94WvCDKSsRwTqa-gzGzoHsz","appKey":"bKSP5XiBoIHs8PyXC4uhGhqQ","avatar":"mm","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@5.0.1/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"zh-cn","pageSize":10,"placeholder":"你的评论 ...","recordIP":true,"visitor":true}},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"EO42BFKWB5","algoliaIndex":"hugoblogloveit","algoliaSearchKey":"d3ef25fc7cb90a144ea0139748e4cf6b","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"},"twemoji":true};</script><script type=text/javascript src=/js/theme.min.js></script><script type=text/javascript>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','UA-105751499-1',{'anonymize_ip':true});</script><script type=text/javascript src="https://www.googletagmanager.com/gtag/js?id=UA-105751499-1" async></script></body></html>

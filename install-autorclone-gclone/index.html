@@ -1,0 +1,378 @@
+<!doctype html><html lang=zh-cn><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="noodp"><meta http-equiv=x-ua-compatible content="IE=edge, chrome=1"><title>如何安装和配置 Autorclone Gclone - Blog My Life</title><meta name=Description content="A blog recording my life"><meta property="og:title" content="如何安装和配置 Autorclone Gclone"><meta property="og:description" content="使用Gclone搬运Google Drive资源"><meta property="og:type" content="article"><meta property="og:url" content="https://www.nashome.cn/install-autorclone-gclone/"><meta property="og:image" content="https://www.nashome.cn/logo.png"><meta property="article:published_time" content="2020-07-07T14:00:58+08:00"><meta property="article:modified_time" content="2020-07-08T14:34:13+08:00"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://www.nashome.cn/logo.png"><meta name=twitter:title content="如何安装和配置 Autorclone Gclone"><meta name=twitter:description content="使用Gclone搬运Google Drive资源"><meta name=application-name content="Blog My Life"><meta name=apple-mobile-web-app-title content="Blog My Life"><meta name=theme-color content="#ffffff"><meta name=msapplication-TileColor content="#da532c"><link rel="shortcut icon" type=image/x-icon href=/favicon.ico><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://www.nashome.cn/install-autorclone-gclone/><link rel=prev href=https://www.nashome.cn/dynamics-ax-insufficient-memory-to-run-script/><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css><link rel=stylesheet href=/css/style.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"如何安装和配置 Autorclone Gclone","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.nashome.cn\/install-autorclone-gclone\/"},"image":[{"@type":"ImageObject","url":"https:\/\/www.nashome.cn\/images\/Apple-Devices-Preview.png","width":3200,"height":2048}],"genre":"posts","keywords":"GoogleDrive","wordcount":1005,"url":"https:\/\/www.nashome.cn\/install-autorclone-gclone\/","datePublished":"2020-07-07T14:00:58+08:00","dateModified":"2020-07-08T14:34:13+08:00","license":"This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher":{"@type":"Organization","name":"zhaoqiang","logo":{"@type":"ImageObject","url":"https:\/\/www.nashome.cn\/images\/avatar.png","width":528,"height":560}},"author":{"@type":"Person","name":"ZhaoQiang"},"description":""}</script></head><body header-desktop=fixed header-mobile=auto><script type=text/javascript>(window.localStorage&&localStorage.getItem('theme')?localStorage.getItem('theme')==='dark':('auto'==='auto'?window.matchMedia('(prefers-color-scheme: dark)').matches:'auto'==='dark'))&&document.body.setAttribute('theme','dark');</script><div id=mask></div><div class=wrapper><header class=desktop id=header-desktop><div class=header-wrapper><div class=header-title><a href=/ title="Blog My Life"><span class=header-title-pre><i class="far fa-kiss-wink-heart fa-fw"></i></span>zhaoqiang's blog</a></div><div class=menu><div class=menu-inner><a class=menu-item href=/posts/>所有文章 </a><a class=menu-item href=/tags/>标签 </a><a class=menu-item href=/categories/>分类 </a><a class=menu-item href=/ title=GitHub><i class="fab fa-github fa-fw"></i></a><span class="menu-item delimiter"></span><span class="menu-item search" id=search-desktop><input type=text placeholder=搜索文章标题或内容... id=search-input-desktop>
+<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-desktop title=搜索><i class="fas fa-search fa-fw"></i></a><a href=javascript:void(0); class="search-button search-clear" id=search-clear-desktop title=清空><i class="fas fa-times-circle fa-fw"></i></a><span class="search-button search-loading" id=search-loading-desktop><i class="fas fa-spinner fa-fw fa-spin"></i></span></span><a href=javascript:void(0); class="menu-item theme-switch" title=切换主题><i class="fas fa-adjust fa-fw"></i></a></div></div></div></header><header class=mobile id=header-mobile><div class=header-container><div class=header-wrapper><div class=header-title><a href=/ title="Blog My Life"><span class=header-title-pre><i class="far fa-kiss-wink-heart fa-fw"></i></span>zhaoqiang's blog</a></div><div class=menu-toggle id=menu-toggle-mobile><span></span><span></span><span></span></div></div><div class=menu id=menu-mobile><div class=search-wrapper><div class="search mobile" id=search-mobile><input type=text placeholder=搜索文章标题或内容... id=search-input-mobile>
+<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-mobile title=搜索><i class="fas fa-search fa-fw"></i></a><a href=javascript:void(0); class="search-button search-clear" id=search-clear-mobile title=清空><i class="fas fa-times-circle fa-fw"></i></a><span class="search-button search-loading" id=search-loading-mobile><i class="fas fa-spinner fa-fw fa-spin"></i></span></div><a href=javascript:void(0); class=search-cancel id=search-cancel-mobile>取消</a></div><a class=menu-item href=/posts/>所有文章</a><a class=menu-item href=/tags/>标签</a><a class=menu-item href=/categories/>分类</a><a class=menu-item href=/ title=GitHub><i class="fab fa-github fa-fw"></i></a><a href=javascript:void(0); class="menu-item theme-switch" title=切换主题>
+<i class="fas fa-adjust fa-fw"></i></a></div></div></header><div class="search-dropdown desktop"><div id=search-dropdown-desktop></div></div><div class="search-dropdown mobile"><div id=search-dropdown-mobile></div></div><main class=main><div class=container><div class=toc id=toc-auto><h2 class=toc-title>目录</h2><div class="toc-content always-active" id=toc-content-auto></div></div><article class="page single"><h1 class="single-title animated flipInX">如何安装和配置 Autorclone Gclone</h1><div class=post-meta><div class=post-meta-line><span class=post-author><a href=/ title=Author rel=author class=author><i class="fas fa-user-circle fa-fw"></i>ZhaoQiang</a></span>&nbsp;<span class=post-category>收录于 <a href=/categories/linux/><i class="far fa-folder fa-fw"></i>Linux</a></span></div><div class=post-meta-line><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime=2020-07-07>2020-07-07</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1005 字&nbsp;
+<i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 5 分钟&nbsp;<span id=/install-autorclone-gclone/ class=leancloud_visitors data-flag-title="如何安装和配置 Autorclone Gclone">
+<i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
+</span>&nbsp;</div></div><div class="details toc" id=toc-static kept><div class="details-summary toc-title"><span>目录</span>
+<span><i class="details-icon fas fa-angle-right"></i></span></div><div class="details-content toc-content" id=toc-content-static><nav id=TableOfContents><ul><li><ul><li><a href=#安装步骤>安装步骤</a><ul><li><a href=#一安装rclonegclone>一、安装Rclone、Gclone</a></li><li><a href=#二安装配置autorclone>二、安装配置Autorclone</a></li><li><a href=#三生成sa账号>三、生成SA账号</a></li><li><a href=#四配置gclone>四、配置Gclone</a></li></ul></li></ul></li></ul></nav></div></div><div class=content id=content><p>使用Gclone搬运Google Drive资源</p><p><a href=https://github.com/xyou365/AutoRclone/ target=_blank rel="noopener noreffer">Autorclone地址</a></p><p><a href=https://www.hostloc.com/thread-643808-1-1.html target=_blank rel="noopener noreffer">Gclone地址</a></p><h2 id=安装步骤>安装步骤</h2><h3 id=一安装rclonegclone>一、安装Rclone、Gclone</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-fallback data-lang=fallback>curl https://rclone.org/install.sh | sudo bash
+安装原版rclone
+bash &lt;(wget -qO- https://git.io/gclone.sh)
+安装修改后的Gclone
+</code></pre></td></tr></table></div></div><h3 id=二安装配置autorclone>二、安装配置Autorclone</h3><p><strong>配置环境</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-fallback data-lang=fallback>#CentOS系统
+wget https://www.moerats.com/usr/shell/Python3/CentOS_Python3.6.sh &amp;&amp; sh CentOS_Python3.6.sh
+yum install screen git -y
+#Debian系统
+wget https://www.moerats.com/usr/shell/Python3/Debian_Python3.6.sh &amp;&amp; sh Debian_Python3.6.sh
+apt-get install screen git 
+#Ubuntu系统
+apt update
+apt install python3-pip python3-setuptools python3-dev python3-wheel build-essential screen git -y
+</code></pre></td></tr></table></div></div><p><strong>安装源码并配置环境</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-fallback data-lang=fallback>git clone https://github.com/xyou365/AutoRclone &amp;&amp; cd AutoRclone &amp;&amp; pip3 install -r requirements.txt
+</code></pre></td></tr></table></div></div><h3 id=三生成sa账号>三、生成SA账号</h3><ol><li>获取账户的JSON
+在<a href=https://developers.google.com/drive/api/v3/quickstart/python target=_blank rel="noopener noreffer">Python Quickstart</a></li></ol><p><img class=lazyload src=/svg/loading.min.svg data-src=https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/AutoRclone/1.png data-srcset="https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/AutoRclone/1.png, https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/AutoRclone/1.png 1.5x, https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/AutoRclone/1.png 2x" data-sizes=auto alt=https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/AutoRclone/1.png title=img></p><p><img class=lazyload src=/svg/loading.min.svg data-src=https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/AutoRclone/2.png data-srcset="https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/AutoRclone/2.png, https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/AutoRclone/2.png 1.5x, https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/AutoRclone/2.png 2x" data-sizes=auto alt=https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/AutoRclone/2.png title=img></p><p><img class=lazyload src=/svg/loading.min.svg data-src=https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/AutoRclone/3.png data-srcset="https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/AutoRclone/3.png, https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/AutoRclone/3.png 1.5x, https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/AutoRclone/3.png 2x" data-sizes=auto alt=https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/AutoRclone/3.png title=img></p><p>这一步会得到一个文件，保存它
+2. 生成SA账号</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-fallback data-lang=fallback>python3 gen_sa_accounts.py --quick-setup 1
+</code></pre></td></tr></table></div></div><p>最后的参数1表示创建多少项目，一个项目一百个SA账户。</p><p>然后运行下面的命令，会在ROOT目录生成一个email文件，该文件就是你所创建的账户的所有的邮箱地址。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-fallback data-lang=fallback>cat ~/AutoRclone/accounts/*.json | grep &#34;client_email&#34; | awk &#39;{print $2}&#39;| tr -d &#39;,&#34;&#39; | sed &#39;N;N;N;N;N;N;N;N;N;/^$/d;G&#39; &gt; ~/email
+</code></pre></td></tr></table></div></div><ol start=3><li>创建<a href=https://groups.google.com/ target=_blank rel="noopener noreffer">Google Group</a>
+将上面得到的email文件中的邮箱全部加如刚创建的Group
+<img class=lazyload src=/svg/loading.min.svg data-src=https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/AutoRclone/4.png data-srcset="https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/AutoRclone/4.png, https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/AutoRclone/4.png 1.5x, https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/AutoRclone/4.png 2x" data-sizes=auto alt=https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/AutoRclone/4.png title=img></li></ol><p><img class=lazyload src=/svg/loading.min.svg data-src=https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/AutoRclone/5.png data-srcset="https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/AutoRclone/5.png, https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/AutoRclone/5.png 1.5x, https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/AutoRclone/5.png 2x" data-sizes=auto alt=https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/AutoRclone/5.png title=img></p><p><img class=lazyload src=/svg/loading.min.svg data-src=https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/AutoRclone/6.png data-srcset="https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/AutoRclone/6.png, https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/AutoRclone/6.png 1.5x, https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/AutoRclone/6.png 2x" data-sizes=auto alt=https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/AutoRclone/6.png title=img></p><p>至此，Autorclone的配置全部结束</p><h3 id=四配置gclone>四、配置Gclone</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>  1
+</span><span class=lnt>  2
+</span><span class=lnt>  3
+</span><span class=lnt>  4
+</span><span class=lnt>  5
+</span><span class=lnt>  6
+</span><span class=lnt>  7
+</span><span class=lnt>  8
+</span><span class=lnt>  9
+</span><span class=lnt> 10
+</span><span class=lnt> 11
+</span><span class=lnt> 12
+</span><span class=lnt> 13
+</span><span class=lnt> 14
+</span><span class=lnt> 15
+</span><span class=lnt> 16
+</span><span class=lnt> 17
+</span><span class=lnt> 18
+</span><span class=lnt> 19
+</span><span class=lnt> 20
+</span><span class=lnt> 21
+</span><span class=lnt> 22
+</span><span class=lnt> 23
+</span><span class=lnt> 24
+</span><span class=lnt> 25
+</span><span class=lnt> 26
+</span><span class=lnt> 27
+</span><span class=lnt> 28
+</span><span class=lnt> 29
+</span><span class=lnt> 30
+</span><span class=lnt> 31
+</span><span class=lnt> 32
+</span><span class=lnt> 33
+</span><span class=lnt> 34
+</span><span class=lnt> 35
+</span><span class=lnt> 36
+</span><span class=lnt> 37
+</span><span class=lnt> 38
+</span><span class=lnt> 39
+</span><span class=lnt> 40
+</span><span class=lnt> 41
+</span><span class=lnt> 42
+</span><span class=lnt> 43
+</span><span class=lnt> 44
+</span><span class=lnt> 45
+</span><span class=lnt> 46
+</span><span class=lnt> 47
+</span><span class=lnt> 48
+</span><span class=lnt> 49
+</span><span class=lnt> 50
+</span><span class=lnt> 51
+</span><span class=lnt> 52
+</span><span class=lnt> 53
+</span><span class=lnt> 54
+</span><span class=lnt> 55
+</span><span class=lnt> 56
+</span><span class=lnt> 57
+</span><span class=lnt> 58
+</span><span class=lnt> 59
+</span><span class=lnt> 60
+</span><span class=lnt> 61
+</span><span class=lnt> 62
+</span><span class=lnt> 63
+</span><span class=lnt> 64
+</span><span class=lnt> 65
+</span><span class=lnt> 66
+</span><span class=lnt> 67
+</span><span class=lnt> 68
+</span><span class=lnt> 69
+</span><span class=lnt> 70
+</span><span class=lnt> 71
+</span><span class=lnt> 72
+</span><span class=lnt> 73
+</span><span class=lnt> 74
+</span><span class=lnt> 75
+</span><span class=lnt> 76
+</span><span class=lnt> 77
+</span><span class=lnt> 78
+</span><span class=lnt> 79
+</span><span class=lnt> 80
+</span><span class=lnt> 81
+</span><span class=lnt> 82
+</span><span class=lnt> 83
+</span><span class=lnt> 84
+</span><span class=lnt> 85
+</span><span class=lnt> 86
+</span><span class=lnt> 87
+</span><span class=lnt> 88
+</span><span class=lnt> 89
+</span><span class=lnt> 90
+</span><span class=lnt> 91
+</span><span class=lnt> 92
+</span><span class=lnt> 93
+</span><span class=lnt> 94
+</span><span class=lnt> 95
+</span><span class=lnt> 96
+</span><span class=lnt> 97
+</span><span class=lnt> 98
+</span><span class=lnt> 99
+</span><span class=lnt>100
+</span><span class=lnt>101
+</span><span class=lnt>102
+</span><span class=lnt>103
+</span><span class=lnt>104
+</span><span class=lnt>105
+</span><span class=lnt>106
+</span><span class=lnt>107
+</span><span class=lnt>108
+</span><span class=lnt>109
+</span><span class=lnt>110
+</span><span class=lnt>111
+</span><span class=lnt>112
+</span><span class=lnt>113
+</span><span class=lnt>114
+</span><span class=lnt>115
+</span><span class=lnt>116
+</span><span class=lnt>117
+</span><span class=lnt>118
+</span><span class=lnt>119
+</span><span class=lnt>120
+</span><span class=lnt>121
+</span><span class=lnt>122
+</span><span class=lnt>123
+</span><span class=lnt>124
+</span><span class=lnt>125
+</span><span class=lnt>126
+</span><span class=lnt>127
+</span><span class=lnt>128
+</span><span class=lnt>129
+</span><span class=lnt>130
+</span><span class=lnt>131
+</span><span class=lnt>132
+</span><span class=lnt>133
+</span><span class=lnt>134
+</span><span class=lnt>135
+</span><span class=lnt>136
+</span><span class=lnt>137
+</span><span class=lnt>138
+</span><span class=lnt>139
+</span><span class=lnt>140
+</span><span class=lnt>141
+</span><span class=lnt>142
+</span><span class=lnt>143
+</span><span class=lnt>144
+</span><span class=lnt>145
+</span><span class=lnt>146
+</span><span class=lnt>147
+</span><span class=lnt>148
+</span><span class=lnt>149
+</span><span class=lnt>150
+</span><span class=lnt>151
+</span><span class=lnt>152
+</span><span class=lnt>153
+</span><span class=lnt>154
+</span><span class=lnt>155
+</span><span class=lnt>156
+</span><span class=lnt>157
+</span><span class=lnt>158
+</span><span class=lnt>159
+</span><span class=lnt>160
+</span><span class=lnt>161
+</span><span class=lnt>162
+</span><span class=lnt>163
+</span><span class=lnt>164
+</span><span class=lnt>165
+</span><span class=lnt>166
+</span><span class=lnt>167
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-fallback data-lang=fallback>gclone config
+
+[root@izj6cfrhpszlpag2u50h1pz ~]# gclone config
+
+Current remotes:
+
+Name                 Type
+====                 ====
+gc                   drive
+gc1                  drive
+jygd                 drive
+sjhl                 onedrive
+
+e) Edit existing remote
+n) New remote
+d) Delete remote
+r) Rename remote
+c) Copy remote
+s) Set configuration password
+q) Quit config
+e/n/d/r/c/s/q&gt; n
+name&gt; gc
+Remote &#34;gc&#34; already exists.
+name&gt; gc2
+Type of storage to configure.
+Enter a string value. Press Enter for the default (&#34;&#34;).
+Choose a number from below, or type in your own value
+ 1 / 1Fichier
+   \ &#34;fichier&#34;
+ 2 / Alias for an existing remote
+   \ &#34;alias&#34;
+ 3 / Amazon Drive
+   \ &#34;amazon cloud drive&#34;
+ 4 / Amazon S3 Compliant Storage Provider (AWS, Alibaba, Ceph, Digital Ocean, Dreamhost, IBM COS, Minio, etc)
+   \ &#34;s3&#34;
+ 5 / Backblaze B2
+   \ &#34;b2&#34;
+ 6 / Box
+   \ &#34;box&#34;
+ 7 / Cache a remote
+   \ &#34;cache&#34;
+ 8 / Citrix Sharefile
+   \ &#34;sharefile&#34;
+ 9 / Dropbox
+   \ &#34;dropbox&#34;
+10 / Encrypt/Decrypt a remote
+   \ &#34;crypt&#34;
+11 / FTP Connection
+   \ &#34;ftp&#34;
+12 / Google Cloud Storage (this is not Google Drive)
+   \ &#34;google cloud storage&#34;
+13 / Google Drive
+   \ &#34;drive&#34;
+14 / Google Photos
+   \ &#34;google photos&#34;
+15 / Hubic
+   \ &#34;hubic&#34;
+16 / In memory object storage system.
+   \ &#34;memory&#34;
+17 / JottaCloud
+   \ &#34;jottacloud&#34;
+18 / Koofr
+   \ &#34;koofr&#34;
+19 / Local Disk
+   \ &#34;local&#34;
+20 / Mail.ru Cloud
+   \ &#34;mailru&#34;
+21 / Mega
+   \ &#34;mega&#34;
+22 / Microsoft Azure Blob Storage
+   \ &#34;azureblob&#34;
+23 / Microsoft OneDrive
+   \ &#34;onedrive&#34;
+24 / OpenDrive
+   \ &#34;opendrive&#34;
+25 / Openstack Swift (Rackspace Cloud Files, Memset Memstore, OVH)
+   \ &#34;swift&#34;
+26 / Pcloud
+   \ &#34;pcloud&#34;
+27 / Put.io
+   \ &#34;putio&#34;
+28 / QingCloud Object Storage
+   \ &#34;qingstor&#34;
+29 / SSH/SFTP Connection
+   \ &#34;sftp&#34;
+30 / Sugarsync
+   \ &#34;sugarsync&#34;
+31 / Transparently chunk/split large files
+   \ &#34;chunker&#34;
+32 / Union merges the contents of several remotes
+   \ &#34;union&#34;
+33 / Webdav
+   \ &#34;webdav&#34;
+34 / Yandex Disk
+   \ &#34;yandex&#34;
+35 / http Connection
+   \ &#34;http&#34;
+36 / premiumize.me
+   \ &#34;premiumizeme&#34;
+Storage&gt; 13
+** See help for drive backend at: https://rclone.org/drive/ **
+
+Google Application Client Id
+Setting your own is recommended.
+See https://rclone.org/drive/#making-your-own-client-id for how to create your own.
+If you leave this blank, it will use an internal key which is low performance.
+Enter a string value. Press Enter for the default (&#34;&#34;).
+client_id&gt; 
+Google Application Client Secret
+Setting your own is recommended.
+Enter a string value. Press Enter for the default (&#34;&#34;).
+client_secret&gt; 
+Scope that rclone should use when requesting access from drive.
+Enter a string value. Press Enter for the default (&#34;&#34;).
+Choose a number from below, or type in your own value
+ 1 / Full access all files, excluding Application Data Folder.
+   \ &#34;drive&#34;
+ 2 / Read-only access to file metadata and file contents.
+   \ &#34;drive.readonly&#34;
+   / Access to files created by rclone only.
+ 3 | These are visible in the drive website.
+   | File authorization is revoked when the user deauthorizes the app.
+   \ &#34;drive.file&#34;
+   / Allows read and write access to the Application Data folder.
+ 4 | This is not visible in the drive website.
+   \ &#34;drive.appfolder&#34;
+   / Allows read-only access to file metadata but
+ 5 | does not allow any access to read or download file content.
+   \ &#34;drive.metadata.readonly&#34;
+scope&gt; 1
+ID of the root folder
+Leave blank normally.
+
+Fill in to access &#34;Computers&#34; folders (see docs), or for rclone to use
+a non root folder as its starting point.
+
+Note that if this is blank, the first time rclone runs it will fill it
+in with the ID of the root folder.
+
+Enter a string value. Press Enter for the default (&#34;&#34;).
+root_folder_id&gt; 
+Service Account Credentials JSON file path 
+Leave blank normally.
+Needed only if you want use SA instead of interactive login.
+Enter a string value. Press Enter for the default (&#34;&#34;).
+*************************************************此处为重点***************************************
+service_account_file&gt; 因为我们在root目录配置的Autorclone，所以此处填写为/root/AutoRclone/accounts/任意一个json文件名
+*************************************************此处为重点***************************************
+Enter a string value. Press Enter for the default (&#34;&#34;).
+service_account_file_path&gt; 此处填写/root/AutoRclone/accounts/
+Enter a string value. Press Enter for the default (&#34;&#34;).
+service_account_file_path&gt; 
+Edit advanced config? (y/n)
+y) Yes
+n) No (default)
+y/n&gt; n
+Remote config
+Use auto config?
+ * Say Y if not sure
+ * Say N if you are working on a remote or headless machine
+y) Yes (default)
+n) No
+y/n&gt; n
+Please go to the following link: 这里返回是的一个链接，自行复制粘贴到浏览器完成授权，并获取token
+Log in and authorize rclone for access
+Enter verification code&gt; token输入在这里
+后面会有个让你选择是否为团队盘的选项，认真看一下，选完之后就可以一直回车了
+</code></pre></td></tr></table></div></div><p>到这里，AutoRclone和Gclone就完全配置完了.</p><p>接下来可以配置Google Drive百宝箱来更方便和快速的搬运了。</p><p>(https://www.nashome.cn/bt-gdutils/)</p></div><div class=post-footer id=post-footer><div class=post-info><div class=post-info-line><div class=post-info-mod><span>更新于 2020-07-08</span></div><div class=post-info-license></div></div><div class=post-info-line><div class=post-info-md><span><a class=link-to-markdown href=/install-autorclone-gclone/index.md target=_blank>阅读原始文档</a></span></div><div class=post-info-share><span><a href=javascript:void(0); title="分享到 Twitter" data-sharer=twitter data-url=https://www.nashome.cn/install-autorclone-gclone/ data-title="如何安装和配置 Autorclone Gclone" data-hashtags=GoogleDrive><i class="fab fa-twitter fa-fw"></i></a><a href=javascript:void(0); title="分享到 Facebook" data-sharer=facebook data-url=https://www.nashome.cn/install-autorclone-gclone/ data-hashtag=GoogleDrive><i class="fab fa-facebook-square fa-fw"></i></a><a href=javascript:void(0); title="分享到 Hacker News" data-sharer=hackernews data-url=https://www.nashome.cn/install-autorclone-gclone/ data-title="如何安装和配置 Autorclone Gclone"><i class="fab fa-hacker-news fa-fw"></i></a><a href=javascript:void(0); title="分享到 Line" data-sharer=line data-url=https://www.nashome.cn/install-autorclone-gclone/ data-title="如何安装和配置 Autorclone Gclone"><i data-svg-src=https://cdn.jsdelivr.net/npm/simple-icons@2.14.0/icons/line.svg></i></a><a href=javascript:void(0); title="分享到 微博" data-sharer=weibo data-url=https://www.nashome.cn/install-autorclone-gclone/ data-title="如何安装和配置 Autorclone Gclone"><i class="fab fa-weibo fa-fw"></i></a></span></div></div></div><div class=post-info-more><section class=post-tags><i class="fas fa-tags fa-fw"></i>&nbsp;<a href=/tags/googledrive/>GoogleDrive</a></section><section><span><a href=javascript:void(0); onclick=window.history.back();>返回</a></span>&nbsp;|&nbsp;<span><a href=/>主页</a></span></section></div><div class=post-nav><a href=/dynamics-ax-insufficient-memory-to-run-script/ class=prev rel=prev title="Dynamics AX Issue： Insufficient Memory to Run Script"><i class="fas fa-angle-left fa-fw"></i>Dynamics AX Issue： Insufficient Memory to Run Script</a></div></div><div id=comments><div id=valine class=comment></div><noscript>Please enable JavaScript to view the comments powered by <a href=https://valine.js.org/>Valine</a>.</noscript></div></article></div></main><footer class=footer><div class=footer-container><div class=footer-line>由 <a href=https://gohugo.io/ target=_blank rel="noopener noreffer" title="Hugo 0.64.1">Hugo</a> 强力驱动 | 主题 - <a href=https://github.com/dillonzq/LoveIt target=_blank rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i>LoveIt</a></div><div class=footer-line><i class="far fa-copyright fa-fw"></i><span itemprop=copyrightYear>2016 - 2020</span><span class=author itemprop=copyrightHolder>&nbsp;<a href=/ target=_blank>zhaoqiang</a></span>&nbsp;|&nbsp;<span class=license><a rel="license external nofollow noopener noreffer" href=https://creativecommons.org/licenses/by-nc/4.0/ target=_blank>CC BY-NC 4.0</a></span><span class=icp-splitter>&nbsp;|&nbsp;</span><br class=icp-br><span class=icp><a href=http://www.beian.miit.gov.cn>沪ICP备17033498号</a></span></div></div></footer></div><div id=fixed-buttons><a href=# id=back-to-top class=fixed-button title=回到顶部><i class="fas fa-arrow-up fa-fw"></i></a><a href=# id=view-comments class=fixed-button title=查看评论><i class="fas fa-comment fa-fw"></i></a></div><link rel=stylesheet href=/lib/valine/valine.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.css><script type=text/javascript src=https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/algoliasearch@4.2.0/dist/algoliasearch-lite.umd.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/twemoji@13.0.0/dist/twemoji.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/sharer.js@0.4.0/sharer.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/mhchem.min.js></script><script type=text/javascript>window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{"valine":{"appId":"Bu42IhLNJc94WvCDKSsRwTqa-gzGzoHsz","appKey":"bKSP5XiBoIHs8PyXC4uhGhqQ","avatar":"mm","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@5.0.1/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"zh-cn","pageSize":10,"placeholder":"你的评论 ...","recordIP":true,"visitor":true}},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"EO42BFKWB5","algoliaIndex":"hugoblogloveit","algoliaSearchKey":"d3ef25fc7cb90a144ea0139748e4cf6b","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"},"twemoji":true};</script><script type=text/javascript src=/js/theme.min.js></script><script type=text/javascript>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','UA-105751499-1',{'anonymize_ip':true});</script><script type=text/javascript src="https://www.googletagmanager.com/gtag/js?id=UA-105751499-1" async></script></body></html>
