@@ -284,6 +284,5 @@ Enter verification code> token输入在这里
 
 到这里，AutoRclone和Gclone就完全配置完了.
 
-接下来可以配置Google Drive百宝箱来更方便和快速的搬运了。
+接下来可以[配置Google Drive百宝箱]({{< ref "bt-gdutils.md" >}})来更方便和快速的搬运了。
 
-({{< ref "bt-gdutils.md" >}})

@@ -47,10 +47,10 @@ license: ""
 ## 前置条件
 
 - Rclone 已安装配置
-
 - Autorclone 已安装配置
-
 - Gclone 已安装配置
+
+前置条件的安装请转至这里：[如何安装和配置 Autorclone Gclone]({{< ref "install-autorclone-gclone.md" >}})
 
 ## 环境配置
 

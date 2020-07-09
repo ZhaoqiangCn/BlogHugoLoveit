@@ -21,9 +21,11 @@ comment:
 
 ---
 
-<!--more-->
-
 > **本文同步更新至 [Youtube ](https://youtu.be/X3ROQto8jWM) 和 [BiliBili ](https://www.bilibili.com/video/av84104625/)**
+>
+> 目前我已经切换到Loveit主题了，但是方法是一样的
+
+<!--more-->
 
 ## 初始化 GitHub 仓库
 
