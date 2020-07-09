@@ -1,8 +1,11 @@
 # 用 Hugo 配合 Valine 实现简洁的评论交互
 
 
-<!--more-->
 >**本文同步更新至 [Youtube ](https://youtu.be/U7fpUaGrt8o) 和 [BiliBili ](https://www.bilibili.com/video/av84392015/)**
+>
+>作者已经在最新的主题中加入了Algolia搜索，现在只要在配置文件中开启一下即可。
+
+<!--more-->
 
 ## Leancloud相关配置
 

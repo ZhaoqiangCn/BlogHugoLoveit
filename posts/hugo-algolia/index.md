@@ -1,6 +1,10 @@
 # 用 Hugo 配合 Algolia 实现高效美观的站内搜索
 
 > **本文同步更新至 [Youtube ](https://youtu.be/D77dMN_U4YA) 和 [BiliBili ](https://www.bilibili.com/video/av91537755/)**
+>
+> 作者已经在最新的主题中加入了Algolia搜索，现在只要在配置文件中开启一下即可。
+
+<!--more-->
 
 ## 前言
 
