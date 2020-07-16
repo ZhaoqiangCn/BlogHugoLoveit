@@ -76,8 +76,8 @@ enableEmoji = true
         maxResultLength = 10
         snippetLength = 50
         highlightTag = "em"
-        absoluteURL = false
-        canonifyurls = true
+        absoluteURL = true
+        # canonifyurls = true
         [languages.zh-cn.params.search.algolia]
           index = "hugoblogloveit"
           appID = "EO42BFKWB5"
