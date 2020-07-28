@@ -1,29 +1,5 @@
----
-title: "如何把 Openwrt 软路由刷入 N1 真香盒子中"
-subtitle: ""
-date: 2020-07-27T17:37:31+08:00
-lastmod: 2020-07-27T17:37:31+08:00
-draft: false
-author: ""
-authorLink: ""
-description: ""
+# 如何把 Openwrt 软路由刷入 N1 真香盒子中
 
-tags: [N1,openwrt]
-categories: [Linux]
-
-hiddenFromHomePage: false
-hiddenFromSearch: false
-
-featuredImage: ""
-featuredImagePreview: ""
-
-toc:
-  enable: true
-math:
-  enable: false
-lightgallery: false
-license: ""
----
 
 <!--more-->
 
