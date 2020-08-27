@@ -53,7 +53,7 @@ count: 块数
 查看是否有swap分区
 `free -m`
 
-> 如需卸载, 使用命令: `swapoff /swapfile`
+**如需卸载, 使用命令:** `swapoff /swapfile`
 
 到这一步基本已经完成了.
 不过系统重启后需要手动挂载swap文件.
