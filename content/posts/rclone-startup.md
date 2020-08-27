@@ -44,12 +44,20 @@ vi /usr/lib/systemd/system/rclone.service
 ```
 [Unit]
 Description = rclone
-    
+
 [Service]
 User = root
-ExecStart = /usr/bin/rclone mount gdrive:/googledrive-path/ /local-path --copy-links --no-gzip-encoding --no-check-certificate --allow-other --allow-non-empty --umask 000
+ExecStart = /usr/bin/rclone mount embyserver:videos/embyserver /www/wwwroot/v.nashome.cn/embyserver \
+--umask 0000 \
+--default-permissions \
+--allow-non-empty \
+--allow-other \
+--buffer-size 32M \
+--dir-cache-time 12h \
+--vfs-read-chunk-size 64M \
+--vfs-read-chunk-size-limit 1G
 Restart = on-abort
-    
+
 [Install]
 WantedBy = multi-user.target
 ```
