@@ -32,13 +32,11 @@ license: ""
 - Object ‘CLRObject’ could not be created
 - ClrObject static method invocation error
 
-而且，系统给出的日志实在是太简短了，让人摸不着头脑。
+而且，系统给出的日志实在是太简短了，让人摸不着头脑。不过一般出现这两个问题都是在AX中处理.net相关的dll或者在调用web service、WCF。那么剩下的问题就是我们该怎么样得知在调用.net 框架的时候究竟出了什么问题呢，一旦知道了具体原因就好办了。
 
-不过一般出现这两个问题都是在AX中处理.net相关的dll或者在调用web service、WCF。
+------
 
-那么剩下的问题就是我们该怎么样得知在调用.net 框架的时候究竟出了什么问题呢，一旦知道了具体原因就好办了。
-
-好，那我们通过一个Job演示一下吧：
+好，那我们通过一个 Job 演示一下吧：
 
 ```c#
 static void RaiseCLRException(Args _args)

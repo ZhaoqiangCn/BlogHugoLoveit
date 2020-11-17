@@ -5,7 +5,7 @@
 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id=/posts/dynamicsax-clr-exceptions/ class=leancloud_visitors data-flag-title="如何在 DynamicsAX 中处理CLR对象报错的问题">
 <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
 </span>&nbsp;</div></div><div class="details toc" id=toc-static kept><div class="details-summary toc-title"><span>目录</span>
-<span><i class="details-icon fas fa-angle-right"></i></span></div><div class="details-content toc-content" id=toc-content-static><nav id=TableOfContents></nav></div></div><div class=content id=content><p>在Dynamics ax中 无论是2009还是2012，总是会遇到下面这两个报错：</p><ul><li>Object ‘CLRObject’ could not be created</li><li>ClrObject static method invocation error</li></ul><p>而且，系统给出的日志实在是太简短了，让人摸不着头脑。</p><p>不过一般出现这两个问题都是在AX中处理.net相关的dll或者在调用web service、WCF。</p><p>那么剩下的问题就是我们该怎么样得知在调用.net 框架的时候究竟出了什么问题呢，一旦知道了具体原因就好办了。</p><p>好，那我们通过一个Job演示一下吧：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+<span><i class="details-icon fas fa-angle-right"></i></span></div><div class="details-content toc-content" id=toc-content-static><nav id=TableOfContents></nav></div></div><div class=content id=content><p>在Dynamics ax中 无论是2009还是2012，总是会遇到下面这两个报错：</p><ul><li>Object ‘CLRObject’ could not be created</li><li>ClrObject static method invocation error</li></ul><p>而且，系统给出的日志实在是太简短了，让人摸不着头脑。不过一般出现这两个问题都是在AX中处理.net相关的dll或者在调用web service、WCF。那么剩下的问题就是我们该怎么样得知在调用.net 框架的时候究竟出了什么问题呢，一旦知道了具体原因就好办了。</p><hr><p>好，那我们通过一个 Job 演示一下吧：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
 </span><span class=lnt> 2
 </span><span class=lnt> 3
 </span><span class=lnt> 4
