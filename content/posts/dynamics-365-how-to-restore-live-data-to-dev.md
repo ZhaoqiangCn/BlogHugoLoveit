@@ -33,8 +33,6 @@ comment:
   enable: true
 ---
 
-This blog post is for my notes, you can find more details on Microsoft link. There are some extra steps in the Microsoft link, which I never used. I usually follow only these steps and it works for me. So Instead I need to search on Microsoft link. I wrote this post for my future use. Step 1: You have to restore production database to UAT and then from uat to export it to Asset library Step 2: Download Backpac file in specific location Step 3: Open Command prompt with run as administrator for locally hosted VM and go to following location
-
 这是我的操作笔记，微软提供更详细的内容，其中有一些步骤我从来没有使用过，对于我来说仅仅使用以下这几步操作即可。
 
 #### 一.还原生产环境数据库到UAT环境，再从UAT导出到 Asset Library。
