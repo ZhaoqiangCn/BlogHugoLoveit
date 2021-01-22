@@ -1,12 +1,12 @@
 ---
 title: "如何把 Dynamics 365 FO的开发机升级到最新版本"
-subtitle: "Install deployable packages from the command line"
+subtitle: ""
 date: 2021-01-20T15:28:36+08:00
 lastmod: 2021-01-20T15:28:36+08:00
 draft: false
 author: "ZhaoQiang"
 authorLink: ""
-description: "如何把 Dynamics 365 FO的开发机升级到最新版本"
+description: "如何把 Dynamics 365 FO的开发机升级到最新版本/Install deployable packages from the command line"
 
 tags: ["Dynamics365"]
 categories: ["Dynamicsax"]

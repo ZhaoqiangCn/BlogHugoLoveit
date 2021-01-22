@@ -1,12 +1,12 @@
 ---
 title: "如何安装和配置一台 Dynamics 365 FO的开发机"
-subtitle: "How to setup a develop machine in Dynamics 365 FO"
+subtitle: ""
 date: 2021-01-20T10:03:40+08:00
 lastmod: 2021-01-20T10:03:40+08:00
 draft: false
 author: "ZhaoQiang"
 authorLink: ""
-description: "如何安装和配置一台 Dynamics 365 FO的开发机，并连接到 VSTS 协同开发"
+description: "如何安装和配置一台 Dynamics 365 FO的开发机，并连接到 VSTS 协同开发\How to setup a develop machine in Dynamics 365 FO"
 
 tags: ["Dynamics365"]
 categories: ["Dynamicsax"]
