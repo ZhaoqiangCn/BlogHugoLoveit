@@ -2,7 +2,7 @@
 title: "如何安装和配置一台 Dynamics 365 FO的开发机"
 subtitle: ""
 date: 2021-01-20T10:03:40+08:00
-lastmod: 2021-01-20T10:03:40+08:00
+lastmod: 2021-01-21T17:32:40+08:00
 draft: false
 author: "ZhaoQiang"
 authorLink: ""
