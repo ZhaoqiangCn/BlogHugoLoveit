@@ -15,23 +15,23 @@
 
 **资产库**
 
-![img](http://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/D365UpgradeDevEnv/4.png)
+![img](https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/D365UpgradeDevEnv/4.png)
 
 **软件可部署包**
 选择 Service Update ，点击后就会自动开始下载。
-![img](http://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/D365UpgradeDevEnv/5.png)
+![img](https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/D365UpgradeDevEnv/5.png)
 
 ### 从 Lifecycle Services 下载小版本的更新包
 
 **完整详细信息**
 
-![img](http://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/D365UpgradeDevEnv/1.png)
+![img](https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/D365UpgradeDevEnv/1.png)
 
 这里可以看到当前 SandBox 环境的大版本号和小版本号，我们点击右侧的**查看更新**
-![img](http://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/D365UpgradeDevEnv/2.png)
+![img](https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/D365UpgradeDevEnv/2.png)
 
 在弹出的页面中我们可以看到已经有许多更新存在这里了，点击右上角的**保存包**就会开始下载了。
-![img](http://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/D365UpgradeDevEnv/3.png)
+![img](https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/D365UpgradeDevEnv/3.png)
 
 
 
