@@ -22,11 +22,11 @@
 7. Accept the Microsoft Software License Terms for a Virtual Hard Disk image
 8. Select the destination folder where the Virtual Hard Disk will be placed and click on Extract
 
-![01-VM Downloal v2.0](https://dynamicsax708.files.wordpress.com/2017/03/01-vm-downloal-v2.0.png?w=840)
+![01-VM Downloal v2.0](https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/PicGo/01-vm-downloal-v2.0.png)
 
-![02-VM Downloal v2.0](https://dynamicsax708.files.wordpress.com/2017/03/02-vm-downloal-v2.0.png?w=840)
+![02-VM Downloal v2.0](https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/PicGo/02-vm-downloal-v2.0.png)
 
-![03-VM Downloal v2.0.png to be used](https://dynamicsax708.files.wordpress.com/2017/03/03-vm-downloal-v2.0.png-to-be-used.png?w=840)
+![03-VM Downloal v2.0.png to be used](https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/PicGo/03-vm-downloal-v2.0.png-to-be-used.png)
 
 _Note: Once the extraction process is complete, the Virtual Hard Disk created in the destination folder._
 
@@ -67,9 +67,9 @@ If you don’t have Microsoft Hyper-V Manager, please follow the instruction bel
 7. _Mark ‘**Allow management operation system to share this network adapter’**_
 8. Click on Apply and Ok
 
-![10\_LCS\_Cloud\_Tool\_Locally\_Environment\_Virtual\_Switch](https://dynamicsax708.files.wordpress.com/2017/03/10_lcs_cloud_tool_locally_environment_virtual_switch.png?w=840)
+![10\_LCS\_Cloud\_Tool\_Locally\_Environment\_Virtual\_Switch](https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/PicGo/10_lcs_cloud_tool_locally_environment_virtual_switch.png)
 
-![11\_LCS\_Cloud\_Tool\_Locally\_Environment\_Virtual\_Switch\_2](https://dynamicsax708.files.wordpress.com/2017/03/11_lcs_cloud_tool_locally_environment_virtual_switch_2.png?w=840)
+![11\_LCS\_Cloud\_Tool\_Locally\_Environment\_Virtual\_Switch\_2](https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/PicGo/11_lcs_cloud_tool_locally_environment_virtual_switch_2.png)
 
 Note: This is important step to access Dynamics 365 for Operations instance.
 
@@ -86,11 +86,11 @@ Note: This is important step to access Dynamics 365 for Operations instance.
 9. On the **Connect Virtual Hard Disk,** choose **Use an existing virtual hard disk and** select the VHD location
 10. On the Summary page, verify your selections and then click **Finish**.
 
-![12\_LCS\_Cloud\_Tool\_Locally\_Environment\_VM\_Wizard\_Name](https://dynamicsax708.files.wordpress.com/2017/03/12_lcs_cloud_tool_locally_environment_vm_wizard_name.png?w=840)
+![12\_LCS\_Cloud\_Tool\_Locally\_Environment\_VM\_Wizard\_Name](https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/PicGo/12_lcs_cloud_tool_locally_environment_vm_wizard_name.png)
 
-![13\_LCS\_Cloud\_Tool\_Locally\_Environment\_VM\_Wizard\_VHD](https://dynamicsax708.files.wordpress.com/2017/03/13_lcs_cloud_tool_locally_environment_vm_wizard_vhd.png?w=840)
+![13\_LCS\_Cloud\_Tool\_Locally\_Environment\_VM\_Wizard\_VHD](https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/PicGo/13_lcs_cloud_tool_locally_environment_vm_wizard_vhd.png)
 
-![14\_LCS\_Cloud\_Tool\_Locally\_Environment\_VM\_Wizard\_Summary](https://dynamicsax708.files.wordpress.com/2017/03/14_lcs_cloud_tool_locally_environment_vm_wizard_summary2.png?w=840)
+![14\_LCS\_Cloud\_Tool\_Locally\_Environment\_VM\_Wizard\_Summary](https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/PicGo/14_lcs_cloud_tool_locally_environment_vm_wizard_summary2.png)
 
 ### Connecting to Virtual machine using Microsoft Hyper-V Manager
 
@@ -108,11 +108,11 @@ Once the virtualization support is turned on in the BIOS settings successfully,
    * **User name: Administrator**
    * **Password: pass@word1**
 
-![15\_LCS\_Cloud\_Tool\_Locally\_Environment\_VM\_Connect](https://dynamicsax708.files.wordpress.com/2017/03/15_lcs_cloud_tool_locally_environment_vm_connect.png?w=840)
+![15\_LCS\_Cloud\_Tool\_Locally\_Environment\_VM\_Connect](https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/PicGo/15_lcs_cloud_tool_locally_environment_vm_connect.png)
 
-![16\_LCS\_Cloud\_Tool\_Locally\_Environment\_VM\_Login](https://dynamicsax708.files.wordpress.com/2017/03/16_lcs_cloud_tool_locally_environment_vm_login.png?w=840)
+![16\_LCS\_Cloud\_Tool\_Locally\_Environment\_VM\_Login](https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/PicGo/16_lcs_cloud_tool_locally_environment_vm_login.png)
 
-![16.1\_LCS\_Cloud\_Tool\_Locally\_Environment\_VM\_Login](https://dynamicsax708.files.wordpress.com/2017/03/16-1_lcs_cloud_tool_locally_environment_vm_login.png?w=840)
+![16.1\_LCS\_Cloud\_Tool\_Locally\_Environment\_VM\_Login](https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/PicGo/16-1_lcs_cloud_tool_locally_environment_vm_login.png)
 
 ### Access Dynamics 365 instance using base URL of the local application
 
@@ -123,7 +123,7 @@ Before accessing you must authenticate your credentials as administrator for the
 1. From the desktop, run the admin user provisioning tool as an administrator \(right-click the icon, and then click Run as administrator\).
 2. Enter your email address \(Make sure it is Office365 ID or Azure AD credentials\), and then click Submit.
 
-![17\_LCS\_Cloud\_Tool\_Locally\_Environment\_VM\_Provision\_User](https://dynamicsax708.files.wordpress.com/2017/03/17_lcs_cloud_tool_locally_environment_vm_provision_user.png?w=840)
+![17\_LCS\_Cloud\_Tool\_Locally\_Environment\_VM\_Provision\_User](https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/PicGo/17_lcs_cloud_tool_locally_environment_vm_provision_user.png)
 
 #### _Access the instance using the URL of the local application_
 
@@ -134,9 +134,9 @@ The user authenticated in the above step can access the instance on the computer
 3. Enter your credentials authenticated in the step above
 4. Now it’s all set to access ‘**Dynamics 365 for Operation’** instance
 
-![18\_LCS\_Cloud\_Tool\_Locally\_Environment\_VM\_User\_credentials](https://dynamicsax708.files.wordpress.com/2017/03/18_lcs_cloud_tool_locally_environment_vm_user_credentials.png?w=840)
+![18\_LCS\_Cloud\_Tool\_Locally\_Environment\_VM\_User\_credentials](https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/PicGo/18_lcs_cloud_tool_locally_environment_vm_user_credentials.png)
 
-![19\_LCS\_Cloud\_Tool\_Locally\_Environment\_VM\_D365\_Ready](https://dynamicsax708.files.wordpress.com/2017/03/19_lcs_cloud_tool_locally_environment_vm_d365_ready.png?w=840)
+![19\_LCS\_Cloud\_Tool\_Locally\_Environment\_VM\_D365\_Ready](https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/PicGo/19_lcs_cloud_tool_locally_environment_vm_d365_ready.png)
 
 ### References:
 

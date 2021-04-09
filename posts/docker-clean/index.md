@@ -6,7 +6,6 @@
 # 清理Docker占用的磁盘空间
 
 **摘要：**用了Docker，好处挺多的，但是有一个不大不小的问题，它会一不小心占用太多磁盘，这就意味着我们**必须**及时清理。  
-![](https://kiwenlau.com/2018/01/10/how-to-clean-docker-disk/disk.png)  
 
 
 作为一个有信仰的技术公司，我们[Fundebug](https://fundebug.com/)的后台采用了酷炫的全Docker化架构，所有服务，包括数据库都运行在Docker里面。这样做当然不是为了炫技，看得清楚的好处还是不少的：
@@ -25,15 +24,11 @@
 
 **docker system df**命令，类似于Linux上的**df**命令，用于查看Docker的磁盘使用情况:
 
-![](../../../.gitbook/assets/image%20%2814%29.png)
-
 可知，Docker镜像占用了**7.2GB**磁盘，Docker容器占用了**104.8MB**磁盘，Docker数据卷占用了**1.4GB**磁盘。
 
 **docker system prune**命令可以用于清理磁盘，删除关闭的容器、无用的数据卷和网络，以及dangling镜像\(即无tag的镜像\)。**docker system prune -a**命令清理得更加彻底，可以将没有容器使用Docker镜像都删掉。注意，这两个命令会把你暂时关闭的容器，以及暂时没有用到的Docker镜像都删掉了…所以使用之前一定要想清楚吶。
 
 执行**docker system prune -a**命令之后，Docker占用的磁盘空间减少了很多：
-
-![](../../../.gitbook/assets/image%20%2812%29.png)
 
 **2. 手动清理Docker镜像/容器/数据卷**
 

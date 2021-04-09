@@ -16,7 +16,7 @@ Github地址：https://github.com/kchown/naiveboom
 ![PNG](https://nashome-image-bucket.oss-accelerate.aliyuncs.com/Images/NaiveBooMImage/diannaoyulan.png)
 iOS手机端Web界面预览：		
 
-![PNG](https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/NaiveBooMImage/shoujiyulan.png)
+<img src="https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/Images/NaiveBooMImage/shoujiyulan.png" alt="PNG" style="zoom: 25%;" />
 
 基础环境配置
 Redis
