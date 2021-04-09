@@ -49,15 +49,15 @@ git submodule add https://github.com/zhaoqiangcn/hugo-theme-even.git themes/even
 
 
 
-![1](https://d33wubrfki0l68.cloudfront.net/0e9f9cefe968382536d4e4baa66e49945ad2694c/e20ef/images/hosting-and-deployment/hosting-on-netlify/netlify-signup.jpg)
+![1](https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/PicGo/netlify-signup.jpg)
 
-![2](https://d33wubrfki0l68.cloudfront.net/1a92de85be074abc024967fa7088c8b719c32466/f7496/images/hosting-and-deployment/hosting-on-netlify/netlify-add-new-site.jpg)
+![2](https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/PicGo/netlify-add-new-site.jpg)
 
-![3](https://d33wubrfki0l68.cloudfront.net/742c7be22b24a5df82a39f7cd259a04a7abdd150/db696/images/hosting-and-deployment/hosting-on-netlify/netlify-create-new-site-step-1.jpg)
+![3](https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/PicGo/netlify-create-new-site-step-1.jpg)
 
-![4](https://d33wubrfki0l68.cloudfront.net/188f9bfa9eb4997757414ec0ac1979d7111c9741/8f7a6/images/hosting-and-deployment/hosting-on-netlify/netlify-create-new-site-step-2.jpg)
+![4](https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/PicGo/netlify-create-new-site-step-2.jpg)
 
-![5](https://d33wubrfki0l68.cloudfront.net/a9f55d92792a554cb775cd0d10eddf445338b83a/0a424/images/hosting-and-deployment/hosting-on-netlify/netlify-deploying-site.gif)
+![5](https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/PicGo/netlify-deploying-site.gif)
 
 
 跟官网宣传的一样，部署 Hugo 网站到 Netlify 非常简单，跟着导航操作即可。

@@ -35,16 +35,16 @@ comment:
 
 - 登录成功后，进入后台点击左上角的创建应用：
 
-  ![img](https://pichome-1254392422.cos.ap-chengdu.myqcloud.com/20180708153104380829479.png)
+  ![img](https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/PicGo/20180708153104380829479.png)
 
 - 进入应用，左边栏找到【设置】【应用Key】
 记录 App ID，App Key 后面配置文件中会用到：
 - 建立两个新的存储,因为评论和文章阅读数统计依赖于存储Class
 - 创建两个存储Class，分别命名为: `Counter` 和 `Comment`;
-  ![img](https://pichome-1254392422.cos.ap-chengdu.myqcloud.com/20180708153104475972323.png)
+  ![img](https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/PicGo/20180708153104475972323.png)
 - 为应用添加安全域名，左边栏点击【设置】【安全中心】【安全域名】
 输入博客使用的域名，点击保存即可：
-  ![img](https://pichome-1254392422.cos.ap-chengdu.myqcloud.com/20180708153104592457270.png)
+  ![img](https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/PicGo/20180708153104592457270.png)
 
 ## config.toml添加参数
 
@@ -136,6 +136,6 @@ comment:
 
 可以看到上述代码中引用了配置文件中的相关参数，这样以后修改配置就不用修改代码了，只需要改配置文件 `config.toml`，另外注意到的是，我也添加了文章阅读数统计的显示内容。将配置文件中 **valine** 配置的 `eanble` 设置为 `true` ，本地测试一下，正常的话，打开一篇文章会看到：
 
-![img](https://pichome-1254392422.cos.ap-chengdu.myqcloud.com/20180708153104555886981.png)
+![img](https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/PicGo/20180708153104555886981.png)
 
 此时，生成静态博客文件，部署到自己的托管平台，正常的话打开博客中的一篇文章，就可以看到正常的文章计数和评论框了，此时随便评论一条，验证一下，评论如果成功，可以去leancloud后台看一下 `Comment` 和 `Counter`存储中新加了相应网址的条目。
