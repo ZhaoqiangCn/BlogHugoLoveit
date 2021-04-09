@@ -226,8 +226,8 @@ enableEmoji = true
         clientSecret = ""
       [params.page.comment.valine]
         enable = true
-        appId = 'Bu42IhLNJc94WvCDKSsRwTqa-gzGzoHsz'
-        appKey = 'bKSP5XiBoIHs8PyXC4uhGhqQ'
+        appId = 'V2oqmWdqU1a1AOOswFxyF4s7-MdYXbMMI'
+        appKey = 'cIUuNAppKNSRbeWVyNEwTDwS'
         placeholder = ""
         avatar = "mm"
         meta= ""
