@@ -41,7 +41,13 @@ license: ""
 
 ### **Connect RDP and open SSMS** 
 
-   *如果不需要修改表相关的数据，请直接跳到第六步修改webconfig。*
+   *如果不需要修改表相关的数据，请直接跳到第六步使用如下数据修改webconfig。*
+
+![image-20210802111104611](https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/PicGo/image-20210802111104611.png)
+
+![image-20210802111008460](https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/PicGo/image-20210802111008460.png)
+
+![image-20210802110646089](https://nashome-image-bucket.oss-cn-shanghai.aliyuncs.com/PicGo/image-20210802110646089.png)
 
    使用 LCS 中的服务器名称连接到 SQL 服务器并将前缀添加到 SQL 服务器名称
 
