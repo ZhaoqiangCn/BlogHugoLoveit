@@ -1,0 +1,124 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge,chrome=1"><title>Using webservice to connect with Dynamics AX | Zhaoqiang's Blog</title><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="noodp"><meta name=Description content="Zhao Qiang's Blog"><link rel=prev href=https://www.spacesh.com/dynamics-ax-golive-data-import/><link rel=next href=https://www.spacesh.com/%E5%85%8D%E8%B4%B9%E7%94%B3%E8%AF%B7-office365-%E4%BC%81%E4%B8%9A%E7%89%88%E4%B8%80%E5%B9%B4%E8%AF%95%E7%94%A8%E6%95%99%E7%A8%8B/><link rel=canonical href=https://www.spacesh.com/using-webservice-to-connect-with-dynamics-ax/><link rel="shortcut icon" type=image/x-icon href=/favicon.ico><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><meta name=msapplication-TileColor content="#da532c"><meta name=theme-color content="#ffffff"><meta property="og:title" content="Using webservice to connect with Dynamics AX"><meta property="og:description" content><meta property="og:type" content="article"><meta property="og:url" content="https://www.spacesh.com/using-webservice-to-connect-with-dynamics-ax/"><meta property="article:published_time" content="2020-01-14T11:03:30+08:00"><meta property="article:modified_time" content="2020-01-14T11:03:30+08:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="Using webservice to connect with Dynamics AX"><meta name=twitter:description content><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"Using webservice to connect with Dynamics AX","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.spacesh.com\/using-webservice-to-connect-with-dynamics-ax\/"},"image":{"@type":"ImageObject","url":"https:\/\/www.spacesh.com\/cover.png","width":800,"height":600},"genre":"posts","keywords":"AX2009, WebService, WCF","wordcount":528,"url":"https:\/\/www.spacesh.com\/using-webservice-to-connect-with-dynamics-ax\/","datePublished":"2020-01-14T11:03:30\x2b08:00","dateModified":"2020-01-14T11:03:30\x2b08:00","license":"This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher":{"@type":"Organization","name":"zhao qiang","logo":{"@type":"ImageObject","url":"https:\/\/www.spacesh.com\/logo.png","width":127,"height":40}},"description":""}</script><link rel=stylesheet href=/css/style.min.css><link href=https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css rel=stylesheet><link rel=stylesheet href=/css/lib/forkawesome/forkawesome.min.css><link href=https://cdn.bootcss.com/animate.css/3.7.2/animate.css rel=stylesheet><link rel=stylesheet href=/css/search.min.css><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css></head><body><script>if(!window.localStorage||!window.localStorage.getItem('theme')){window.isDark=window.matchMedia('(prefers-color-scheme: dark)').matches;}else{window.isDark=(window.localStorage&&window.localStorage.getItem('theme'))==='dark';}
+window.isDark&&document.body.classList.add('dark-theme');</script><div class=wrapper><nav class=navbar><div class=navbar-container><div class="navbar-header animated bounceIn"><a href=https://www.spacesh.com/>Zhaoqiang's Blog</a></div><div class=navbar-menu><a class=menu-item href=https://www.spacesh.com/posts>Posts</a><a class=menu-item href=https://www.spacesh.com/tags>Tags</a><a class=menu-item href=https://www.spacesh.com/categories>Categories</a><a href=javascript:void(0); class=theme-switch><i class="fas fa-adjust fa-rotate-180 fa-fw" title="Switch Theme"></i></a>
+<a href=#ex1 rel=modal:open><i class="fas fa-search fa-fw"></i></a></div></div></nav><nav class=navbar-mobile><div class=navbar-container><div class=navbar-header><div class="navbar-header-title animated bounceIn"><a href=https://www.spacesh.com/>Zhaoqiang's Blog</a></div><div class=menu-toggle id=menu-toggle><span></span><span></span><span></span></div></div><div class=navbar-menu id=mobile-menu><a class=menu-item href=https://www.spacesh.com/posts>Posts</a><a class=menu-item href=https://www.spacesh.com/tags>Tags</a><a class=menu-item href=https://www.spacesh.com/categories>Categories</a><a href=javascript:void(0); class=theme-switch><i class="fas fa-adjust fa-rotate-180 fa-fw" title="Switch Theme"></i></a></div></div></nav><main class=main><div class=container><article class=page><h1 class="post-title animated flipInX">Using webservice to connect with Dynamics AX</h1><div class=post-meta><div class=post-meta-main><a class=author href=https://www.spacesh.com/ rel=author target=_blank><i class="fas fa-user-circle fa-fw"></i>zhao qiang
+</a>&nbsp;<span class=post-category>included in&nbsp;<i class="far fa-folder fa-fw"></i><a href=https://www.spacesh.com/categories/dynamicsax/>Dynamics a x</a>&nbsp;</span></div><div class=post-meta-other><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-01-14>2020-01-14</time>&nbsp;
+<i class="fas fa-pencil-alt fa-fw"></i>about 528 words&nbsp;
+<i class="far fa-clock fa-fw"></i>2 min&nbsp;<span id=/using-webservice-to-connect-with-dynamics-ax/ class=leancloud_visitors data-flag-title="Using webservice to connect with Dynamics AX">
+<i class="far fa-eye fa-fw"></i><span class=leancloud-visitors-count></span>pageviews
+</span>&nbsp;</div></div><div class=post-content><a class=post-dummy-target id=第三方接口调用ax内部程序></a><h2>第三方接口调用AX内部程序</h2><a class=post-dummy-target id=systemconnector></a><h3>SystemConnector</h3><p>在"Csharp"代码中，我们可以直接调用"Systemconnector"提供的接口从而实现执行AX内部程序的功能。</p><p>如：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-c# data-lang=c#><span class=n>axServiceProvider</span><span class=p>.</span><span class=n>handleAgileData</span><span class=p>(</span><span class=s>&#34;cig&#34;</span><span class=p>,</span> <span class=n>_XMLStr</span><span class=p>)</span><span class=p>;</span> 
+</code></pre></td></tr></table></div></div><p>实际上 &ldquo;axServiceProvider&rdquo; 是通过内置函数 &ldquo;CallStaticClassMethod&rdquo; 来实现调用AX内部程序。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-c# data-lang=c#><span class=kt>string</span> <span class=n>returnStr</span> <span class=p>=</span> <span class=p>(</span><span class=kt>string</span><span class=p>)</span><span class=n>op</span><span class=p>.</span><span class=n>CallStaticClassMethod</span><span class=p>(</span><span class=s>&#34;AX Class&#34;</span><span class=p>,</span> <span class=s>&#34;Class Method&#34;</span><span class=p>,</span> <span class=n>_legal</span><span class=p>,</span> <span class=n>_XMLStr</span><span class=p>)</span><span class=p>;</span>
+</code></pre></td></tr></table></div></div><p>将第三方外部程序组织的XML数据主动传递给AX，AX内部只需要解析该XML数据即可执行相应的业务逻辑操作。</p><p>在 axServiceProvider 中我们可以设定AX2009的环境端口，用户，密码，公司等信息，同样可以构建更多的方法来调用Ax不同的功能。</p><p>下文是通过"Csharp"代码调用接口的样例：</p><a class=post-dummy-target id=consume-systemconnector-in-vs></a><h2>Consume SystemConnector in VS</h2><p><figure><img src=/svg/loading.min.svg data-sizes=auto data-src=/Images/AX2009Webservice/1.png alt=1 class=lazyload><figcaption class=image-caption>1</figcaption></figure></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span><span class=lnt>42
+</span><span class=lnt>43
+</span><span class=lnt>44
+</span><span class=lnt>45
+</span><span class=lnt>46
+</span><span class=lnt>47
+</span><span class=lnt>48
+</span><span class=lnt>49
+</span><span class=lnt>50
+</span><span class=lnt>51
+</span><span class=lnt>52
+</span><span class=lnt>53
+</span><span class=lnt>54
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-c# data-lang=c#><span class=k>using</span> <span class=nn>System</span><span class=p>;</span>
+<span class=k>using</span> <span class=nn>System.Collections.Generic</span><span class=p>;</span>
+<span class=k>using</span> <span class=nn>System.IO</span><span class=p>;</span>
+<span class=k>using</span> <span class=nn>System.Linq</span><span class=p>;</span>
+<span class=k>using</span> <span class=nn>System.Web</span><span class=p>;</span>
+<span class=k>using</span> <span class=nn>System.Web.UI</span><span class=p>;</span>
+<span class=k>using</span> <span class=nn>System.Web.UI.WebControls</span><span class=p>;</span>
+<span class=k>using</span> <span class=nn>System.Xml</span><span class=p>;</span>
+<span class=k>using</span> <span class=nn>SystemConnector.DynamicsAX</span><span class=p>;</span>
+
+<span class=k>namespace</span> <span class=nn>CIG_WCF4AgileAX</span>
+<span class=p>{</span>
+    <span class=k>public</span> <span class=k>partial</span> <span class=k>class</span> <span class=nc>WebForm1</span> <span class=p>:</span> <span class=n>System</span><span class=p>.</span><span class=n>Web</span><span class=p>.</span><span class=n>UI</span><span class=p>.</span><span class=n>Page</span>
+    <span class=p>{</span>
+        <span class=k>protected</span> <span class=k>void</span> <span class=n>Page_Load</span><span class=p>(</span><span class=kt>object</span> <span class=n>sender</span><span class=p>,</span> <span class=n>EventArgs</span> <span class=n>e</span><span class=p>)</span>
+        <span class=p>{</span>
+            <span class=kt>string</span> <span class=n>ret</span> <span class=p>=</span> <span class=s>&#34;&#34;</span><span class=p>;</span>
+            <span class=c1>//string _XMLStr = GetXmlDocument(@&#34;D:/AgileXml/HDC000076-utf.xml&#34;);
+</span><span class=c1></span>            <span class=c1>//string _XMLStr = GetXmlDocument(@&#34;E:/AgileXml/test1014/UPD-1014-33-01.xml&#34;);
+</span><span class=c1></span>            <span class=kt>string</span> <span class=n>_XMLStr</span> <span class=p>=</span> <span class=n>GetXmlDocument</span><span class=p>(</span><span class=s>@&#34;E:/AgileXml/test1014/CIG000780.xml&#34;</span><span class=p>)</span><span class=p>;</span>
+            <span class=c1>//string _XMLStr = &#34;AX-MES-RDIF-Go&#34;;
+</span><span class=c1></span>            <span class=k>try</span>
+            <span class=p>{</span>
+                <span class=n>AXServiceProvider</span> <span class=n>axServiceProvider</span> <span class=p>=</span> <span class=k>new</span> <span class=n>AXServiceProvider</span><span class=p>(</span><span class=p>)</span><span class=p>;</span>
+                <span class=c1>//ret = axServiceProvider.handleRFIDData(&#34;cig&#34;, _XMLStr);
+</span><span class=c1></span>                <span class=n>ret</span> <span class=p>=</span> <span class=n>axServiceProvider</span><span class=p>.</span><span class=n>handleAgileData</span><span class=p>(</span><span class=s>&#34;cig&#34;</span><span class=p>,</span> <span class=n>_XMLStr</span><span class=p>)</span><span class=p>;</span>              
+            <span class=p>}</span>
+            <span class=k>catch</span> <span class=p>(</span><span class=n>Exception</span> <span class=n>ex</span><span class=p>)</span>
+            <span class=p>{</span>
+                <span class=n>ret</span><span class=p>=</span> <span class=n>ex</span><span class=p>.</span><span class=n>ToString</span><span class=p>(</span><span class=p>)</span><span class=p>;</span>
+            <span class=p>}</span>
+            <span class=n>Response</span><span class=p>.</span><span class=n>Write</span><span class=p>(</span><span class=n>ret</span><span class=p>)</span><span class=p>;</span>
+        <span class=p>}</span>
+
+        <span class=k>private</span> <span class=k>static</span> <span class=kt>string</span> <span class=n>GetXmlDocument</span><span class=p>(</span><span class=kt>string</span> <span class=n>xmlPath</span><span class=p>)</span>
+        <span class=p>{</span>
+            <span class=k>try</span>
+            <span class=p>{</span>
+                <span class=n>XmlDocument</span> <span class=n>doc</span> <span class=p>=</span> <span class=k>null</span><span class=p>;</span>
+                <span class=k>if</span> <span class=p>(</span><span class=n>File</span><span class=p>.</span><span class=n>Exists</span><span class=p>(</span><span class=n>xmlPath</span><span class=p>)</span><span class=p>)</span>
+                <span class=p>{</span>
+                    <span class=n>doc</span> <span class=p>=</span> <span class=k>new</span> <span class=n>XmlDocument</span><span class=p>(</span><span class=p>)</span><span class=p>;</span>
+                    <span class=n>doc</span><span class=p>.</span><span class=n>Load</span><span class=p>(</span><span class=n>xmlPath</span><span class=p>)</span><span class=p>;</span>               
+                <span class=p>}</span>
+                <span class=k>return</span> <span class=n>doc</span><span class=p>.</span><span class=n>InnerXml</span><span class=p>;</span>
+            <span class=p>}</span>
+            <span class=k>catch</span> <span class=p>(</span><span class=n>Exception</span> <span class=n>ex</span><span class=p>)</span>
+            <span class=p>{</span>
+                <span class=n>System</span><span class=p>.</span><span class=n>Diagnostics</span><span class=p>.</span><span class=n>Debug</span><span class=p>.</span><span class=n>Write</span><span class=p>(</span><span class=n>ex</span><span class=p>.</span><span class=n>Message</span><span class=p>)</span><span class=p>;</span>
+            <span class=p>}</span>
+            <span class=k>return</span> <span class=k>null</span><span class=p>;</span>
+        <span class=p>}</span>
+    <span class=p>}</span>
+<span class=p>}</span>
+</code></pre></td></tr></table></div></div><p><a href=https://pan.nashome.cn/s/x9FmdkpEiiWnT4B target=_blank>源代码</a></p><a class=post-dummy-target id=ax内部程序调用第三方接口></a><h2>AX内部程序调用第三方接口</h2><p>AX2009 调用外部接口只需要打开AOT-Reference-添加一个服务引用即可，添加引用时可以添加dll文件。</p><p>如下图：</p><p><figure><img src=/svg/loading.min.svg data-sizes=auto data-src=/Images/AX2009Webservice/2.png alt=2 class=lazyload><figcaption class=image-caption>2</figcaption></figure></p><p><figure><img src=/svg/loading.min.svg data-sizes=auto data-src=/Images/AX2009Webservice/3.png alt=3 class=lazyload><figcaption class=image-caption>3</figcaption></figure></p><p>这样就可以了。</p></div><div class=post-footer id=post-footer><div class=post-info><div class=post-info-line><div class=post-info-mod><span>The article was updated on 2020-01-14</span></div><div class=post-info-license></div></div><div class=post-info-line><div class=post-info-md></div><div class=post-info-share><span><a href="//twitter.com/share?url=https%3a%2f%2fwww.spacesh.com%2fusing-webservice-to-connect-with-dynamics-ax%2f&text=Using%20webservice%20to%20connect%20with%20Dynamics%20AX&via=xxxx" target=_blank title="Share on Twitter"><i class="fab fa-twitter fa-fw"></i></a><a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.spacesh.com%2fusing-webservice-to-connect-with-dynamics-ax%2f" target=_blank title="Share on Facebook"><i class="fab fa-facebook-square fa-fw"></i></a><a href="//reddit.com/submit?url=https%3a%2f%2fwww.spacesh.com%2fusing-webservice-to-connect-with-dynamics-ax%2f&title=Using%20webservice%20to%20connect%20with%20Dynamics%20AX" target=_blank title="Share on Reddit"><i class="fab fa-reddit fa-fw"></i></a><a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fwww.spacesh.com%2fusing-webservice-to-connect-with-dynamics-ax%2f&title=Using%20webservice%20to%20connect%20with%20Dynamics%20AX" target=_blank title="Share on LinkedIn"><i class="fab fa-linkedin fa-fw"></i></a><a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fwww.spacesh.com%2fusing-webservice-to-connect-with-dynamics-ax%2f&description=Using%20webservice%20to%20connect%20with%20Dynamics%20AX" target=_blank title="Share on Pinterest"><i class="fab fa-pinterest fa-fw"></i></a><a href="//service.weibo.com/share/share.php?url=https%3a%2f%2fwww.spacesh.com%2fusing-webservice-to-connect-with-dynamics-ax%2f&appkey=&title=Using%20webservice%20to%20connect%20with%20Dynamics%20AX" target=_blank title="Share on Weibo"><i class="fab fa-weibo fa-fw"></i></a></span></div></div></div><div class=post-info-more><section><span class=tag><a href=https://www.spacesh.com/tags/ax2009/><i class="fas fa-tag fa-fw"></i>&nbsp;AX2009</a>&nbsp;
+</span><span class=tag><a href=https://www.spacesh.com/tags/webservice/><i class="fas fa-tag fa-fw"></i>&nbsp;WebService</a>&nbsp;
+</span><span class=tag><a href=https://www.spacesh.com/tags/wcf/><i class="fas fa-tag fa-fw"></i>&nbsp;WCF</a>&nbsp;</span></section><section><span><a href=javascript:window.history.back();>Back</a></span>&nbsp;|&nbsp;<span><a href=https://www.spacesh.com/>Home</a></span></section></div><div class=post-nav><a href=https://www.spacesh.com/dynamics-ax-golive-data-import/ class=prev rel=prev title="Dynamics AX GoLive Data Import"><i class="fas fa-angle-left fa-fw"></i>Dynamics AX GoLive Data Import</a>
+<a href=https://www.spacesh.com/%E5%85%8D%E8%B4%B9%E7%94%B3%E8%AF%B7-office365-%E4%BC%81%E4%B8%9A%E7%89%88%E4%B8%80%E5%B9%B4%E8%AF%95%E7%94%A8%E6%95%99%E7%A8%8B/ class=next rel=next title="免费申请 Office365 企业版一年试用教程">免费申请 Office365 企业版一年试用教程<i class="fas fa-angle-right fa-fw"></i></a></div></div><div class=post-comment><div id=valine_container></div><script src=/js/lib/valine/Valine.min.min.js></script><script>new Valine({el:'#valine_container',appId:'Bu42IhLNJc94WvCDKSsRwTqa-gzGzoHsz',appKey:'bKSP5XiBoIHs8PyXC4uhGhqQ',placeholder:'说点什么吧...',avatar:'mm',lang:'en',visitor:true,recordIP:true,});</script><noscript>Please enable JavaScript to view the <a href=https://valine.js.org/>comments powered by Valine.</a></noscript></div></article></div></main><footer class=footer><div class=copyright><div class=copyright-line>Powered by <a href=https://gohugo.io/ target=_blank rel="external nofollow noopener noreffer">Hugo</a> | Theme - <a href=https://github.com/dillonzq/LoveIt target=_blank rel="external nofollow noopener noreffer">LoveIt<i class="far fa-heart fa-fw"></i></a></div><div class=copyright-line><i class="far fa-copyright fa-fw"></i><span itemprop=copyrightYear>2019 - 2020</span><span class=author itemprop=copyrightHolder>&nbsp;<a href=https://www.spacesh.com/ target=_blank>zhao qiang</a></span>&nbsp;|&nbsp;<span class=license><a rel="license external nofollow noopener noreffer" href=https://creativecommons.org/licenses/by-nc/4.0/ target=_blank>CC BY-NC 4.0</a></span><span class=icp-splitter>&nbsp;|&nbsp;</span><br class=icp-br><span class=icp><a href=http://www.beian.miit.gov.cn>沪ICP备17033498号</a></span></div></div></footer></div><a href=# class=dynamic-to-top id=dynamic-to-top data-scroll><span>&nbsp;</span></a>
+<script type=application/javascript>var doNotTrack=false;if(!doNotTrack){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;ga('create','UA-105751499-1','auto');ga('set','anonymizeIp',true);ga('send','pageview');}</script><script async src=https://www.google-analytics.com/analytics.js></script><script src=https://cdn.bootcss.com/jquery/3.4.1/jquery.slim.min.js></script><script src=https://cdn.bootcss.com/lazysizes/5.1.2/lazysizes.min.js></script><script src=https://cdn.bootcss.com/smooth-scroll/16.1.0/smooth-scroll.polyfills.min.js></script><script>window.scroll=new SmoothScroll('[data-scroll]',{speed:300,speedAsDuration:true});</script><link rel=stylesheet href=/css/lib/katex/katex.min.css><script src=/js/lib/katex/katex.min.js></script><script defer src=/js/lib/katex/auto-render.min.js></script><link rel=stylesheet href=/css/lib/katex/copy-tex.min.css><script defer src=/js/lib/katex/copy-tex.min.js></script><script defer src=/js/lib/katex/mhchem.min.js></script><script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\(",right:"\\)",display:false},{left:"\\[",right:"\\]",display:true},{left:"$",right:"$",display:false},]});});</script><script src=/js/blog.min.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js></script><script src=https://res.cloudinary.com/jimmysong/raw/upload/rootsongjc-hugo/algoliasearch.min.js></script><script src=https://res.cloudinary.com/jimmysong/raw/upload/rootsongjc-hugo/autocomplete.min.js></script><script src=/js/search.js type=text/javascript></script><script data-ad-client=ca-pub-3216129127646136 async src=https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js></script><div id=ex1 class=modal><div class=aa-input-container id=aa-input-container><input type=search id=aa-search-input class=aa-input-search placeholder="Search for titles or URIs..." name=search autocomplete=off><svg class="aa-input-icon" viewBox="654 -372 1664 1664"><path d="M1806 332c0-123.3-43.8-228.8-131.5-316.5C1586.8-72.2 1481.3-116 1358-116s-228.8 43.8-316.5 131.5S910 208.7 910 332s43.8 228.8 131.5 316.5S1234.7 780 1358 780s228.8-43.8 316.5-131.5S1806 455.3 1806 332zm512 832c0 34.7-12.7 64.7-38 90s-55.3 38-90 38c-36 0-66-12.7-90-38l-343-342c-119.3 82.7-252.3 124-399 124-95.3.0-186.5-18.5-273.5-55.5s-162-87-225-150-113-138-150-225S654 427.3 654 332s18.5-186.5 55.5-273.5 87-162 150-225 138-113 225-150S1262.7-372 1358-372s186.5 18.5 273.5 55.5 162 87 225 150 113 138 150 225S2062 236.7 2062 332c0 146.7-41.3 279.7-124 399l343 343C2305.7 1098.7 2318 1128.7 2318 1164z" /></svg></div></div></body></html>
