@@ -2,7 +2,7 @@
 title: "Dynamics AX 版本号大全"
 date: 2019-12-09T17:57:40+08:00
 description: ""
-draft: false
+draft: true
 tags: [版本号,BuildNumber]
 categories: [Dynamicsax]
 toc:
