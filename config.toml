@@ -97,15 +97,15 @@ enableEmoji = true
           disclaimer = ""
         # 主页文章列表
         [languages.zh-cn.params.home.posts]
-          enable = true
+          enable = false
           paginate = 6
       [languages.zh-cn.params.social]
         GitHub = "ZhaoqiangCn"
-        Instagram = "zhaoqiangsh"
+        # Instagram = "zhaoqiangsh"
         Email = "zq19890000@gmail.com"
-        Telegram = "jaoqiang"
-        Youtubechannel = "UCb71N1EWfn12QGEfZ-5GIQA?view_as=subscriber"
-        Bilibili = "474553042"
+        # Telegram = "jaoqiang"
+        # Youtubechannel = "UCb71N1EWfn12QGEfZ-5GIQA?view_as=subscriber"
+        # Bilibili = "474553042"
         RSS = true
 [params]
   version = "0.2.X"
