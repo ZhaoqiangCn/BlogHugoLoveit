@@ -97,8 +97,8 @@ enableEmoji = true
           disclaimer = ""
         # 主页文章列表
         [languages.zh-cn.params.home.posts]
-          enable = false
-          paginate = 12
+          enable = true
+          paginate = 6
       [languages.zh-cn.params.social]
         GitHub = "ZhaoqiangCn"
         Instagram = "zhaoqiangsh"
