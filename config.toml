@@ -18,7 +18,7 @@ enableEmoji = true
 [languages]
   [languages.zh-cn]
     weight = 2
-    languageCode = "zh-CN"
+    languageCode = "zh-cn"
     languageName = "简体中文"
     hasCJKLanguage = false
     paginate = 12
@@ -97,8 +97,8 @@ enableEmoji = true
           disclaimer = ""
         # 主页文章列表
         [languages.zh-cn.params.home.posts]
-          enable = true
-          paginate = 6
+          enable = false
+          paginate = 12
       [languages.zh-cn.params.social]
         GitHub = "ZhaoqiangCn"
         Instagram = "zhaoqiangsh"
