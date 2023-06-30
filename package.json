@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "algolia": "hugo-algolia -i \"content/post/**\" -s "
+    "algolia": "hugo-algolia -i \"content/posts/**\" -s "
   },
   "repository": {
     "type": "git",
