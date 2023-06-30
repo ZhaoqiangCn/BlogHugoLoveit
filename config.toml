@@ -214,7 +214,7 @@ enableEmoji = true
       Mix = false
     # 评论系统设置
     [params.page.comment]
-      enable = true
+      enable = false
       [params.page.comment.disqus]
         enable = false
         shortname = ""
@@ -225,7 +225,7 @@ enableEmoji = true
         clientId = ""
         clientSecret = ""
       [params.page.comment.valine]
-        enable = true
+        enable = false
         appId = 'V2oqmWdqU1a1AOOswFxyF4s7-MdYXbMMI'
         appKey = 'cIUuNAppKNSRbeWVyNEwTDwS'
         placeholder = ""
