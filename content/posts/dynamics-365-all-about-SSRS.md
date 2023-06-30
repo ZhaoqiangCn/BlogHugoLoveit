@@ -1,5 +1,5 @@
 ---
-title: "关于在D365FO中创建SSRS报表的一切"
+title: "关于在D365FO中创建SSRS报表的一切有用的信息"
 subtitle: "All useful code about create SSRS in D365FO"
 date: 2023-06-30T14:38:44+08:00
 lastmod: 2023-06-30T14:38:44+08:00
@@ -44,11 +44,13 @@ license: ""
 ### 一些常用的相关元素
 <details>
 <summary>#### 条码</summary>
+
 {{< gist zhaoqiangcn 855565c89bd619133ee6493c8ddcaeca reportBarcode.md >}}
 </details>
 
 <details>
-<summary>#### LOGO</summary>
+<summary>#### 公司LOGO</summary>
+
 在临时表中创建如下字段：
 * Field name: CompanyLogo
 * Data type: Container
