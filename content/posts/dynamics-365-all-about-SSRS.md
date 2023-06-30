@@ -1,5 +1,5 @@
 ---
-title: "All about SSRS in dynamics 365FO"
+title: "All about SSRS in dynamics365FO"
 subtitle: ""
 date: 2023-06-30T14:38:44+08:00
 lastmod: 2023-06-30T14:38:44+08:00
@@ -31,14 +31,26 @@ license: ""
 最后创建SSRS报表和设计。
 
 ### 类
-#### DP模板
+#### DP
 {{< gist zhaoqiangcn 855565c89bd619133ee6493c8ddcaeca reportDP.md >}}
-#### Controller模板
+#### Controller
 {{< gist zhaoqiangcn 855565c89bd619133ee6493c8ddcaeca reportController.md >}}
-#### Contract模板
+#### Contract
 {{< gist zhaoqiangcn 855565c89bd619133ee6493c8ddcaeca reportContract.md >}}
-#### UIBuilder模板
+#### UIBuilder
 
 ### 临时表
 ### 查询
-
+### 一些常用的相关元素
+#### 条码
+```
+{{< gist zhaoqiangcn 855565c89bd619133ee6493c8ddcaeca reportBarcode.md >}}
+```
+#### LOGO
+在临时表中创建如下字段：
+* Field name: CompanyLogo
+* Data type: Container
+* Extended data type: Bitmap
+```
+{{< gist zhaoqiangcn 855565c89bd619133ee6493c8ddcaeca reportLOGO.md >}}
+```

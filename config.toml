@@ -18,7 +18,7 @@ enableEmoji = true
 [languages]
   [languages.zh-cn]
     weight = 2
-    languageCode = "zh-cn"
+    languageCode = "zh-CN"
     languageName = "简体中文"
     hasCJKLanguage = false
     paginate = 12
