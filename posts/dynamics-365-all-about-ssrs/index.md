@@ -1,4 +1,4 @@
-# All about SSRS in dynamics365FO
+# 关于在D365FO中创建SSRS报表的一切
 
 
 <!--more-->
@@ -18,16 +18,20 @@
 ### 临时表
 ### 查询
 ### 一些常用的相关元素
-#### 条码
-```
+<details>
+<summary>#### 条码</summary>
 {{< gist zhaoqiangcn 855565c89bd619133ee6493c8ddcaeca reportBarcode.md >}}
-```
-#### LOGO
+</details>
+
+<details>
+<summary>#### LOGO</summary>
 在临时表中创建如下字段：
 * Field name: CompanyLogo
 * Data type: Container
 * Extended data type: Bitmap
-```
 {{< gist zhaoqiangcn 855565c89bd619133ee6493c8ddcaeca reportLOGO.md >}}
-```
+</details>
+
+
+
 
