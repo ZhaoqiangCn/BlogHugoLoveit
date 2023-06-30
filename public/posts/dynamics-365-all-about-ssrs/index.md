@@ -1,29 +1,5 @@
----
-title: "All about SSRS in dynamics 365FO"
-subtitle: ""
-date: 2023-06-30T14:38:44+08:00
-lastmod: 2023-06-30T14:38:44+08:00
-draft: false
-author: ""
-authorLink: ""
-description: ""
+# All about SSRS in dynamics 365FO
 
-tags: ["Dynamics365","Customization"]
-categories: ["Dynamicsax"]
-
-hiddenFromHomePage: false
-hiddenFromSearch: false
-
-featuredImage: ""
-featuredImagePreview: ""
-
-toc:
-  enable: true
-math:
-  enable: false
-lightgallery: false
-license: ""
----
 
 <!--more-->
 ## 概览
@@ -41,4 +17,5 @@ license: ""
 
 ### 临时表
 ### 查询
+
 
