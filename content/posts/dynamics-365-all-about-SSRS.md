@@ -42,21 +42,15 @@ license: ""
 ### 临时表
 ### 查询
 ### 一些常用的相关元素
-<details>
-<summary>#### 条码</summary>
-
+#### 条码
 {{< gist zhaoqiangcn 855565c89bd619133ee6493c8ddcaeca reportBarcode.md >}}
-</details>
-
-<details>
-<summary>#### 公司LOGO</summary>
-
+#### 公司LOGO
 在临时表中创建如下字段：
 * Field name: CompanyLogo
 * Data type: Container
 * Extended data type: Bitmap
 {{< gist zhaoqiangcn 855565c89bd619133ee6493c8ddcaeca reportLOGO.md >}}
-</details>
+
 
 
 
