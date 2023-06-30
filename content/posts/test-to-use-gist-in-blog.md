@@ -3,7 +3,7 @@ title: "Test to Use Gist in Blog"
 subtitle: ""
 date: 2023-06-30T10:47:33+08:00
 lastmod: 2023-06-30T10:47:33+08:00
-draft: true
+draft: false
 author: ""
 authorLink: ""
 description: ""
