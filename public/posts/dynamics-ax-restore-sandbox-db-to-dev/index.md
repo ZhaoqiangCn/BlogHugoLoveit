@@ -13,11 +13,11 @@ Here is the procedure to restore Sandbox DB to DEV.
 SqlPackage.exe /a:import /sf:D:\Exportedbacpac\my.bacpac /tsn:localhost /tdn:<target database name> /p:CommandTimeout=1200
  
 Example
-Tricor
-1.	SqlPackage.exe /a:import /sf:J:\MSSQL_BACKUP\TRI_PreProdbackup.bacpac /tsn:localhost /tdn:PreProd_20220712 /p:CommandTimeout=1200
+Demo
+1.	SqlPackage.exe /a:import /sf:J:\MSSQL_BACKUP\Demo_PreProdbackup.bacpac /tsn:localhost /tdn:PreProd_20220712 /p:CommandTimeout=1200
  
-LAML
-2.	SqlPackage.exe /a:import /sf:J:\MSSQL_BACKUP\lml_uatbackup.bacpac /tsn:localhost /tdn:uat_20221028 /p:CommandTimeout=1200
+Demo
+2.	SqlPackage.exe /a:import /sf:J:\MSSQL_BACKUP\Demo_uatbackup.bacpac /tsn:localhost /tdn:uat_20221028 /p:CommandTimeout=1200
 ```
 6. Waiting
 7. Run below script after restore the database, change the database name in below line:
